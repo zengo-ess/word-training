@@ -82,3 +82,26 @@ describe("deleteWord", () => {
     expect(deleteWord(db, word.id)).toBe(false);
   });
 });
+
+describe("audio_url", () => {
+  it("по умолчанию audio_url = null", () => {
+    const word = createWord(db, { deckId, english: "cat", russian: "кот" });
+    expect(word.audio_url).toBeNull();
+  });
+
+  it("сохраняет переданный audioUrl", () => {
+    const word = createWord(db, {
+      deckId,
+      english: "cat",
+      russian: "кот",
+      audioUrl: "/uploads/audio/x.mp3",
+    });
+    expect(word.audio_url).toBe("/uploads/audio/x.mp3");
+  });
+
+  it("updateWord обновляет audioUrl", () => {
+    const word = createWord(db, { deckId, english: "cat", russian: "кот" });
+    const updated = updateWord(db, word.id, { audioUrl: "/uploads/audio/y.mp3" });
+    expect(updated?.audio_url).toBe("/uploads/audio/y.mp3");
+  });
+});

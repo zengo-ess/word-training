@@ -9,6 +9,7 @@ export interface WordRow {
   transcription: string | null;
   example_sentence: string | null;
   image_url: string | null;
+  audio_url: string | null;
   created_at: string;
 }
 
@@ -19,6 +20,7 @@ export interface NewWord {
   transcription?: string | null;
   exampleSentence?: string | null;
   imageUrl?: string | null;
+  audioUrl?: string | null;
 }
 
 export interface WordUpdate {
@@ -27,6 +29,7 @@ export interface WordUpdate {
   transcription?: string | null;
   exampleSentence?: string | null;
   imageUrl?: string | null;
+  audioUrl?: string | null;
 }
 
 export function getWord(db: Database.Database, id: string): WordRow | undefined {
@@ -42,8 +45,8 @@ export function listWordsByDeck(db: Database.Database, deckId: string): WordRow[
 export function createWord(db: Database.Database, word: NewWord): WordRow {
   const id = randomUUID();
   db.prepare(
-    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence, image_url)
-     VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence, image_url, audio_url)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
   ).run(
     id,
     word.deckId,
@@ -52,6 +55,7 @@ export function createWord(db: Database.Database, word: NewWord): WordRow {
     word.transcription ?? null,
     word.exampleSentence ?? null,
     word.imageUrl ?? null,
+    word.audioUrl ?? null,
   );
   return getWord(db, id) as WordRow;
 }
@@ -83,6 +87,10 @@ export function updateWord(
   if (update.imageUrl !== undefined) {
     fields.push("image_url = ?");
     values.push(update.imageUrl);
+  }
+  if (update.audioUrl !== undefined) {
+    fields.push("audio_url = ?");
+    values.push(update.audioUrl);
   }
 
   if (fields.length > 0) {
