@@ -27,3 +27,15 @@ describe("runMigrations", () => {
     expect(() => runMigrations(db)).not.toThrow();
   });
 });
+
+describe("отслеживание применённых миграций", () => {
+  it("повторный прогон не применяет миграции дважды", () => {
+    const db = new Database(":memory:");
+    runMigrations(db);
+    const first = db.prepare("SELECT COUNT(*) AS c FROM _migrations").get() as { c: number };
+    runMigrations(db);
+    const second = db.prepare("SELECT COUNT(*) AS c FROM _migrations").get() as { c: number };
+    expect(first.c).toBeGreaterThan(0);
+    expect(second.c).toBe(first.c);
+  });
+});
