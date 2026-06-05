@@ -1,3 +1,8 @@
+import { useAuth } from "./auth/AuthContext";
+import { LoginScreen } from "./screens/LoginScreen";
+import { HomeScreen } from "./screens/HomeScreen";
+
 export function App() {
-  return <h1>Тренажёр слов</h1>;
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? <HomeScreen /> : <LoginScreen />;
 }
