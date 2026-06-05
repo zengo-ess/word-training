@@ -15,11 +15,22 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
     res.json({ status: "ok" });
   });
 
+  // Статика озвучки (публично — браузерный <audio> не шлёт заголовок авторизации)
+  app.use("/uploads", express.static(config.uploadsDir));
+
   app.use("/api/auth", createAuthRouter(config));
 
   const requireAuth = createAuthMiddleware(config.jwtSecret);
   app.use("/api/decks", requireAuth, createDecksRouter(db));
-  app.use("/api/words", requireAuth, createWordsRouter(db, config.unsplashAccessKey));
+  app.use(
+    "/api/words",
+    requireAuth,
+    createWordsRouter(db, {
+      unsplashAccessKey: config.unsplashAccessKey,
+      googleTtsApiKey: config.googleTtsApiKey,
+      uploadsDir: config.uploadsDir,
+    }),
+  );
   app.use("/api/unsplash", requireAuth, createUnsplashRouter(config.unsplashAccessKey));
 
   return app;

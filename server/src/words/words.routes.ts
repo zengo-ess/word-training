@@ -4,10 +4,18 @@ import { getDeck } from "../decks/decks.repository.js";
 import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
 import { translateToRussian } from "../services/mymemory.js";
 import { searchImages } from "../services/unsplash.js";
+import { synthesizeMp3 } from "../services/googleTts.js";
+import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
 
 const BUILTIN_READONLY = "Встроенная колода доступна только для чтения";
 
-export function createWordsRouter(db: Database.Database, unsplashAccessKey: string): Router {
+export interface WordsRouterDeps {
+  unsplashAccessKey: string;
+  googleTtsApiKey: string;
+  uploadsDir: string;
+}
+
+export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps): Router {
   const router = Router();
 
   // Авто-черновик: перевод + картинки, без сохранения
@@ -19,7 +27,7 @@ export function createWordsRouter(db: Database.Database, unsplashAccessKey: stri
     }
     const [russian, images] = await Promise.all([
       translateToRussian(english),
-      searchImages(english, unsplashAccessKey),
+      searchImages(english, deps.unsplashAccessKey),
     ]);
     res.json({
       english,
@@ -29,7 +37,7 @@ export function createWordsRouter(db: Database.Database, unsplashAccessKey: stri
     });
   });
 
-  router.post("/", (req, res) => {
+  router.post("/", async (req, res) => {
     const body = req.body ?? {};
     const deckId = typeof body.deckId === "string" ? body.deckId : "";
     const english = typeof body.english === "string" ? body.english.trim() : "";
@@ -50,7 +58,21 @@ export function createWordsRouter(db: Database.Database, unsplashAccessKey: stri
       return;
     }
 
-    res.status(201).json({ word: createWord(db, { deckId, english, russian, imageUrl }) });
+    const word = createWord(db, { deckId, english, russian, imageUrl });
+
+    // Озвучка опциональна: при отсутствии ключа/ошибке слово остаётся без аудио
+    let finalWord = word;
+    try {
+      const mp3 = await synthesizeMp3(english, deps.googleTtsApiKey);
+      if (mp3) {
+        const audioUrl = saveAudioFile(deps.uploadsDir, word.id, mp3);
+        finalWord = updateWord(db, word.id, { audioUrl }) ?? word;
+      }
+    } catch {
+      // молча оставляем слово без озвучки
+    }
+
+    res.status(201).json({ word: finalWord });
   });
 
   router.put("/:id", (req, res) => {
@@ -85,6 +107,7 @@ export function createWordsRouter(db: Database.Database, unsplashAccessKey: stri
       return;
     }
     deleteWord(db, req.params.id);
+    deleteAudioFile(deps.uploadsDir, req.params.id);
     res.status(204).end();
   });
 
@@ -113,6 +136,7 @@ export function createWordsRouter(db: Database.Database, unsplashAccessKey: stri
       transcription: source.transcription,
       exampleSentence: source.example_sentence,
       imageUrl: source.image_url,
+      audioUrl: source.audio_url,
     });
     res.status(201).json({ word });
   });
