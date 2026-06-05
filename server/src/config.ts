@@ -2,6 +2,8 @@ export interface AppConfig {
   appPassword: string;
   jwtSecret: string;
   unsplashAccessKey: string;
+  googleTtsApiKey: string;
+  uploadsDir: string;
   port: number;
 }
 
@@ -20,6 +22,8 @@ export function loadConfig(env: Record<string, string | undefined>): AppConfig {
     appPassword,
     jwtSecret,
     unsplashAccessKey: env.UNSPLASH_ACCESS_KEY ?? "",
+    googleTtsApiKey: env.GOOGLE_TTS_API_KEY ?? "",
+    uploadsDir: env.UPLOADS_DIR ?? "uploads",
     port: env.PORT ? Number(env.PORT) : 3001,
   };
 }

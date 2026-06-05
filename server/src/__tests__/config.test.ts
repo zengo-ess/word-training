@@ -9,17 +9,27 @@ describe("loadConfig", () => {
       APP_PASSWORD: "secret",
       JWT_SECRET: "jwt-secret",
       UNSPLASH_ACCESS_KEY: "unsplash",
+      GOOGLE_TTS_API_KEY: "tts-key",
+      UPLOADS_DIR: "/data/uploads",
       PORT: "4000",
     });
     expect(config.appPassword).toBe("secret");
     expect(config.jwtSecret).toBe("jwt-secret");
     expect(config.unsplashAccessKey).toBe("unsplash");
+    expect(config.googleTtsApiKey).toBe("tts-key");
+    expect(config.uploadsDir).toBe("/data/uploads");
     expect(config.port).toBe(4000);
   });
 
   it("использует порт 3001 по умолчанию", () => {
     const config = loadConfig({ APP_PASSWORD: "p", JWT_SECRET: "j" });
     expect(config.port).toBe(3001);
+  });
+
+  it("использует пустой TTS-ключ и uploads по умолчанию", () => {
+    const config = loadConfig({ APP_PASSWORD: "p", JWT_SECRET: "j" });
+    expect(config.googleTtsApiKey).toBe("");
+    expect(config.uploadsDir).toBe("uploads");
   });
 
   it("бросает ошибку, если нет APP_PASSWORD или JWT_SECRET", () => {
