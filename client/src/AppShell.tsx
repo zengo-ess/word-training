@@ -11,7 +11,7 @@ export function AppShell() {
   return (
     <>
       {tab === "home" ? <HomeScreen /> : null}
-      {tab === "decks" ? <DecksTab /> : null}
+      {tab === "decks" ? <DecksTab onOpenDeck={() => { /* Plan 8 Task 4 */ }} /> : null}
       {tab === "stats" ? <StatsScreen /> : null}
       {tab === "profile" ? <ProfileScreen /> : null}
 
