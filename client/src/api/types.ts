@@ -34,3 +34,14 @@ export interface Progress {
 export interface WordWithProgress extends Word {
   progress: Progress | null;
 }
+
+export interface Stats {
+  learned: number;
+  inProgress: number;
+  dueToday: number;
+  learnedToday: number;
+  dailyGoal: number;
+  streak: number;
+  week: boolean[];
+  decks: Deck[];
+}

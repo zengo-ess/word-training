@@ -11,6 +11,7 @@ export interface Stats {
   learnedToday: number;
   dailyGoal: number;
   streak: number;
+  week: boolean[];
   decks: DeckWithStats[];
 }
 
@@ -35,6 +36,14 @@ export function getStats(db: Database.Database, now: Date): Stats {
       .get(today) as { c: number }
   ).c;
 
+  const studyRows = db.prepare("SELECT day FROM study_days").all() as { day: string }[];
+  const studyDays = new Set(studyRows.map((r) => r.day));
+  const week = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+    d.setUTCDate(d.getUTCDate() - (6 - i));
+    return studyDays.has(isoDay(d));
+  });
+
   return {
     learned,
     inProgress,
@@ -42,6 +51,7 @@ export function getStats(db: Database.Database, now: Date): Stats {
     learnedToday,
     dailyGoal: DAILY_GOAL,
     streak: computeStreak(db, now),
+    week,
     decks: listDecksWithStats(db),
   };
 }
