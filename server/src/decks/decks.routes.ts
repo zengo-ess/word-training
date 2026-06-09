@@ -1,13 +1,13 @@
 import { Router } from "express";
 import type Database from "better-sqlite3";
-import { listDecks, getDeck, createDeck } from "./decks.repository.js";
-import { listWordsByDeck } from "../words/words.repository.js";
+import { getDeck, createDeck } from "./decks.repository.js";
+import { listDecksWithStats, listWordsWithProgress } from "./deckStats.repository.js";
 
 export function createDecksRouter(db: Database.Database): Router {
   const router = Router();
 
   router.get("/", (_req, res) => {
-    res.json({ decks: listDecks(db) });
+    res.json({ decks: listDecksWithStats(db) });
   });
 
   router.post("/", (req, res) => {
@@ -25,7 +25,7 @@ export function createDecksRouter(db: Database.Database): Router {
       res.status(404).json({ error: "Колода не найдена" });
       return;
     }
-    res.json({ words: listWordsByDeck(db, req.params.id) });
+    res.json({ words: listWordsWithProgress(db, req.params.id) });
   });
 
   return router;
