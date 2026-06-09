@@ -7,6 +7,7 @@ import { createDecksRouter } from "./decks/decks.routes.js";
 import { createWordsRouter } from "./words/words.routes.js";
 import { createUnsplashRouter } from "./unsplash.routes.js";
 import { createTrainingRouter } from "./training/training.routes.js";
+import { createStatsRouter } from "./stats/stats.routes.js";
 
 export function createApp(config: AppConfig, db: Database.Database): Express {
   const app = express();
@@ -33,6 +34,7 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
     }),
   );
   app.use("/api/training", requireAuth, createTrainingRouter(db));
+  app.use("/api/stats", requireAuth, createStatsRouter(db));
   app.use("/api/unsplash", requireAuth, createUnsplashRouter(config.unsplashAccessKey));
 
   return app;

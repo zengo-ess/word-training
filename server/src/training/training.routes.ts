@@ -7,6 +7,7 @@ import {
   markLearned,
   recordReview,
 } from "./training.service.js";
+import { recordStudyDay, isoDay } from "../stats/studyDays.js";
 
 export function createTrainingRouter(db: Database.Database): Router {
   const router = Router();
@@ -22,6 +23,8 @@ export function createTrainingRouter(db: Database.Database): Router {
       res.status(404).json({ error: "Слово не найдено" });
       return;
     }
+
+    recordStudyDay(db, isoDay(new Date()));
 
     const mode = body.mode;
 
