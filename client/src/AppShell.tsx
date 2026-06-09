@@ -23,7 +23,18 @@ export function AppShell() {
 
   return (
     <>
-      {tab === "home" ? <HomeScreen /> : null}
+      {tab === "home" ? (
+        <HomeScreen
+          onLearn={() => {
+            /* План 10 */
+          }}
+          onReview={() => {
+            /* План 11 */
+          }}
+          onOpenDeck={openDeck}
+          onProfile={() => setTab("profile")}
+        />
+      ) : null}
       {tab === "decks" ? <DecksTab key={reloadKey} onOpenDeck={openDeck} /> : null}
       {tab === "stats" ? <StatsScreen /> : null}
       {tab === "profile" ? <ProfileScreen /> : null}
