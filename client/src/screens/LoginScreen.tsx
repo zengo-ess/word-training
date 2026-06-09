@@ -21,23 +21,42 @@ export function LoginScreen() {
   };
 
   return (
-    <form className="login" onSubmit={(e) => void onSubmit(e)}>
-      <h1>Вход</h1>
-      <input
-        type="password"
-        aria-label="Пароль"
-        placeholder="Пароль"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button type="submit" disabled={loading || password.length === 0}>
-        {loading ? "Вход…" : "Войти"}
-      </button>
-      {error.length > 0 && (
-        <p role="alert" className="login__error">
-          {error}
-        </p>
-      )}
-    </form>
+    <main className="screen screen--center">
+      <div className="login-stack">
+        <form className="card login" onSubmit={(e) => void onSubmit(e)}>
+          <span className="brand">
+            <span className="brand__mark" aria-hidden="true">
+              Aa
+            </span>
+            <span className="brand__name">Словарь</span>
+          </span>
+
+          <h1 className="login__title">Вход</h1>
+          <p className="login__subtitle">Тренажёр английских слов</p>
+
+          <label className="field">
+            <span className="field__label">Пароль</span>
+            <input
+              className="input"
+              type="password"
+              aria-label="Пароль"
+              placeholder="Введите пароль"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+
+          <button className="btn btn--primary" type="submit" disabled={loading || password.length === 0}>
+            {loading ? "Входим…" : "Войти"}
+          </button>
+
+          {error.length > 0 && (
+            <p role="alert" className="alert">
+              {error}
+            </p>
+          )}
+        </form>
+      </div>
+    </main>
   );
 }
