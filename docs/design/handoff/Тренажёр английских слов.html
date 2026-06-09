@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Тренажёр английских слов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --backdrop: #ECE2D4;
+    --bg: #FBF4EA;
+    --surface: #FFFFFF;
+    --surface-2: #F4ECE0;
+    --ink: #3A2E26;
+    --ink-soft: #6E5F53;
+    --ink-mute: #A6968A;
+    --line: #EFE6D9;
+    --line-strong: #E2D5C5;
+    --track: #ECE2D4;
+    --nav-bg: rgba(255,252,247,0.86);
+    --nav-line: #EFE6D9;
+
+    --primary: #3E84E0;
+    --primary-2: #2E6BD0;
+    --on-primary: #FFFFFF;
+    --primary-soft: #E1ECFB;
+    --primary-ink: #2557A8;
+    --primary-glow: rgba(62,132,224,.5);
+
+    --amber: #F2A93B;
+    --amber-soft: #FCEFD2;
+    --amber-ink: #946410;
+    --success: #4FAE6F;
+    --success-soft: #DEF1E2;
+    --success-ink: #2E7A48;
+    --danger: #E5654B;
+    --danger-soft: #FBE2DB;
+    --danger-ink: #B23A23;
+
+    --r-card: 22px;
+    --r-btn: 16px;
+    --r-tile: 18px;
+
+    --shadow-sm: 0 2px 10px -2px rgba(120,80,40,0.10), 0 1px 2px rgba(120,80,40,0.05);
+    --shadow-md: 0 10px 26px -8px rgba(120,80,40,0.16);
+
+    --font: 'Nunito', system-ui, -apple-system, sans-serif;
+    --font-display: 'Comfortaa', 'Nunito', sans-serif;
+    --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  [data-theme="dark"] {
+    --backdrop: #1A130D;
+    --bg: #241B14;
+    --surface: #2F251C;
+    --surface-2: #3A2E23;
+    --ink: #F5ECE0;
+    --ink-soft: #C9BAA9;
+    --ink-mute: #8C7B6B;
+    --line: #3E3127;
+    --line-strong: #4A3B2E;
+    --track: #3A2E23;
+    --nav-bg: rgba(36,27,20,0.86);
+    --nav-line: #3E3127;
+    --amber-soft: #3F3320;
+    --amber-ink: #F2C66B;
+    --success-soft: #28392C;
+    --success-ink: #82D89C;
+    --danger-soft: #3E2A23;
+    --danger-ink: #F0998270;
+    --danger-ink: #F09982;
+    --shadow-sm: 0 2px 12px -2px rgba(0,0,0,0.35);
+    --shadow-md: 0 12px 28px -8px rgba(0,0,0,0.45);
+  }
+
+  [data-font="clean"] { --font-display: 'Nunito', sans-serif; }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #ECE2D4; }
+  body { font-family: var(--font); }
+  button { font-family: var(--font); }
+  input { font-family: var(--font); }
+  ::selection { background: var(--primary-soft); }
+
+  .page-scroll::-webkit-scrollbar { width: 0; }
+  .page-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .btn-press { transition: transform .12s cubic-bezier(.34,1.56,.64,1); }
+  .btn-press:active { transform: scale(0.94); }
+  .card-tap { transition: transform .12s, box-shadow .15s; cursor: pointer; }
+  .card-tap:active { transform: scale(0.985); }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 0.9s linear infinite; display: inline-flex; }
+
+  @keyframes fadeUp { from { transform: translateY(10px); } to { transform: translateY(0); } }
+  .fade-up { animation: fadeUp .35s cubic-bezier(.4,0,.2,1); }
+
+  @keyframes exEnter { from { transform: translateX(18px); } to { transform: translateX(0); } }
+  .ex-enter { animation: exEnter .3s cubic-bezier(.4,0,.2,1); }
+
+  @keyframes fbEnter { from { transform: translateY(24px); } to { transform: translateY(0); } }
+  .fb-enter { animation: fbEnter .3s cubic-bezier(.34,1.56,.64,1); }
+
+  @keyframes pop { 0% { transform: scale(0.5); } 60% { transform: scale(1.08); } 100% { transform: scale(1); } }
+  .pop { animation: pop .5s cubic-bezier(.34,1.56,.64,1); }
+
+  @keyframes tilePop { from { transform: scale(0.6); } to { transform: scale(1); } }
+  .tile-pop { animation: tilePop .18s cubic-bezier(.34,1.56,.64,1); }
+
+  @keyframes sheetUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+  .sheet-up { animation: sheetUp .32s cubic-bezier(.32,.72,0,1); }
+  @keyframes bdIn { from { opacity: 0; } to { opacity: 1; } }
+  .sheet-backdrop { animation: bdIn .25s ease; }
+
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app/icons.jsx"></script>
+<script type="text/babel" src="app/data.jsx"></script>
+<script type="text/babel" src="app/ui.jsx"></script>
+<script type="text/babel" src="app/screens-home.jsx"></script>
+<script type="text/babel" src="app/screens-decks.jsx"></script>
+<script type="text/babel" src="app/screens-addword.jsx"></script>
+<script type="text/babel" src="app/exercises.jsx"></script>
+<script type="text/babel" src="app/trainer.jsx"></script>
+<script type="text/babel" src="app/review.jsx"></script>
+<script type="text/babel" src="app/app.jsx"></script>
+</body>
+</html>
