@@ -10,8 +10,8 @@ vi.mock("../auth/AuthContext", () => ({
   useAuth: () => ({ ...authState, login: vi.fn(), logout: vi.fn() }),
 }));
 
-vi.mock("../AuthedApp", () => ({
-  AuthedApp: () => <div>authed-app</div>,
+vi.mock("../AppShell", () => ({
+  AppShell: () => <div>app-shell</div>,
 }));
 
 describe("App (гейт авторизации)", () => {
@@ -24,6 +24,6 @@ describe("App (гейт авторизации)", () => {
   it("показывает приложение после авторизации", () => {
     authState.isAuthenticated = true;
     render(<App />);
-    expect(screen.getByText("authed-app")).toBeInTheDocument();
+    expect(screen.getByText("app-shell")).toBeInTheDocument();
   });
 });
