@@ -372,3 +372,50 @@ body::before {
     transition: none !important;
   }
 }
+
+/* ===== Компоновка списков/групп ===== */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.muted-text {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.group-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 6px 0 2px;
+}
+
+.pill {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.btn--sm {
+  padding: 9px 14px;
+  font-size: 14px;
+  border-radius: var(--r-sm);
+}

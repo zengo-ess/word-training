@@ -10,6 +10,10 @@ vi.mock("../auth/AuthContext", () => ({
   useAuth: () => ({ ...authState, login: vi.fn(), logout: vi.fn() }),
 }));
 
+vi.mock("../AuthedApp", () => ({
+  AuthedApp: () => <div>authed-app</div>,
+}));
+
 describe("App (гейт авторизации)", () => {
   it("показывает экран входа без авторизации", () => {
     authState.isAuthenticated = false;
@@ -17,9 +21,9 @@ describe("App (гейт авторизации)", () => {
     expect(screen.getByRole("heading", { name: "Вход" })).toBeInTheDocument();
   });
 
-  it("показывает домашний экран после авторизации", () => {
+  it("показывает приложение после авторизации", () => {
     authState.isAuthenticated = true;
     render(<App />);
-    expect(screen.getByRole("button", { name: "Выйти" })).toBeInTheDocument();
+    expect(screen.getByText("authed-app")).toBeInTheDocument();
   });
 });

@@ -1,8 +1,8 @@
 import { useAuth } from "./auth/AuthContext";
 import { LoginScreen } from "./screens/LoginScreen";
-import { HomeScreen } from "./screens/HomeScreen";
+import { AuthedApp } from "./AuthedApp";
 
 export function App() {
   const { isAuthenticated } = useAuth();
-  return isAuthenticated ? <HomeScreen /> : <LoginScreen />;
+  return isAuthenticated ? <AuthedApp /> : <LoginScreen />;
 }
