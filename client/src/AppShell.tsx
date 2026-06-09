@@ -36,7 +36,7 @@ export function AppShell() {
         />
       ) : null}
       {tab === "decks" ? <DecksTab key={reloadKey} onOpenDeck={openDeck} /> : null}
-      {tab === "stats" ? <StatsScreen /> : null}
+      {tab === "stats" ? <StatsScreen onOpenDeck={openDeck} /> : null}
       {tab === "profile" ? <ProfileScreen /> : null}
 
       {top === null ? (
