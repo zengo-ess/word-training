@@ -1,0 +1,1205 @@
+{
+  "name": "Топ-200 частых слов",
+  "words": [
+    {
+      "english": "time",
+      "russian": "время",
+      "transcription": "/taɪm/",
+      "example": "What ___ is it now?"
+    },
+    {
+      "english": "year",
+      "russian": "год",
+      "transcription": "/jɪr/",
+      "example": "Next ___ I want to learn French."
+    },
+    {
+      "english": "month",
+      "russian": "месяц",
+      "transcription": "/mʌnθ/",
+      "example": "June is my favorite ___."
+    },
+    {
+      "english": "week",
+      "russian": "неделя",
+      "transcription": "/wik/",
+      "example": "I play tennis twice a ___."
+    },
+    {
+      "english": "day",
+      "russian": "день",
+      "transcription": "/deɪ/",
+      "example": "Monday is the first ___ of the week."
+    },
+    {
+      "english": "hour",
+      "russian": "час",
+      "transcription": "/ˈaʊər/",
+      "example": "One ___ has sixty minutes."
+    },
+    {
+      "english": "minute",
+      "russian": "минута",
+      "transcription": "/ˈmɪnɪt/",
+      "example": "Wait a ___, please."
+    },
+    {
+      "english": "morning",
+      "russian": "утро",
+      "transcription": "/ˈmɔrnɪŋ/",
+      "example": "Good ___! How are you?"
+    },
+    {
+      "english": "evening",
+      "russian": "вечер",
+      "transcription": "/ˈivnɪŋ/",
+      "example": "We watch TV in the ___."
+    },
+    {
+      "english": "night",
+      "russian": "ночь",
+      "transcription": "/naɪt/",
+      "example": "I sleep eight hours every ___."
+    },
+    {
+      "english": "world",
+      "russian": "мир",
+      "transcription": "/wɜrld/",
+      "example": "There are many countries in the ___."
+    },
+    {
+      "english": "life",
+      "russian": "жизнь",
+      "transcription": "/laɪf/",
+      "example": "Family is the most important thing in my ___."
+    },
+    {
+      "english": "man",
+      "russian": "мужчина",
+      "transcription": "/mæn/",
+      "example": "That tall ___ is my uncle."
+    },
+    {
+      "english": "woman",
+      "russian": "женщина",
+      "transcription": "/ˈwʊmən/",
+      "example": "That ___ is our new teacher."
+    },
+    {
+      "english": "child",
+      "russian": "ребёнок",
+      "transcription": "/tʃaɪld/",
+      "example": "Every ___ loves games."
+    },
+    {
+      "english": "family",
+      "russian": "семья",
+      "transcription": "/ˈfæməli/",
+      "example": "My ___ lives in Moscow."
+    },
+    {
+      "english": "friend",
+      "russian": "друг",
+      "transcription": "/frɛnd/",
+      "example": "He is my best ___."
+    },
+    {
+      "english": "people",
+      "russian": "люди",
+      "transcription": "/ˈpipəl/",
+      "example": "Many ___ in this city ride bikes."
+    },
+    {
+      "english": "name",
+      "russian": "имя",
+      "transcription": "/neɪm/",
+      "example": "My ___ is Anna."
+    },
+    {
+      "english": "head",
+      "russian": "голова",
+      "transcription": "/hɛd/",
+      "example": "My ___ hurts."
+    },
+    {
+      "english": "brother",
+      "russian": "брат",
+      "transcription": "/ˈbrʌðər/",
+      "example": "My ___ is older than me."
+    },
+    {
+      "english": "sister",
+      "russian": "сестра",
+      "transcription": "/ˈsɪstər/",
+      "example": "My little ___ is five years old."
+    },
+    {
+      "english": "mother",
+      "russian": "мама",
+      "transcription": "/ˈmʌðər/",
+      "example": "My ___ cooks very well."
+    },
+    {
+      "english": "father",
+      "russian": "папа",
+      "transcription": "/ˈfɑðər/",
+      "example": "My ___ works in a hospital."
+    },
+    {
+      "english": "house",
+      "russian": "дом",
+      "transcription": "/haʊs/",
+      "example": "Our ___ has a small garden."
+    },
+    {
+      "english": "home",
+      "russian": "домой",
+      "transcription": "/hoʊm/",
+      "example": "I want to go ___ now."
+    },
+    {
+      "english": "room",
+      "russian": "комната",
+      "transcription": "/rum/",
+      "example": "This ___ has two big windows."
+    },
+    {
+      "english": "door",
+      "russian": "дверь",
+      "transcription": "/dɔr/",
+      "example": "Please close the ___."
+    },
+    {
+      "english": "window",
+      "russian": "окно",
+      "transcription": "/ˈwɪndoʊ/",
+      "example": "Open the ___, please."
+    },
+    {
+      "english": "table",
+      "russian": "стол",
+      "transcription": "/ˈteɪbəl/",
+      "example": "The cups are on the ___."
+    },
+    {
+      "english": "chair",
+      "russian": "стул",
+      "transcription": "/tʃɛr/",
+      "example": "Sit on this ___, please."
+    },
+    {
+      "english": "bed",
+      "russian": "кровать",
+      "transcription": "/bɛd/",
+      "example": "I go to ___ at ten."
+    },
+    {
+      "english": "kitchen",
+      "russian": "кухня",
+      "transcription": "/ˈkɪtʃən/",
+      "example": "Mom is cooking in the ___."
+    },
+    {
+      "english": "garden",
+      "russian": "сад",
+      "transcription": "/ˈɡɑrdən/",
+      "example": "There are many flowers in our ___."
+    },
+    {
+      "english": "key",
+      "russian": "ключ",
+      "transcription": "/ki/",
+      "example": "I can't find my ___."
+    },
+    {
+      "english": "wall",
+      "russian": "стена",
+      "transcription": "/wɔl/",
+      "example": "The ___ in my room is light blue."
+    },
+    {
+      "english": "floor",
+      "russian": "пол",
+      "transcription": "/flɔr/",
+      "example": "The cat is sleeping on the ___."
+    },
+    {
+      "english": "city",
+      "russian": "город",
+      "transcription": "/ˈsɪti/",
+      "example": "Moscow is a very big ___."
+    },
+    {
+      "english": "country",
+      "russian": "страна",
+      "transcription": "/ˈkʌntri/",
+      "example": "France is a beautiful ___."
+    },
+    {
+      "english": "street",
+      "russian": "улица",
+      "transcription": "/strit/",
+      "example": "I live on this ___."
+    },
+    {
+      "english": "road",
+      "russian": "дорога",
+      "transcription": "/roʊd/",
+      "example": "This ___ goes to the sea."
+    },
+    {
+      "english": "car",
+      "russian": "машина",
+      "transcription": "/kɑr/",
+      "example": "My father drives a red ___."
+    },
+    {
+      "english": "bus",
+      "russian": "автобус",
+      "transcription": "/bʌs/",
+      "example": "I go to work by ___."
+    },
+    {
+      "english": "train",
+      "russian": "поезд",
+      "transcription": "/treɪn/",
+      "example": "The ___ leaves at nine."
+    },
+    {
+      "english": "plane",
+      "russian": "самолёт",
+      "transcription": "/pleɪn/",
+      "example": "The ___ flies very high."
+    },
+    {
+      "english": "airport",
+      "russian": "аэропорт",
+      "transcription": "/ˈɛrpɔrt/",
+      "example": "We must be at the ___ at six."
+    },
+    {
+      "english": "station",
+      "russian": "вокзал",
+      "transcription": "/ˈsteɪʃən/",
+      "example": "The train stops at every ___."
+    },
+    {
+      "english": "hotel",
+      "russian": "отель",
+      "transcription": "/hoʊˈtɛl/",
+      "example": "We stayed at a small ___ near the sea."
+    },
+    {
+      "english": "shop",
+      "russian": "магазин",
+      "transcription": "/ʃɑp/",
+      "example": "This ___ sells fresh bread."
+    },
+    {
+      "english": "market",
+      "russian": "рынок",
+      "transcription": "/ˈmɑrkɪt/",
+      "example": "We buy fruit at the ___."
+    },
+    {
+      "english": "park",
+      "russian": "парк",
+      "transcription": "/pɑrk/",
+      "example": "We walk in the ___ on Sundays."
+    },
+    {
+      "english": "ticket",
+      "russian": "билет",
+      "transcription": "/ˈtɪkɪt/",
+      "example": "How much is a ___ to London?"
+    },
+    {
+      "english": "water",
+      "russian": "вода",
+      "transcription": "/ˈwɔtər/",
+      "example": "Can I have a glass of ___?"
+    },
+    {
+      "english": "tree",
+      "russian": "дерево",
+      "transcription": "/tri/",
+      "example": "There is an old ___ near our house."
+    },
+    {
+      "english": "flower",
+      "russian": "цветок",
+      "transcription": "/ˈflaʊər/",
+      "example": "This ___ smells wonderful."
+    },
+    {
+      "english": "sun",
+      "russian": "солнце",
+      "transcription": "/sʌn/",
+      "example": "The ___ is shining today."
+    },
+    {
+      "english": "sky",
+      "russian": "небо",
+      "transcription": "/skaɪ/",
+      "example": "The ___ is blue and clear."
+    },
+    {
+      "english": "sea",
+      "russian": "море",
+      "transcription": "/si/",
+      "example": "We swim in the ___ every summer."
+    },
+    {
+      "english": "river",
+      "russian": "река",
+      "transcription": "/ˈrɪvər/",
+      "example": "There is a long ___ near the city."
+    },
+    {
+      "english": "mountain",
+      "russian": "гора",
+      "transcription": "/ˈmaʊntən/",
+      "example": "That ___ is very high."
+    },
+    {
+      "english": "rain",
+      "russian": "дождь",
+      "transcription": "/reɪn/",
+      "example": "I don't like walking in the ___."
+    },
+    {
+      "english": "snow",
+      "russian": "снег",
+      "transcription": "/snoʊ/",
+      "example": "Children love playing in the ___."
+    },
+    {
+      "english": "weather",
+      "russian": "погода",
+      "transcription": "/ˈwɛðər/",
+      "example": "The ___ is great today."
+    },
+    {
+      "english": "animal",
+      "russian": "животное",
+      "transcription": "/ˈænəməl/",
+      "example": "The elephant is a very big ___."
+    },
+    {
+      "english": "dog",
+      "russian": "собака",
+      "transcription": "/dɔɡ/",
+      "example": "My ___ likes to play with a ball."
+    },
+    {
+      "english": "cat",
+      "russian": "кошка",
+      "transcription": "/kæt/",
+      "example": "Our ___ catches mice at night."
+    },
+    {
+      "english": "bird",
+      "russian": "птица",
+      "transcription": "/bɜrd/",
+      "example": "A small ___ is singing in the tree."
+    },
+    {
+      "english": "fish",
+      "russian": "рыба",
+      "transcription": "/fɪʃ/",
+      "example": "There are many ___ in this river."
+    },
+    {
+      "english": "food",
+      "russian": "еда",
+      "transcription": "/fud/",
+      "example": "Italian ___ is very popular."
+    },
+    {
+      "english": "bread",
+      "russian": "хлеб",
+      "transcription": "/brɛd/",
+      "example": "We need to buy some ___."
+    },
+    {
+      "english": "milk",
+      "russian": "молоко",
+      "transcription": "/mɪlk/",
+      "example": "Put some ___ in my tea, please."
+    },
+    {
+      "english": "coffee",
+      "russian": "кофе",
+      "transcription": "/ˈkɔfi/",
+      "example": "Would you like some ___?"
+    },
+    {
+      "english": "tea",
+      "russian": "чай",
+      "transcription": "/ti/",
+      "example": "I drink ___ with lemon."
+    },
+    {
+      "english": "apple",
+      "russian": "яблоко",
+      "transcription": "/ˈæpəl/",
+      "example": "An ___ a day keeps the doctor away."
+    },
+    {
+      "english": "egg",
+      "russian": "яйцо",
+      "transcription": "/ɛɡ/",
+      "example": "I eat one ___ for breakfast."
+    },
+    {
+      "english": "fruit",
+      "russian": "фрукты",
+      "transcription": "/frut/",
+      "example": "Eat more ___ and vegetables."
+    },
+    {
+      "english": "breakfast",
+      "russian": "завтрак",
+      "transcription": "/ˈbrɛkfəst/",
+      "example": "I have ___ at eight."
+    },
+    {
+      "english": "lunch",
+      "russian": "обед",
+      "transcription": "/lʌntʃ/",
+      "example": "Let's have ___ together."
+    },
+    {
+      "english": "dinner",
+      "russian": "ужин",
+      "transcription": "/ˈdɪnər/",
+      "example": "We cook ___ at home."
+    },
+    {
+      "english": "cup",
+      "russian": "чашка",
+      "transcription": "/kʌp/",
+      "example": "Would you like a ___ of tea?"
+    },
+    {
+      "english": "school",
+      "russian": "школа",
+      "transcription": "/skul/",
+      "example": "My sister goes to ___ at eight."
+    },
+    {
+      "english": "job",
+      "russian": "работа",
+      "transcription": "/dʒɑb/",
+      "example": "She has an interesting ___."
+    },
+    {
+      "english": "office",
+      "russian": "офис",
+      "transcription": "/ˈɔfɪs/",
+      "example": "My mother works in an ___."
+    },
+    {
+      "english": "teacher",
+      "russian": "учитель",
+      "transcription": "/ˈtitʃər/",
+      "example": "Our ___ is very kind."
+    },
+    {
+      "english": "student",
+      "russian": "студент",
+      "transcription": "/ˈstudənt/",
+      "example": "He is a ___ at the university."
+    },
+    {
+      "english": "doctor",
+      "russian": "врач",
+      "transcription": "/ˈdɑktər/",
+      "example": "You should see a ___."
+    },
+    {
+      "english": "hospital",
+      "russian": "больница",
+      "transcription": "/ˈhɑspɪtəl/",
+      "example": "The ___ is near the park."
+    },
+    {
+      "english": "book",
+      "russian": "книга",
+      "transcription": "/bʊk/",
+      "example": "I read one ___ every month."
+    },
+    {
+      "english": "letter",
+      "russian": "письмо",
+      "transcription": "/ˈlɛtər/",
+      "example": "I got a ___ from my friend."
+    },
+    {
+      "english": "question",
+      "russian": "вопрос",
+      "transcription": "/ˈkwɛstʃən/",
+      "example": "Can I ask you a ___?"
+    },
+    {
+      "english": "answer",
+      "russian": "ответ",
+      "transcription": "/ˈænsər/",
+      "example": "I know the ___ to this question."
+    },
+    {
+      "english": "money",
+      "russian": "деньги",
+      "transcription": "/ˈmʌni/",
+      "example": "I don't have much ___."
+    },
+    {
+      "english": "phone",
+      "russian": "телефон",
+      "transcription": "/foʊn/",
+      "example": "My ___ is in my bag."
+    },
+    {
+      "english": "computer",
+      "russian": "компьютер",
+      "transcription": "/kəmˈpjutər/",
+      "example": "I work on my ___ every day."
+    },
+    {
+      "english": "picture",
+      "russian": "картина",
+      "transcription": "/ˈpɪktʃər/",
+      "example": "There is a beautiful ___ on the wall."
+    },
+    {
+      "english": "music",
+      "russian": "музыка",
+      "transcription": "/ˈmjuzɪk/",
+      "example": "I listen to ___ on the bus."
+    },
+    {
+      "english": "song",
+      "russian": "песня",
+      "transcription": "/sɔŋ/",
+      "example": "Sing your favorite ___ for us!"
+    },
+    {
+      "english": "game",
+      "russian": "игра",
+      "transcription": "/ɡeɪm/",
+      "example": "Let's play a ___ after dinner."
+    },
+    {
+      "english": "film",
+      "russian": "фильм",
+      "transcription": "/fɪlm/",
+      "example": "Let's watch a ___ tonight."
+    },
+    {
+      "english": "word",
+      "russian": "слово",
+      "transcription": "/wɜrd/",
+      "example": "What does this ___ mean?"
+    },
+    {
+      "english": "be",
+      "russian": "быть",
+      "transcription": "/bi/",
+      "example": "I want to ___ a doctor."
+    },
+    {
+      "english": "have",
+      "russian": "иметь",
+      "transcription": "/hæv/",
+      "example": "I ___ two brothers."
+    },
+    {
+      "english": "do",
+      "russian": "выполнять",
+      "transcription": "/du/",
+      "example": "Please ___ your homework now."
+    },
+    {
+      "english": "go",
+      "russian": "идти",
+      "transcription": "/ɡoʊ/",
+      "example": "I ___ to school every day."
+    },
+    {
+      "english": "come",
+      "russian": "приходить",
+      "transcription": "/kʌm/",
+      "example": "Please ___ to my party tomorrow."
+    },
+    {
+      "english": "see",
+      "russian": "видеть",
+      "transcription": "/si/",
+      "example": "I can ___ the sea from my window."
+    },
+    {
+      "english": "look",
+      "russian": "смотреть",
+      "transcription": "/lʊk/",
+      "example": "Please ___ at this picture."
+    },
+    {
+      "english": "watch",
+      "russian": "наблюдать",
+      "transcription": "/wɑtʃ/",
+      "example": "I like to ___ birds in the garden."
+    },
+    {
+      "english": "hear",
+      "russian": "слышать",
+      "transcription": "/hɪr/",
+      "example": "Can you ___ the music?"
+    },
+    {
+      "english": "listen",
+      "russian": "слушать",
+      "transcription": "/ˈlɪsən/",
+      "example": "I ___ to music every morning."
+    },
+    {
+      "english": "speak",
+      "russian": "говорить",
+      "transcription": "/spik/",
+      "example": "Do you ___ English?"
+    },
+    {
+      "english": "say",
+      "russian": "сказать",
+      "transcription": "/seɪ/",
+      "example": "What did you ___?"
+    },
+    {
+      "english": "tell",
+      "russian": "рассказывать",
+      "transcription": "/tɛl/",
+      "example": "Please ___ me about your trip."
+    },
+    {
+      "english": "ask",
+      "russian": "спрашивать",
+      "transcription": "/æsk/",
+      "example": "Can I ___ you a question?"
+    },
+    {
+      "english": "read",
+      "russian": "читать",
+      "transcription": "/rid/",
+      "example": "I ___ books before bed."
+    },
+    {
+      "english": "write",
+      "russian": "писать",
+      "transcription": "/raɪt/",
+      "example": "Please ___ your name here."
+    },
+    {
+      "english": "learn",
+      "russian": "учить",
+      "transcription": "/lɜrn/",
+      "example": "I want to ___ Spanish."
+    },
+    {
+      "english": "teach",
+      "russian": "преподавать",
+      "transcription": "/titʃ/",
+      "example": "She wants to ___ English at school."
+    },
+    {
+      "english": "study",
+      "russian": "учиться",
+      "transcription": "/ˈstʌdi/",
+      "example": "We ___ at the library every day."
+    },
+    {
+      "english": "know",
+      "russian": "знать",
+      "transcription": "/noʊ/",
+      "example": "Do you ___ his name?"
+    },
+    {
+      "english": "think",
+      "russian": "думать",
+      "transcription": "/θɪŋk/",
+      "example": "I ___ it is a good idea."
+    },
+    {
+      "english": "understand",
+      "russian": "понимать",
+      "transcription": "/ˌʌndərˈstænd/",
+      "example": "I don't ___ this word."
+    },
+    {
+      "english": "remember",
+      "russian": "помнить",
+      "transcription": "/rɪˈmɛmbər/",
+      "example": "I ___ my first day at school."
+    },
+    {
+      "english": "forget",
+      "russian": "забывать",
+      "transcription": "/fərˈɡɛt/",
+      "example": "Don't ___ your keys."
+    },
+    {
+      "english": "want",
+      "russian": "хотеть",
+      "transcription": "/wɑnt/",
+      "example": "I ___ a cup of tea."
+    },
+    {
+      "english": "need",
+      "russian": "нуждаться",
+      "transcription": "/nid/",
+      "example": "We ___ more time."
+    },
+    {
+      "english": "like",
+      "russian": "нравиться",
+      "transcription": "/laɪk/",
+      "example": "I ___ this song."
+    },
+    {
+      "english": "love",
+      "russian": "любить",
+      "transcription": "/lʌv/",
+      "example": "I ___ my family."
+    },
+    {
+      "english": "help",
+      "russian": "помогать",
+      "transcription": "/hɛlp/",
+      "example": "Can you ___ me with this bag?"
+    },
+    {
+      "english": "give",
+      "russian": "давать",
+      "transcription": "/ɡɪv/",
+      "example": "Please ___ me the book."
+    },
+    {
+      "english": "take",
+      "russian": "брать",
+      "transcription": "/teɪk/",
+      "example": "You can ___ my umbrella."
+    },
+    {
+      "english": "get",
+      "russian": "получать",
+      "transcription": "/ɡɛt/",
+      "example": "Where can I ___ a ticket?"
+    },
+    {
+      "english": "buy",
+      "russian": "покупать",
+      "transcription": "/baɪ/",
+      "example": "I want to ___ a new phone."
+    },
+    {
+      "english": "sell",
+      "russian": "продавать",
+      "transcription": "/sɛl/",
+      "example": "They ___ fruit at the market."
+    },
+    {
+      "english": "pay",
+      "russian": "платить",
+      "transcription": "/peɪ/",
+      "example": "Can I ___ by card?"
+    },
+    {
+      "english": "find",
+      "russian": "находить",
+      "transcription": "/faɪnd/",
+      "example": "I can't ___ my keys."
+    },
+    {
+      "english": "lose",
+      "russian": "терять",
+      "transcription": "/luz/",
+      "example": "Don't ___ your ticket."
+    },
+    {
+      "english": "open",
+      "russian": "открывать",
+      "transcription": "/ˈoʊpən/",
+      "example": "Please ___ the window."
+    },
+    {
+      "english": "close",
+      "russian": "закрывать",
+      "transcription": "/kloʊz/",
+      "example": "Please ___ the door."
+    },
+    {
+      "english": "start",
+      "russian": "начинать",
+      "transcription": "/stɑrt/",
+      "example": "Let's ___ the lesson."
+    },
+    {
+      "english": "finish",
+      "russian": "заканчивать",
+      "transcription": "/ˈfɪnɪʃ/",
+      "example": "I must ___ this work today."
+    },
+    {
+      "english": "stop",
+      "russian": "останавливаться",
+      "transcription": "/stɑp/",
+      "example": "The bus will ___ here."
+    },
+    {
+      "english": "play",
+      "russian": "играть",
+      "transcription": "/pleɪ/",
+      "example": "Children ___ in the park."
+    },
+    {
+      "english": "run",
+      "russian": "бегать",
+      "transcription": "/rʌn/",
+      "example": "I ___ in the park every morning."
+    },
+    {
+      "english": "walk",
+      "russian": "ходить пешком",
+      "transcription": "/wɔk/",
+      "example": "We ___ to school together."
+    },
+    {
+      "english": "swim",
+      "russian": "плавать",
+      "transcription": "/swɪm/",
+      "example": "I can ___ very well."
+    },
+    {
+      "english": "fly",
+      "russian": "летать",
+      "transcription": "/flaɪ/",
+      "example": "Birds ___ in the sky."
+    },
+    {
+      "english": "drive",
+      "russian": "водить",
+      "transcription": "/draɪv/",
+      "example": "Can you ___ a car?"
+    },
+    {
+      "english": "travel",
+      "russian": "путешествовать",
+      "transcription": "/ˈtrævəl/",
+      "example": "I want to ___ around the world."
+    },
+    {
+      "english": "visit",
+      "russian": "навещать",
+      "transcription": "/ˈvɪzɪt/",
+      "example": "We ___ our grandmother every Sunday."
+    },
+    {
+      "english": "wait",
+      "russian": "ждать",
+      "transcription": "/weɪt/",
+      "example": "Please ___ for me here."
+    },
+    {
+      "english": "meet",
+      "russian": "встречать",
+      "transcription": "/mit/",
+      "example": "Let's ___ at the station."
+    },
+    {
+      "english": "call",
+      "russian": "звонить",
+      "transcription": "/kɔl/",
+      "example": "I will ___ you tomorrow."
+    },
+    {
+      "english": "eat",
+      "russian": "есть",
+      "transcription": "/it/",
+      "example": "We ___ dinner at seven."
+    },
+    {
+      "english": "drink",
+      "russian": "пить",
+      "transcription": "/drɪŋk/",
+      "example": "I ___ coffee every morning."
+    },
+    {
+      "english": "cook",
+      "russian": "готовить",
+      "transcription": "/kʊk/",
+      "example": "I ___ dinner for my family."
+    },
+    {
+      "english": "sleep",
+      "russian": "спать",
+      "transcription": "/slip/",
+      "example": "I usually ___ eight hours."
+    },
+    {
+      "english": "make",
+      "russian": "делать",
+      "transcription": "/meɪk/",
+      "example": "Let's ___ a cake."
+    },
+    {
+      "english": "good",
+      "russian": "хороший",
+      "transcription": "/ɡʊd/",
+      "example": "She is a ___ teacher."
+    },
+    {
+      "english": "bad",
+      "russian": "плохой",
+      "transcription": "/bæd/",
+      "example": "The weather is ___ today."
+    },
+    {
+      "english": "big",
+      "russian": "большой",
+      "transcription": "/bɪɡ/",
+      "example": "They live in a ___ city."
+    },
+    {
+      "english": "small",
+      "russian": "маленький",
+      "transcription": "/smɔl/",
+      "example": "I have a ___ dog."
+    },
+    {
+      "english": "new",
+      "russian": "новый",
+      "transcription": "/nu/",
+      "example": "I want to buy a ___ car."
+    },
+    {
+      "english": "old",
+      "russian": "старый",
+      "transcription": "/oʊld/",
+      "example": "This is a very ___ house."
+    },
+    {
+      "english": "young",
+      "russian": "молодой",
+      "transcription": "/jʌŋ/",
+      "example": "Our teacher is very ___."
+    },
+    {
+      "english": "long",
+      "russian": "длинный",
+      "transcription": "/lɔŋ/",
+      "example": "It is a ___ road."
+    },
+    {
+      "english": "short",
+      "russian": "короткий",
+      "transcription": "/ʃɔrt/",
+      "example": "Her hair is very ___."
+    },
+    {
+      "english": "tall",
+      "russian": "высокий",
+      "transcription": "/tɔl/",
+      "example": "My brother is very ___."
+    },
+    {
+      "english": "hot",
+      "russian": "горячий",
+      "transcription": "/hɑt/",
+      "example": "Be careful! The tea is ___."
+    },
+    {
+      "english": "cold",
+      "russian": "холодный",
+      "transcription": "/koʊld/",
+      "example": "The water in the river is ___."
+    },
+    {
+      "english": "warm",
+      "russian": "тёплый",
+      "transcription": "/wɔrm/",
+      "example": "The day was ___ and sunny."
+    },
+    {
+      "english": "fast",
+      "russian": "быстрый",
+      "transcription": "/fæst/",
+      "example": "This train is very ___."
+    },
+    {
+      "english": "slow",
+      "russian": "медленный",
+      "transcription": "/sloʊ/",
+      "example": "The bus is very ___ in the morning."
+    },
+    {
+      "english": "easy",
+      "russian": "лёгкий",
+      "transcription": "/ˈizi/",
+      "example": "This question is ___."
+    },
+    {
+      "english": "difficult",
+      "russian": "трудный",
+      "transcription": "/ˈdɪfɪkəlt/",
+      "example": "Chinese is a ___ language."
+    },
+    {
+      "english": "happy",
+      "russian": "счастливый",
+      "transcription": "/ˈhæpi/",
+      "example": "I am very ___ today."
+    },
+    {
+      "english": "sad",
+      "russian": "грустный",
+      "transcription": "/sæd/",
+      "example": "Why are you so ___?"
+    },
+    {
+      "english": "angry",
+      "russian": "сердитый",
+      "transcription": "/ˈæŋɡri/",
+      "example": "Don't be ___ with me."
+    },
+    {
+      "english": "tired",
+      "russian": "усталый",
+      "transcription": "/ˈtaɪərd/",
+      "example": "I am ___ after work."
+    },
+    {
+      "english": "hungry",
+      "russian": "голодный",
+      "transcription": "/ˈhʌŋɡri/",
+      "example": "The children are ___ after school."
+    },
+    {
+      "english": "beautiful",
+      "russian": "красивый",
+      "transcription": "/ˈbjutəfəl/",
+      "example": "What a ___ flower!"
+    },
+    {
+      "english": "nice",
+      "russian": "приятный",
+      "transcription": "/naɪs/",
+      "example": "Have a ___ day!"
+    },
+    {
+      "english": "kind",
+      "russian": "добрый",
+      "transcription": "/kaɪnd/",
+      "example": "She is very ___ to animals."
+    },
+    {
+      "english": "funny",
+      "russian": "смешной",
+      "transcription": "/ˈfʌni/",
+      "example": "This film is really ___."
+    },
+    {
+      "english": "interesting",
+      "russian": "интересный",
+      "transcription": "/ˈɪntrəstɪŋ/",
+      "example": "This book is very ___."
+    },
+    {
+      "english": "important",
+      "russian": "важный",
+      "transcription": "/ɪmˈpɔrtənt/",
+      "example": "This is an ___ question."
+    },
+    {
+      "english": "expensive",
+      "russian": "дорогой",
+      "transcription": "/ɪkˈspɛnsɪv/",
+      "example": "This hotel is too ___."
+    },
+    {
+      "english": "cheap",
+      "russian": "дешёвый",
+      "transcription": "/tʃip/",
+      "example": "The tickets are very ___."
+    },
+    {
+      "english": "always",
+      "russian": "всегда",
+      "transcription": "/ˈɔlweɪz/",
+      "example": "I ___ drink tea in the morning."
+    },
+    {
+      "english": "often",
+      "russian": "часто",
+      "transcription": "/ˈɔfən/",
+      "example": "We ___ play football after school."
+    },
+    {
+      "english": "usually",
+      "russian": "обычно",
+      "transcription": "/ˈjuʒuəli/",
+      "example": "I ___ get up at seven."
+    },
+    {
+      "english": "sometimes",
+      "russian": "иногда",
+      "transcription": "/ˈsʌmtaɪmz/",
+      "example": "We ___ go to the cinema."
+    },
+    {
+      "english": "never",
+      "russian": "никогда",
+      "transcription": "/ˈnɛvər/",
+      "example": "I ___ eat meat."
+    },
+    {
+      "english": "today",
+      "russian": "сегодня",
+      "transcription": "/təˈdeɪ/",
+      "example": "We have an English lesson ___."
+    },
+    {
+      "english": "tomorrow",
+      "russian": "завтра",
+      "transcription": "/təˈmɑroʊ/",
+      "example": "See you ___!"
+    },
+    {
+      "english": "yesterday",
+      "russian": "вчера",
+      "transcription": "/ˈjɛstərdeɪ/",
+      "example": "I was at home ___."
+    },
+    {
+      "english": "now",
+      "russian": "сейчас",
+      "transcription": "/naʊ/",
+      "example": "I am busy right ___."
+    },
+    {
+      "english": "here",
+      "russian": "здесь",
+      "transcription": "/hɪr/",
+      "example": "Come ___, please!"
+    },
+    {
+      "english": "together",
+      "russian": "вместе",
+      "transcription": "/təˈɡɛðər/",
+      "example": "Let's go to the park ___."
+    },
+    {
+      "english": "well",
+      "russian": "хорошо",
+      "transcription": "/wɛl/",
+      "example": "She speaks English very ___."
+    }
+  ]
+}
