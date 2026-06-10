@@ -11,7 +11,8 @@ export function Page({ children, withNav = true, pad = true }: PageProps) {
     <div
       className="page-scroll"
       style={{
-        minHeight: "100dvh",
+        height: "100%",
+        overflowY: "auto",
         paddingTop: 20,
         paddingBottom: withNav ? 96 : 28,
         paddingLeft: pad ? 18 : 0,
