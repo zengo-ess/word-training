@@ -7,7 +7,9 @@ import { ProfileScreen } from "./screens/ProfileScreen";
 import { DeckDetailScreen } from "./screens/DeckDetailScreen";
 import { WordSheet } from "./screens/WordSheet";
 import { AddWordScreen } from "./screens/AddWordScreen";
-import type { Deck, WordWithProgress } from "./api/types";
+import { TrainerScreen } from "./screens/TrainerScreen";
+import { fetchTodayTraining } from "./api/trainingApi";
+import type { Deck, Word, WordWithProgress } from "./api/types";
 
 type Overlay = { type: "deck"; deck: Deck } | { type: "add"; deckId: string };
 
@@ -16,18 +18,25 @@ export function AppShell() {
   const [stack, setStack] = useState<Overlay[]>([]);
   const [sheetWord, setSheetWord] = useState<WordWithProgress | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
+  const [trainerWords, setTrainerWords] = useState<Word[] | null>(null);
 
   const top = stack[stack.length - 1] ?? null;
   const back = () => setStack((s) => s.slice(0, -1));
   const openDeck = (deck: Deck) => setStack((s) => [...s, { type: "deck", deck }]);
 
+  const openTrainer = () => {
+    void fetchTodayTraining().then(({ newWords }) => {
+      if (newWords.length > 0) {
+        setTrainerWords(newWords.map((lw) => lw.word));
+      }
+    });
+  };
+
   return (
     <>
       {tab === "home" ? (
         <HomeScreen
-          onLearn={() => {
-            /* План 10 */
-          }}
+          onLearn={openTrainer}
           onReview={() => {
             /* План 11 */
           }}
@@ -46,9 +55,7 @@ export function AppShell() {
             setStack([]);
             setTab(t);
           }}
-          onLearn={() => {
-            /* запуск тренажёра — План 10 */
-          }}
+          onLearn={openTrainer}
         />
       ) : null}
 
@@ -59,9 +66,7 @@ export function AppShell() {
           onBack={back}
           onWord={(w) => setSheetWord(w)}
           onAddWord={() => setStack((s) => [...s, { type: "add", deckId: top.deck.id }])}
-          onLearn={() => {
-            /* План 10 */
-          }}
+          onLearn={openTrainer}
           onReview={() => {
             /* План 11 */
           }}
@@ -74,6 +79,17 @@ export function AppShell() {
           onClose={back}
           onSaved={() => {
             back();
+            setReloadKey((k) => k + 1);
+          }}
+        />
+      ) : null}
+
+      {trainerWords ? (
+        <TrainerScreen
+          batch={trainerWords}
+          onClose={() => setTrainerWords(null)}
+          onDone={() => {
+            setTrainerWords(null);
             setReloadKey((k) => k + 1);
           }}
         />
