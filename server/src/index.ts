@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { loadConfig } from "./config.js";
 import { createConnection } from "./db/connection.js";
 import { runMigrations } from "./db/migrate.js";
+import { seedBuiltins } from "./db/seedBuiltins.js";
 import { createApp } from "./app.js";
 
 const config = loadConfig(process.env);
@@ -12,6 +13,7 @@ mkdirSync(join(config.uploadsDir, "audio"), { recursive: true });
 const dbFile = process.env.DB_FILE ?? "data/word-training.sqlite";
 const db = createConnection(dbFile);
 runMigrations(db);
+seedBuiltins(db, process.env.DATA_DIR ?? "../data");
 
 const app = createApp(config, db);
 app.listen(config.port, () => {
