@@ -37,3 +37,15 @@ export async function postTrainingResult(
     fetchFn,
   );
 }
+
+export async function postReviewResult(
+  wordId: string,
+  correct: boolean,
+  fetchFn: typeof fetch = fetch,
+): Promise<{ progress: Progress }> {
+  return apiRequest<{ progress: Progress }>(
+    "/api/training/result",
+    { method: "POST", body: { wordId, mode: "review", correct }, token: getToken() },
+    fetchFn,
+  );
+}

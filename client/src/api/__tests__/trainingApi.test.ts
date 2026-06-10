@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { fetchTodayTraining, postTrainingResult } from "../trainingApi";
+import { fetchTodayTraining, postTrainingResult, postReviewResult } from "../trainingApi";
 
 function mockFetch(body: unknown): typeof fetch {
   return (async (_url: string, _init?: RequestInit) => ({
@@ -53,5 +53,14 @@ describe("trainingApi", () => {
     const body = JSON.parse(captured.init.body as string) as Record<string, unknown>;
     expect(body.mode).toBe("step");
     expect(body.currentType).toBe(2);
+  });
+
+  it("postReviewResult шлёт review с correct", async () => {
+    const { captured, fn } = captureFetch({ progress: {} });
+    await postReviewResult("w1", true, fn);
+    expect(captured.url).toBe("/api/training/result");
+    const body = JSON.parse(captured.init.body as string) as Record<string, unknown>;
+    expect(body.mode).toBe("review");
+    expect(body.correct).toBe(true);
   });
 });
