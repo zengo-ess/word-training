@@ -10,15 +10,16 @@ export function checkPassword(input: string, expected: string): boolean {
   return timingSafeEqual(a, b);
 }
 
-export function signToken(secret: string): string {
-  return jwt.sign({ sub: "owner" }, secret, { expiresIn: "30d" });
+export function signToken(userId: string, secret: string): string {
+  return jwt.sign({ sub: userId }, secret, { expiresIn: "30d" });
 }
 
-export function verifyToken(token: string, secret: string): boolean {
+export function verifyToken(token: string, secret: string): string | null {
   try {
-    jwt.verify(token, secret);
-    return true;
+    const payload = jwt.verify(token, secret);
+    const sub = typeof payload === "object" ? payload.sub : undefined;
+    return typeof sub === "string" ? sub : null;
   } catch {
-    return false;
+    return null;
   }
 }

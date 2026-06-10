@@ -20,9 +20,9 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
   // Статика озвучки (публично — браузерный <audio> не шлёт заголовок авторизации)
   app.use("/uploads", express.static(config.uploadsDir));
 
-  app.use("/api/auth", createAuthRouter(config));
+  app.use("/api/auth", createAuthRouter(config, db));
 
-  const requireAuth = createAuthMiddleware(config.jwtSecret);
+  const requireAuth = createAuthMiddleware(config.jwtSecret, db);
   app.use("/api/decks", requireAuth, createDecksRouter(db));
   app.use(
     "/api/words",

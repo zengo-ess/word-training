@@ -20,17 +20,17 @@ describe("checkPassword", () => {
 });
 
 describe("signToken / verifyToken", () => {
-  it("подписанный токен успешно проверяется", () => {
-    const token = signToken(SECRET);
-    expect(verifyToken(token, SECRET)).toBe(true);
+  it("verifyToken возвращает userId из токена", () => {
+    const token = signToken("user-1", SECRET);
+    expect(verifyToken(token, SECRET)).toBe("user-1");
   });
 
-  it("токен с неверным секретом не проходит проверку", () => {
-    const token = signToken(SECRET);
-    expect(verifyToken(token, "other-secret")).toBe(false);
+  it("чужой секрет — null", () => {
+    const token = signToken("user-1", SECRET);
+    expect(verifyToken(token, "other-secret")).toBeNull();
   });
 
-  it("мусорный токен не проходит проверку", () => {
-    expect(verifyToken("not-a-token", SECRET)).toBe(false);
+  it("мусорный токен — null", () => {
+    expect(verifyToken("not-a-token", SECRET)).toBeNull();
   });
 });
