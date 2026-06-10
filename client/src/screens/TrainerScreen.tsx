@@ -36,7 +36,7 @@ function SegBar({ total, done }: { total: number; done: number }) {
   );
 }
 
-function FeedbackBar({ kind, word }: { kind: "correct" | "wrong"; word: Word }) {
+export function FeedbackBar({ kind, word }: { kind: "correct" | "wrong"; word: Word }) {
   const ok = kind === "correct";
   return (
     <div
@@ -461,7 +461,7 @@ function Assemble({
   );
 }
 
-function Exercise({
+export function Exercise({
   layer,
   word,
   pool,
