@@ -8,6 +8,7 @@ import { DeckDetailScreen } from "./screens/DeckDetailScreen";
 import { WordSheet } from "./screens/WordSheet";
 import { AddWordScreen } from "./screens/AddWordScreen";
 import { TrainerScreen } from "./screens/TrainerScreen";
+import { ReviewScreen } from "./screens/ReviewScreen";
 import { fetchTodayTraining } from "./api/trainingApi";
 import type { Deck, Word, WordWithProgress } from "./api/types";
 
@@ -19,6 +20,7 @@ export function AppShell() {
   const [sheetWord, setSheetWord] = useState<WordWithProgress | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
   const [trainerWords, setTrainerWords] = useState<Word[] | null>(null);
+  const [reviewWords, setReviewWords] = useState<Word[] | null>(null);
 
   const top = stack[stack.length - 1] ?? null;
   const back = () => setStack((s) => s.slice(0, -1));
@@ -32,14 +34,20 @@ export function AppShell() {
     });
   };
 
+  const openReview = () => {
+    void fetchTodayTraining().then(({ reviewWords: due }) => {
+      if (due.length > 0) {
+        setReviewWords(due.map((r) => r.word));
+      }
+    });
+  };
+
   return (
     <>
       {tab === "home" ? (
         <HomeScreen
           onLearn={openTrainer}
-          onReview={() => {
-            /* План 11 */
-          }}
+          onReview={openReview}
           onOpenDeck={openDeck}
           onProfile={() => setTab("profile")}
         />
@@ -67,9 +75,7 @@ export function AppShell() {
           onWord={(w) => setSheetWord(w)}
           onAddWord={() => setStack((s) => [...s, { type: "add", deckId: top.deck.id }])}
           onLearn={openTrainer}
-          onReview={() => {
-            /* План 11 */
-          }}
+          onReview={openReview}
         />
       ) : null}
 
@@ -90,6 +96,17 @@ export function AppShell() {
           onClose={() => setTrainerWords(null)}
           onDone={() => {
             setTrainerWords(null);
+            setReloadKey((k) => k + 1);
+          }}
+        />
+      ) : null}
+
+      {reviewWords ? (
+        <ReviewScreen
+          dueWords={reviewWords}
+          onClose={() => setReviewWords(null)}
+          onDone={() => {
+            setReviewWords(null);
             setReloadKey((k) => k + 1);
           }}
         />
