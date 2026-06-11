@@ -4,6 +4,7 @@ export interface AppConfig {
   unsplashAccessKey: string;
   googleTtsApiKey: string;
   uploadsDir: string;
+  clientDistDir: string;
   port: number;
 }
 
@@ -24,6 +25,7 @@ export function loadConfig(env: Record<string, string | undefined>): AppConfig {
     unsplashAccessKey: env.UNSPLASH_ACCESS_KEY ?? "",
     googleTtsApiKey: env.GOOGLE_TTS_API_KEY ?? "",
     uploadsDir: env.UPLOADS_DIR ?? "uploads",
+    clientDistDir: env.CLIENT_DIST ?? "",
     port: env.PORT ? Number(env.PORT) : 3001,
   };
 }

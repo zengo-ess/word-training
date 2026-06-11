@@ -1,3 +1,4 @@
+import { join, resolve } from "node:path";
 import express, { type Express } from "express";
 import type Database from "better-sqlite3";
 import type { AppConfig } from "./config.js";
@@ -36,6 +37,19 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
   app.use("/api/training", requireAuth, createTrainingRouter(db));
   app.use("/api/stats", requireAuth, createStatsRouter(db));
   app.use("/api/unsplash", requireAuth, createUnsplashRouter(config.unsplashAccessKey));
+
+  // Прод: раздаём собранный клиент; всё, что не /api и не /uploads — SPA-фоллбэк на index.html
+  if (config.clientDistDir) {
+    const dist = resolve(config.clientDistDir);
+    app.use(express.static(dist));
+    app.get("*", (req, res, next) => {
+      if (req.path.startsWith("/api") || req.path.startsWith("/uploads")) {
+        next();
+        return;
+      }
+      res.sendFile(join(dist, "index.html"));
+    });
+  }
 
   return app;
 }

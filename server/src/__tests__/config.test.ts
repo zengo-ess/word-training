@@ -32,6 +32,13 @@ describe("loadConfig", () => {
     expect(config.uploadsDir).toBe("uploads");
   });
 
+  it("читает CLIENT_DIST, по умолчанию пустой", () => {
+    expect(loadConfig({ APP_PASSWORD: "p", JWT_SECRET: "j" }).clientDistDir).toBe("");
+    expect(
+      loadConfig({ APP_PASSWORD: "p", JWT_SECRET: "j", CLIENT_DIST: "/app/public" }).clientDistDir,
+    ).toBe("/app/public");
+  });
+
   it("бросает ошибку, если нет APP_PASSWORD или JWT_SECRET", () => {
     expect(() => loadConfig({ JWT_SECRET: "j" })).toThrow(/APP_PASSWORD/);
     expect(() => loadConfig({ APP_PASSWORD: "p" })).toThrow(/JWT_SECRET/);
