@@ -107,3 +107,24 @@ describe("AuthProvider / useAuth", () => {
     expect(localStorage.getItem("wt_user")).toBeNull();
   });
 });
+
+describe("wt-unauthorized", () => {
+  it("событие разлогинивает пользователя", () => {
+    localStorage.setItem("wt_token", "STALE");
+    localStorage.setItem("wt_user", JSON.stringify({ id: "u1", name: "Женя" }));
+    render(
+      <AuthProvider>
+        <Probe />
+      </AuthProvider>,
+    );
+    expect(screen.getByTestId("state")).toHaveTextContent("in");
+
+    act(() => {
+      window.dispatchEvent(new Event("wt-unauthorized"));
+    });
+
+    expect(screen.getByTestId("state")).toHaveTextContent("out");
+    expect(localStorage.getItem("wt_token")).toBeNull();
+    expect(localStorage.getItem("wt_user")).toBeNull();
+  });
+});

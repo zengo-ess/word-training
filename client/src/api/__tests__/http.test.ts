@@ -56,3 +56,31 @@ describe("apiRequest", () => {
     ).rejects.toMatchObject({ status: 401, message: "Неверный пароль" });
   });
 });
+
+describe("apiRequest 401", () => {
+  it("диспатчит wt-unauthorized для авторизованного запроса", async () => {
+    let fired = false;
+    const onEvent = () => {
+      fired = true;
+    };
+    window.addEventListener("wt-unauthorized", onEvent);
+    await expect(
+      apiRequest("/api/x", { token: "stale" }, mockFetch(401, { error: "Не авторизован" })),
+    ).rejects.toThrow();
+    window.removeEventListener("wt-unauthorized", onEvent);
+    expect(fired).toBe(true);
+  });
+
+  it("НЕ диспатчит wt-unauthorized для запроса без токена (логин)", async () => {
+    let fired = false;
+    const onEvent = () => {
+      fired = true;
+    };
+    window.addEventListener("wt-unauthorized", onEvent);
+    await expect(
+      apiRequest("/api/auth/login", { method: "POST", body: {} }, mockFetch(401, { error: "Неверный пароль" })),
+    ).rejects.toThrow();
+    window.removeEventListener("wt-unauthorized", onEvent);
+    expect(fired).toBe(false);
+  });
+});

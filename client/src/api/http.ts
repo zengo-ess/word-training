@@ -40,6 +40,10 @@ export async function apiRequest<T>(
   });
 
   if (!response.ok) {
+    if (response.status === 401 && options.token) {
+      // Токен протух или невалиден — сообщаем приложению, чтобы оно разлогинило
+      window.dispatchEvent(new Event("wt-unauthorized"));
+    }
     const error = new Error(await extractError(response)) as ApiError;
     error.status = response.status;
     throw error;

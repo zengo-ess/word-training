@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import {
   clearStoredUser,
   clearToken,
@@ -45,6 +45,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setToken(null);
     setUser(null);
   };
+
+  // Сервер ответил 401 на авторизованный запрос — сессия мертва, выходим к выбору профиля
+  useEffect(() => {
+    window.addEventListener("wt-unauthorized", logout);
+    return () => window.removeEventListener("wt-unauthorized", logout);
+  }, []);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated: token !== null, user, login, register, logout }}>
