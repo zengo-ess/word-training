@@ -7,7 +7,7 @@ import { ProfileScreen } from "../ProfileScreen";
 
 const logoutMock = vi.fn();
 vi.mock("../../auth/AuthContext", () => ({
-  useAuth: () => ({ logout: logoutMock }),
+  useAuth: () => ({ logout: logoutMock, user: { id: "u1", name: "Женя" } }),
 }));
 
 describe("ProfileScreen", () => {
@@ -16,6 +16,12 @@ describe("ProfileScreen", () => {
     expect(screen.getByText("Профиль")).toBeInTheDocument();
     expect(screen.getByText("Дневная цель")).toBeInTheDocument();
     expect(screen.getByText("Направление повторов")).toBeInTheDocument();
+  });
+
+  it("показывает имя пользователя и первую букву в аватаре", () => {
+    render(<ProfileScreen />);
+    expect(screen.getByText("Женя")).toBeInTheDocument();
+    expect(screen.getByText("Ж")).toBeInTheDocument();
   });
 
   it("кнопка выйти вызывает logout", async () => {

@@ -1,10 +1,20 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
-import { clearToken, getToken, saveToken } from "./token";
-import { login as loginApi } from "./authApi";
+import {
+  clearStoredUser,
+  clearToken,
+  getStoredUser,
+  getToken,
+  saveStoredUser,
+  saveToken,
+  type StoredUser,
+} from "./token";
+import { login as loginApi, register as registerApi } from "./authApi";
 
 interface AuthValue {
   isAuthenticated: boolean;
-  login: (password: string) => Promise<void>;
+  user: StoredUser | null;
+  login: (userId: string, password: string) => Promise<void>;
+  register: (name: string, password: string, familyCode: string) => Promise<void>;
   logout: () => void;
 }
 
@@ -12,20 +22,32 @@ const AuthContext = createContext<AuthValue | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [token, setToken] = useState<string | null>(() => getToken());
+  const [user, setUser] = useState<StoredUser | null>(() => getStoredUser());
 
-  const login = async (password: string): Promise<void> => {
-    const newToken = await loginApi(password);
-    saveToken(newToken);
-    setToken(newToken);
+  const apply = (result: { token: string; user: StoredUser }): void => {
+    saveToken(result.token);
+    saveStoredUser(result.user);
+    setToken(result.token);
+    setUser(result.user);
+  };
+
+  const login = async (userId: string, password: string): Promise<void> => {
+    apply(await loginApi(userId, password));
+  };
+
+  const register = async (name: string, password: string, familyCode: string): Promise<void> => {
+    apply(await registerApi(name, password, familyCode));
   };
 
   const logout = (): void => {
     clearToken();
+    clearStoredUser();
     setToken(null);
+    setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated: token !== null, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated: token !== null, user, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

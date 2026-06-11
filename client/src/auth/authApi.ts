@@ -1,13 +1,41 @@
 import { apiRequest } from "../api/http";
 
+export interface AuthUser {
+  id: string;
+  name: string;
+}
+
+export interface AuthResult {
+  token: string;
+  user: AuthUser;
+}
+
+export async function fetchUsers(fetchFn: typeof fetch = fetch): Promise<AuthUser[]> {
+  const data = await apiRequest<{ users: AuthUser[] }>("/api/auth/users", {}, fetchFn);
+  return data.users;
+}
+
 export async function login(
+  userId: string,
   password: string,
   fetchFn: typeof fetch = fetch,
-): Promise<string> {
-  const data = await apiRequest<{ token: string }>(
+): Promise<AuthResult> {
+  return apiRequest<AuthResult>(
     "/api/auth/login",
-    { method: "POST", body: { password } },
+    { method: "POST", body: { userId, password } },
     fetchFn,
   );
-  return data.token;
+}
+
+export async function register(
+  name: string,
+  password: string,
+  familyCode: string,
+  fetchFn: typeof fetch = fetch,
+): Promise<AuthResult> {
+  return apiRequest<AuthResult>(
+    "/api/auth/register",
+    { method: "POST", body: { name, password, familyCode } },
+    fetchFn,
+  );
 }

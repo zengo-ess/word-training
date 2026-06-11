@@ -12,7 +12,7 @@ const SETTINGS_ROWS = [
 ] as const;
 
 export function ProfileScreen() {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
 
   return (
     <Page>
@@ -34,11 +34,13 @@ export function ProfileScreen() {
             justifyContent: "center",
           }}
         >
-          <span style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 700, color: "#fff" }}>Я</span>
+          <span style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 700, color: "#fff" }}>
+            {(user?.name ?? "Я").charAt(0).toUpperCase()}
+          </span>
         </div>
         <div style={{ flex: 1 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 19, fontWeight: 700, color: "var(--ink)" }}>
-            Моё обучение
+            {user?.name ?? "Профиль"}
           </div>
           <div style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-mute)" }}>Личный словарь</div>
         </div>
