@@ -4,12 +4,14 @@ export function isoDay(date: Date): string {
   return date.toISOString().slice(0, 10);
 }
 
-export function recordStudyDay(db: Database.Database, day: string): void {
-  db.prepare("INSERT OR IGNORE INTO study_days (day) VALUES (?)").run(day);
+export function recordStudyDay(db: Database.Database, userId: string, day: string): void {
+  db.prepare("INSERT OR IGNORE INTO study_days (user_id, day) VALUES (?, ?)").run(userId, day);
 }
 
-export function computeStreak(db: Database.Database, now: Date): number {
-  const rows = db.prepare("SELECT day FROM study_days").all() as { day: string }[];
+export function computeStreak(db: Database.Database, userId: string, now: Date): number {
+  const rows = db
+    .prepare("SELECT day FROM study_days WHERE user_id = ?")
+    .all(userId) as { day: string }[];
   const days = new Set(rows.map((r) => r.day));
   if (days.size === 0) {
     return 0;

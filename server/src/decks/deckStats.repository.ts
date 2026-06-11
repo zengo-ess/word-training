@@ -11,18 +11,19 @@ export interface DeckWithStats {
   learned: number;
 }
 
-export function listDecksWithStats(db: Database.Database): DeckWithStats[] {
+export function listDecksWithStats(db: Database.Database, userId: string): DeckWithStats[] {
   return db
     .prepare(
       `SELECT d.id, d.name, d.is_builtin, d.created_at,
          (SELECT COUNT(*) FROM words w WHERE w.deck_id = d.id) AS total,
          (SELECT COUNT(*) FROM words w
-            JOIN progress p ON p.word_id = w.id
+            JOIN progress p ON p.word_id = w.id AND p.user_id = ?
             WHERE w.deck_id = d.id AND p.learned_at IS NOT NULL) AS learned
        FROM decks d
+       WHERE d.is_builtin = 1 OR d.user_id = ?
        ORDER BY d.is_builtin DESC, d.created_at ASC`,
     )
-    .all() as DeckWithStats[];
+    .all(userId, userId) as DeckWithStats[];
 }
 
 export interface WordWithProgress extends WordRow {
@@ -40,7 +41,11 @@ interface JoinedRow extends WordRow {
   p_correct_reviews: number | null;
 }
 
-export function listWordsWithProgress(db: Database.Database, deckId: string): WordWithProgress[] {
+export function listWordsWithProgress(
+  db: Database.Database,
+  deckId: string,
+  userId: string,
+): WordWithProgress[] {
   const rows = db
     .prepare(
       `SELECT w.*,
@@ -49,11 +54,11 @@ export function listWordsWithProgress(db: Database.Database, deckId: string): Wo
          p.next_review_at AS p_next_review_at, p.total_reviews AS p_total_reviews,
          p.correct_reviews AS p_correct_reviews
        FROM words w
-       LEFT JOIN progress p ON p.word_id = w.id
+       LEFT JOIN progress p ON p.word_id = w.id AND p.user_id = ?
        WHERE w.deck_id = ?
        ORDER BY w.created_at ASC`,
     )
-    .all(deckId) as JoinedRow[];
+    .all(userId, deckId) as JoinedRow[];
 
   return rows.map((r) => {
     const {

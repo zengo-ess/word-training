@@ -15,26 +15,33 @@ export interface TrainingToday {
 
 export function getTodayTraining(
   db: Database.Database,
+  userId: string,
   now: Date,
   batchSize = 20,
 ): TrainingToday {
   return {
-    newWords: listLearnableWords(db, batchSize),
-    reviewWords: listDueReviews(db, now.toISOString()),
+    newWords: listLearnableWords(db, userId, batchSize),
+    reviewWords: listDueReviews(db, userId, now.toISOString()),
   };
 }
 
 export function recordLearningStep(
   db: Database.Database,
+  userId: string,
   wordId: string,
   currentType: number,
 ): ProgressRow {
-  return upsertProgress(db, wordId, { currentType });
+  return upsertProgress(db, userId, wordId, { currentType });
 }
 
-export function markLearned(db: Database.Database, wordId: string, now: Date): ProgressRow {
+export function markLearned(
+  db: Database.Database,
+  userId: string,
+  wordId: string,
+  now: Date,
+): ProgressRow {
   const schedule = initialSchedule(now);
-  return upsertProgress(db, wordId, {
+  return upsertProgress(db, userId, wordId, {
     currentType: null,
     learnedAt: now.toISOString(),
     easeFactor: schedule.easeFactor,
@@ -45,11 +52,12 @@ export function markLearned(db: Database.Database, wordId: string, now: Date): P
 
 export function recordReview(
   db: Database.Database,
+  userId: string,
   wordId: string,
   correct: boolean,
   now: Date,
 ): ProgressRow | undefined {
-  const progress = getProgress(db, wordId);
+  const progress = getProgress(db, userId, wordId);
   if (!progress || progress.learned_at === null) {
     return undefined;
   }
@@ -58,7 +66,7 @@ export function recordReview(
     correct,
     now,
   );
-  return upsertProgress(db, wordId, {
+  return upsertProgress(db, userId, wordId, {
     easeFactor: schedule.easeFactor,
     intervalDays: schedule.intervalDays,
     nextReviewAt: schedule.nextReviewAt,

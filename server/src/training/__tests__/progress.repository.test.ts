@@ -4,23 +4,26 @@ import { describe, it, expect, beforeEach } from "vitest";
 import type Database from "better-sqlite3";
 import { createConnection } from "../../db/connection.js";
 import { runMigrations } from "../../db/migrate.js";
+import { createUser } from "../../auth/users.repository.js";
 import { createDeck } from "../../decks/decks.repository.js";
 import { createWord } from "../../words/words.repository.js";
 import { getProgress, upsertProgress } from "../progress.repository.js";
 
 let db: Database.Database;
+let userId: string;
 let wordId: string;
 
 beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
-  const deckId = createDeck(db, "Колода").id;
+  userId = createUser(db, "Тестер", "salt:hash").id;
+  const deckId = createDeck(db, "Колода", userId).id;
   wordId = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
 });
 
 describe("upsertProgress / getProgress", () => {
   it("создаёт строку прогресса с guid и дефолтами", () => {
-    const progress = upsertProgress(db, wordId, { currentType: 1 });
+    const progress = upsertProgress(db, userId, wordId, { currentType: 1 });
     expect(progress.id).toMatch(/^[0-9a-f-]{36}$/);
     expect(progress.word_id).toBe(wordId);
     expect(progress.current_type).toBe(1);
@@ -31,8 +34,8 @@ describe("upsertProgress / getProgress", () => {
   });
 
   it("обновляет существующую строку, не плодит новую", () => {
-    upsertProgress(db, wordId, { currentType: 1 });
-    const updated = upsertProgress(db, wordId, {
+    upsertProgress(db, userId, wordId, { currentType: 1 });
+    const updated = upsertProgress(db, userId, wordId, {
       currentType: null,
       learnedAt: "2026-06-05T12:00:00.000Z",
       intervalDays: 1,
@@ -46,6 +49,14 @@ describe("upsertProgress / getProgress", () => {
   });
 
   it("getProgress возвращает undefined без строки", () => {
-    expect(getProgress(db, wordId)).toBeUndefined();
+    expect(getProgress(db, userId, wordId)).toBeUndefined();
+  });
+
+  it("прогресс одного пользователя не виден другому", () => {
+    const userB = createUser(db, "Юзер Б", "salt:hash-b");
+    upsertProgress(db, userId, wordId, { currentType: 2 });
+
+    expect(getProgress(db, userId, wordId)?.current_type).toBe(2);
+    expect(getProgress(db, userB.id, wordId)).toBeUndefined();
   });
 });

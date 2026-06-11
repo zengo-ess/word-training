@@ -18,18 +18,20 @@ interface LearnableRow extends WordRow {
 
 export function listLearnableWords(
   db: Database.Database,
+  userId: string,
   limit: number,
 ): LearnableWord[] {
   const rows = db
     .prepare(
       `SELECT w.*, p.current_type AS p_current_type
        FROM words w
-       LEFT JOIN progress p ON p.word_id = w.id
-       WHERE p.id IS NULL OR p.learned_at IS NULL
+       JOIN decks d ON d.id = w.deck_id
+       LEFT JOIN progress p ON p.word_id = w.id AND p.user_id = ?
+       WHERE (d.is_builtin = 1 OR d.user_id = ?) AND (p.id IS NULL OR p.learned_at IS NULL)
        ORDER BY w.created_at ASC
        LIMIT ?`,
     )
-    .all(limit) as LearnableRow[];
+    .all(userId, userId, limit) as LearnableRow[];
 
   return rows.map((row) => {
     const { p_current_type, ...word } = row;
@@ -59,6 +61,7 @@ interface DueRow {
 
 export function listDueReviews(
   db: Database.Database,
+  userId: string,
   nowIso: string,
 ): DueReview[] {
   const rows = db
@@ -70,10 +73,10 @@ export function listDueReviews(
          p.next_review_at, p.total_reviews, p.correct_reviews
        FROM progress p
        JOIN words w ON w.id = p.word_id
-       WHERE p.learned_at IS NOT NULL AND p.next_review_at <= ?
+       WHERE p.user_id = ? AND p.learned_at IS NOT NULL AND p.next_review_at <= ?
        ORDER BY p.next_review_at ASC`,
     )
-    .all(nowIso) as DueRow[];
+    .all(userId, nowIso) as DueRow[];
 
   return rows.map((r) => ({
     word: {

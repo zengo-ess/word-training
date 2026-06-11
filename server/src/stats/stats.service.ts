@@ -15,28 +15,38 @@ export interface Stats {
   decks: DeckWithStats[];
 }
 
-export function getStats(db: Database.Database, now: Date): Stats {
+export function getStats(db: Database.Database, userId: string, now: Date): Stats {
   const nowIso = now.toISOString();
   const today = isoDay(now);
 
   const learned = (
-    db.prepare("SELECT COUNT(*) AS c FROM progress WHERE learned_at IS NOT NULL").get() as { c: number }
+    db
+      .prepare("SELECT COUNT(*) AS c FROM progress WHERE user_id = ? AND learned_at IS NOT NULL")
+      .get(userId) as { c: number }
   ).c;
   const inProgress = (
-    db.prepare("SELECT COUNT(*) AS c FROM progress WHERE learned_at IS NULL").get() as { c: number }
+    db
+      .prepare("SELECT COUNT(*) AS c FROM progress WHERE user_id = ? AND learned_at IS NULL")
+      .get(userId) as { c: number }
   ).c;
   const dueToday = (
     db
-      .prepare("SELECT COUNT(*) AS c FROM progress WHERE learned_at IS NOT NULL AND next_review_at <= ?")
-      .get(nowIso) as { c: number }
+      .prepare(
+        "SELECT COUNT(*) AS c FROM progress WHERE user_id = ? AND learned_at IS NOT NULL AND next_review_at <= ?",
+      )
+      .get(userId, nowIso) as { c: number }
   ).c;
   const learnedToday = (
     db
-      .prepare("SELECT COUNT(*) AS c FROM progress WHERE learned_at IS NOT NULL AND substr(learned_at, 1, 10) = ?")
-      .get(today) as { c: number }
+      .prepare(
+        "SELECT COUNT(*) AS c FROM progress WHERE user_id = ? AND learned_at IS NOT NULL AND substr(learned_at, 1, 10) = ?",
+      )
+      .get(userId, today) as { c: number }
   ).c;
 
-  const studyRows = db.prepare("SELECT day FROM study_days").all() as { day: string }[];
+  const studyRows = db
+    .prepare("SELECT day FROM study_days WHERE user_id = ?")
+    .all(userId) as { day: string }[];
   const studyDays = new Set(studyRows.map((r) => r.day));
   const week = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
@@ -50,8 +60,8 @@ export function getStats(db: Database.Database, now: Date): Stats {
     dueToday,
     learnedToday,
     dailyGoal: DAILY_GOAL,
-    streak: computeStreak(db, now),
+    streak: computeStreak(db, userId, now),
     week,
-    decks: listDecksWithStats(db),
+    decks: listDecksWithStats(db, userId),
   };
 }

@@ -33,16 +33,23 @@ const COLUMN_BY_FIELD: Record<keyof ProgressFields, string> = {
   correctReviews: "correct_reviews",
 };
 
-export function getProgress(db: Database.Database, wordId: string): ProgressRow | undefined {
-  return db.prepare("SELECT * FROM progress WHERE word_id = ?").get(wordId) as ProgressRow | undefined;
+export function getProgress(
+  db: Database.Database,
+  userId: string,
+  wordId: string,
+): ProgressRow | undefined {
+  return db
+    .prepare("SELECT * FROM progress WHERE user_id = ? AND word_id = ?")
+    .get(userId, wordId) as ProgressRow | undefined;
 }
 
 export function upsertProgress(
   db: Database.Database,
+  userId: string,
   wordId: string,
   fields: ProgressFields,
 ): ProgressRow {
-  const existing = getProgress(db, wordId);
+  const existing = getProgress(db, userId, wordId);
 
   if (existing) {
     const sets: string[] = [];
@@ -54,19 +61,22 @@ export function upsertProgress(
       }
     }
     if (sets.length > 0) {
-      values.push(wordId);
-      db.prepare(`UPDATE progress SET ${sets.join(", ")} WHERE word_id = ?`).run(...values);
+      values.push(userId, wordId);
+      db.prepare(
+        `UPDATE progress SET ${sets.join(", ")} WHERE user_id = ? AND word_id = ?`,
+      ).run(...values);
     }
-    return getProgress(db, wordId) as ProgressRow;
+    return getProgress(db, userId, wordId) as ProgressRow;
   }
 
   const id = randomUUID();
   db.prepare(
     `INSERT INTO progress
-       (id, word_id, current_type, learned_at, ease_factor, interval_days, next_review_at, total_reviews, correct_reviews)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       (id, user_id, word_id, current_type, learned_at, ease_factor, interval_days, next_review_at, total_reviews, correct_reviews)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
   ).run(
     id,
+    userId,
     wordId,
     fields.currentType ?? null,
     fields.learnedAt ?? null,
@@ -76,5 +86,5 @@ export function upsertProgress(
     fields.totalReviews ?? 0,
     fields.correctReviews ?? 0,
   );
-  return getProgress(db, wordId) as ProgressRow;
+  return getProgress(db, userId, wordId) as ProgressRow;
 }

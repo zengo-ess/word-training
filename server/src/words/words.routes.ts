@@ -1,6 +1,7 @@
 import { Router } from "express";
 import type Database from "better-sqlite3";
-import { getDeck } from "../decks/decks.repository.js";
+import type { AuthedRequest } from "../auth/auth.middleware.js";
+import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
 import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
 import { translateToRussian } from "../services/mymemory.js";
 import { searchImages } from "../services/unsplash.js";
@@ -37,7 +38,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     });
   });
 
-  router.post("/", async (req, res) => {
+  router.post("/", async (req: AuthedRequest, res) => {
+    const userId = req.userId as string;
     const body = req.body ?? {};
     const deckId = typeof body.deckId === "string" ? body.deckId : "";
     const english = typeof body.english === "string" ? body.english.trim() : "";
@@ -45,7 +47,7 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     const imageUrl = typeof body.imageUrl === "string" ? body.imageUrl : null;
 
     const deck = getDeck(db, deckId);
-    if (!deck) {
+    if (!deck || !canAccessDeck(deck, userId)) {
       res.status(404).json({ error: "Колода не найдена" });
       return;
     }
@@ -75,14 +77,19 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     res.status(201).json({ word: finalWord });
   });
 
-  router.put("/:id", (req, res) => {
+  router.put("/:id", (req: AuthedRequest, res) => {
+    const userId = req.userId as string;
     const word = getWord(db, req.params.id);
     if (!word) {
       res.status(404).json({ error: "Слово не найдено" });
       return;
     }
     const deck = getDeck(db, word.deck_id);
-    if (deck?.is_builtin) {
+    if (!deck || !canAccessDeck(deck, userId)) {
+      res.status(404).json({ error: "Слово не найдено" });
+      return;
+    }
+    if (deck.is_builtin) {
       res.status(403).json({ error: BUILTIN_READONLY });
       return;
     }
@@ -95,14 +102,19 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     res.json({ word: updated });
   });
 
-  router.delete("/:id", (req, res) => {
+  router.delete("/:id", (req: AuthedRequest, res) => {
+    const userId = req.userId as string;
     const word = getWord(db, req.params.id);
     if (!word) {
       res.status(404).json({ error: "Слово не найдено" });
       return;
     }
     const deck = getDeck(db, word.deck_id);
-    if (deck?.is_builtin) {
+    if (!deck || !canAccessDeck(deck, userId)) {
+      res.status(404).json({ error: "Слово не найдено" });
+      return;
+    }
+    if (deck.is_builtin) {
       res.status(403).json({ error: BUILTIN_READONLY });
       return;
     }
@@ -112,7 +124,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
   });
 
   // Скопировать слово из встроенной (или любой) колоды в свою
-  router.post("/:id/copy", (req, res) => {
+  router.post("/:id/copy", (req: AuthedRequest, res) => {
+    const userId = req.userId as string;
     const source = getWord(db, req.params.id);
     if (!source) {
       res.status(404).json({ error: "Слово не найдено" });
@@ -121,7 +134,7 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     const targetDeckId =
       typeof req.body?.targetDeckId === "string" ? req.body.targetDeckId : "";
     const target = getDeck(db, targetDeckId);
-    if (!target) {
+    if (!target || !canAccessDeck(target, userId)) {
       res.status(404).json({ error: "Целевая колода не найдена" });
       return;
     }

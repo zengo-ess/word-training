@@ -4,6 +4,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import type Database from "better-sqlite3";
 import { createConnection } from "../../db/connection.js";
 import { runMigrations } from "../../db/migrate.js";
+import { createUser } from "../../auth/users.repository.js";
 import { createDeck } from "../../decks/decks.repository.js";
 import {
   listWordsByDeck,
@@ -14,12 +15,14 @@ import {
 } from "../words.repository.js";
 
 let db: Database.Database;
+let userId: string;
 let deckId: string;
 
 beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
-  deckId = createDeck(db, "Колода").id;
+  userId = createUser(db, "Тестер", "salt:hash").id;
+  deckId = createDeck(db, "Колода", userId).id;
 });
 
 describe("createWord", () => {
@@ -50,7 +53,7 @@ describe("createWord", () => {
 
 describe("listWordsByDeck", () => {
   it("возвращает только слова указанной колоды", () => {
-    const other = createDeck(db, "Другая").id;
+    const other = createDeck(db, "Другая", userId).id;
     createWord(db, { deckId, english: "cat", russian: "кот" });
     createWord(db, { deckId: other, english: "dog", russian: "собака" });
     const words = listWordsByDeck(db, deckId);
