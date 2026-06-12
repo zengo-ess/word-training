@@ -65,4 +65,80 @@ describe("seedBuiltins", () => {
     runMigrations(db);
     expect(() => seedBuiltins(db, join(dir, "nope"))).not.toThrow();
   });
+
+  it("пишет image_url из imageUrl при первичном сидинге", () => {
+    writeFileSync(
+      join(dir, "01-test.json"),
+      JSON.stringify({
+        name: "Тестовая",
+        words: [
+          {
+            english: "sun",
+            russian: "солнце",
+            transcription: "/sʌn/",
+            example: "The ___ is bright.",
+            imageUrl: "https://images.unsplash.com/photo-sun",
+          },
+          { english: "moon", russian: "луна", transcription: "/muːn/", example: "The ___ is full tonight." },
+        ],
+      }),
+    );
+
+    const db = new Database(":memory:");
+    runMigrations(db);
+    seedBuiltins(db, dir);
+
+    const rows = db.prepare("SELECT english, image_url FROM words ORDER BY english").all() as {
+      english: string;
+      image_url: string | null;
+    }[];
+    expect(rows).toEqual([
+      { english: "moon", image_url: null },
+      { english: "sun", image_url: "https://images.unsplash.com/photo-sun" },
+    ]);
+  });
+
+  it("дозаполняет image_url у уже засеянной колоды, не трогая занятые", () => {
+    const db = new Database(":memory:");
+    runMigrations(db);
+    seedBuiltins(db, dir);
+
+    db.prepare("UPDATE words SET image_url = ? WHERE english = ?").run("https://example.com/custom-moon", "moon");
+
+    writeFileSync(
+      join(dir, "01-test.json"),
+      JSON.stringify({
+        name: "Тестовая",
+        words: [
+          {
+            english: "sun",
+            russian: "солнце",
+            transcription: "/sʌn/",
+            example: "The ___ is bright.",
+            imageUrl: "https://images.unsplash.com/photo-sun",
+          },
+          {
+            english: "moon",
+            russian: "луна",
+            transcription: "/muːn/",
+            example: "The ___ is full tonight.",
+            imageUrl: "https://images.unsplash.com/photo-moon",
+          },
+        ],
+      }),
+    );
+    seedBuiltins(db, dir);
+
+    const rows = db.prepare("SELECT english, image_url FROM words ORDER BY english").all() as {
+      english: string;
+      image_url: string | null;
+    }[];
+    expect(rows).toEqual([
+      { english: "moon", image_url: "https://example.com/custom-moon" },
+      { english: "sun", image_url: "https://images.unsplash.com/photo-sun" },
+    ]);
+
+    const words = db.prepare("SELECT COUNT(*) AS c FROM words").get() as { c: number };
+    expect(words.c).toBe(2);
+  });
 });

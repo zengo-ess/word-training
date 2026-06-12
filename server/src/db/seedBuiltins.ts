@@ -8,6 +8,7 @@ interface SeedWord {
   russian: string;
   transcription: string;
   example: string;
+  imageUrl?: string;
 }
 
 interface SeedDeck {
@@ -27,21 +28,42 @@ export function seedBuiltins(db: Database.Database, dataDir: string): void {
   const deckExists = db.prepare("SELECT id FROM decks WHERE name = ?");
   const insertDeck = db.prepare("INSERT INTO decks (id, name, is_builtin) VALUES (?, ?, 1)");
   const insertWord = db.prepare(
-    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence)
-     VALUES (?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence, image_url)
+     VALUES (?, ?, ?, ?, ?, ?, ?)`,
+  );
+  const backfillImage = db.prepare(
+    "UPDATE words SET image_url = ? WHERE deck_id = ? AND english = ? AND image_url IS NULL",
   );
 
   const seedDeck = db.transaction((deck: SeedDeck) => {
     const deckId = randomUUID();
     insertDeck.run(deckId, deck.name);
     for (const word of deck.words) {
-      insertWord.run(randomUUID(), deckId, word.english, word.russian, word.transcription, word.example);
+      insertWord.run(
+        randomUUID(),
+        deckId,
+        word.english,
+        word.russian,
+        word.transcription,
+        word.example,
+        word.imageUrl ?? null,
+      );
+    }
+  });
+
+  const backfillDeck = db.transaction((deckId: string, deck: SeedDeck) => {
+    for (const word of deck.words) {
+      if (word.imageUrl) {
+        backfillImage.run(word.imageUrl, deckId, word.english);
+      }
     }
   });
 
   for (const file of files) {
     const deck = JSON.parse(readFileSync(join(dataDir, file), "utf8")) as SeedDeck;
-    if (deckExists.get(deck.name)) {
+    const existing = deckExists.get(deck.name) as { id: string } | undefined;
+    if (existing) {
+      backfillDeck(existing.id, deck);
       continue;
     }
     seedDeck(deck);
