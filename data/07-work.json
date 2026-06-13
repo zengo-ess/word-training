@@ -1,45 +1,285 @@
 {
   "name": "Работа",
   "words": [
-    { "english": "job", "russian": "работа", "transcription": "/dʒɑb/", "example": "My brother has a new ___ at a bank." },
-    { "english": "office", "russian": "офис", "transcription": "/ˈɔfɪs/", "example": "She goes to the ___ at nine in the morning." },
-    { "english": "meeting", "russian": "встреча", "transcription": "/ˈmitɪŋ/", "example": "We have a team ___ every Monday." },
-    { "english": "salary", "russian": "зарплата", "transcription": "/ˈsæləri/", "example": "He gets his ___ at the end of the month." },
-    { "english": "boss", "russian": "начальник", "transcription": "/bɔs/", "example": "My ___ is a kind and smart woman." },
-    { "english": "colleague", "russian": "коллега", "transcription": "/ˈkɑliɡ/", "example": "I eat lunch with my ___ from the next desk." },
-    { "english": "career", "russian": "карьера", "transcription": "/kəˈrɪr/", "example": "She wants a ___ in medicine." },
-    { "english": "interview", "russian": "собеседование", "transcription": "/ˈɪntərvju/", "example": "I have a job ___ at ten tomorrow." },
-    { "english": "work", "russian": "труд", "transcription": "/wɜrk/", "example": "Hard ___ helps you learn new things." },
-    { "english": "company", "russian": "компания", "transcription": "/ˈkʌmpəni/", "example": "My father works for a big car ___." },
-    { "english": "manager", "russian": "менеджер", "transcription": "/ˈmænɪdʒər/", "example": "The ___ talks to the team about the plan." },
-    { "english": "employee", "russian": "сотрудник", "transcription": "/ɪmˈplɔɪi/", "example": "Every new ___ gets a desk and a computer." },
-    { "english": "project", "russian": "проект", "transcription": "/ˈprɑdʒɛkt/", "example": "Our team starts a new ___ next week." },
-    { "english": "task", "russian": "задача", "transcription": "/tæsk/", "example": "My first ___ today is to answer emails." },
-    { "english": "deadline", "russian": "срок", "transcription": "/ˈdɛdlaɪn/", "example": "The ___ for this report is Friday." },
-    { "english": "report", "russian": "отчёт", "transcription": "/rɪˈpɔrt/", "example": "She writes a short ___ about the meeting." },
-    { "english": "team", "russian": "команда", "transcription": "/tim/", "example": "Our ___ has five people." },
-    { "english": "schedule", "russian": "расписание", "transcription": "/ˈskɛdʒul/", "example": "My ___ is full of meetings today." },
-    { "english": "desk", "russian": "стол", "transcription": "/dɛsk/", "example": "There is a lamp and a phone on my ___." },
-    { "english": "computer", "russian": "компьютер", "transcription": "/kəmˈpjutər/", "example": "He works on his ___ all day." },
-    { "english": "document", "russian": "документ", "transcription": "/ˈdɑkjəmənt/", "example": "Please print this ___ for the meeting." },
-    { "english": "contract", "russian": "контракт", "transcription": "/ˈkɑntrækt/", "example": "She signs a ___ with the new company." },
-    { "english": "client", "russian": "клиент", "transcription": "/ˈklaɪənt/", "example": "Our new ___ wants a website for his shop." },
-    { "english": "customer", "russian": "покупатель", "transcription": "/ˈkʌstəmər/", "example": "The ___ pays for the shoes at the counter." },
-    { "english": "business", "russian": "бизнес", "transcription": "/ˈbɪznəs/", "example": "My aunt has a small flower ___." },
-    { "english": "skill", "russian": "навык", "transcription": "/skɪl/", "example": "Writing emails in English is a useful ___." },
-    { "english": "training", "russian": "обучение", "transcription": "/ˈtreɪnɪŋ/", "example": "New workers get two weeks of ___." },
-    { "english": "promotion", "russian": "повышение", "transcription": "/prəˈmoʊʃən/", "example": "After three years he gets a ___ at work." },
-    { "english": "resume", "russian": "резюме", "transcription": "/ˈrɛzəmeɪ/", "example": "Send your ___ to the company by email." },
-    { "english": "experience", "russian": "опыт", "transcription": "/ɪkˈspɪriəns/", "example": "She has five years of ___ as a teacher." },
-    { "english": "profession", "russian": "профессия", "transcription": "/prəˈfɛʃən/", "example": "Doctor is a very important ___." },
-    { "english": "worker", "russian": "рабочий", "transcription": "/ˈwɜrkər/", "example": "Each ___ at the factory wears a helmet." },
-    { "english": "factory", "russian": "завод", "transcription": "/ˈfæktəri/", "example": "This ___ makes toys for children." },
-    { "english": "break", "russian": "перерыв", "transcription": "/breɪk/", "example": "We have a coffee ___ at eleven." },
-    { "english": "shift", "russian": "смена", "transcription": "/ʃɪft/", "example": "His night ___ starts at ten in the evening." },
-    { "english": "email", "russian": "письмо", "transcription": "/ˈimeɪl/", "example": "I send an ___ to my boss every morning." },
-    { "english": "phone", "russian": "телефон", "transcription": "/foʊn/", "example": "She answers the ___ at the front desk." },
-    { "english": "presentation", "russian": "презентация", "transcription": "/ˌprizɛnˈteɪʃən/", "example": "He gives a ___ about the new project." },
-    { "english": "conference", "russian": "конференция", "transcription": "/ˈkɑnfərəns/", "example": "Many doctors come to the ___ every year." },
-    { "english": "department", "russian": "отдел", "transcription": "/dɪˈpɑrtmənt/", "example": "She works in the sales ___ of the company." }
+    {
+      "english": "job",
+      "russian": "работа",
+      "transcription": "/dʒɑb/",
+      "example": "My brother has a new ___ at a bank.",
+      "imageUrl": "https://images.unsplash.com/photo-1698077689052-73daf0d5b10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxqb2J8ZW58MXwyfHx8MTc4MTMzNjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "office",
+      "russian": "офис",
+      "transcription": "/ˈɔfɪs/",
+      "example": "She goes to the ___ at nine in the morning.",
+      "imageUrl": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvZmZpY2V8ZW58MXwyfHx8MTc4MTMzNzA0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "meeting",
+      "russian": "встреча",
+      "transcription": "/ˈmitɪŋ/",
+      "example": "We have a team ___ every Monday.",
+      "imageUrl": "https://images.unsplash.com/photo-1637979909766-ccf55518a928?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtZWV0aW5nfGVufDF8Mnx8fDE3ODEzNjI4MTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "salary",
+      "russian": "зарплата",
+      "transcription": "/ˈsæləri/",
+      "example": "He gets his ___ at the end of the month.",
+      "imageUrl": "https://images.unsplash.com/photo-1698285439441-06c88e37fc0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYWxhcnl8ZW58MXwyfHx8MTc4MTM2Mjg5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "boss",
+      "russian": "начальник",
+      "transcription": "/bɔs/",
+      "example": "My ___ is a kind and smart woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1617176892789-6b7d8ea3e365?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxib3NzfGVufDF8Mnx8fDE3ODEzNjI5NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "colleague",
+      "russian": "коллега",
+      "transcription": "/ˈkɑliɡ/",
+      "example": "I eat lunch with my ___ from the next desk.",
+      "imageUrl": "https://images.unsplash.com/photo-1535953472862-9cc610a70f8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb2xsZWFndWV8ZW58MXwyfHx8MTc4MTM2MzA1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "career",
+      "russian": "карьера",
+      "transcription": "/kəˈrɪr/",
+      "example": "She wants a ___ in medicine.",
+      "imageUrl": "https://images.unsplash.com/photo-1698767008609-f5fa6137b9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYXJlZXJ8ZW58MXwyfHx8MTc4MTM2MzEzNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "interview",
+      "russian": "собеседование",
+      "transcription": "/ˈɪntərvju/",
+      "example": "I have a job ___ at ten tomorrow.",
+      "imageUrl": "https://images.unsplash.com/photo-1607544836359-7603ef1d3c4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpbnRlcnZpZXd8ZW58MXwyfHx8MTc4MTM2MzIxNnww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "work",
+      "russian": "труд",
+      "transcription": "/wɜrk/",
+      "example": "Hard ___ helps you learn new things.",
+      "imageUrl": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JrfGVufDF8Mnx8fDE3ODEzNDY2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "company",
+      "russian": "компания",
+      "transcription": "/ˈkʌmpəni/",
+      "example": "My father works for a big car ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1481026469463-66327c86e544?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb21wYW55fGVufDF8Mnx8fDE3ODEzNTIyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "manager",
+      "russian": "менеджер",
+      "transcription": "/ˈmænɪdʒər/",
+      "example": "The ___ talks to the team about the plan.",
+      "imageUrl": "https://images.unsplash.com/photo-1680309915319-d46a0e40a153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtYW5hZ2VyfGVufDF8Mnx8fDE3ODEzNjMyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "employee",
+      "russian": "сотрудник",
+      "transcription": "/ɪmˈplɔɪi/",
+      "example": "Every new ___ gets a desk and a computer.",
+      "imageUrl": "https://images.unsplash.com/photo-1592992584424-bb6c75136025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlbXBsb3llZXxlbnwxfDJ8fHwxNzgxMzYzMzc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "project",
+      "russian": "проект",
+      "transcription": "/ˈprɑdʒɛkt/",
+      "example": "Our team starts a new ___ next week.",
+      "imageUrl": "https://images.unsplash.com/photo-1594694899408-32443deff59f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcm9qZWN0fGVufDF8Mnx8fDE3ODEzNjM0NjB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "task",
+      "russian": "задача",
+      "transcription": "/tæsk/",
+      "example": "My first ___ today is to answer emails.",
+      "imageUrl": "https://images.unsplash.com/photo-1692158961403-4d2a98e9878e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YXNrfGVufDF8Mnx8fDE3ODEzNjM1NDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "deadline",
+      "russian": "срок",
+      "transcription": "/ˈdɛdlaɪn/",
+      "example": "The ___ for this report is Friday.",
+      "imageUrl": "https://images.unsplash.com/photo-1668903678384-00b6ccb4336e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZWFkbGluZXxlbnwxfDJ8fHwxNzgxMzYzNjIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "report",
+      "russian": "отчёт",
+      "transcription": "/rɪˈpɔrt/",
+      "example": "She writes a short ___ about the meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1606522754091-a3bbf9ad4cb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZXBvcnR8ZW58MXwyfHx8MTc4MTM2MzcwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "team",
+      "russian": "команда",
+      "transcription": "/tim/",
+      "example": "Our ___ has five people.",
+      "imageUrl": "https://images.unsplash.com/photo-1595589943370-3d84c8f54c98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWFtfGVufDF8Mnx8fDE3ODEzNTIyODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "schedule",
+      "russian": "расписание",
+      "transcription": "/ˈskɛdʒul/",
+      "example": "My ___ is full of meetings today.",
+      "imageUrl": "https://images.unsplash.com/photo-1692158962119-8103c7d78c86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzY2hlZHVsZXxlbnwxfDJ8fHwxNzgxMzYzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "desk",
+      "russian": "стол",
+      "transcription": "/dɛsk/",
+      "example": "There is a lamp and a phone on my ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1565791380713-1756b9a05343?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZXNrfGVufDF8Mnx8fDE3ODEzNjM4NjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "computer",
+      "russian": "компьютер",
+      "transcription": "/kəmˈpjutər/",
+      "example": "He works on his ___ all day.",
+      "imageUrl": "https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb21wdXRlcnxlbnwxfDJ8fHwxNzgxMzM3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "document",
+      "russian": "документ",
+      "transcription": "/ˈdɑkjəmənt/",
+      "example": "Please print this ___ for the meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1641395437808-10c477b8f199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkb2N1bWVudHxlbnwxfDJ8fHwxNzgxMzYzOTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "contract",
+      "russian": "контракт",
+      "transcription": "/ˈkɑntrækt/",
+      "example": "She signs a ___ with the new company.",
+      "imageUrl": "https://images.unsplash.com/photo-1550134380-54fbac63ca6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb250cmFjdHxlbnwxfDJ8fHwxNzgxMzY0MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "client",
+      "russian": "клиент",
+      "transcription": "/ˈklaɪənt/",
+      "example": "Our new ___ wants a website for his shop.",
+      "imageUrl": "https://images.unsplash.com/photo-1613521111429-953c450e7e5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbGllbnR8ZW58MXwyfHx8MTc4MTM2NDEwN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "customer",
+      "russian": "покупатель",
+      "transcription": "/ˈkʌstəmər/",
+      "example": "The ___ pays for the shoes at the counter.",
+      "imageUrl": "https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjdXN0b21lcnxlbnwxfDJ8fHwxNzgxMzY0MTg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "business",
+      "russian": "бизнес",
+      "transcription": "/ˈbɪznəs/",
+      "example": "My aunt has a small flower ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1585399090149-de01d4c28e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidXNpbmVzc3xlbnwxfDJ8fHwxNzgxMzY0MjY5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "skill",
+      "russian": "навык",
+      "transcription": "/skɪl/",
+      "example": "Writing emails in English is a useful ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1698767008609-f5fa6137b9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxza2lsbHxlbnwxfDJ8fHwxNzgxMzY0MzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "training",
+      "russian": "обучение",
+      "transcription": "/ˈtreɪnɪŋ/",
+      "example": "New workers get two weeks of ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1735989967755-706e5edcb44b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cmFpbmluZ3xlbnwxfDJ8fHwxNzgxMzY0NDMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "promotion",
+      "russian": "повышение",
+      "transcription": "/prəˈmoʊʃən/",
+      "example": "After three years he gets a ___ at work.",
+      "imageUrl": "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcm9tb3Rpb258ZW58MXwyfHx8MTc4MTM2NDUxMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "resume",
+      "russian": "резюме",
+      "transcription": "/ˈrɛzəmeɪ/",
+      "example": "Send your ___ to the company by email.",
+      "imageUrl": "https://images.unsplash.com/photo-1641248867712-257e0aae767b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZXN1bWV8ZW58MXwyfHx8MTc4MTM2NDU5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "experience",
+      "russian": "опыт",
+      "transcription": "/ɪkˈspɪriəns/",
+      "example": "She has five years of ___ as a teacher.",
+      "imageUrl": "https://images.unsplash.com/photo-1652077859695-de2851a95620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxleHBlcmllbmNlfGVufDF8Mnx8fDE3ODEzNjQ2NzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "profession",
+      "russian": "профессия",
+      "transcription": "/prəˈfɛʃən/",
+      "example": "Doctor is a very important ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1563515940928-b1bfb1711975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9ufGVufDF8Mnx8fDE3ODEzNjQ3NTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "worker",
+      "russian": "рабочий",
+      "transcription": "/ˈwɜrkər/",
+      "example": "Each ___ at the factory wears a helmet.",
+      "imageUrl": "https://images.unsplash.com/photo-1495725274072-fd5d0b961a9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JrZXJ8ZW58MXwyfHx8MTc4MTM2NDgzNHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "factory",
+      "russian": "завод",
+      "transcription": "/ˈfæktəri/",
+      "example": "This ___ makes toys for children.",
+      "imageUrl": "https://images.unsplash.com/photo-1649777689164-c4ad5dd3a83c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYWN0b3J5fGVufDF8Mnx8fDE3ODEzNjQ5MTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "break",
+      "russian": "перерыв",
+      "transcription": "/breɪk/",
+      "example": "We have a coffee ___ at eleven.",
+      "imageUrl": "https://images.unsplash.com/photo-1498582750569-89914abe05e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmVha3xlbnwxfDJ8fHwxNzgxMzUwNzIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "shift",
+      "russian": "смена",
+      "transcription": "/ʃɪft/",
+      "example": "His night ___ starts at ten in the evening.",
+      "imageUrl": "https://images.unsplash.com/photo-1572974124013-47309d157225?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaGlmdHxlbnwxfDJ8fHwxNzgxMzY0OTk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "email",
+      "russian": "письмо",
+      "transcription": "/ˈimeɪl/",
+      "example": "I send an ___ to my boss every morning.",
+      "imageUrl": "https://images.unsplash.com/photo-1567473030492-533b30c5494c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlbWFpbHxlbnwxfDJ8fHwxNzgxMzY1MDc3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "phone",
+      "russian": "телефон",
+      "transcription": "/foʊn/",
+      "example": "She answers the ___ at the front desk.",
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwaG9uZXxlbnwxfDJ8fHwxNzgxMzM3ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "presentation",
+      "russian": "презентация",
+      "transcription": "/ˌprizɛnˈteɪʃən/",
+      "example": "He gives a ___ about the new project.",
+      "imageUrl": "https://images.unsplash.com/photo-1503980599186-9cc36eda351a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcmVzZW50YXRpb258ZW58MXwyfHx8MTc4MTM2NTE1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "conference",
+      "russian": "конференция",
+      "transcription": "/ˈkɑnfərəns/",
+      "example": "Many doctors come to the ___ every year.",
+      "imageUrl": "https://images.unsplash.com/photo-1632383380175-812d44ec112b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlfGVufDF8Mnx8fDE3ODEzNjUyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "department",
+      "russian": "отдел",
+      "transcription": "/dɪˈpɑrtmənt/",
+      "example": "She works in the sales ___ of the company.",
+      "imageUrl": "https://images.unsplash.com/photo-1706689656095-168768dc20a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZXBhcnRtZW50fGVufDF8Mnx8fDE3ODEzNjUzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    }
   ]
 }

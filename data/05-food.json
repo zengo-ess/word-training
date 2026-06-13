@@ -1,45 +1,285 @@
 {
   "name": "Еда",
   "words": [
-    { "english": "apple", "russian": "яблоко", "transcription": "/ˈæpəl/", "example": "She eats a red ___ after lunch." },
-    { "english": "bread", "russian": "хлеб", "transcription": "/brɛd/", "example": "We buy fresh ___ every morning." },
-    { "english": "cheese", "russian": "сыр", "transcription": "/tʃiz/", "example": "I like ___ on my sandwich." },
-    { "english": "chicken", "russian": "курица", "transcription": "/ˈtʃɪkən/", "example": "Mom cooks ___ with rice for dinner." },
-    { "english": "coffee", "russian": "кофе", "transcription": "/ˈkɔfi/", "example": "He drinks a cup of ___ at work." },
-    { "english": "dinner", "russian": "ужин", "transcription": "/ˈdɪnər/", "example": "We have ___ at seven in the evening." },
-    { "english": "egg", "russian": "яйцо", "transcription": "/ɛɡ/", "example": "I eat one ___ for breakfast." },
-    { "english": "fish", "russian": "рыба", "transcription": "/fɪʃ/", "example": "This ___ is fresh from the sea." },
-    { "english": "fruit", "russian": "фрукт", "transcription": "/frut/", "example": "A banana is my favorite ___." },
-    { "english": "juice", "russian": "сок", "transcription": "/dʒus/", "example": "The children drink orange ___ in the morning." },
-    { "english": "milk", "russian": "молоко", "transcription": "/mɪlk/", "example": "The cat drinks ___ from a small bowl." },
-    { "english": "meat", "russian": "мясо", "transcription": "/mit/", "example": "He does not eat ___ on Mondays." },
-    { "english": "rice", "russian": "рис", "transcription": "/raɪs/", "example": "We eat ___ with vegetables." },
-    { "english": "salad", "russian": "салат", "transcription": "/ˈsæləd/", "example": "She makes a green ___ with tomatoes." },
-    { "english": "soup", "russian": "суп", "transcription": "/sup/", "example": "Hot ___ is good on a cold day." },
-    { "english": "sugar", "russian": "сахар", "transcription": "/ˈʃʊɡər/", "example": "Do you take ___ in your tea?" },
-    { "english": "tea", "russian": "чай", "transcription": "/ti/", "example": "My grandmother drinks green ___ every day." },
-    { "english": "water", "russian": "вода", "transcription": "/ˈwɔtər/", "example": "Please give me a glass of ___." },
-    { "english": "butter", "russian": "масло", "transcription": "/ˈbʌtər/", "example": "He puts ___ on his toast." },
-    { "english": "cake", "russian": "торт", "transcription": "/keɪk/", "example": "We eat ___ at the birthday party." },
-    { "english": "banana", "russian": "банан", "transcription": "/bəˈnænə/", "example": "The monkey eats a yellow ___." },
-    { "english": "orange", "russian": "апельсин", "transcription": "/ˈɔrɪndʒ/", "example": "I cut an ___ into four pieces." },
-    { "english": "potato", "russian": "картофель", "transcription": "/pəˈteɪtoʊ/", "example": "She cooks one big ___ for me." },
-    { "english": "tomato", "russian": "помидор", "transcription": "/təˈmeɪtoʊ/", "example": "He puts a red ___ in the salad." },
-    { "english": "onion", "russian": "лук", "transcription": "/ˈʌnjən/", "example": "I cry when I cut an ___." },
-    { "english": "carrot", "russian": "морковь", "transcription": "/ˈkærət/", "example": "The rabbit eats a long ___." },
-    { "english": "lemon", "russian": "лимон", "transcription": "/ˈlɛmən/", "example": "She puts a slice of ___ in her tea." },
-    { "english": "breakfast", "russian": "завтрак", "transcription": "/ˈbrɛkfəst/", "example": "I have ___ at eight in the morning." },
-    { "english": "lunch", "russian": "обед", "transcription": "/lʌntʃ/", "example": "We eat ___ at school at noon." },
-    { "english": "salt", "russian": "соль", "transcription": "/sɔlt/", "example": "The soup needs a little more ___." },
-    { "english": "pepper", "russian": "перец", "transcription": "/ˈpɛpər/", "example": "He adds black ___ to his eggs." },
-    { "english": "honey", "russian": "мёд", "transcription": "/ˈhʌni/", "example": "Bears love sweet ___." },
-    { "english": "chocolate", "russian": "шоколад", "transcription": "/ˈtʃɔklət/", "example": "Kids love hot ___ in winter." },
-    { "english": "cookie", "russian": "печенье", "transcription": "/ˈkʊki/", "example": "Can I have one more ___ with my milk?" },
-    { "english": "sandwich", "russian": "бутерброд", "transcription": "/ˈsænwɪtʃ/", "example": "I make a ham ___ for lunch." },
-    { "english": "pizza", "russian": "пицца", "transcription": "/ˈpitsə/", "example": "We order a big ___ on Friday night." },
-    { "english": "plate", "russian": "тарелка", "transcription": "/pleɪt/", "example": "Put the food on a clean ___." },
-    { "english": "cup", "russian": "чашка", "transcription": "/kʌp/", "example": "She drinks tea from a small ___." },
-    { "english": "fork", "russian": "вилка", "transcription": "/fɔrk/", "example": "He eats pasta with a ___." },
-    { "english": "spoon", "russian": "ложка", "transcription": "/spun/", "example": "The baby eats soup with a small ___." }
+    {
+      "english": "apple",
+      "russian": "яблоко",
+      "transcription": "/ˈæpəl/",
+      "example": "She eats a red ___ after lunch.",
+      "imageUrl": "https://images.unsplash.com/photo-1678942946279-c83e37f32304?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhcHBsZXxlbnwxfDJ8fHwxNzgxMzM2MzE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "bread",
+      "russian": "хлеб",
+      "transcription": "/brɛd/",
+      "example": "We buy fresh ___ every morning.",
+      "imageUrl": "https://images.unsplash.com/photo-1691480162735-9b91238080f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmVhZHxlbnwxfDJ8fHwxNzgxMzM1OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "cheese",
+      "russian": "сыр",
+      "transcription": "/tʃiz/",
+      "example": "I like ___ on my sandwich.",
+      "imageUrl": "https://images.unsplash.com/photo-1566454825481-4e48f80aa4d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGVlc2V8ZW58MXwyfHx8MTc4MTM1ODM2NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "chicken",
+      "russian": "курица",
+      "transcription": "/ˈtʃɪkən/",
+      "example": "Mom cooks ___ with rice for dinner.",
+      "imageUrl": "https://images.unsplash.com/photo-1614120263669-43911b47f0b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGlja2VufGVufDF8Mnx8fDE3ODEzNTg0NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "coffee",
+      "russian": "кофе",
+      "transcription": "/ˈkɔfi/",
+      "example": "He drinks a cup of ___ at work.",
+      "imageUrl": "https://images.unsplash.com/photo-1587080413959-06b859fb107d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb2ZmZWV8ZW58MXwyfHx8MTc4MTMzNjE1NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "dinner",
+      "russian": "ужин",
+      "transcription": "/ˈdɪnər/",
+      "example": "We have ___ at seven in the evening.",
+      "imageUrl": "https://images.unsplash.com/photo-1605926637512-c8b131444a4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkaW5uZXJ8ZW58MXwyfHx8MTc4MTMzNjcyMHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "egg",
+      "russian": "яйцо",
+      "transcription": "/ɛɡ/",
+      "example": "I eat one ___ for breakfast.",
+      "imageUrl": "https://images.unsplash.com/photo-1691480158362-d958b907dc35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlZ2d8ZW58MXwyfHx8MTc4MTMzNjM5N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "fish",
+      "russian": "рыба",
+      "transcription": "/fɪʃ/",
+      "example": "This ___ is fresh from the sea.",
+      "imageUrl": "https://images.unsplash.com/photo-1495594059084-33752639b9c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXNofGVufDF8Mnx8fDE3ODEzMzU4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "fruit",
+      "russian": "фрукт",
+      "transcription": "/frut/",
+      "example": "A banana is my favorite ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmcnVpdHxlbnwxfDJ8fHwxNzgxMzM2NDc3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "juice",
+      "russian": "сок",
+      "transcription": "/dʒus/",
+      "example": "The children drink orange ___ in the morning.",
+      "imageUrl": "https://images.unsplash.com/photo-1657101455328-6821c90b0ad3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxqdWljZXxlbnwxfDJ8fHwxNzgxMzU4NTI3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "milk",
+      "russian": "молоко",
+      "transcription": "/mɪlk/",
+      "example": "The cat drinks ___ from a small bowl.",
+      "imageUrl": "https://images.unsplash.com/photo-1523473827533-2a64d0d36748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaWxrfGVufDF8Mnx8fDE3ODEzMzYwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "meat",
+      "russian": "мясо",
+      "transcription": "/mit/",
+      "example": "He does not eat ___ on Mondays.",
+      "imageUrl": "https://images.unsplash.com/photo-1595356161904-6708c97be89c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtZWF0fGVufDF8Mnx8fDE3ODEzNTg2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "rice",
+      "russian": "рис",
+      "transcription": "/raɪs/",
+      "example": "We eat ___ with vegetables.",
+      "imageUrl": "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyaWNlfGVufDF8Mnx8fDE3ODEzNTg2ODl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "salad",
+      "russian": "салат",
+      "transcription": "/ˈsæləd/",
+      "example": "She makes a green ___ with tomatoes.",
+      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYWxhZHxlbnwxfDJ8fHwxNzgxMzU4NzcxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "soup",
+      "russian": "суп",
+      "transcription": "/sup/",
+      "example": "Hot ___ is good on a cold day.",
+      "imageUrl": "https://images.unsplash.com/photo-1625535608282-8f181a38f9e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzb3VwfGVufDF8Mnx8fDE3ODEzNTg4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "sugar",
+      "russian": "сахар",
+      "transcription": "/ˈʃʊɡər/",
+      "example": "Do you take ___ in your tea?",
+      "imageUrl": "https://images.unsplash.com/photo-1581268497089-7a975fb491a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdWdhcnxlbnwxfDJ8fHwxNzgxMzU4OTMzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "tea",
+      "russian": "чай",
+      "transcription": "/ti/",
+      "example": "My grandmother drinks green ___ every day.",
+      "imageUrl": "https://images.unsplash.com/photo-1615484477112-677decb29c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWF8ZW58MXwyfHx8MTc4MTMzNjIzNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "water",
+      "russian": "вода",
+      "transcription": "/ˈwɔtər/",
+      "example": "Please give me a glass of ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1553531768-88af16561c0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MXwxfHNlYXJjaHwxfHx3YXRlcnxlbnwxfDJ8fHwxNzgxMzM0NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "butter",
+      "russian": "масло",
+      "transcription": "/ˈbʌtər/",
+      "example": "He puts ___ on his toast.",
+      "imageUrl": "https://images.unsplash.com/photo-1728910107534-e04e261768ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidXR0ZXJ8ZW58MXwyfHx8MTc4MTM1OTAxNHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "cake",
+      "russian": "торт",
+      "transcription": "/keɪk/",
+      "example": "We eat ___ at the birthday party.",
+      "imageUrl": "https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYWtlfGVufDF8Mnx8fDE3ODEzNTkwOTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "banana",
+      "russian": "банан",
+      "transcription": "/bəˈnænə/",
+      "example": "The monkey eats a yellow ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiYW5hbmF8ZW58MXwyfHx8MTc4MTM1OTE3NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "orange",
+      "russian": "апельсин",
+      "transcription": "/ˈɔrɪndʒ/",
+      "example": "I cut an ___ into four pieces.",
+      "imageUrl": "https://images.unsplash.com/photo-1509391618207-32f1fa13c1d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvcmFuZ2V8ZW58MXwyfHx8MTc4MTM1OTI1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "potato",
+      "russian": "картофель",
+      "transcription": "/pəˈteɪtoʊ/",
+      "example": "She cooks one big ___ for me.",
+      "imageUrl": "https://images.unsplash.com/photo-1617130094141-532436117aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwb3RhdG98ZW58MXwyfHx8MTc4MTM1OTMzOHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "tomato",
+      "russian": "помидор",
+      "transcription": "/təˈmeɪtoʊ/",
+      "example": "He puts a red ___ in the salad.",
+      "imageUrl": "https://images.unsplash.com/photo-1615486171815-2611a6e3cd02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b21hdG98ZW58MXwyfHx8MTc4MTM1OTQxOHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "onion",
+      "russian": "лук",
+      "transcription": "/ˈʌnjən/",
+      "example": "I cry when I cut an ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvbmlvbnxlbnwxfDJ8fHwxNzgxMzU5NDk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "carrot",
+      "russian": "морковь",
+      "transcription": "/ˈkærət/",
+      "example": "The rabbit eats a long ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1606355601253-61a57fe375e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYXJyb3R8ZW58MXwyfHx8MTc4MTM1OTU4MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "lemon",
+      "russian": "лимон",
+      "transcription": "/ˈlɛmən/",
+      "example": "She puts a slice of ___ in her tea.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1587302164675-820fe61bbd55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZW1vbnxlbnwxfDJ8fHwxNzgxMzU5NjYxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "breakfast",
+      "russian": "завтрак",
+      "transcription": "/ˈbrɛkfəst/",
+      "example": "I have ___ at eight in the morning.",
+      "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmVha2Zhc3R8ZW58MXwyfHx8MTc4MTMzNjU1OHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "lunch",
+      "russian": "обед",
+      "transcription": "/lʌntʃ/",
+      "example": "We eat ___ at school at noon.",
+      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsdW5jaHxlbnwxfDJ8fHwxNzgxMzM2NjM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "salt",
+      "russian": "соль",
+      "transcription": "/sɔlt/",
+      "example": "The soup needs a little more ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1580980906245-af3b357dcc84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYWx0fGVufDF8Mnx8fDE3ODEzNTk3NDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "pepper",
+      "russian": "перец",
+      "transcription": "/ˈpɛpər/",
+      "example": "He adds black ___ to his eggs.",
+      "imageUrl": "https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwZXBwZXJ8ZW58MXwyfHx8MTc4MTM1OTgyMnww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "honey",
+      "russian": "мёд",
+      "transcription": "/ˈhʌni/",
+      "example": "Bears love sweet ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1641878067318-1d1f79a77785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob25leXxlbnwxfDJ8fHwxNzgxMzU5OTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "chocolate",
+      "russian": "шоколад",
+      "transcription": "/ˈtʃɔklət/",
+      "example": "Kids love hot ___ in winter.",
+      "imageUrl": "https://images.unsplash.com/photo-1720029106261-0d0396bb270d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaG9jb2xhdGV8ZW58MXwyfHx8MTc4MTM1OTk4NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "cookie",
+      "russian": "печенье",
+      "transcription": "/ˈkʊki/",
+      "example": "Can I have one more ___ with my milk?",
+      "imageUrl": "https://images.unsplash.com/photo-1590080874088-eec64895b423?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb29raWV8ZW58MXwyfHx8MTc4MTM2MDA2NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "sandwich",
+      "russian": "бутерброд",
+      "transcription": "/ˈsænwɪtʃ/",
+      "example": "I make a ham ___ for lunch.",
+      "imageUrl": "https://images.unsplash.com/photo-1603903631889-b5f3ba4d5b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYW5kd2ljaHxlbnwxfDJ8fHwxNzgxMzYwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "pizza",
+      "russian": "пицца",
+      "transcription": "/ˈpitsə/",
+      "example": "We order a big ___ on Friday night.",
+      "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwxfDJ8fHwxNzgxMzYwMjI2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "plate",
+      "russian": "тарелка",
+      "transcription": "/pleɪt/",
+      "example": "Put the food on a clean ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1587334207810-4915c4e40c67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwbGF0ZXxlbnwxfDJ8fHwxNzgxMzYwMzA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "cup",
+      "russian": "чашка",
+      "transcription": "/kʌp/",
+      "example": "She drinks tea from a small ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1696960741206-63a41bb798ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjdXB8ZW58MXwyfHx8MTc4MTMzNjgwMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "fork",
+      "russian": "вилка",
+      "transcription": "/fɔrk/",
+      "example": "He eats pasta with a ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1699484477621-1f6ecb1d153f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmb3JrfGVufDF8Mnx8fDE3ODEzNjAzODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "english": "spoon",
+      "russian": "ложка",
+      "transcription": "/spun/",
+      "example": "The baby eats soup with a small ___.",
+      "imageUrl": "https://images.unsplash.com/photo-1625535608282-8f181a38f9e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzcG9vbnxlbnwxfDJ8fHwxNzgxMzYwNDY4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    }
   ]
 }
