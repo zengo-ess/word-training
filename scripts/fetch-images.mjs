@@ -62,14 +62,16 @@ async function searchImage(query) {
 
 const decks = loadDecks();
 
-// english (в нижнем регистре) → записи слова во всех колодах без картинки
+// поисковый запрос (в нижнем регистре) → записи слова во всех колодах без картинки.
+// Для немецких слов используется imageQuery (английское понятие), если задан —
+// немецкий текст плохо ищется по смыслу на Unsplash.
 const pending = new Map();
 for (const entry of decks) {
   for (const word of entry.deck.words) {
     if (typeof word.imageUrl === "string" && word.imageUrl.length > 0) {
       continue;
     }
-    const key = word.english.trim().toLowerCase();
+    const key = (word.imageQuery ?? word.word).trim().toLowerCase();
     if (!pending.has(key)) {
       pending.set(key, []);
     }
@@ -82,17 +84,17 @@ console.log(`Слов без картинки: ${pending.size} (уникальн
 let done = 0;
 const failed = [];
 
-for (const [english, refs] of pending) {
-  let result = await searchImage(english);
+for (const [queryText, refs] of pending) {
+  let result = await searchImage(queryText);
   while (result.rateLimited) {
-    console.log(`[${done + 1}/${pending.size}] ${english} — лимит запросов, пауза 1 час`);
+    console.log(`[${done + 1}/${pending.size}] ${queryText} — лимит запросов, пауза 1 час`);
     await sleep(RATE_LIMIT_PAUSE_MS);
-    result = await searchImage(english);
+    result = await searchImage(queryText);
   }
   if (result.error) {
-    console.log(`[${done + 1}/${pending.size}] ${english} — ошибка ${result.error}, повтор через минуту`);
+    console.log(`[${done + 1}/${pending.size}] ${queryText} — ошибка ${result.error}, повтор через минуту`);
     await sleep(RETRY_PAUSE_MS);
-    result = await searchImage(english);
+    result = await searchImage(queryText);
   }
 
   done += 1;
@@ -105,10 +107,10 @@ for (const [english, refs] of pending) {
     for (const entry of touched) {
       saveDeck(entry);
     }
-    console.log(`[${done}/${pending.size}] ${english} — ok`);
+    console.log(`[${done}/${pending.size}] ${queryText} — ok`);
   } else {
-    failed.push(english);
-    console.log(`[${done}/${pending.size}] ${english} — картинка не найдена (${result.error ?? "пустой результат"})`);
+    failed.push(queryText);
+    console.log(`[${done}/${pending.size}] ${queryText} — картинка не найдена (${result.error ?? "пустой результат"})`);
   }
 
   if (done < pending.size) {
