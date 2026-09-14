@@ -36,7 +36,7 @@ describe("getTodayTraining", () => {
       learnedAt: "2026-06-01T12:00:00.000Z",
       nextReviewAt: "2026-06-02T12:00:00.000Z",
     });
-    const today = getTodayTraining(db, userId, NOW);
+    const today = getTodayTraining(db, userId, NOW, "en");
     expect(today.newWords).toHaveLength(1);
     expect(today.newWords[0].word.foreign_word).toBe("cat");
     expect(today.reviewWords).toHaveLength(1);

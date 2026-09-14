@@ -17,11 +17,12 @@ export function getTodayTraining(
   db: Database.Database,
   userId: string,
   now: Date,
+  language: string,
   batchSize = 20,
 ): TrainingToday {
   return {
-    newWords: listLearnableWords(db, userId, batchSize),
-    reviewWords: listDueReviews(db, userId, now.toISOString()),
+    newWords: listLearnableWords(db, userId, batchSize, language),
+    reviewWords: listDueReviews(db, userId, now.toISOString(), language),
   };
 }
 

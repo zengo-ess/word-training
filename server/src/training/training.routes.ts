@@ -3,6 +3,7 @@ import type Database from "better-sqlite3";
 import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getWord } from "../words/words.repository.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
+import { getUser } from "../auth/users.repository.js";
 import {
   getTodayTraining,
   recordLearningStep,
@@ -16,7 +17,8 @@ export function createTrainingRouter(db: Database.Database): Router {
 
   router.get("/today", (req: AuthedRequest, res) => {
     const userId = req.userId as string;
-    res.json(getTodayTraining(db, userId, new Date()));
+    const language = getUser(db, userId)?.language ?? "en";
+    res.json(getTodayTraining(db, userId, new Date(), language));
   });
 
   router.post("/result", (req: AuthedRequest, res) => {
