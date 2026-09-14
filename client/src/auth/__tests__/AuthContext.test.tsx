@@ -7,26 +7,31 @@ import { AuthProvider, useAuth } from "../AuthContext";
 vi.mock("../authApi", () => ({
   login: vi.fn(async (userId: string, password: string) =>
     password === "ok"
-      ? { token: "JWT", user: { id: userId, name: "Женя" } }
+      ? { token: "JWT", user: { id: userId, name: "Женя", language: "en" } }
       : Promise.reject(new Error("Неверный пароль")),
   ),
   register: vi.fn(async (name: string) => ({
     token: "JWT2",
-    user: { id: "u2", name },
+    user: { id: "u2", name, language: "en" },
   })),
+  setLanguage: vi.fn(async (language: string) => ({ id: "u1", name: "Женя", language })),
 }));
 
 function Probe() {
-  const { isAuthenticated, user, login, register, logout } = useAuth();
+  const { isAuthenticated, user, login, register, logout, setLanguage } = useAuth();
   return (
     <div>
       <span data-testid="state">{isAuthenticated ? "in" : "out"}</span>
       <span data-testid="user">{user ? user.name : "-"}</span>
+      <span data-testid="language">{user ? user.language : "-"}</span>
       <button type="button" onClick={() => void login("u1", "ok")}>
         войти
       </button>
       <button type="button" onClick={() => void register("Маша", "1234", "family")}>
         создать
+      </button>
+      <button type="button" onClick={() => void setLanguage("de")}>
+        сменить язык
       </button>
       <button type="button" onClick={logout}>
         выйти
@@ -56,7 +61,29 @@ describe("AuthProvider / useAuth", () => {
     expect(screen.getByTestId("state")).toHaveTextContent("in");
     expect(screen.getByTestId("user")).toHaveTextContent("Женя");
     expect(localStorage.getItem("wt_token")).toBe("JWT");
-    expect(localStorage.getItem("wt_user")).toBe(JSON.stringify({ id: "u1", name: "Женя" }));
+    expect(localStorage.getItem("wt_user")).toBe(
+      JSON.stringify({ id: "u1", name: "Женя", language: "en" }),
+    );
+  });
+
+  it("setLanguage обновляет user.language и localStorage", async () => {
+    localStorage.setItem("wt_token", "JWT");
+    localStorage.setItem("wt_user", JSON.stringify({ id: "u1", name: "Женя", language: "en" }));
+    render(
+      <AuthProvider>
+        <Probe />
+      </AuthProvider>,
+    );
+    expect(screen.getByTestId("language")).toHaveTextContent("en");
+
+    await act(async () => {
+      screen.getByRole("button", { name: "сменить язык" }).click();
+    });
+
+    expect(screen.getByTestId("language")).toHaveTextContent("de");
+    expect(localStorage.getItem("wt_user")).toBe(
+      JSON.stringify({ id: "u1", name: "Женя", language: "de" }),
+    );
   });
 
   it("register логинит нового пользователя", async () => {

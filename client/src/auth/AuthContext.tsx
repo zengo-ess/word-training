@@ -8,13 +8,14 @@ import {
   saveToken,
   type StoredUser,
 } from "./token";
-import { login as loginApi, register as registerApi } from "./authApi";
+import { login as loginApi, register as registerApi, setLanguage as setLanguageApi } from "./authApi";
 
 interface AuthValue {
   isAuthenticated: boolean;
   user: StoredUser | null;
   login: (userId: string, password: string) => Promise<void>;
   register: (name: string, password: string, familyCode: string) => Promise<void>;
+  setLanguage: (language: string) => Promise<void>;
   logout: () => void;
 }
 
@@ -39,6 +40,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     apply(await registerApi(name, password, familyCode));
   };
 
+  const setLanguage = async (language: string): Promise<void> => {
+    const updated = await setLanguageApi(language);
+    saveStoredUser(updated);
+    setUser(updated);
+  };
+
   const logout = (): void => {
     clearToken();
     clearStoredUser();
@@ -53,7 +60,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated: token !== null, user, login, register, logout }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated: token !== null, user, login, register, setLanguage, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
