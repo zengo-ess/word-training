@@ -1,9 +1,10 @@
 import { Router } from "express";
 import type Database from "better-sqlite3";
 import type { AppConfig } from "../config.js";
+import type { AuthedRequest } from "./auth.middleware.js";
 import { checkPassword, signToken } from "./auth.service.js";
 import { hashPassword, verifyPassword } from "./password.js";
-import { createUser, getUser, getUserByName, listUsers } from "./users.repository.js";
+import { createUser, getUser, getUserByName, listUsers, updateUserLanguage } from "./users.repository.js";
 
 export function createAuthRouter(config: AppConfig, db: Database.Database): Router {
   const router = Router();
@@ -32,7 +33,10 @@ export function createAuthRouter(config: AppConfig, db: Database.Database): Rout
     }
 
     const user = createUser(db, name, hashPassword(password));
-    res.status(201).json({ token: signToken(user.id, config.jwtSecret), user: { id: user.id, name: user.name } });
+    res.status(201).json({
+      token: signToken(user.id, config.jwtSecret),
+      user: { id: user.id, name: user.name, language: user.language },
+    });
   });
 
   router.post("/login", (req, res) => {
@@ -46,7 +50,28 @@ export function createAuthRouter(config: AppConfig, db: Database.Database): Rout
       return;
     }
 
-    res.json({ token: signToken(user.id, config.jwtSecret), user: { id: user.id, name: user.name } });
+    res.json({
+      token: signToken(user.id, config.jwtSecret),
+      user: { id: user.id, name: user.name, language: user.language },
+    });
+  });
+
+  return router;
+}
+
+// Требует авторизации — монтируется отдельно с auth-middleware (см. app.ts)
+export function createAuthMeRouter(db: Database.Database): Router {
+  const router = Router();
+
+  router.patch("/language", (req: AuthedRequest, res) => {
+    const userId = req.userId as string;
+    const language = typeof req.body?.language === "string" ? req.body.language : "";
+    if (language !== "en" && language !== "de") {
+      res.status(400).json({ error: "Недопустимый язык" });
+      return;
+    }
+    const user = updateUserLanguage(db, userId, language);
+    res.json({ user: { id: user!.id, name: user!.name, language: user!.language } });
   });
 
   return router;

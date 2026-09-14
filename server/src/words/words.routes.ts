@@ -9,6 +9,7 @@ import { synthesizeMp3 } from "../services/googleTts.js";
 import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
 
 const BUILTIN_READONLY = "Встроенная колода доступна только для чтения";
+const TTS_LANGUAGE_CODE: Record<string, string> = { en: "en-US", de: "de-DE" };
 
 export interface WordsRouterDeps {
   unsplashAccessKey: string;
@@ -21,18 +22,19 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
 
   // Авто-черновик: перевод + картинки, без сохранения
   router.post("/lookup", async (req, res) => {
-    const english = typeof req.body?.english === "string" ? req.body.english.trim() : "";
-    if (!english) {
+    const foreignWord = typeof req.body?.foreignWord === "string" ? req.body.foreignWord.trim() : "";
+    const language = typeof req.body?.language === "string" ? req.body.language : "en";
+    if (!foreignWord) {
       res.status(400).json({ error: "Не указано слово" });
       return;
     }
-    const [russian, images] = await Promise.all([
-      translateToRussian(english),
-      searchImages(english, deps.unsplashAccessKey),
+    const [nativeWord, images] = await Promise.all([
+      translateToRussian(foreignWord, language),
+      searchImages(foreignWord, deps.unsplashAccessKey),
     ]);
     res.json({
-      english,
-      russian,
+      foreignWord,
+      nativeWord,
       imageUrl: images[0] ?? null,
       imageCandidates: images,
     });
@@ -42,8 +44,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     const userId = req.userId as string;
     const body = req.body ?? {};
     const deckId = typeof body.deckId === "string" ? body.deckId : "";
-    const english = typeof body.english === "string" ? body.english.trim() : "";
-    const russian = typeof body.russian === "string" ? body.russian.trim() : "";
+    const foreignWord = typeof body.foreignWord === "string" ? body.foreignWord.trim() : "";
+    const nativeWord = typeof body.nativeWord === "string" ? body.nativeWord.trim() : "";
     const imageUrl = typeof body.imageUrl === "string" ? body.imageUrl : null;
 
     const deck = getDeck(db, deckId);
@@ -55,17 +57,18 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       res.status(403).json({ error: BUILTIN_READONLY });
       return;
     }
-    if (!english || !russian) {
-      res.status(400).json({ error: "Нужны английское слово и перевод" });
+    if (!foreignWord || !nativeWord) {
+      res.status(400).json({ error: "Нужны слово и перевод" });
       return;
     }
 
-    const word = createWord(db, { deckId, english, russian, imageUrl });
+    const word = createWord(db, { deckId, foreignWord, nativeWord, imageUrl });
 
     // Озвучка опциональна: при отсутствии ключа/ошибке слово остаётся без аудио
     let finalWord = word;
     try {
-      const mp3 = await synthesizeMp3(english, deps.googleTtsApiKey);
+      const languageCode = TTS_LANGUAGE_CODE[deck.language] ?? "en-US";
+      const mp3 = await synthesizeMp3(foreignWord, languageCode, deps.googleTtsApiKey);
       if (mp3) {
         const audioUrl = saveAudioFile(deps.uploadsDir, word.id, mp3);
         finalWord = updateWord(db, word.id, { audioUrl }) ?? word;
@@ -95,8 +98,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     }
     const body = req.body ?? {};
     const updated = updateWord(db, req.params.id, {
-      english: typeof body.english === "string" ? body.english.trim() : undefined,
-      russian: typeof body.russian === "string" ? body.russian.trim() : undefined,
+      foreignWord: typeof body.foreignWord === "string" ? body.foreignWord.trim() : undefined,
+      nativeWord: typeof body.nativeWord === "string" ? body.nativeWord.trim() : undefined,
       imageUrl: typeof body.imageUrl === "string" ? body.imageUrl : undefined,
     });
     res.json({ word: updated });
@@ -144,8 +147,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     }
     const word = createWord(db, {
       deckId: targetDeckId,
-      english: source.english,
-      russian: source.russian,
+      foreignWord: source.foreign_word,
+      nativeWord: source.native_word,
       transcription: source.transcription,
       exampleSentence: source.example_sentence,
       imageUrl: source.image_url,

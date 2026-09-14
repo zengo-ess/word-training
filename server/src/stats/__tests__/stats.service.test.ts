@@ -20,14 +20,14 @@ beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
   userId = createUser(db, "Тестер", "salt:hash").id;
-  deckId = createDeck(db, "Еда", userId).id;
+  deckId = createDeck(db, "Еда", userId, "en").id;
 });
 
 describe("getStats", () => {
   it("считает learned / inProgress / dueToday / стрик", () => {
-    const learnedId = createWord(db, { deckId, english: "apple", russian: "яблоко" }).id;
-    const dueId = createWord(db, { deckId, english: "bread", russian: "хлеб" }).id;
-    const inProgressId = createWord(db, { deckId, english: "milk", russian: "молоко" }).id;
+    const learnedId = createWord(db, { deckId, foreignWord: "apple", nativeWord: "яблоко" }).id;
+    const dueId = createWord(db, { deckId, foreignWord: "bread", nativeWord: "хлеб" }).id;
+    const inProgressId = createWord(db, { deckId, foreignWord: "milk", nativeWord: "молоко" }).id;
 
     upsertProgress(db, userId, learnedId, {
       currentType: null,
@@ -42,7 +42,7 @@ describe("getStats", () => {
     upsertProgress(db, userId, inProgressId, { currentType: 2 });
     recordStudyDay(db, userId, "2026-06-09");
 
-    const stats = getStats(db, userId, NOW);
+    const stats = getStats(db, userId, NOW, "en");
     expect(stats.learned).toBe(2);
     expect(stats.inProgress).toBe(1);
     expect(stats.dueToday).toBe(1);

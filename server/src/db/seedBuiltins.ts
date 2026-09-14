@@ -4,7 +4,7 @@ import { join } from "node:path";
 import type Database from "better-sqlite3";
 
 interface SeedWord {
-  english: string;
+  word: string;
   russian: string;
   transcription: string;
   example: string;
@@ -13,6 +13,7 @@ interface SeedWord {
 
 interface SeedDeck {
   name: string;
+  language?: "en" | "de";
   words: SeedWord[];
 }
 
@@ -26,23 +27,25 @@ export function seedBuiltins(db: Database.Database, dataDir: string): void {
     .sort();
 
   const deckExists = db.prepare("SELECT id FROM decks WHERE name = ?");
-  const insertDeck = db.prepare("INSERT INTO decks (id, name, is_builtin) VALUES (?, ?, 1)");
+  const insertDeck = db.prepare(
+    "INSERT INTO decks (id, name, is_builtin, language) VALUES (?, ?, 1, ?)",
+  );
   const insertWord = db.prepare(
-    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence, image_url)
+    `INSERT INTO words (id, deck_id, foreign_word, native_word, transcription, example_sentence, image_url)
      VALUES (?, ?, ?, ?, ?, ?, ?)`,
   );
   const backfillImage = db.prepare(
-    "UPDATE words SET image_url = ? WHERE deck_id = ? AND english = ? AND image_url IS NULL",
+    "UPDATE words SET image_url = ? WHERE deck_id = ? AND foreign_word = ? AND image_url IS NULL",
   );
 
   const seedDeck = db.transaction((deck: SeedDeck) => {
     const deckId = randomUUID();
-    insertDeck.run(deckId, deck.name);
+    insertDeck.run(deckId, deck.name, deck.language ?? "en");
     for (const word of deck.words) {
       insertWord.run(
         randomUUID(),
         deckId,
-        word.english,
+        word.word,
         word.russian,
         word.transcription,
         word.example,
@@ -54,7 +57,7 @@ export function seedBuiltins(db: Database.Database, dataDir: string): void {
   const backfillDeck = db.transaction((deckId: string, deck: SeedDeck) => {
     for (const word of deck.words) {
       if (word.imageUrl) {
-        backfillImage.run(word.imageUrl, deckId, word.english);
+        backfillImage.run(word.imageUrl, deckId, word.word);
       }
     }
   });

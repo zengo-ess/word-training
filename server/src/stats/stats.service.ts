@@ -15,7 +15,7 @@ export interface Stats {
   decks: DeckWithStats[];
 }
 
-export function getStats(db: Database.Database, userId: string, now: Date): Stats {
+export function getStats(db: Database.Database, userId: string, now: Date, language: string): Stats {
   const nowIso = now.toISOString();
   const today = isoDay(now);
 
@@ -62,6 +62,6 @@ export function getStats(db: Database.Database, userId: string, now: Date): Stat
     dailyGoal: DAILY_GOAL,
     streak: computeStreak(db, userId, now),
     week,
-    decks: listDecksWithStats(db, userId),
+    decks: listDecksWithStats(db, userId, language),
   };
 }

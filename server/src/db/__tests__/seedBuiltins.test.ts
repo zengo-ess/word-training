@@ -17,8 +17,8 @@ beforeEach(() => {
     JSON.stringify({
       name: "Тестовая",
       words: [
-        { english: "sun", russian: "солнце", transcription: "/sʌn/", example: "The ___ is bright." },
-        { english: "moon", russian: "луна", transcription: "/muːn/", example: "The ___ is full tonight." },
+        { word: "sun", russian: "солнце", transcription: "/sʌn/", example: "The ___ is bright." },
+        { word: "moon", russian: "луна", transcription: "/muːn/", example: "The ___ is full tonight." },
       ],
     }),
   );
@@ -35,17 +35,37 @@ describe("seedBuiltins", () => {
     seedBuiltins(db, dir);
 
     const deck = db.prepare("SELECT * FROM decks WHERE name = ?").get("Тестовая") as
-      | { id: string; is_builtin: number }
+      | { id: string; is_builtin: number; language: string }
       | undefined;
     expect(deck).toBeDefined();
     expect(deck?.is_builtin).toBe(1);
+    expect(deck?.language).toBe("en");
 
     const words = db
-      .prepare("SELECT english, russian, transcription, example_sentence FROM words WHERE deck_id = ?")
-      .all(deck?.id) as { english: string; example_sentence: string }[];
+      .prepare("SELECT foreign_word, native_word, transcription, example_sentence FROM words WHERE deck_id = ?")
+      .all(deck?.id) as { foreign_word: string; example_sentence: string }[];
     expect(words).toHaveLength(2);
-    expect(words[0].english).toBe("sun");
+    expect(words[0].foreign_word).toBe("sun");
     expect(words[0].example_sentence).toContain("___");
+  });
+
+  it("сидирует колоду с явным language: 'de'", () => {
+    writeFileSync(
+      join(dir, "02-test-de.json"),
+      JSON.stringify({
+        name: "Немецкая тестовая",
+        language: "de",
+        words: [{ word: "Sonne", russian: "солнце", transcription: "/ˈzɔnə/", example: "Die ___ scheint." }],
+      }),
+    );
+    const db = new Database(":memory:");
+    runMigrations(db);
+    seedBuiltins(db, dir);
+
+    const deck = db.prepare("SELECT * FROM decks WHERE name = ?").get("Немецкая тестовая") as
+      | { language: string }
+      | undefined;
+    expect(deck?.language).toBe("de");
   });
 
   it("идемпотентен — повторный прогон не дублирует", () => {
@@ -73,13 +93,13 @@ describe("seedBuiltins", () => {
         name: "Тестовая",
         words: [
           {
-            english: "sun",
+            word: "sun",
             russian: "солнце",
             transcription: "/sʌn/",
             example: "The ___ is bright.",
             imageUrl: "https://images.unsplash.com/photo-sun",
           },
-          { english: "moon", russian: "луна", transcription: "/muːn/", example: "The ___ is full tonight." },
+          { word: "moon", russian: "луна", transcription: "/muːn/", example: "The ___ is full tonight." },
         ],
       }),
     );
@@ -88,13 +108,13 @@ describe("seedBuiltins", () => {
     runMigrations(db);
     seedBuiltins(db, dir);
 
-    const rows = db.prepare("SELECT english, image_url FROM words ORDER BY english").all() as {
-      english: string;
+    const rows = db.prepare("SELECT foreign_word, image_url FROM words ORDER BY foreign_word").all() as {
+      foreign_word: string;
       image_url: string | null;
     }[];
     expect(rows).toEqual([
-      { english: "moon", image_url: null },
-      { english: "sun", image_url: "https://images.unsplash.com/photo-sun" },
+      { foreign_word: "moon", image_url: null },
+      { foreign_word: "sun", image_url: "https://images.unsplash.com/photo-sun" },
     ]);
   });
 
@@ -103,7 +123,10 @@ describe("seedBuiltins", () => {
     runMigrations(db);
     seedBuiltins(db, dir);
 
-    db.prepare("UPDATE words SET image_url = ? WHERE english = ?").run("https://example.com/custom-moon", "moon");
+    db.prepare("UPDATE words SET image_url = ? WHERE foreign_word = ?").run(
+      "https://example.com/custom-moon",
+      "moon",
+    );
 
     writeFileSync(
       join(dir, "01-test.json"),
@@ -111,14 +134,14 @@ describe("seedBuiltins", () => {
         name: "Тестовая",
         words: [
           {
-            english: "sun",
+            word: "sun",
             russian: "солнце",
             transcription: "/sʌn/",
             example: "The ___ is bright.",
             imageUrl: "https://images.unsplash.com/photo-sun",
           },
           {
-            english: "moon",
+            word: "moon",
             russian: "луна",
             transcription: "/muːn/",
             example: "The ___ is full tonight.",
@@ -129,13 +152,13 @@ describe("seedBuiltins", () => {
     );
     seedBuiltins(db, dir);
 
-    const rows = db.prepare("SELECT english, image_url FROM words ORDER BY english").all() as {
-      english: string;
+    const rows = db.prepare("SELECT foreign_word, image_url FROM words ORDER BY foreign_word").all() as {
+      foreign_word: string;
       image_url: string | null;
     }[];
     expect(rows).toEqual([
-      { english: "moon", image_url: "https://example.com/custom-moon" },
-      { english: "sun", image_url: "https://images.unsplash.com/photo-sun" },
+      { foreign_word: "moon", image_url: "https://example.com/custom-moon" },
+      { foreign_word: "sun", image_url: "https://images.unsplash.com/photo-sun" },
     ]);
 
     const words = db.prepare("SELECT COUNT(*) AS c FROM words").get() as { c: number };

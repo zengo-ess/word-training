@@ -2,7 +2,7 @@ import { join, resolve } from "node:path";
 import express, { type Express } from "express";
 import type Database from "better-sqlite3";
 import type { AppConfig } from "./config.js";
-import { createAuthRouter } from "./auth/auth.routes.js";
+import { createAuthRouter, createAuthMeRouter } from "./auth/auth.routes.js";
 import { createAuthMiddleware } from "./auth/auth.middleware.js";
 import { createDecksRouter } from "./decks/decks.routes.js";
 import { createWordsRouter } from "./words/words.routes.js";
@@ -24,6 +24,7 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
   app.use("/api/auth", createAuthRouter(config, db));
 
   const requireAuth = createAuthMiddleware(config.jwtSecret, db);
+  app.use("/api/auth/me", requireAuth, createAuthMeRouter(db));
   app.use("/api/decks", requireAuth, createDecksRouter(db));
   app.use(
     "/api/words",

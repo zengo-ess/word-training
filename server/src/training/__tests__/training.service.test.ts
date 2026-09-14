@@ -24,13 +24,13 @@ beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
   userId = createUser(db, "Тестер", "salt:hash").id;
-  deckId = createDeck(db, "Колода", userId).id;
+  deckId = createDeck(db, "Колода", userId, "en").id;
 });
 
 describe("getTodayTraining", () => {
   it("разделяет новые слова и повторения", () => {
-    createWord(db, { deckId, english: "cat", russian: "кот" });
-    const reviewId = createWord(db, { deckId, english: "dog", russian: "собака" }).id;
+    createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" });
+    const reviewId = createWord(db, { deckId, foreignWord: "dog", nativeWord: "собака" }).id;
     upsertProgress(db, userId, reviewId, {
       currentType: null,
       learnedAt: "2026-06-01T12:00:00.000Z",
@@ -38,15 +38,15 @@ describe("getTodayTraining", () => {
     });
     const today = getTodayTraining(db, userId, NOW);
     expect(today.newWords).toHaveLength(1);
-    expect(today.newWords[0].word.english).toBe("cat");
+    expect(today.newWords[0].word.foreign_word).toBe("cat");
     expect(today.reviewWords).toHaveLength(1);
-    expect(today.reviewWords[0].word.english).toBe("dog");
+    expect(today.reviewWords[0].word.foreign_word).toBe("dog");
   });
 });
 
 describe("recordLearningStep", () => {
   it("сохраняет текущий тип упражнения", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     const progress = recordLearningStep(db, userId, id, 4);
     expect(progress.current_type).toBe(4);
     expect(progress.learned_at).toBeNull();
@@ -55,7 +55,7 @@ describe("recordLearningStep", () => {
 
 describe("markLearned", () => {
   it("переводит слово в SR: learned_at + первый повтор через 1 день", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     recordLearningStep(db, userId, id, 5);
     const progress = markLearned(db, userId, id, NOW);
     expect(progress.current_type).toBeNull();
@@ -67,7 +67,7 @@ describe("markLearned", () => {
 
 describe("recordReview", () => {
   it("верный повтор двигает интервал и счётчики", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     markLearned(db, userId, id, NOW);
     const progress = recordReview(db, userId, id, true, NOW);
     expect(progress?.interval_days).toBe(3);
@@ -77,7 +77,7 @@ describe("recordReview", () => {
   });
 
   it("неверный повтор сбрасывает интервал, correct_reviews не растёт", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     markLearned(db, userId, id, NOW);
     recordReview(db, userId, id, true, NOW);
     const progress = recordReview(db, userId, id, false, NOW);
@@ -87,7 +87,7 @@ describe("recordReview", () => {
   });
 
   it("возвращает undefined, если слово ещё не выучено", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     recordLearningStep(db, userId, id, 2);
     expect(recordReview(db, userId, id, true, NOW)).toBeUndefined();
     expect(getProgress(db, userId, id)?.learned_at).toBeNull();

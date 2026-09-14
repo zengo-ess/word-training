@@ -17,8 +17,8 @@ beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
   userId = createUser(db, "Тестер", "salt:hash").id;
-  const deckId = createDeck(db, "Колода", userId).id;
-  wordId = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+  const deckId = createDeck(db, "Колода", userId, "en").id;
+  wordId = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
 });
 
 describe("upsertProgress / getProgress", () => {
