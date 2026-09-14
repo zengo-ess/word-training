@@ -1,0 +1,822 @@
+{
+  "name": "Топ-100 немецких глаголов",
+  "language": "de",
+  "words": [
+    {
+      "word": "sein",
+      "russian": "быть",
+      "transcription": "/zaɪ̯n/",
+      "example": "Ich möchte Ärztin ___.",
+      "imageUrl": null,
+      "imageQuery": "to be"
+    },
+    {
+      "word": "haben",
+      "russian": "иметь",
+      "transcription": "/ˈhaːbn̩/",
+      "example": "Kannst du einen Stift ___?",
+      "imageUrl": null,
+      "imageQuery": "to have"
+    },
+    {
+      "word": "machen",
+      "russian": "делать",
+      "transcription": "/ˈmaxn̩/",
+      "example": "Ich muss heute Abend meine Hausaufgaben ___.",
+      "imageUrl": null,
+      "imageQuery": "to do"
+    },
+    {
+      "word": "sagen",
+      "russian": "сказать",
+      "transcription": "/ˈzaːɡn̩/",
+      "example": "Was wolltest du mir ___?",
+      "imageUrl": null,
+      "imageQuery": "to say"
+    },
+    {
+      "word": "bekommen",
+      "russian": "получать",
+      "transcription": "/bəˈkɔmən/",
+      "example": "Ich hoffe, bald einen Brief zu ___.",
+      "imageUrl": null,
+      "imageQuery": "to get"
+    },
+    {
+      "word": "backen",
+      "russian": "печь",
+      "transcription": "/ˈbakn̩/",
+      "example": "Ich möchte für sie einen Kuchen ___.",
+      "imageUrl": null,
+      "imageQuery": "to make (bake)"
+    },
+    {
+      "word": "gehen",
+      "russian": "идти",
+      "transcription": "/ˈɡeːən/",
+      "example": "Wir werden nach dem Essen spazieren ___.",
+      "imageUrl": null,
+      "imageQuery": "to go"
+    },
+    {
+      "word": "wissen",
+      "russian": "знать",
+      "transcription": "/ˈvɪsn̩/",
+      "example": "Kannst du seine Telefonnummer ___?",
+      "imageUrl": null,
+      "imageQuery": "to know"
+    },
+    {
+      "word": "nehmen",
+      "russian": "брать",
+      "transcription": "/ˈneːmən/",
+      "example": "Bitte ___ einen Regenschirm mit.",
+      "imageUrl": null,
+      "imageQuery": "to take"
+    },
+    {
+      "word": "sehen",
+      "russian": "видеть",
+      "transcription": "/ˈzeːən/",
+      "example": "Von hier kann ich das Meer ___.",
+      "imageUrl": null,
+      "imageQuery": "to see"
+    },
+    {
+      "word": "kommen",
+      "russian": "приходить",
+      "transcription": "/ˈkɔmən/",
+      "example": "Kannst du am Samstag zu meiner Party ___?",
+      "imageUrl": null,
+      "imageQuery": "to come"
+    },
+    {
+      "word": "denken",
+      "russian": "думать",
+      "transcription": "/ˈdɛŋkn̩/",
+      "example": "Ich muss noch einmal darüber ___.",
+      "imageUrl": null,
+      "imageQuery": "to think"
+    },
+    {
+      "word": "schauen",
+      "russian": "смотреть",
+      "transcription": "/ˈʃaʊ̯ən/",
+      "example": "Bitte einmal auf dieses Bild ___.",
+      "imageUrl": null,
+      "imageQuery": "to look"
+    },
+    {
+      "word": "wollen",
+      "russian": "хотеть",
+      "transcription": "/ˈvɔlən/",
+      "example": "Was möchtest du heute Abend ___?",
+      "imageUrl": null,
+      "imageQuery": "to want"
+    },
+    {
+      "word": "geben",
+      "russian": "давать",
+      "transcription": "/ˈɡeːbn̩/",
+      "example": "Kannst du mir das Salz ___?",
+      "imageUrl": null,
+      "imageQuery": "to give"
+    },
+    {
+      "word": "benutzen",
+      "russian": "использовать",
+      "transcription": "/bəˈnʊtsn̩/",
+      "example": "Darf ich dein Telefon kurz ___?",
+      "imageUrl": null,
+      "imageQuery": "to use"
+    },
+    {
+      "word": "finden",
+      "russian": "находить",
+      "transcription": "/ˈfɪndn̩/",
+      "example": "Ich kann meine Schlüssel nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to find"
+    },
+    {
+      "word": "erzählen",
+      "russian": "рассказывать",
+      "transcription": "/ɛɐ̯ˈtsɛːlən/",
+      "example": "Kannst du mir von deiner Reise ___?",
+      "imageUrl": null,
+      "imageQuery": "to tell"
+    },
+    {
+      "word": "fragen",
+      "russian": "спрашивать",
+      "transcription": "/ˈfʁaːɡn̩/",
+      "example": "Du kannst den Lehrer ruhig ___.",
+      "imageUrl": null,
+      "imageQuery": "to ask"
+    },
+    {
+      "word": "arbeiten",
+      "russian": "работать",
+      "transcription": "/ˈaʁbaɪ̯tn̩/",
+      "example": "Ich muss heute lange ___.",
+      "imageUrl": null,
+      "imageQuery": "to work"
+    },
+    {
+      "word": "scheinen",
+      "russian": "казаться",
+      "transcription": "/ˈʃaɪ̯nən/",
+      "example": "Du sollst heute sehr glücklich ___.",
+      "imageUrl": null,
+      "imageQuery": "to seem"
+    },
+    {
+      "word": "fühlen",
+      "russian": "чувствовать",
+      "transcription": "/ˈfyːlən/",
+      "example": "Nach dem Sport werde ich mich besser ___.",
+      "imageUrl": null,
+      "imageQuery": "to feel"
+    },
+    {
+      "word": "versuchen",
+      "russian": "пытаться",
+      "transcription": "/fɛɐ̯ˈzuːxn̩/",
+      "example": "Du solltest dieses Restaurant unbedingt ___.",
+      "imageUrl": null,
+      "imageQuery": "to try"
+    },
+    {
+      "word": "verlassen",
+      "russian": "уходить",
+      "transcription": "/fɛɐ̯ˈlasn̩/",
+      "example": "Wir müssen das Haus um acht Uhr ___.",
+      "imageUrl": null,
+      "imageQuery": "to leave"
+    },
+    {
+      "word": "anrufen",
+      "russian": "звонить",
+      "transcription": "/ˈanʁuːfn̩/",
+      "example": "Ich werde dich morgen früh ___.",
+      "imageUrl": null,
+      "imageQuery": "to call"
+    },
+    {
+      "word": "brauchen",
+      "russian": "нуждаться",
+      "transcription": "/ˈbʁaʊ̯xn̩/",
+      "example": "Ich muss dringend Hilfe ___.",
+      "imageUrl": null,
+      "imageQuery": "to need"
+    },
+    {
+      "word": "werden",
+      "russian": "становиться",
+      "transcription": "/ˈveːɐ̯dn̩/",
+      "example": "Sie möchte eine berühmte Sängerin ___.",
+      "imageUrl": null,
+      "imageQuery": "to become"
+    },
+    {
+      "word": "bedeuten",
+      "russian": "означать",
+      "transcription": "/bəˈdɔʏ̯tn̩/",
+      "example": "Was soll dieses Wort auf Deutsch ___?",
+      "imageUrl": null,
+      "imageQuery": "to mean"
+    },
+    {
+      "word": "behalten",
+      "russian": "хранить",
+      "transcription": "/bəˈhaltn̩/",
+      "example": "Du darfst das Wechselgeld ___.",
+      "imageUrl": null,
+      "imageQuery": "to keep"
+    },
+    {
+      "word": "lassen",
+      "russian": "позволять",
+      "transcription": "/ˈlasn̩/",
+      "example": "Meine Eltern ___ mich jeden Tag draußen spielen.",
+      "imageUrl": null,
+      "imageQuery": "to let"
+    },
+    {
+      "word": "beginnen",
+      "russian": "начинать",
+      "transcription": "/bəˈɡɪnən/",
+      "example": "Der Unterricht wird um neun Uhr ___.",
+      "imageUrl": null,
+      "imageQuery": "to begin"
+    },
+    {
+      "word": "helfen",
+      "russian": "помогать",
+      "transcription": "/ˈhɛlfn̩/",
+      "example": "Kannst du mir mit den Taschen ___?",
+      "imageUrl": null,
+      "imageQuery": "to help"
+    },
+    {
+      "word": "reden",
+      "russian": "разговаривать",
+      "transcription": "/ˈʁeːdn̩/",
+      "example": "Ich möchte gern mit dir ___.",
+      "imageUrl": null,
+      "imageQuery": "to talk"
+    },
+    {
+      "word": "drehen",
+      "russian": "поворачивать",
+      "transcription": "/ˈdʁeːən/",
+      "example": "Bitte an der nächsten Ecke links ___.",
+      "imageUrl": null,
+      "imageQuery": "to turn"
+    },
+    {
+      "word": "starten",
+      "russian": "стартовать",
+      "transcription": "/ˈʃtaʁtn̩/",
+      "example": "Das Rennen wird in fünf Minuten ___.",
+      "imageUrl": null,
+      "imageQuery": "to start"
+    },
+    {
+      "word": "zeigen",
+      "russian": "показывать",
+      "transcription": "/ˈtsaɪ̯ɡn̩/",
+      "example": "Kannst du mir deine neuen Fotos ___?",
+      "imageUrl": null,
+      "imageQuery": "to show"
+    },
+    {
+      "word": "hören",
+      "russian": "слышать",
+      "transcription": "/ˈhøːʁən/",
+      "example": "Von hier kann ich Musik ___.",
+      "imageUrl": null,
+      "imageQuery": "to hear"
+    },
+    {
+      "word": "spielen",
+      "russian": "играть",
+      "transcription": "/ˈʃpiːlən/",
+      "example": "Die Kinder werden im Hof Fußball ___.",
+      "imageUrl": null,
+      "imageQuery": "to play"
+    },
+    {
+      "word": "rennen",
+      "russian": "бегать",
+      "transcription": "/ˈʁɛnən/",
+      "example": "Ich möchte jeden Morgen im Park ___.",
+      "imageUrl": null,
+      "imageQuery": "to run"
+    },
+    {
+      "word": "bewegen",
+      "russian": "двигаться",
+      "transcription": "/bəˈveːɡn̩/",
+      "example": "Bitte während des Fotos nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to move"
+    },
+    {
+      "word": "mögen",
+      "russian": "нравиться",
+      "transcription": "/ˈmøːɡn̩/",
+      "example": "Ich kann Eiscreme sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "to like"
+    },
+    {
+      "word": "leben",
+      "russian": "жить",
+      "transcription": "/ˈleːbn̩/",
+      "example": "Sie möchten in einem kleinen Haus am Fluss ___.",
+      "imageUrl": null,
+      "imageQuery": "to live"
+    },
+    {
+      "word": "glauben",
+      "russian": "верить",
+      "transcription": "/ˈɡlaʊ̯bn̩/",
+      "example": "Ich kann dir das einfach nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to believe"
+    },
+    {
+      "word": "halten",
+      "russian": "держать",
+      "transcription": "/ˈhaltn̩/",
+      "example": "Kannst du kurz meine Tasche ___?",
+      "imageUrl": null,
+      "imageQuery": "to hold"
+    },
+    {
+      "word": "bringen",
+      "russian": "приносить",
+      "transcription": "/ˈbʁɪŋən/",
+      "example": "Bitte morgen deine Bücher mit ___.",
+      "imageUrl": null,
+      "imageQuery": "to bring"
+    },
+    {
+      "word": "passieren",
+      "russian": "случаться",
+      "transcription": "/paˈsiːʁən/",
+      "example": "Was wird ___, wenn ich diesen Knopf drücke?",
+      "imageUrl": null,
+      "imageQuery": "to happen"
+    },
+    {
+      "word": "schreiben",
+      "russian": "писать",
+      "transcription": "/ˈʃʁaɪ̯bn̩/",
+      "example": "Ich werde meiner Großmutter einen Brief ___.",
+      "imageUrl": null,
+      "imageQuery": "to write"
+    },
+    {
+      "word": "sitzen",
+      "russian": "сидеть",
+      "transcription": "/ˈzɪtsn̩/",
+      "example": "Bitte ___ und öffnet eure Bücher.",
+      "imageUrl": null,
+      "imageQuery": "to sit"
+    },
+    {
+      "word": "stehen",
+      "russian": "стоять",
+      "transcription": "/ˈʃteːən/",
+      "example": "Bitte ___ auf, wenn der Lehrer hereinkommt.",
+      "imageUrl": null,
+      "imageQuery": "to stand"
+    },
+    {
+      "word": "verlieren",
+      "russian": "терять",
+      "transcription": "/fɛɐ̯ˈliːʁən/",
+      "example": "Pass auf, du darfst dein Ticket nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to lose"
+    },
+    {
+      "word": "bezahlen",
+      "russian": "платить",
+      "transcription": "/bəˈtsaːlən/",
+      "example": "Kann ich mit Karte ___?",
+      "imageUrl": null,
+      "imageQuery": "to pay"
+    },
+    {
+      "word": "treffen",
+      "russian": "встречать",
+      "transcription": "/ˈtʁɛfn̩/",
+      "example": "Wollen wir uns um sechs Uhr im Café ___?",
+      "imageUrl": null,
+      "imageQuery": "to meet"
+    },
+    {
+      "word": "einschließen",
+      "russian": "включать",
+      "transcription": "/ˈaɪ̯nʃliːsn̩/",
+      "example": "Soll der Preis das Frühstück ___?",
+      "imageUrl": null,
+      "imageQuery": "to include"
+    },
+    {
+      "word": "fortsetzen",
+      "russian": "продолжать",
+      "transcription": "/ˈfɔʁtzɛtsn̩/",
+      "example": "Wir werden die Stunde nach der Pause ___.",
+      "imageUrl": null,
+      "imageQuery": "to continue"
+    },
+    {
+      "word": "stellen",
+      "russian": "устанавливать",
+      "transcription": "/ˈʃtɛlən/",
+      "example": "Vergiss nicht, den Wecker auf sieben Uhr zu ___.",
+      "imageUrl": null,
+      "imageQuery": "to set"
+    },
+    {
+      "word": "lernen",
+      "russian": "изучать",
+      "transcription": "/ˈlɛʁnən/",
+      "example": "Ich möchte dieses Jahr Deutsch ___.",
+      "imageUrl": null,
+      "imageQuery": "to learn"
+    },
+    {
+      "word": "ändern",
+      "russian": "менять",
+      "transcription": "/ˈɛndɐn/",
+      "example": "Ich muss vor dem Abendessen meine Kleidung ___.",
+      "imageUrl": null,
+      "imageQuery": "to change"
+    },
+    {
+      "word": "führen",
+      "russian": "вести",
+      "transcription": "/ˈfyːʁən/",
+      "example": "Diese Straße wird dich zum Bahnhof ___.",
+      "imageUrl": null,
+      "imageQuery": "to lead"
+    },
+    {
+      "word": "verstehen",
+      "russian": "понимать",
+      "transcription": "/fɛɐ̯ˈʃteːən/",
+      "example": "Ich kann diese Frage nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to understand"
+    },
+    {
+      "word": "beobachten",
+      "russian": "наблюдать",
+      "transcription": "/bəˈʔoːbaxtn̩/",
+      "example": "Wir werden heute Abend zusammen fernsehen und die Vögel ___.",
+      "imageUrl": null,
+      "imageQuery": "to watch"
+    },
+    {
+      "word": "folgen",
+      "russian": "следовать",
+      "transcription": "/ˈfɔlɡn̩/",
+      "example": "Bitte mir ___, das Zimmer ist hier.",
+      "imageUrl": null,
+      "imageQuery": "to follow"
+    },
+    {
+      "word": "anhalten",
+      "russian": "останавливаться",
+      "transcription": "/ˈanhaltn̩/",
+      "example": "Der Bus wird gleich neben der Schule ___.",
+      "imageUrl": null,
+      "imageQuery": "to stop"
+    },
+    {
+      "word": "erschaffen",
+      "russian": "создавать",
+      "transcription": "/ɛɐ̯ˈʃafn̩/",
+      "example": "Du musst ein neues Passwort ___.",
+      "imageUrl": null,
+      "imageQuery": "to create"
+    },
+    {
+      "word": "sprechen",
+      "russian": "говорить",
+      "transcription": "/ˈʃpʁɛçn̩/",
+      "example": "Kannst du Englisch ___?",
+      "imageUrl": null,
+      "imageQuery": "to speak"
+    },
+    {
+      "word": "lesen",
+      "russian": "читать",
+      "transcription": "/ˈleːzn̩/",
+      "example": "Ich möchte vor dem Schlafen ein Buch ___.",
+      "imageUrl": null,
+      "imageQuery": "to read"
+    },
+    {
+      "word": "ausgeben",
+      "russian": "тратить",
+      "transcription": "/ˈaʊ̯sɡeːbn̩/",
+      "example": "Du solltest nicht dein ganzes Geld für Spielzeug ___.",
+      "imageUrl": null,
+      "imageQuery": "to spend"
+    },
+    {
+      "word": "wachsen",
+      "russian": "расти",
+      "transcription": "/ˈvaksn̩/",
+      "example": "Diese Blumen werden im Sommer sehr schnell ___.",
+      "imageUrl": null,
+      "imageQuery": "to grow"
+    },
+    {
+      "word": "öffnen",
+      "russian": "открывать",
+      "transcription": "/ˈœfnən/",
+      "example": "Kannst du bitte das Fenster ___?",
+      "imageUrl": null,
+      "imageQuery": "to open"
+    },
+    {
+      "word": "laufen",
+      "russian": "гулять",
+      "transcription": "/ˈlaʊ̯fn̩/",
+      "example": "Wir werden jeden Tag zur Schule ___.",
+      "imageUrl": null,
+      "imageQuery": "to walk"
+    },
+    {
+      "word": "gewinnen",
+      "russian": "побеждать",
+      "transcription": "/ɡəˈvɪnən/",
+      "example": "Ich hoffe, unser Team wird das Spiel ___.",
+      "imageUrl": null,
+      "imageQuery": "to win"
+    },
+    {
+      "word": "unterrichten",
+      "russian": "преподавать",
+      "transcription": "/ˈʊntɐʁɪçtn̩/",
+      "example": "Meine Mutter kann dich kochen ___.",
+      "imageUrl": null,
+      "imageQuery": "to teach"
+    },
+    {
+      "word": "anbieten",
+      "russian": "предлагать",
+      "transcription": "/ˈanbiːtn̩/",
+      "example": "Sie werden im Hotel kostenlosen Kaffee ___.",
+      "imageUrl": null,
+      "imageQuery": "to offer"
+    },
+    {
+      "word": "erinnern",
+      "russian": "помнить",
+      "transcription": "/ɛɐ̯ˈʔɪnɐn/",
+      "example": "Kannst du dich an meinen Namen ___?",
+      "imageUrl": null,
+      "imageQuery": "to remember"
+    },
+    {
+      "word": "lieben",
+      "russian": "любить",
+      "transcription": "/ˈliːbn̩/",
+      "example": "Ich möchte meine Familie immer sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "to love"
+    },
+    {
+      "word": "überlegen",
+      "russian": "рассматривать",
+      "transcription": "/ˌyːbɐˈleːɡn̩/",
+      "example": "Du solltest seine Idee wirklich ___.",
+      "imageUrl": null,
+      "imageQuery": "to consider"
+    },
+    {
+      "word": "erscheinen",
+      "russian": "появляться",
+      "transcription": "/ɛɐ̯ˈʃaɪ̯nən/",
+      "example": "Sterne werden nachts am Himmel ___.",
+      "imageUrl": null,
+      "imageQuery": "to appear"
+    },
+    {
+      "word": "kaufen",
+      "russian": "покупать",
+      "transcription": "/ˈkaʊ̯fn̩/",
+      "example": "Ich möchte etwas Brot und Milch ___.",
+      "imageUrl": null,
+      "imageQuery": "to buy"
+    },
+    {
+      "word": "warten",
+      "russian": "ждать",
+      "transcription": "/ˈvaʁtn̩/",
+      "example": "Bitte hier an der Bushaltestelle auf mich ___.",
+      "imageUrl": null,
+      "imageQuery": "to wait"
+    },
+    {
+      "word": "servieren",
+      "russian": "обслуживать",
+      "transcription": "/zɛʁˈviːʁən/",
+      "example": "Sie werden von sieben bis zehn Uhr Frühstück ___.",
+      "imageUrl": null,
+      "imageQuery": "to serve"
+    },
+    {
+      "word": "sterben",
+      "russian": "умирать",
+      "transcription": "/ˈʃtɛʁbn̩/",
+      "example": "Ohne Wasser und Licht werden Pflanzen ___.",
+      "imageUrl": null,
+      "imageQuery": "to die"
+    },
+    {
+      "word": "senden",
+      "russian": "отправлять",
+      "transcription": "/ˈzɛndn̩/",
+      "example": "Ich werde dir heute Abend eine Nachricht ___.",
+      "imageUrl": null,
+      "imageQuery": "to send"
+    },
+    {
+      "word": "bauen",
+      "russian": "строить",
+      "transcription": "/ˈbaʊ̯ən/",
+      "example": "Sie möchten hier eine neue Schule ___.",
+      "imageUrl": null,
+      "imageQuery": "to build"
+    },
+    {
+      "word": "bleiben",
+      "russian": "оставаться",
+      "transcription": "/ˈblaɪ̯bn̩/",
+      "example": "Wir werden an diesem Wochenende zu Hause ___.",
+      "imageUrl": null,
+      "imageQuery": "to stay"
+    },
+    {
+      "word": "fallen",
+      "russian": "падать",
+      "transcription": "/ˈfalən/",
+      "example": "Sei vorsichtig, du kannst auf dem Eis ___.",
+      "imageUrl": null,
+      "imageQuery": "to fall"
+    },
+    {
+      "word": "schneiden",
+      "russian": "резать",
+      "transcription": "/ˈʃnaɪ̯dn̩/",
+      "example": "Kannst du bitte das Brot ___?",
+      "imageUrl": null,
+      "imageQuery": "to cut"
+    },
+    {
+      "word": "erreichen",
+      "russian": "достигать",
+      "transcription": "/ɛɐ̯ˈʁaɪ̯çn̩/",
+      "example": "Wir werden die Stadt vor der Dunkelheit ___.",
+      "imageUrl": null,
+      "imageQuery": "to reach"
+    },
+    {
+      "word": "töten",
+      "russian": "убивать",
+      "transcription": "/ˈtøːtn̩/",
+      "example": "Kälte kann diese Pflanzen leicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to kill"
+    },
+    {
+      "word": "heben",
+      "russian": "поднимать",
+      "transcription": "/ˈheːbn̩/",
+      "example": "Bitte die Hand ___, wenn du eine Frage hast.",
+      "imageUrl": null,
+      "imageQuery": "to raise"
+    },
+    {
+      "word": "vorbeigehen",
+      "russian": "проходить",
+      "transcription": "/foːɐ̯ˈbaɪ̯ɡeːən/",
+      "example": "Viele Autos werden jeden Tag an unserem Haus ___.",
+      "imageUrl": null,
+      "imageQuery": "to pass by"
+    },
+    {
+      "word": "verkaufen",
+      "russian": "продавать",
+      "transcription": "/fɛɐ̯ˈkaʊ̯fn̩/",
+      "example": "Sie werden frisches Obst auf dem Markt ___.",
+      "imageUrl": null,
+      "imageQuery": "to sell"
+    },
+    {
+      "word": "entscheiden",
+      "russian": "решать",
+      "transcription": "/ɛntˈʃaɪ̯dn̩/",
+      "example": "Wir müssen ___, wohin wir in den Urlaub fahren.",
+      "imageUrl": null,
+      "imageQuery": "to decide"
+    },
+    {
+      "word": "zurückkehren",
+      "russian": "возвращаться",
+      "transcription": "/tsuˈʁʏkkeːʁən/",
+      "example": "Ich werde um sechs Uhr abends nach Hause ___.",
+      "imageUrl": null,
+      "imageQuery": "to return"
+    },
+    {
+      "word": "erklären",
+      "russian": "объяснять",
+      "transcription": "/ɛɐ̯ˈklɛːʁən/",
+      "example": "Kannst du mir diese Regel noch einmal ___?",
+      "imageUrl": null,
+      "imageQuery": "to explain"
+    },
+    {
+      "word": "hoffen",
+      "russian": "надеяться",
+      "transcription": "/ˈhɔfn̩/",
+      "example": "Ich möchte auf gutes Wetter morgen ___.",
+      "imageUrl": null,
+      "imageQuery": "to hope"
+    },
+    {
+      "word": "tragen",
+      "russian": "нести",
+      "transcription": "/ˈtʁaːɡn̩/",
+      "example": "Lass mich diese schwere Kiste für dich ___.",
+      "imageUrl": null,
+      "imageQuery": "to carry"
+    },
+    {
+      "word": "fahren",
+      "russian": "водить",
+      "transcription": "/ˈfaːʁən/",
+      "example": "Mein Vater kann einen Bus ___.",
+      "imageUrl": null,
+      "imageQuery": "to drive"
+    },
+    {
+      "word": "zerbrechen",
+      "russian": "ломать",
+      "transcription": "/tsɛɐ̯ˈbʁɛçn̩/",
+      "example": "Sei vorsichtig, du darfst das Glas nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to break"
+    },
+    {
+      "word": "essen",
+      "russian": "есть",
+      "transcription": "/ˈɛsn̩/",
+      "example": "Wir werden das Abendessen um sieben Uhr ___.",
+      "imageUrl": null,
+      "imageQuery": "to eat"
+    },
+    {
+      "word": "trinken",
+      "russian": "пить",
+      "transcription": "/ˈtʁɪŋkn̩/",
+      "example": "Du solltest jeden Tag mehr Wasser ___.",
+      "imageUrl": null,
+      "imageQuery": "to drink"
+    },
+    {
+      "word": "schlafen",
+      "russian": "спать",
+      "transcription": "/ˈʃlaːfn̩/",
+      "example": "Babys können viele Stunden am Tag ___.",
+      "imageUrl": null,
+      "imageQuery": "to sleep"
+    },
+    {
+      "word": "kochen",
+      "russian": "готовить (еду)",
+      "transcription": "/ˈkɔxn̩/",
+      "example": "Meine Mutter kann sehr gut ___.",
+      "imageUrl": null,
+      "imageQuery": "to cook"
+    },
+    {
+      "word": "reisen",
+      "russian": "путешествовать",
+      "transcription": "/ˈʁaɪ̯zn̩/",
+      "example": "Nächstes Jahr möchten wir nach Italien ___.",
+      "imageUrl": null,
+      "imageQuery": "to travel"
+    }
+  ]
+}

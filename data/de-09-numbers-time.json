@@ -1,0 +1,326 @@
+{
+  "name": "Немецкие числа и время",
+  "language": "de",
+  "words": [
+    {
+      "word": "eins",
+      "russian": "один",
+      "transcription": "/aɪ̯ns/",
+      "example": "Nach der Null kommt die Zahl ___.",
+      "imageUrl": null,
+      "imageQuery": "number one"
+    },
+    {
+      "word": "zwei",
+      "russian": "два",
+      "transcription": "/tsvaɪ̯/",
+      "example": "Ich habe genau ___ Brüder.",
+      "imageUrl": null,
+      "imageQuery": "number two"
+    },
+    {
+      "word": "drei",
+      "russian": "три",
+      "transcription": "/dʁaɪ̯/",
+      "example": "Auf dem Tisch liegen ___ Äpfel.",
+      "imageUrl": null,
+      "imageQuery": "number three"
+    },
+    {
+      "word": "vier",
+      "russian": "четыре",
+      "transcription": "/fiːɐ̯/",
+      "example": "Ein Auto hat ___ Räder.",
+      "imageUrl": null,
+      "imageQuery": "number four"
+    },
+    {
+      "word": "fünf",
+      "russian": "пять",
+      "transcription": "/fʏnf/",
+      "example": "Eine Hand hat ___ Finger.",
+      "imageUrl": null,
+      "imageQuery": "number five"
+    },
+    {
+      "word": "sechs",
+      "russian": "шесть",
+      "transcription": "/zɛks/",
+      "example": "Eine Woche hat ___ Werktage.",
+      "imageUrl": null,
+      "imageQuery": "number six"
+    },
+    {
+      "word": "sieben",
+      "russian": "семь",
+      "transcription": "/ˈziːbn̩/",
+      "example": "Eine Woche hat ___ Tage.",
+      "imageUrl": null,
+      "imageQuery": "number seven"
+    },
+    {
+      "word": "acht",
+      "russian": "восемь",
+      "transcription": "/axt/",
+      "example": "Ich schlafe jede Nacht ___ Stunden.",
+      "imageUrl": null,
+      "imageQuery": "number eight"
+    },
+    {
+      "word": "neun",
+      "russian": "девять",
+      "transcription": "/nɔʏ̯n/",
+      "example": "Die Schule beginnt um ___ Uhr.",
+      "imageUrl": null,
+      "imageQuery": "number nine"
+    },
+    {
+      "word": "zehn",
+      "russian": "десять",
+      "transcription": "/tseːn/",
+      "example": "Ich zähle bis ___.",
+      "imageUrl": null,
+      "imageQuery": "number ten"
+    },
+    {
+      "word": "zwanzig",
+      "russian": "двадцать",
+      "transcription": "/ˈtsvantsɪç/",
+      "example": "Sie ist erst ___ Jahre alt.",
+      "imageUrl": null,
+      "imageQuery": "number twenty"
+    },
+    {
+      "word": "hundert",
+      "russian": "сто",
+      "transcription": "/ˈhʊndɐt/",
+      "example": "In dieser Stadt leben über ___ Familien.",
+      "imageUrl": null,
+      "imageQuery": "number hundred"
+    },
+    {
+      "word": "tausend",
+      "russian": "тысяча",
+      "transcription": "/ˈtaʊ̯zn̩t/",
+      "example": "Dieses Auto kostet mehr als ___ Euro.",
+      "imageUrl": null,
+      "imageQuery": "number thousand"
+    },
+    {
+      "word": "die Million",
+      "russian": "миллион",
+      "transcription": "/mɪˈli̯oːn/",
+      "example": "In dieser Stadt leben eine ganze ___ Menschen.",
+      "imageUrl": null,
+      "imageQuery": "number million"
+    },
+    {
+      "word": "erste",
+      "russian": "первый",
+      "transcription": "/ˈeːɐ̯stə/",
+      "example": "Das ist der ___ Tag im neuen Job.",
+      "imageUrl": null,
+      "imageQuery": "first"
+    },
+    {
+      "word": "zweite",
+      "russian": "второй",
+      "transcription": "/ˈtsvaɪ̯tə/",
+      "example": "Das ist der ___ Versuch heute.",
+      "imageUrl": null,
+      "imageQuery": "second (ordinal)"
+    },
+    {
+      "word": "die Stunde",
+      "russian": "час",
+      "transcription": "/ˈʃtʊndə/",
+      "example": "Der Film dauert eine ganze ___.",
+      "imageUrl": null,
+      "imageQuery": "hour"
+    },
+    {
+      "word": "die Minute",
+      "russian": "минута",
+      "transcription": "/miˈnuːtə/",
+      "example": "Warte bitte noch ___.",
+      "imageUrl": null,
+      "imageQuery": "minute"
+    },
+    {
+      "word": "die Woche",
+      "russian": "неделя",
+      "transcription": "/ˈvɔxə/",
+      "example": "Sehr schnell vergeht ___.",
+      "imageUrl": null,
+      "imageQuery": "week"
+    },
+    {
+      "word": "der Monat",
+      "russian": "месяц",
+      "transcription": "/ˈmoːnat/",
+      "example": "Im Kalender beginnt ___ mit dem ersten Tag.",
+      "imageUrl": null,
+      "imageQuery": "month"
+    },
+    {
+      "word": "der Morgen",
+      "russian": "утро",
+      "transcription": "/ˈmɔʁɡn̩/",
+      "example": "Voller Sonnenschein beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "morning"
+    },
+    {
+      "word": "gestern",
+      "russian": "вчера",
+      "transcription": "/ˈɡɛstɐn/",
+      "example": "Ich habe sie ___ getroffen.",
+      "imageUrl": null,
+      "imageQuery": "yesterday"
+    },
+    {
+      "word": "heute",
+      "russian": "сегодня",
+      "transcription": "/ˈhɔʏ̯tə/",
+      "example": "Ich fühle mich ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "today"
+    },
+    {
+      "word": "morgen",
+      "russian": "завтра",
+      "transcription": "/ˈmɔʁɡn̩/",
+      "example": "Der Zug fährt erst ___.",
+      "imageUrl": null,
+      "imageQuery": "tomorrow"
+    },
+    {
+      "word": "das Jahr",
+      "russian": "год",
+      "transcription": "/jaːɐ̯/",
+      "example": "Sehr schnell vergeht ___.",
+      "imageUrl": null,
+      "imageQuery": "year"
+    },
+    {
+      "word": "der Tag",
+      "russian": "день",
+      "transcription": "/taːk/",
+      "example": "Heute ist ein sehr schöner ___.",
+      "imageUrl": null,
+      "imageQuery": "day"
+    },
+    {
+      "word": "die Nacht",
+      "russian": "ночь",
+      "transcription": "/naxt/",
+      "example": "Ganz ruhig verläuft ___.",
+      "imageUrl": null,
+      "imageQuery": "night"
+    },
+    {
+      "word": "der Abend",
+      "russian": "вечер",
+      "transcription": "/ˈaːbn̩t/",
+      "example": "Ganz ruhig verläuft ___.",
+      "imageUrl": null,
+      "imageQuery": "evening"
+    },
+    {
+      "word": "der Nachmittag",
+      "russian": "день (после полудня)",
+      "transcription": "/ˈnaːxmɪtaːk/",
+      "example": "Regnerisch beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "afternoon"
+    },
+    {
+      "word": "der Mittag",
+      "russian": "полдень",
+      "transcription": "/ˈmɪtaːk/",
+      "example": "Ganz pünktlich beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "noon"
+    },
+    {
+      "word": "die Mitternacht",
+      "russian": "полночь",
+      "transcription": "/ˈmɪtɐnaxt/",
+      "example": "Um ___ beginnt das neue Jahr.",
+      "imageUrl": null,
+      "imageQuery": "midnight"
+    },
+    {
+      "word": "die Uhr",
+      "russian": "часы",
+      "transcription": "/uːɐ̯/",
+      "example": "An der Wand hängt eine alte ___.",
+      "imageUrl": null,
+      "imageQuery": "clock"
+    },
+    {
+      "word": "die Armbanduhr",
+      "russian": "наручные часы",
+      "transcription": "/ˈaʁmbantʔuːɐ̯/",
+      "example": "An ihrem Arm trägt sie eine goldene ___.",
+      "imageUrl": null,
+      "imageQuery": "wristwatch"
+    },
+    {
+      "word": "der Kalender",
+      "russian": "календарь",
+      "transcription": "/kaˈlɛndɐ/",
+      "example": "An der Wand hängt ___.",
+      "imageUrl": null,
+      "imageQuery": "calendar"
+    },
+    {
+      "word": "die Jahreszeit",
+      "russian": "время года",
+      "transcription": "/ˈjaːʁəstsaɪ̯t/",
+      "example": "Der Herbst ist meine liebste ___.",
+      "imageUrl": null,
+      "imageQuery": "season"
+    },
+    {
+      "word": "das Jahrhundert",
+      "russian": "век",
+      "transcription": "/jaːɐ̯ˈhʊndɐt/",
+      "example": "Dieses Gebäude steht seit einem ganzen ___.",
+      "imageUrl": null,
+      "imageQuery": "century"
+    },
+    {
+      "word": "der Moment",
+      "russian": "момент",
+      "transcription": "/moˈmɛnt/",
+      "example": "Ganz plötzlich kommt ___.",
+      "imageUrl": null,
+      "imageQuery": "moment"
+    },
+    {
+      "word": "früh",
+      "russian": "рано",
+      "transcription": "/fʁyː/",
+      "example": "Am Montag stehe ich sehr ___ auf.",
+      "imageUrl": null,
+      "imageQuery": "early"
+    },
+    {
+      "word": "spät",
+      "russian": "поздно",
+      "transcription": "/ʃpɛːt/",
+      "example": "Am Abend kommt er meistens ___ nach Hause.",
+      "imageUrl": null,
+      "imageQuery": "late"
+    },
+    {
+      "word": "jetzt",
+      "russian": "сейчас",
+      "transcription": "/jɛtst/",
+      "example": "Wir müssen ___ sofort losfahren.",
+      "imageUrl": null,
+      "imageQuery": "now"
+    }
+  ]
+}

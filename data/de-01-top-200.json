@@ -1,0 +1,1606 @@
+{
+  "name": "Топ-200 частых немецких слов",
+  "language": "de",
+  "words": [
+    {
+      "word": "die Zeit",
+      "russian": "время",
+      "transcription": "/tsaɪ̯t/",
+      "example": "Für dieses Projekt fehlt uns ___.",
+      "imageUrl": null,
+      "imageQuery": "time"
+    },
+    {
+      "word": "das Jahr",
+      "russian": "год",
+      "transcription": "/jaːɐ̯/",
+      "example": "Sehr schnell vergeht ___.",
+      "imageUrl": null,
+      "imageQuery": "year"
+    },
+    {
+      "word": "der Monat",
+      "russian": "месяц",
+      "transcription": "/ˈmoːnat/",
+      "example": "Im Kalender beginnt ___ mit dem ersten Tag.",
+      "imageUrl": null,
+      "imageQuery": "month"
+    },
+    {
+      "word": "die Woche",
+      "russian": "неделя",
+      "transcription": "/ˈvɔxə/",
+      "example": "Sehr schnell vergeht ___.",
+      "imageUrl": null,
+      "imageQuery": "week"
+    },
+    {
+      "word": "der Tag",
+      "russian": "день",
+      "transcription": "/taːk/",
+      "example": "Heute beginnt ___ mit Sonnenschein.",
+      "imageUrl": null,
+      "imageQuery": "day"
+    },
+    {
+      "word": "die Stunde",
+      "russian": "час",
+      "transcription": "/ˈʃtʊndə/",
+      "example": "Jeden Abend vergeht ___ wie im Flug.",
+      "imageUrl": null,
+      "imageQuery": "hour"
+    },
+    {
+      "word": "die Minute",
+      "russian": "минута",
+      "transcription": "/miˈnuːtə/",
+      "example": "Bis zum Start bleibt nur noch ___.",
+      "imageUrl": null,
+      "imageQuery": "minute"
+    },
+    {
+      "word": "der Morgen",
+      "russian": "утро",
+      "transcription": "/ˈmɔʁɡn̩/",
+      "example": "Sehr früh beginnt ___ heute.",
+      "imageUrl": null,
+      "imageQuery": "morning"
+    },
+    {
+      "word": "der Abend",
+      "russian": "вечер",
+      "transcription": "/ˈaːbn̩t/",
+      "example": "Ganz ruhig verläuft ___.",
+      "imageUrl": null,
+      "imageQuery": "evening"
+    },
+    {
+      "word": "die Nacht",
+      "russian": "ночь",
+      "transcription": "/naxt/",
+      "example": "Ganz ruhig verläuft ___.",
+      "imageUrl": null,
+      "imageQuery": "night"
+    },
+    {
+      "word": "die Welt",
+      "russian": "мир",
+      "transcription": "/vɛlt/",
+      "example": "Während der Reise verändert sich ___.",
+      "imageUrl": null,
+      "imageQuery": "world"
+    },
+    {
+      "word": "das Leben",
+      "russian": "жизнь",
+      "transcription": "/ˈleːbn̩/",
+      "example": "In dieser Stadt beginnt ___ neu.",
+      "imageUrl": null,
+      "imageQuery": "life"
+    },
+    {
+      "word": "der Mann",
+      "russian": "мужчина",
+      "transcription": "/man/",
+      "example": "Neben mir sitzt ___.",
+      "imageUrl": null,
+      "imageQuery": "man"
+    },
+    {
+      "word": "die Frau",
+      "russian": "женщина",
+      "transcription": "/fʁaʊ̯/",
+      "example": "An der Kasse steht ___.",
+      "imageUrl": null,
+      "imageQuery": "woman"
+    },
+    {
+      "word": "das Kind",
+      "russian": "ребёнок",
+      "transcription": "/kɪnt/",
+      "example": "Im Garten spielt ___.",
+      "imageUrl": null,
+      "imageQuery": "child"
+    },
+    {
+      "word": "die Familie",
+      "russian": "семья",
+      "transcription": "/faˈmiːli̯ə/",
+      "example": "In diesem Haus wohnt ___.",
+      "imageUrl": null,
+      "imageQuery": "family"
+    },
+    {
+      "word": "der Freund",
+      "russian": "друг",
+      "transcription": "/fʁɔʏ̯nt/",
+      "example": "In diesem Haus wohnt auch ___.",
+      "imageUrl": null,
+      "imageQuery": "friend"
+    },
+    {
+      "word": "die Leute",
+      "russian": "люди",
+      "transcription": "/ˈlɔʏ̯tə/",
+      "example": "Im Park spazieren ___.",
+      "imageUrl": null,
+      "imageQuery": "people"
+    },
+    {
+      "word": "der Name",
+      "russian": "имя",
+      "transcription": "/ˈnaːmə/",
+      "example": "Auf der Liste steht ___ ganz oben.",
+      "imageUrl": null,
+      "imageQuery": "name"
+    },
+    {
+      "word": "der Kopf",
+      "russian": "голова",
+      "transcription": "/kɔpf/",
+      "example": "Auf dem Kissen liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "head"
+    },
+    {
+      "word": "der Bruder",
+      "russian": "брат",
+      "transcription": "/ˈbʁuːdɐ/",
+      "example": "Bei mir zu Hause wohnt ___ noch.",
+      "imageUrl": null,
+      "imageQuery": "brother"
+    },
+    {
+      "word": "die Schwester",
+      "russian": "сестра",
+      "transcription": "/ˈʃvɛstɐ/",
+      "example": "An der Universität studiert ___ fleißig.",
+      "imageUrl": null,
+      "imageQuery": "sister"
+    },
+    {
+      "word": "die Mutter",
+      "russian": "мать",
+      "transcription": "/ˈmʊtɐ/",
+      "example": "In der Küche kocht ___ sehr lecker.",
+      "imageUrl": null,
+      "imageQuery": "mother"
+    },
+    {
+      "word": "der Vater",
+      "russian": "отец",
+      "transcription": "/ˈfaːtɐ/",
+      "example": "Im Krankenhaus arbeitet ___.",
+      "imageUrl": null,
+      "imageQuery": "father"
+    },
+    {
+      "word": "das Haus",
+      "russian": "дом",
+      "transcription": "/haʊ̯s/",
+      "example": "Am Ende der Straße steht ___.",
+      "imageUrl": null,
+      "imageQuery": "house"
+    },
+    {
+      "word": "das Zuhause",
+      "russian": "дом (домашний очаг)",
+      "transcription": "/tsuˈhaʊ̯zə/",
+      "example": "Nach der langen Reise freut sie sich auf ___.",
+      "imageUrl": null,
+      "imageQuery": "home"
+    },
+    {
+      "word": "das Zimmer",
+      "russian": "комната",
+      "transcription": "/ˈtsɪmɐ/",
+      "example": "Am Ende des Flurs liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "room"
+    },
+    {
+      "word": "die Tür",
+      "russian": "дверь",
+      "transcription": "/tyːɐ̯/",
+      "example": "Bitte schließe ___ hinter dir.",
+      "imageUrl": null,
+      "imageQuery": "door"
+    },
+    {
+      "word": "das Fenster",
+      "russian": "окно",
+      "transcription": "/ˈfɛnstɐ/",
+      "example": "Bitte öffne ___, es ist heiß.",
+      "imageUrl": null,
+      "imageQuery": "window"
+    },
+    {
+      "word": "der Tisch",
+      "russian": "стол",
+      "transcription": "/tɪʃ/",
+      "example": "Mitten im Zimmer steht ___.",
+      "imageUrl": null,
+      "imageQuery": "table"
+    },
+    {
+      "word": "der Stuhl",
+      "russian": "стул",
+      "transcription": "/ʃtuːl/",
+      "example": "Direkt am Fenster steht ___.",
+      "imageUrl": null,
+      "imageQuery": "chair"
+    },
+    {
+      "word": "das Bett",
+      "russian": "кровать",
+      "transcription": "/bɛt/",
+      "example": "Um zehn Uhr gehe ich in ___.",
+      "imageUrl": null,
+      "imageQuery": "bed"
+    },
+    {
+      "word": "die Küche",
+      "russian": "кухня",
+      "transcription": "/ˈkʏçə/",
+      "example": "Ganz am Ende des Flurs liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "kitchen"
+    },
+    {
+      "word": "der Garten",
+      "russian": "сад",
+      "transcription": "/ˈɡaʁtn̩/",
+      "example": "Hinter unserem Haus liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "garden"
+    },
+    {
+      "word": "der Schlüssel",
+      "russian": "ключ",
+      "transcription": "/ˈʃlʏsl̩/",
+      "example": "Auf dem Tisch liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "key"
+    },
+    {
+      "word": "die Wand",
+      "russian": "стена",
+      "transcription": "/vant/",
+      "example": "In meinem Zimmer ist ___ hellblau.",
+      "imageUrl": null,
+      "imageQuery": "wall"
+    },
+    {
+      "word": "der Boden",
+      "russian": "пол",
+      "transcription": "/ˈboːdn̩/",
+      "example": "In der Mitte des Zimmers ist ___ aus Holz.",
+      "imageUrl": null,
+      "imageQuery": "floor"
+    },
+    {
+      "word": "die Stadt",
+      "russian": "город",
+      "transcription": "/ʃtat/",
+      "example": "Sehr modern ist ___ heute.",
+      "imageUrl": null,
+      "imageQuery": "city"
+    },
+    {
+      "word": "das Land",
+      "russian": "страна",
+      "transcription": "/lant/",
+      "example": "Sehr schön ist ___ im Frühling.",
+      "imageUrl": null,
+      "imageQuery": "country"
+    },
+    {
+      "word": "die Straße",
+      "russian": "улица",
+      "transcription": "/ˈʃtʁaːsə/",
+      "example": "Direkt vor unserer Schule verläuft ___.",
+      "imageUrl": null,
+      "imageQuery": "street"
+    },
+    {
+      "word": "die Landstraße",
+      "russian": "дорога",
+      "transcription": "/ˈlantʃtʁaːsə/",
+      "example": "Zum Dorf führt ___.",
+      "imageUrl": null,
+      "imageQuery": "road"
+    },
+    {
+      "word": "das Auto",
+      "russian": "машина",
+      "transcription": "/ˈaʊ̯to/",
+      "example": "Mein Vater fährt ___ jeden Tag.",
+      "imageUrl": null,
+      "imageQuery": "car"
+    },
+    {
+      "word": "der Bus",
+      "russian": "автобус",
+      "transcription": "/bʊs/",
+      "example": "Zur Arbeit fährt jeden Morgen ___.",
+      "imageUrl": null,
+      "imageQuery": "bus"
+    },
+    {
+      "word": "der Zug",
+      "russian": "поезд",
+      "transcription": "/tsuːk/",
+      "example": "Um neun Uhr fährt ___.",
+      "imageUrl": null,
+      "imageQuery": "train"
+    },
+    {
+      "word": "das Flugzeug",
+      "russian": "самолёт",
+      "transcription": "/ˈfluːktsɔʏ̯k/",
+      "example": "Sehr hoch am Himmel fliegt ___.",
+      "imageUrl": null,
+      "imageQuery": "plane"
+    },
+    {
+      "word": "der Flughafen",
+      "russian": "аэропорт",
+      "transcription": "/ˈfluːkhaːfn̩/",
+      "example": "Direkt vor der Stadt liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "airport"
+    },
+    {
+      "word": "der Bahnhof",
+      "russian": "вокзал",
+      "transcription": "/ˈbaːnhoːf/",
+      "example": "In der Stadtmitte liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "train station"
+    },
+    {
+      "word": "das Hotel",
+      "russian": "отель",
+      "transcription": "/hoˈtɛl/",
+      "example": "Am Strand liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "hotel"
+    },
+    {
+      "word": "der Laden",
+      "russian": "магазин",
+      "transcription": "/ˈlaːdn̩/",
+      "example": "Direkt an der Ecke befindet sich ___.",
+      "imageUrl": null,
+      "imageQuery": "shop"
+    },
+    {
+      "word": "der Markt",
+      "russian": "рынок",
+      "transcription": "/maʁkt/",
+      "example": "Sonntags findet ___ auf dem Platz statt.",
+      "imageUrl": null,
+      "imageQuery": "market"
+    },
+    {
+      "word": "der Park",
+      "russian": "парк",
+      "transcription": "/paʁk/",
+      "example": "Mitten in der Stadt liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "park"
+    },
+    {
+      "word": "das Ticket",
+      "russian": "билет",
+      "transcription": "/ˈtɪkət/",
+      "example": "An der Kasse kaufe ich ___.",
+      "imageUrl": null,
+      "imageQuery": "ticket"
+    },
+    {
+      "word": "das Wasser",
+      "russian": "вода",
+      "transcription": "/ˈvasɐ/",
+      "example": "In der Flasche ist ___ noch frisch.",
+      "imageUrl": null,
+      "imageQuery": "water"
+    },
+    {
+      "word": "der Baum",
+      "russian": "дерево",
+      "transcription": "/baʊ̯m/",
+      "example": "Neben unserem Haus steht ___.",
+      "imageUrl": null,
+      "imageQuery": "tree"
+    },
+    {
+      "word": "die Blume",
+      "russian": "цветок",
+      "transcription": "/ˈbluːmə/",
+      "example": "Im Garten blüht ___ wunderschön.",
+      "imageUrl": null,
+      "imageQuery": "flower"
+    },
+    {
+      "word": "die Sonne",
+      "russian": "солнце",
+      "transcription": "/ˈzɔnə/",
+      "example": "Im Sommer scheint ___ sehr hell.",
+      "imageUrl": null,
+      "imageQuery": "sun"
+    },
+    {
+      "word": "der Himmel",
+      "russian": "небо",
+      "transcription": "/ˈhɪml̩/",
+      "example": "Heute ist ___ ganz blau.",
+      "imageUrl": null,
+      "imageQuery": "sky"
+    },
+    {
+      "word": "das Meer",
+      "russian": "море",
+      "transcription": "/meːɐ̯/",
+      "example": "Direkt vor dem Hotel liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "sea"
+    },
+    {
+      "word": "der Fluss",
+      "russian": "река",
+      "transcription": "/flʊs/",
+      "example": "Durch unsere Stadt fließt ___.",
+      "imageUrl": null,
+      "imageQuery": "river"
+    },
+    {
+      "word": "der Berg",
+      "russian": "гора",
+      "transcription": "/bɛʁk/",
+      "example": "In den Alpen liegt ___ sehr hoch.",
+      "imageUrl": null,
+      "imageQuery": "mountain"
+    },
+    {
+      "word": "der Regen",
+      "russian": "дождь",
+      "transcription": "/ˈʁeːɡn̩/",
+      "example": "Den ganzen Tag fällt ___.",
+      "imageUrl": null,
+      "imageQuery": "rain"
+    },
+    {
+      "word": "der Schnee",
+      "russian": "снег",
+      "transcription": "/ʃneː/",
+      "example": "Im Winter fällt hier oft ___.",
+      "imageUrl": null,
+      "imageQuery": "snow"
+    },
+    {
+      "word": "das Wetter",
+      "russian": "погода",
+      "transcription": "/ˈvɛtɐ/",
+      "example": "Heute ist ___ sehr schön.",
+      "imageUrl": null,
+      "imageQuery": "weather"
+    },
+    {
+      "word": "das Tier",
+      "russian": "животное",
+      "transcription": "/tiːɐ̯/",
+      "example": "Sehr groß ist ___ im Zoo.",
+      "imageUrl": null,
+      "imageQuery": "animal"
+    },
+    {
+      "word": "der Hund",
+      "russian": "собака",
+      "transcription": "/hʊnt/",
+      "example": "Im Hof spielt ___ mit dem Ball.",
+      "imageUrl": null,
+      "imageQuery": "dog"
+    },
+    {
+      "word": "die Katze",
+      "russian": "кошка",
+      "transcription": "/ˈkatsə/",
+      "example": "Auf dem Sofa schläft ___.",
+      "imageUrl": null,
+      "imageQuery": "cat"
+    },
+    {
+      "word": "der Vogel",
+      "russian": "птица",
+      "transcription": "/ˈfoːɡl̩/",
+      "example": "Auf dem Baum singt ___.",
+      "imageUrl": null,
+      "imageQuery": "bird"
+    },
+    {
+      "word": "der Fisch",
+      "russian": "рыба",
+      "transcription": "/fɪʃ/",
+      "example": "In diesem Fluss lebt ___.",
+      "imageUrl": null,
+      "imageQuery": "fish"
+    },
+    {
+      "word": "das Essen",
+      "russian": "еда",
+      "transcription": "/ˈɛsn̩/",
+      "example": "In diesem Restaurant schmeckt ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "food"
+    },
+    {
+      "word": "das Brot",
+      "russian": "хлеб",
+      "transcription": "/broːt/",
+      "example": "Jeden Morgen kaufe ich ___ frisch.",
+      "imageUrl": null,
+      "imageQuery": "bread"
+    },
+    {
+      "word": "die Milch",
+      "russian": "молоко",
+      "transcription": "/mɪlç/",
+      "example": "In den Kaffee gebe ich ___.",
+      "imageUrl": null,
+      "imageQuery": "milk"
+    },
+    {
+      "word": "der Kaffee",
+      "russian": "кофе",
+      "transcription": "/ˈkafeː/",
+      "example": "Am Morgen duftet in der Küche ___.",
+      "imageUrl": null,
+      "imageQuery": "coffee"
+    },
+    {
+      "word": "der Tee",
+      "russian": "чай",
+      "transcription": "/teː/",
+      "example": "Am Nachmittag dampft in der Kanne ___.",
+      "imageUrl": null,
+      "imageQuery": "tea"
+    },
+    {
+      "word": "der Apfel",
+      "russian": "яблоко",
+      "transcription": "/ˈapfl̩/",
+      "example": "Im Korb liegt ___ ganz oben.",
+      "imageUrl": null,
+      "imageQuery": "apple"
+    },
+    {
+      "word": "das Ei",
+      "russian": "яйцо",
+      "transcription": "/aɪ̯/",
+      "example": "Zum Frühstück kocht er ___.",
+      "imageUrl": null,
+      "imageQuery": "egg"
+    },
+    {
+      "word": "das Obst",
+      "russian": "фрукты",
+      "transcription": "/oːpst/",
+      "example": "Auf dem Markt liegt ___ frisch bereit.",
+      "imageUrl": null,
+      "imageQuery": "fruit"
+    },
+    {
+      "word": "das Frühstück",
+      "russian": "завтрак",
+      "transcription": "/ˈfʁyːʃtʏk/",
+      "example": "Um acht Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "breakfast"
+    },
+    {
+      "word": "das Mittagessen",
+      "russian": "обед",
+      "transcription": "/ˈmɪtaːkʔɛsn̩/",
+      "example": "Um zwölf Uhr gibt es ___.",
+      "imageUrl": null,
+      "imageQuery": "lunch"
+    },
+    {
+      "word": "das Abendessen",
+      "russian": "ужин",
+      "transcription": "/ˈaːbn̩tʔɛsn̩/",
+      "example": "Um sieben Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "dinner"
+    },
+    {
+      "word": "die Tasse",
+      "russian": "чашка",
+      "transcription": "/ˈtasə/",
+      "example": "Auf dem Tisch steht ___.",
+      "imageUrl": null,
+      "imageQuery": "cup"
+    },
+    {
+      "word": "die Schule",
+      "russian": "школа",
+      "transcription": "/ˈʃuːlə/",
+      "example": "Um acht Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "school"
+    },
+    {
+      "word": "der Job",
+      "russian": "работа",
+      "transcription": "/dʒɔp/",
+      "example": "Seit einem Jahr gefällt ihr ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "job"
+    },
+    {
+      "word": "das Büro",
+      "russian": "офис",
+      "transcription": "/byˈʁoː/",
+      "example": "Direkt neben dem Aufzug liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "office"
+    },
+    {
+      "word": "der Lehrer",
+      "russian": "учитель",
+      "transcription": "/ˈleːʁɐ/",
+      "example": "Sehr freundlich ist ___ in unserer Klasse.",
+      "imageUrl": null,
+      "imageQuery": "teacher"
+    },
+    {
+      "word": "der Student",
+      "russian": "студент",
+      "transcription": "/ʃtuˈdɛnt/",
+      "example": "An der Universität lernt ___ sehr fleißig.",
+      "imageUrl": null,
+      "imageQuery": "student"
+    },
+    {
+      "word": "der Arzt",
+      "russian": "врач",
+      "transcription": "/aʁtst/",
+      "example": "In diesem Krankenhaus arbeitet ___.",
+      "imageUrl": null,
+      "imageQuery": "doctor"
+    },
+    {
+      "word": "das Krankenhaus",
+      "russian": "больница",
+      "transcription": "/ˈkʁankn̩haʊ̯s/",
+      "example": "In der Nähe vom Park liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "hospital"
+    },
+    {
+      "word": "das Buch",
+      "russian": "книга",
+      "transcription": "/buːx/",
+      "example": "Auf dem Tisch liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "book"
+    },
+    {
+      "word": "der Brief",
+      "russian": "письмо",
+      "transcription": "/bʁiːf/",
+      "example": "Von meiner Freundin kommt heute ___ an.",
+      "imageUrl": null,
+      "imageQuery": "letter"
+    },
+    {
+      "word": "die Frage",
+      "russian": "вопрос",
+      "transcription": "/ˈfʁaːɡə/",
+      "example": "Darf ich dir ___ stellen?",
+      "imageUrl": null,
+      "imageQuery": "question"
+    },
+    {
+      "word": "die Antwort",
+      "russian": "ответ",
+      "transcription": "/ˈantvɔʁt/",
+      "example": "Auf diese Frage kennt er ___ genau.",
+      "imageUrl": null,
+      "imageQuery": "answer"
+    },
+    {
+      "word": "das Geld",
+      "russian": "деньги",
+      "transcription": "/ɡɛlt/",
+      "example": "Für das Brot braucht man ___.",
+      "imageUrl": null,
+      "imageQuery": "money"
+    },
+    {
+      "word": "das Telefon",
+      "russian": "телефон",
+      "transcription": "/teleˈfoːn/",
+      "example": "In meiner Tasche liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "phone"
+    },
+    {
+      "word": "der Computer",
+      "russian": "компьютер",
+      "transcription": "/kɔmˈpjuːtɐ/",
+      "example": "Auf dem Schreibtisch steht ___.",
+      "imageUrl": null,
+      "imageQuery": "computer"
+    },
+    {
+      "word": "das Bild",
+      "russian": "картина",
+      "transcription": "/bɪlt/",
+      "example": "An der Wand hängt ___.",
+      "imageUrl": null,
+      "imageQuery": "picture"
+    },
+    {
+      "word": "die Musik",
+      "russian": "музыка",
+      "transcription": "/muˈziːk/",
+      "example": "Jeden Tag hört sie ___ gerne.",
+      "imageUrl": null,
+      "imageQuery": "music"
+    },
+    {
+      "word": "das Lied",
+      "russian": "песня",
+      "transcription": "/liːt/",
+      "example": "Auf der Party erklingt ___.",
+      "imageUrl": null,
+      "imageQuery": "song"
+    },
+    {
+      "word": "das Spiel",
+      "russian": "игра",
+      "transcription": "/ʃpiːl/",
+      "example": "Sehr beliebt bei den Kindern ist ___.",
+      "imageUrl": null,
+      "imageQuery": "game"
+    },
+    {
+      "word": "der Film",
+      "russian": "фильм",
+      "transcription": "/fɪlm/",
+      "example": "Am Freitagabend läuft ___ im Kino.",
+      "imageUrl": null,
+      "imageQuery": "film"
+    },
+    {
+      "word": "das Wort",
+      "russian": "слово",
+      "transcription": "/vɔʁt/",
+      "example": "Sehr oft benutzt sie ___.",
+      "imageUrl": null,
+      "imageQuery": "word"
+    },
+    {
+      "word": "sein",
+      "russian": "быть",
+      "transcription": "/zaɪ̯n/",
+      "example": "Ich möchte Ärztin ___.",
+      "imageUrl": null,
+      "imageQuery": "to be"
+    },
+    {
+      "word": "haben",
+      "russian": "иметь",
+      "transcription": "/ˈhaːbn̩/",
+      "example": "Kannst du einen Stift ___?",
+      "imageUrl": null,
+      "imageQuery": "to have"
+    },
+    {
+      "word": "machen",
+      "russian": "делать",
+      "transcription": "/ˈmaxn̩/",
+      "example": "Ich muss heute Abend meine Hausaufgaben ___.",
+      "imageUrl": null,
+      "imageQuery": "to do"
+    },
+    {
+      "word": "gehen",
+      "russian": "идти",
+      "transcription": "/ˈɡeːən/",
+      "example": "Wir werden nach dem Essen spazieren ___.",
+      "imageUrl": null,
+      "imageQuery": "to go"
+    },
+    {
+      "word": "kommen",
+      "russian": "приходить",
+      "transcription": "/ˈkɔmən/",
+      "example": "Kannst du am Samstag zu meiner Party ___?",
+      "imageUrl": null,
+      "imageQuery": "to come"
+    },
+    {
+      "word": "sehen",
+      "russian": "видеть",
+      "transcription": "/ˈzeːən/",
+      "example": "Von hier kann ich das Meer ___.",
+      "imageUrl": null,
+      "imageQuery": "to see"
+    },
+    {
+      "word": "schauen",
+      "russian": "смотреть",
+      "transcription": "/ˈʃaʊ̯ən/",
+      "example": "Bitte einmal auf dieses Bild ___.",
+      "imageUrl": null,
+      "imageQuery": "to look"
+    },
+    {
+      "word": "beobachten",
+      "russian": "наблюдать",
+      "transcription": "/bəˈʔoːbaxtn̩/",
+      "example": "Wir werden heute Abend die Vögel ___.",
+      "imageUrl": null,
+      "imageQuery": "to watch"
+    },
+    {
+      "word": "hören",
+      "russian": "слышать",
+      "transcription": "/ˈhøːʁən/",
+      "example": "Von hier kann ich Musik ___.",
+      "imageUrl": null,
+      "imageQuery": "to hear"
+    },
+    {
+      "word": "zuhören",
+      "russian": "слушать",
+      "transcription": "/ˈtsuːhøːʁən/",
+      "example": "Bitte gut ___, das ist wichtig.",
+      "imageUrl": null,
+      "imageQuery": "to listen"
+    },
+    {
+      "word": "sprechen",
+      "russian": "говорить",
+      "transcription": "/ˈʃpʁɛçn̩/",
+      "example": "Kannst du Englisch ___?",
+      "imageUrl": null,
+      "imageQuery": "to speak"
+    },
+    {
+      "word": "sagen",
+      "russian": "сказать",
+      "transcription": "/ˈzaːɡn̩/",
+      "example": "Was wolltest du mir ___?",
+      "imageUrl": null,
+      "imageQuery": "to say"
+    },
+    {
+      "word": "erzählen",
+      "russian": "рассказывать",
+      "transcription": "/ɛɐ̯ˈtsɛːlən/",
+      "example": "Kannst du mir von deiner Reise ___?",
+      "imageUrl": null,
+      "imageQuery": "to tell"
+    },
+    {
+      "word": "fragen",
+      "russian": "спрашивать",
+      "transcription": "/ˈfʁaːɡn̩/",
+      "example": "Du kannst den Lehrer ruhig ___.",
+      "imageUrl": null,
+      "imageQuery": "to ask"
+    },
+    {
+      "word": "lesen",
+      "russian": "читать",
+      "transcription": "/ˈleːzn̩/",
+      "example": "Ich möchte vor dem Schlafen ein Buch ___.",
+      "imageUrl": null,
+      "imageQuery": "to read"
+    },
+    {
+      "word": "schreiben",
+      "russian": "писать",
+      "transcription": "/ˈʃʁaɪ̯bn̩/",
+      "example": "Ich werde meiner Großmutter einen Brief ___.",
+      "imageUrl": null,
+      "imageQuery": "to write"
+    },
+    {
+      "word": "lernen",
+      "russian": "изучать",
+      "transcription": "/ˈlɛʁnən/",
+      "example": "Ich möchte dieses Jahr Deutsch ___.",
+      "imageUrl": null,
+      "imageQuery": "to learn"
+    },
+    {
+      "word": "unterrichten",
+      "russian": "преподавать",
+      "transcription": "/ˈʊntɐʁɪçtn̩/",
+      "example": "Meine Mutter kann dich kochen ___.",
+      "imageUrl": null,
+      "imageQuery": "to teach"
+    },
+    {
+      "word": "studieren",
+      "russian": "учиться",
+      "transcription": "/ʃtuˈdiːʁən/",
+      "example": "Er möchte an dieser Universität Medizin ___.",
+      "imageUrl": null,
+      "imageQuery": "to study"
+    },
+    {
+      "word": "wissen",
+      "russian": "знать",
+      "transcription": "/ˈvɪsn̩/",
+      "example": "Kannst du seine Telefonnummer ___?",
+      "imageUrl": null,
+      "imageQuery": "to know"
+    },
+    {
+      "word": "denken",
+      "russian": "думать",
+      "transcription": "/ˈdɛŋkn̩/",
+      "example": "Ich muss noch einmal darüber ___.",
+      "imageUrl": null,
+      "imageQuery": "to think"
+    },
+    {
+      "word": "verstehen",
+      "russian": "понимать",
+      "transcription": "/fɛɐ̯ˈʃteːən/",
+      "example": "Ich kann diese Frage nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to understand"
+    },
+    {
+      "word": "erinnern",
+      "russian": "помнить",
+      "transcription": "/ɛɐ̯ˈʔɪnɐn/",
+      "example": "Kannst du dich an meinen Namen ___?",
+      "imageUrl": null,
+      "imageQuery": "to remember"
+    },
+    {
+      "word": "vergessen",
+      "russian": "забывать",
+      "transcription": "/fɛɐ̯ˈɡɛsn̩/",
+      "example": "Bitte nicht deinen Schirm ___.",
+      "imageUrl": null,
+      "imageQuery": "to forget"
+    },
+    {
+      "word": "wollen",
+      "russian": "хотеть",
+      "transcription": "/ˈvɔlən/",
+      "example": "Was möchtest du heute Abend ___?",
+      "imageUrl": null,
+      "imageQuery": "to want"
+    },
+    {
+      "word": "brauchen",
+      "russian": "нуждаться",
+      "transcription": "/ˈbʁaʊ̯xn̩/",
+      "example": "Ich muss dringend Hilfe ___.",
+      "imageUrl": null,
+      "imageQuery": "to need"
+    },
+    {
+      "word": "mögen",
+      "russian": "нравиться",
+      "transcription": "/ˈmøːɡn̩/",
+      "example": "Ich kann Eiscreme sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "to like"
+    },
+    {
+      "word": "lieben",
+      "russian": "любить",
+      "transcription": "/ˈliːbn̩/",
+      "example": "Ich möchte meine Familie immer sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "to love"
+    },
+    {
+      "word": "helfen",
+      "russian": "помогать",
+      "transcription": "/ˈhɛlfn̩/",
+      "example": "Kannst du mir mit den Taschen ___?",
+      "imageUrl": null,
+      "imageQuery": "to help"
+    },
+    {
+      "word": "geben",
+      "russian": "давать",
+      "transcription": "/ˈɡeːbn̩/",
+      "example": "Kannst du mir das Salz ___?",
+      "imageUrl": null,
+      "imageQuery": "to give"
+    },
+    {
+      "word": "nehmen",
+      "russian": "брать",
+      "transcription": "/ˈneːmən/",
+      "example": "Du solltest einen Regenschirm ___.",
+      "imageUrl": null,
+      "imageQuery": "to take"
+    },
+    {
+      "word": "bekommen",
+      "russian": "получать",
+      "transcription": "/bəˈkɔmən/",
+      "example": "Ich hoffe, bald einen Brief zu ___.",
+      "imageUrl": null,
+      "imageQuery": "to get"
+    },
+    {
+      "word": "kaufen",
+      "russian": "покупать",
+      "transcription": "/ˈkaʊ̯fn̩/",
+      "example": "Ich möchte etwas Brot und Milch ___.",
+      "imageUrl": null,
+      "imageQuery": "to buy"
+    },
+    {
+      "word": "verkaufen",
+      "russian": "продавать",
+      "transcription": "/fɛɐ̯ˈkaʊ̯fn̩/",
+      "example": "Sie werden frisches Obst auf dem Markt ___.",
+      "imageUrl": null,
+      "imageQuery": "to sell"
+    },
+    {
+      "word": "bezahlen",
+      "russian": "платить",
+      "transcription": "/bəˈtsaːlən/",
+      "example": "Kann ich mit Karte ___?",
+      "imageUrl": null,
+      "imageQuery": "to pay"
+    },
+    {
+      "word": "finden",
+      "russian": "находить",
+      "transcription": "/ˈfɪndn̩/",
+      "example": "Ich kann meine Schlüssel nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to find"
+    },
+    {
+      "word": "verlieren",
+      "russian": "терять",
+      "transcription": "/fɛɐ̯ˈliːʁən/",
+      "example": "Pass auf, du darfst dein Ticket nicht ___.",
+      "imageUrl": null,
+      "imageQuery": "to lose"
+    },
+    {
+      "word": "öffnen",
+      "russian": "открывать",
+      "transcription": "/ˈœfnən/",
+      "example": "Kannst du bitte das Fenster ___?",
+      "imageUrl": null,
+      "imageQuery": "to open"
+    },
+    {
+      "word": "schließen",
+      "russian": "закрывать",
+      "transcription": "/ˈʃliːsn̩/",
+      "example": "Du solltest die Tür ___.",
+      "imageUrl": null,
+      "imageQuery": "to close"
+    },
+    {
+      "word": "beginnen",
+      "russian": "начинать",
+      "transcription": "/bəˈɡɪnən/",
+      "example": "Der Unterricht wird um neun Uhr ___.",
+      "imageUrl": null,
+      "imageQuery": "to start"
+    },
+    {
+      "word": "beenden",
+      "russian": "заканчивать",
+      "transcription": "/bəˈʔɛndn̩/",
+      "example": "Wir werden das Projekt heute ___.",
+      "imageUrl": null,
+      "imageQuery": "to finish"
+    },
+    {
+      "word": "anhalten",
+      "russian": "останавливаться",
+      "transcription": "/ˈanhaltn̩/",
+      "example": "Der Bus wird gleich neben der Schule ___.",
+      "imageUrl": null,
+      "imageQuery": "to stop"
+    },
+    {
+      "word": "spielen",
+      "russian": "играть",
+      "transcription": "/ˈʃpiːlən/",
+      "example": "Die Kinder werden im Hof Fußball ___.",
+      "imageUrl": null,
+      "imageQuery": "to play"
+    },
+    {
+      "word": "rennen",
+      "russian": "бегать",
+      "transcription": "/ˈʁɛnən/",
+      "example": "Ich möchte jeden Morgen im Park ___.",
+      "imageUrl": null,
+      "imageQuery": "to run"
+    },
+    {
+      "word": "laufen",
+      "russian": "гулять",
+      "transcription": "/ˈlaʊ̯fn̩/",
+      "example": "Wir werden jeden Tag zur Schule ___.",
+      "imageUrl": null,
+      "imageQuery": "to walk"
+    },
+    {
+      "word": "schwimmen",
+      "russian": "плавать",
+      "transcription": "/ˈʃvɪmən/",
+      "example": "Im Sommer möchten wir im Meer ___.",
+      "imageUrl": null,
+      "imageQuery": "to swim"
+    },
+    {
+      "word": "fliegen",
+      "russian": "летать",
+      "transcription": "/ˈfliːɡn̩/",
+      "example": "Nächsten Monat werden wir nach Berlin ___.",
+      "imageUrl": null,
+      "imageQuery": "to fly"
+    },
+    {
+      "word": "fahren",
+      "russian": "водить",
+      "transcription": "/ˈfaːʁən/",
+      "example": "Mein Vater kann einen Bus ___.",
+      "imageUrl": null,
+      "imageQuery": "to drive"
+    },
+    {
+      "word": "reisen",
+      "russian": "путешествовать",
+      "transcription": "/ˈʁaɪ̯zn̩/",
+      "example": "Nächstes Jahr möchten wir nach Italien ___.",
+      "imageUrl": null,
+      "imageQuery": "to travel"
+    },
+    {
+      "word": "besuchen",
+      "russian": "посещать",
+      "transcription": "/bəˈzuːxn̩/",
+      "example": "Am Wochenende möchten wir unsere Großmutter ___.",
+      "imageUrl": null,
+      "imageQuery": "to visit"
+    },
+    {
+      "word": "warten",
+      "russian": "ждать",
+      "transcription": "/ˈvaʁtn̩/",
+      "example": "Bitte hier an der Bushaltestelle auf mich ___.",
+      "imageUrl": null,
+      "imageQuery": "to wait"
+    },
+    {
+      "word": "treffen",
+      "russian": "встречать",
+      "transcription": "/ˈtʁɛfn̩/",
+      "example": "Wollen wir uns um sechs Uhr im Café ___?",
+      "imageUrl": null,
+      "imageQuery": "to meet"
+    },
+    {
+      "word": "anrufen",
+      "russian": "звонить",
+      "transcription": "/ˈanʁuːfn̩/",
+      "example": "Ich werde dich morgen früh ___.",
+      "imageUrl": null,
+      "imageQuery": "to call"
+    },
+    {
+      "word": "essen",
+      "russian": "есть",
+      "transcription": "/ˈɛsn̩/",
+      "example": "Wir werden das Abendessen um sieben Uhr ___.",
+      "imageUrl": null,
+      "imageQuery": "to eat"
+    },
+    {
+      "word": "trinken",
+      "russian": "пить",
+      "transcription": "/ˈtʁɪŋkn̩/",
+      "example": "Du solltest jeden Tag mehr Wasser ___.",
+      "imageUrl": null,
+      "imageQuery": "to drink"
+    },
+    {
+      "word": "kochen",
+      "russian": "готовить (еду)",
+      "transcription": "/ˈkɔxn̩/",
+      "example": "Meine Mutter kann sehr gut ___.",
+      "imageUrl": null,
+      "imageQuery": "to cook"
+    },
+    {
+      "word": "schlafen",
+      "russian": "спать",
+      "transcription": "/ˈʃlaːfn̩/",
+      "example": "Babys können viele Stunden am Tag ___.",
+      "imageUrl": null,
+      "imageQuery": "to sleep"
+    },
+    {
+      "word": "backen",
+      "russian": "печь",
+      "transcription": "/ˈbakn̩/",
+      "example": "Ich möchte für sie einen Kuchen ___.",
+      "imageUrl": null,
+      "imageQuery": "to make"
+    },
+    {
+      "word": "gut",
+      "russian": "хороший",
+      "transcription": "/ɡuːt/",
+      "example": "Diese Suppe schmeckt sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "good"
+    },
+    {
+      "word": "schlecht",
+      "russian": "плохой",
+      "transcription": "/ʃlɛçt/",
+      "example": "Das Wetter ist heute ___.",
+      "imageUrl": null,
+      "imageQuery": "bad"
+    },
+    {
+      "word": "groß",
+      "russian": "большой",
+      "transcription": "/ɡʁoːs/",
+      "example": "Ihr Haus am Park ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "big"
+    },
+    {
+      "word": "klein",
+      "russian": "маленький",
+      "transcription": "/klaɪ̯n/",
+      "example": "Der Garten hinter dem Haus ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "small"
+    },
+    {
+      "word": "neu",
+      "russian": "новый",
+      "transcription": "/nɔʏ̯/",
+      "example": "Mein Telefon ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "new"
+    },
+    {
+      "word": "alt",
+      "russian": "старый",
+      "transcription": "/alt/",
+      "example": "Das Haus meines Großvaters ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "old"
+    },
+    {
+      "word": "jung",
+      "russian": "молодой",
+      "transcription": "/jʊŋ/",
+      "example": "Sie ist noch viel zu ___, um Auto zu fahren.",
+      "imageUrl": null,
+      "imageQuery": "young"
+    },
+    {
+      "word": "lang",
+      "russian": "длинный",
+      "transcription": "/laŋ/",
+      "example": "Der Weg zur Stadt ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "long"
+    },
+    {
+      "word": "kurz",
+      "russian": "короткий",
+      "transcription": "/kʊʁts/",
+      "example": "Der Brief an ihre Freundin war sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "short"
+    },
+    {
+      "word": "hochgewachsen",
+      "russian": "высокий",
+      "transcription": "/ˈhoːxɡəvaksn̩/",
+      "example": "Mein Bruder ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "tall"
+    },
+    {
+      "word": "heiß",
+      "russian": "горячий",
+      "transcription": "/haɪ̯s/",
+      "example": "Vorsicht, der Tee ist noch sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "hot"
+    },
+    {
+      "word": "kalt",
+      "russian": "холодный",
+      "transcription": "/kalt/",
+      "example": "Draußen ist es heute sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "cold"
+    },
+    {
+      "word": "warm",
+      "russian": "тёплый",
+      "transcription": "/vaʁm/",
+      "example": "Heute ist es draußen sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "warm"
+    },
+    {
+      "word": "schnell",
+      "russian": "быстрый",
+      "transcription": "/ʃnɛl/",
+      "example": "Sein Auto ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "fast"
+    },
+    {
+      "word": "langsam",
+      "russian": "медленный",
+      "transcription": "/ˈlaŋzaːm/",
+      "example": "Das Internet ist heute sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "slow"
+    },
+    {
+      "word": "leicht",
+      "russian": "лёгкий",
+      "transcription": "/ˈlaɪ̯çt/",
+      "example": "Diese Frage ist für mich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "easy"
+    },
+    {
+      "word": "schwierig",
+      "russian": "трудный",
+      "transcription": "/ˈʃviːʁɪç/",
+      "example": "Chinesisch ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "difficult"
+    },
+    {
+      "word": "glücklich",
+      "russian": "счастливый",
+      "transcription": "/ˈɡlʏklɪç/",
+      "example": "Sie sieht heute sehr ___ aus.",
+      "imageUrl": null,
+      "imageQuery": "happy"
+    },
+    {
+      "word": "traurig",
+      "russian": "грустный",
+      "transcription": "/ˈtʁaʊ̯ʁɪç/",
+      "example": "Sie fühlte sich nach dem Film ___.",
+      "imageUrl": null,
+      "imageQuery": "sad"
+    },
+    {
+      "word": "wütend",
+      "russian": "злой",
+      "transcription": "/ˈvyːtn̩t/",
+      "example": "Warum bist du so ___ auf mich?",
+      "imageUrl": null,
+      "imageQuery": "angry"
+    },
+    {
+      "word": "müde",
+      "russian": "усталый",
+      "transcription": "/ˈmyːdə/",
+      "example": "Ich bin nach der Arbeit sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "tired"
+    },
+    {
+      "word": "hungrig",
+      "russian": "голодный",
+      "transcription": "/ˈhʊŋʁɪç/",
+      "example": "Das Baby ist ___ und will Milch.",
+      "imageUrl": null,
+      "imageQuery": "hungry"
+    },
+    {
+      "word": "schön",
+      "russian": "красивый",
+      "transcription": "/ʃøːn/",
+      "example": "Dein Garten ist wirklich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "beautiful"
+    },
+    {
+      "word": "nett",
+      "russian": "милый",
+      "transcription": "/nɛt/",
+      "example": "Er ist zu allen Gästen sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "nice"
+    },
+    {
+      "word": "freundlich",
+      "russian": "добрый",
+      "transcription": "/ˈfʁɔʏ̯ntlɪç/",
+      "example": "Er ist sehr ___ zu Tieren.",
+      "imageUrl": null,
+      "imageQuery": "kind"
+    },
+    {
+      "word": "lustig",
+      "russian": "смешной",
+      "transcription": "/ˈlʊstɪç/",
+      "example": "Sein Witz beim Abendessen war sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "funny"
+    },
+    {
+      "word": "interessant",
+      "russian": "интересный",
+      "transcription": "/ɪntɛʁɛˈsant/",
+      "example": "Dieses Buch ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "interesting"
+    },
+    {
+      "word": "wichtig",
+      "russian": "важный",
+      "transcription": "/ˈvɪçtɪç/",
+      "example": "Dieses Treffen heute ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "important"
+    },
+    {
+      "word": "teuer",
+      "russian": "дорогой",
+      "transcription": "/ˈtɔʏ̯ɐ/",
+      "example": "Diese Uhr ist für mich zu ___.",
+      "imageUrl": null,
+      "imageQuery": "expensive"
+    },
+    {
+      "word": "billig",
+      "russian": "дешёвый",
+      "transcription": "/ˈbɪlɪç/",
+      "example": "Diese Schuhe sind sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "cheap"
+    },
+    {
+      "word": "immer",
+      "russian": "всегда",
+      "transcription": "/ˈɪmɐ/",
+      "example": "Ich trinke morgens ___ Kaffee.",
+      "imageUrl": null,
+      "imageQuery": "always"
+    },
+    {
+      "word": "oft",
+      "russian": "часто",
+      "transcription": "/ɔft/",
+      "example": "Wir gehen ___ ins Kino.",
+      "imageUrl": null,
+      "imageQuery": "often"
+    },
+    {
+      "word": "normalerweise",
+      "russian": "обычно",
+      "transcription": "/nɔʁˈmaːlɐˌvaɪ̯zə/",
+      "example": "Ich stehe ___ um sieben Uhr auf.",
+      "imageUrl": null,
+      "imageQuery": "usually"
+    },
+    {
+      "word": "manchmal",
+      "russian": "иногда",
+      "transcription": "/ˈmançmaːl/",
+      "example": "Hier regnet es im Sommer ___.",
+      "imageUrl": null,
+      "imageQuery": "sometimes"
+    },
+    {
+      "word": "nie",
+      "russian": "никогда",
+      "transcription": "/niː/",
+      "example": "Er kommt ___ zu spät.",
+      "imageUrl": null,
+      "imageQuery": "never"
+    },
+    {
+      "word": "heute",
+      "russian": "сегодня",
+      "transcription": "/ˈhɔʏ̯tə/",
+      "example": "Ich fühle mich ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "today"
+    },
+    {
+      "word": "morgen",
+      "russian": "завтра",
+      "transcription": "/ˈmɔʁɡn̩/",
+      "example": "Der Zug fährt erst ___.",
+      "imageUrl": null,
+      "imageQuery": "tomorrow"
+    },
+    {
+      "word": "gestern",
+      "russian": "вчера",
+      "transcription": "/ˈɡɛstɐn/",
+      "example": "Ich habe sie ___ getroffen.",
+      "imageUrl": null,
+      "imageQuery": "yesterday"
+    },
+    {
+      "word": "jetzt",
+      "russian": "сейчас",
+      "transcription": "/jɛtst/",
+      "example": "Wir müssen ___ sofort losfahren.",
+      "imageUrl": null,
+      "imageQuery": "now"
+    },
+    {
+      "word": "hier",
+      "russian": "здесь",
+      "transcription": "/hiːɐ̯/",
+      "example": "Bitte warte ___ auf mich.",
+      "imageUrl": null,
+      "imageQuery": "here"
+    },
+    {
+      "word": "zusammen",
+      "russian": "вместе",
+      "transcription": "/tsuˈzamən/",
+      "example": "Wir gehen heute Abend ___ ins Kino.",
+      "imageUrl": null,
+      "imageQuery": "together"
+    },
+    {
+      "word": "prima",
+      "russian": "хорошо",
+      "transcription": "/ˈpʁiːma/",
+      "example": "Das hast du wirklich ___ gemacht.",
+      "imageUrl": null,
+      "imageQuery": "well done"
+    }
+  ]
+}

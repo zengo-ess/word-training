@@ -68,6 +68,31 @@ describe("seedBuiltins", () => {
     expect(deck?.language).toBe("de");
   });
 
+  it("колода с тем же именем, но другим языком — отдельная колода, а не backfill", () => {
+    writeFileSync(
+      join(dir, "02-test-de.json"),
+      JSON.stringify({
+        name: "Тестовая",
+        language: "de",
+        words: [{ word: "Sonne", russian: "солнце", transcription: "/ˈzɔnə/", example: "Die ___ scheint." }],
+      }),
+    );
+    const db = new Database(":memory:");
+    runMigrations(db);
+    seedBuiltins(db, dir);
+
+    const decks = db.prepare("SELECT name, language FROM decks ORDER BY language").all() as {
+      name: string;
+      language: string;
+    }[];
+    expect(decks).toEqual([
+      { name: "Тестовая", language: "de" },
+      { name: "Тестовая", language: "en" },
+    ]);
+    const words = db.prepare("SELECT COUNT(*) AS c FROM words").get() as { c: number };
+    expect(words.c).toBe(3);
+  });
+
   it("идемпотентен — повторный прогон не дублирует", () => {
     const db = new Database(":memory:");
     runMigrations(db);

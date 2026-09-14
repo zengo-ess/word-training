@@ -1,0 +1,326 @@
+{
+  "name": "Немецкие эмоции",
+  "language": "de",
+  "words": [
+    {
+      "word": "glücklich",
+      "russian": "счастливый",
+      "transcription": "/ˈɡlʏklɪç/",
+      "example": "Nach der guten Nachricht ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "happy"
+    },
+    {
+      "word": "traurig",
+      "russian": "грустный",
+      "transcription": "/ˈtʁaʊ̯ʁɪç/",
+      "example": "Nach dem Film ist er ein wenig ___.",
+      "imageUrl": null,
+      "imageQuery": "sad"
+    },
+    {
+      "word": "wütend",
+      "russian": "злой",
+      "transcription": "/ˈvyːtn̩t/",
+      "example": "Nach dem Streit ist er sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "angry"
+    },
+    {
+      "word": "die Angst",
+      "russian": "страх",
+      "transcription": "/aŋst/",
+      "example": "Vor Spinnen hat sie große ___.",
+      "imageUrl": null,
+      "imageQuery": "fear"
+    },
+    {
+      "word": "die Freude",
+      "russian": "радость",
+      "transcription": "/ˈfʁɔʏ̯də/",
+      "example": "Über das Geschenk ist ___ riesig.",
+      "imageUrl": null,
+      "imageQuery": "joy"
+    },
+    {
+      "word": "die Liebe",
+      "russian": "любовь",
+      "transcription": "/ˈliːbə/",
+      "example": "Zwischen den beiden wächst eine tiefe ___.",
+      "imageUrl": null,
+      "imageQuery": "love"
+    },
+    {
+      "word": "die Überraschung",
+      "russian": "удивление",
+      "transcription": "/ˈyːbɐʁaʃʊŋ/",
+      "example": "Zum Geburtstag gibt es eine schöne ___.",
+      "imageUrl": null,
+      "imageQuery": "surprise"
+    },
+    {
+      "word": "müde",
+      "russian": "усталый",
+      "transcription": "/ˈmyːdə/",
+      "example": "Nach der Arbeit ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "tired"
+    },
+    {
+      "word": "die Sorge",
+      "russian": "беспокойство",
+      "transcription": "/ˈzɔʁɡə/",
+      "example": "Um ihre Gesundheit hat er große ___.",
+      "imageUrl": null,
+      "imageQuery": "worry"
+    },
+    {
+      "word": "das Lächeln",
+      "russian": "улыбка",
+      "transcription": "/ˈlɛçl̩n/",
+      "example": "Auf ihrem Gesicht liegt ein freundliches ___.",
+      "imageUrl": null,
+      "imageQuery": "smile"
+    },
+    {
+      "word": "das Lachen",
+      "russian": "смех",
+      "transcription": "/ˈlaxn̩/",
+      "example": "Im Zimmer hört man fröhliches ___.",
+      "imageUrl": null,
+      "imageQuery": "laughter"
+    },
+    {
+      "word": "das Weinen",
+      "russian": "плач",
+      "transcription": "/ˈvaɪ̯nən/",
+      "example": "Aus dem Zimmer hört man leises ___.",
+      "imageUrl": null,
+      "imageQuery": "crying"
+    },
+    {
+      "word": "die Hoffnung",
+      "russian": "надежда",
+      "transcription": "/ˈhɔfnʊŋ/",
+      "example": "Trotz allem bleibt in ihr eine kleine ___.",
+      "imageUrl": null,
+      "imageQuery": "hope"
+    },
+    {
+      "word": "ruhig",
+      "russian": "спокойный",
+      "transcription": "/ˈʁuːɪç/",
+      "example": "Vor der Prüfung bleibt er ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "calm"
+    },
+    {
+      "word": "gelangweilt",
+      "russian": "скучающий",
+      "transcription": "/ɡəˈlaŋɡəvaɪ̯lt/",
+      "example": "Während des Vortrags wirkt er ___.",
+      "imageUrl": null,
+      "imageQuery": "bored"
+    },
+    {
+      "word": "aufgeregt",
+      "russian": "взволнованный",
+      "transcription": "/ˈaʊ̯fɡəʁeːkt/",
+      "example": "Vor der Reise ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "excited"
+    },
+    {
+      "word": "verängstigt",
+      "russian": "испуганный",
+      "transcription": "/fɛɐ̯ˈʔɛŋstɪçt/",
+      "example": "Nach dem lauten Knall wirkt das Kind ___.",
+      "imageUrl": null,
+      "imageQuery": "scared"
+    },
+    {
+      "word": "einsam",
+      "russian": "одинокий",
+      "transcription": "/ˈaɪ̯nzaːm/",
+      "example": "Seit dem Umzug fühlt er sich ___.",
+      "imageUrl": null,
+      "imageQuery": "lonely"
+    },
+    {
+      "word": "stolz",
+      "russian": "гордый",
+      "transcription": "/ʃtɔlts/",
+      "example": "Auf ihren Sohn ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "proud"
+    },
+    {
+      "word": "schüchtern",
+      "russian": "застенчивый",
+      "transcription": "/ˈʃʏçtɐn/",
+      "example": "Bei fremden Menschen ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "shy"
+    },
+    {
+      "word": "nervös",
+      "russian": "нервный",
+      "transcription": "/nɛʁˈvøːs/",
+      "example": "Vor der Prüfung ist er sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "nervous"
+    },
+    {
+      "word": "eifersüchtig",
+      "russian": "ревнивый",
+      "transcription": "/ˈaɪ̯fɐzʏçtɪç/",
+      "example": "Auf ihre Schwester ist sie manchmal ___.",
+      "imageUrl": null,
+      "imageQuery": "jealous"
+    },
+    {
+      "word": "die Laune",
+      "russian": "настроение",
+      "transcription": "/ˈlaʊ̯nə/",
+      "example": "Nach dem Regen ist ___ schlecht.",
+      "imageUrl": null,
+      "imageQuery": "mood"
+    },
+    {
+      "word": "das Gefühl",
+      "russian": "чувство",
+      "transcription": "/ɡəˈfyːl/",
+      "example": "Tief in ihr wächst ein neues ___.",
+      "imageUrl": null,
+      "imageQuery": "feeling"
+    },
+    {
+      "word": "der Hass",
+      "russian": "ненависть",
+      "transcription": "/has/",
+      "example": "Zwischen den Brüdern gibt es keinen ___.",
+      "imageUrl": null,
+      "imageQuery": "hate"
+    },
+    {
+      "word": "der Stress",
+      "russian": "стресс",
+      "transcription": "/ʃtʁɛs/",
+      "example": "Vor den Prüfungen hat sie viel ___.",
+      "imageUrl": null,
+      "imageQuery": "stress"
+    },
+    {
+      "word": "der Ärger",
+      "russian": "гнев",
+      "transcription": "/ˈɛʁɡɐ/",
+      "example": "Über die Verspätung ist ___ groß.",
+      "imageUrl": null,
+      "imageQuery": "anger"
+    },
+    {
+      "word": "die Traurigkeit",
+      "russian": "печаль",
+      "transcription": "/ˈtʁaʊ̯ʁɪçkaɪ̯t/",
+      "example": "In ihren Augen sieht man tiefe ___.",
+      "imageUrl": null,
+      "imageQuery": "sadness"
+    },
+    {
+      "word": "das Glück",
+      "russian": "счастье",
+      "transcription": "/ɡlʏk/",
+      "example": "Bei der Hochzeit strahlt reines ___.",
+      "imageUrl": null,
+      "imageQuery": "happiness"
+    },
+    {
+      "word": "mutig",
+      "russian": "смелый",
+      "transcription": "/ˈmuːtɪç/",
+      "example": "Vor der Gefahr bleibt der Feuerwehrmann ___.",
+      "imageUrl": null,
+      "imageQuery": "brave"
+    },
+    {
+      "word": "freundlich",
+      "russian": "добрый",
+      "transcription": "/ˈfʁɔʏ̯ntlɪç/",
+      "example": "Zu allen Gästen ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "kind"
+    },
+    {
+      "word": "verärgert",
+      "russian": "раздосадованный",
+      "transcription": "/fɛɐ̯ˈʔɛʁɡɐt/",
+      "example": "Über das Ergebnis ist er sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "upset"
+    },
+    {
+      "word": "froh",
+      "russian": "рад",
+      "transcription": "/fʁoː/",
+      "example": "Über die Einladung ist sie sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "glad"
+    },
+    {
+      "word": "ängstlich",
+      "russian": "боязливый",
+      "transcription": "/ˈɛŋstlɪç/",
+      "example": "Vor der Dunkelheit ist das Kind ___.",
+      "imageUrl": null,
+      "imageQuery": "afraid"
+    },
+    {
+      "word": "leid",
+      "russian": "жаль",
+      "transcription": "/laɪ̯t/",
+      "example": "Für den Fehler tut es ihm sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "sorry"
+    },
+    {
+      "word": "lustig",
+      "russian": "весёлый",
+      "transcription": "/ˈlʊstɪç/",
+      "example": "Bei der Feier war es sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "fun"
+    },
+    {
+      "word": "der Frieden",
+      "russian": "мир (спокойствие)",
+      "transcription": "/ˈfʁiːdn̩/",
+      "example": "In diesem Garten herrscht völliger ___.",
+      "imageUrl": null,
+      "imageQuery": "peace"
+    },
+    {
+      "word": "das Vertrauen",
+      "russian": "доверие",
+      "transcription": "/fɛɐ̯ˈtʁaʊ̯ən/",
+      "example": "Zwischen den Freunden besteht großes ___.",
+      "imageUrl": null,
+      "imageQuery": "trust"
+    },
+    {
+      "word": "der Traum",
+      "russian": "мечта",
+      "transcription": "/tʁaʊ̯m/",
+      "example": "Seit der Kindheit lebt in ihr ___.",
+      "imageUrl": null,
+      "imageQuery": "dream"
+    },
+    {
+      "word": "die Umarmung",
+      "russian": "объятие",
+      "transcription": "/ʔʊmˈʔaʁmʊŋ/",
+      "example": "Zur Begrüßung gibt es eine warme ___.",
+      "imageUrl": null,
+      "imageQuery": "hug"
+    }
+  ]
+}

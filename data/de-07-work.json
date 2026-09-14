@@ -1,0 +1,326 @@
+{
+  "name": "Немецкая работа",
+  "language": "de",
+  "words": [
+    {
+      "word": "der Job",
+      "russian": "работа",
+      "transcription": "/dʒɔp/",
+      "example": "Seit einem Jahr gefällt ihr ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "job"
+    },
+    {
+      "word": "das Büro",
+      "russian": "офис",
+      "transcription": "/byˈʁoː/",
+      "example": "Direkt neben dem Aufzug liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "office"
+    },
+    {
+      "word": "die Besprechung",
+      "russian": "совещание",
+      "transcription": "/bəˈʃpʁɛçʊŋ/",
+      "example": "Um zehn Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "meeting"
+    },
+    {
+      "word": "das Gehalt",
+      "russian": "зарплата",
+      "transcription": "/ɡəˈhalt/",
+      "example": "Am Monatsende bekommt sie ___.",
+      "imageUrl": null,
+      "imageQuery": "salary"
+    },
+    {
+      "word": "der Chef",
+      "russian": "начальник",
+      "transcription": "/ʃɛf/",
+      "example": "Heute ist ___ sehr zufrieden.",
+      "imageUrl": null,
+      "imageQuery": "boss"
+    },
+    {
+      "word": "der Kollege",
+      "russian": "коллега",
+      "transcription": "/kɔˈleːɡə/",
+      "example": "Neben mir sitzt mein neuer ___.",
+      "imageUrl": null,
+      "imageQuery": "colleague"
+    },
+    {
+      "word": "die Karriere",
+      "russian": "карьера",
+      "transcription": "/kaˈʁjɛːʁə/",
+      "example": "In dieser Firma beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "career"
+    },
+    {
+      "word": "das Vorstellungsgespräch",
+      "russian": "собеседование",
+      "transcription": "/ˈfoːɐ̯ʃtɛlʊŋsɡəʃpʁɛːç/",
+      "example": "Morgen um neun Uhr hat er ___.",
+      "imageUrl": null,
+      "imageQuery": "job interview"
+    },
+    {
+      "word": "die Arbeit",
+      "russian": "работа",
+      "transcription": "/ˈaʁbaɪ̯t/",
+      "example": "Um acht Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "work"
+    },
+    {
+      "word": "die Firma",
+      "russian": "фирма",
+      "transcription": "/ˈfɪʁma/",
+      "example": "In dieser Stadt liegt eine große ___.",
+      "imageUrl": null,
+      "imageQuery": "company"
+    },
+    {
+      "word": "der Manager",
+      "russian": "менеджер",
+      "transcription": "/ˈmɛnɪdʒɐ/",
+      "example": "Dieses Projekt leitet unser neuer ___.",
+      "imageUrl": null,
+      "imageQuery": "manager"
+    },
+    {
+      "word": "der Mitarbeiter",
+      "russian": "сотрудник",
+      "transcription": "/ˈmɪtaʁbaɪ̯tɐ/",
+      "example": "In dieser Abteilung arbeitet ___.",
+      "imageUrl": null,
+      "imageQuery": "employee"
+    },
+    {
+      "word": "das Projekt",
+      "russian": "проект",
+      "transcription": "/pʁoˈjɛkt/",
+      "example": "Bis Freitag muss ___ fertig sein.",
+      "imageUrl": null,
+      "imageQuery": "project"
+    },
+    {
+      "word": "die Aufgabe",
+      "russian": "задача",
+      "transcription": "/ˈaʊ̯fɡaːbə/",
+      "example": "Für heute bekommt er eine neue ___.",
+      "imageUrl": null,
+      "imageQuery": "task"
+    },
+    {
+      "word": "die Frist",
+      "russian": "срок",
+      "transcription": "/fʁɪst/",
+      "example": "Für diesen Bericht gilt eine strenge ___.",
+      "imageUrl": null,
+      "imageQuery": "deadline"
+    },
+    {
+      "word": "der Bericht",
+      "russian": "отчёт",
+      "transcription": "/bəˈʁɪçt/",
+      "example": "Bis Montag muss ___ fertig sein.",
+      "imageUrl": null,
+      "imageQuery": "report"
+    },
+    {
+      "word": "das Team",
+      "russian": "команда",
+      "transcription": "/tiːm/",
+      "example": "In diesem Projekt arbeitet ein kleines ___.",
+      "imageUrl": null,
+      "imageQuery": "team"
+    },
+    {
+      "word": "der Zeitplan",
+      "russian": "расписание",
+      "transcription": "/ˈtsaɪ̯tplaːn/",
+      "example": "Für diese Woche gilt ein voller ___.",
+      "imageUrl": null,
+      "imageQuery": "schedule"
+    },
+    {
+      "word": "der Schreibtisch",
+      "russian": "письменный стол",
+      "transcription": "/ˈʃʁaɪ̯ptɪʃ/",
+      "example": "Im Büro steht ___.",
+      "imageUrl": null,
+      "imageQuery": "desk"
+    },
+    {
+      "word": "der Computer",
+      "russian": "компьютер",
+      "transcription": "/kɔmˈpjuːtɐ/",
+      "example": "Auf dem Schreibtisch steht ___.",
+      "imageUrl": null,
+      "imageQuery": "computer"
+    },
+    {
+      "word": "das Dokument",
+      "russian": "документ",
+      "transcription": "/dokuˈmɛnt/",
+      "example": "In dieser Mappe liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "document"
+    },
+    {
+      "word": "der Vertrag",
+      "russian": "договор",
+      "transcription": "/fɛɐ̯ˈtʁaːk/",
+      "example": "Heute unterschreibt sie ___.",
+      "imageUrl": null,
+      "imageQuery": "contract"
+    },
+    {
+      "word": "der Auftraggeber",
+      "russian": "клиент",
+      "transcription": "/ˈaʊ̯ftʁaːɡeːbɐ/",
+      "example": "Für dieses Projekt zahlt ___.",
+      "imageUrl": null,
+      "imageQuery": "client"
+    },
+    {
+      "word": "das Geschäft",
+      "russian": "бизнес",
+      "transcription": "/ɡəˈʃɛft/",
+      "example": "In dieser Straße läuft ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "business"
+    },
+    {
+      "word": "die Fähigkeit",
+      "russian": "навык",
+      "transcription": "/ˈfɛːɪçkaɪ̯t/",
+      "example": "Für diese Stelle braucht man eine besondere ___.",
+      "imageUrl": null,
+      "imageQuery": "skill"
+    },
+    {
+      "word": "die Schulung",
+      "russian": "обучение",
+      "transcription": "/ˈʃuːlʊŋ/",
+      "example": "Nächste Woche beginnt seine neue ___.",
+      "imageUrl": null,
+      "imageQuery": "training"
+    },
+    {
+      "word": "die Beförderung",
+      "russian": "повышение",
+      "transcription": "/bəˈføːɐ̯dəʁʊŋ/",
+      "example": "Nach diesem Jahr bekommt er ___.",
+      "imageUrl": null,
+      "imageQuery": "promotion"
+    },
+    {
+      "word": "der Lebenslauf",
+      "russian": "резюме",
+      "transcription": "/ˈleːbn̩slaʊ̯f/",
+      "example": "Für die Bewerbung wichtig ist ___.",
+      "imageUrl": null,
+      "imageQuery": "resume"
+    },
+    {
+      "word": "die Erfahrung",
+      "russian": "опыт",
+      "transcription": "/ɛɐ̯ˈfaːʁʊŋ/",
+      "example": "In diesem Bereich hat sie viel ___.",
+      "imageUrl": null,
+      "imageQuery": "experience"
+    },
+    {
+      "word": "der Beruf",
+      "russian": "профессия",
+      "transcription": "/bəˈʁuːf/",
+      "example": "Seit der Schule gefällt ihr ___ sehr.",
+      "imageUrl": null,
+      "imageQuery": "profession"
+    },
+    {
+      "word": "der Arbeiter",
+      "russian": "рабочий",
+      "transcription": "/ˈaʁbaɪ̯tɐ/",
+      "example": "In dieser Fabrik arbeitet ___ hart.",
+      "imageUrl": null,
+      "imageQuery": "worker"
+    },
+    {
+      "word": "die Fabrik",
+      "russian": "завод",
+      "transcription": "/faˈbʁiːk/",
+      "example": "Am Stadtrand steht eine große ___.",
+      "imageUrl": null,
+      "imageQuery": "factory"
+    },
+    {
+      "word": "die Pause",
+      "russian": "перерыв",
+      "transcription": "/ˈpaʊ̯zə/",
+      "example": "Um zwölf Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "break"
+    },
+    {
+      "word": "die Schicht",
+      "russian": "смена",
+      "transcription": "/ʃɪçt/",
+      "example": "Um sechs Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "shift"
+    },
+    {
+      "word": "die E-Mail",
+      "russian": "электронное письмо",
+      "transcription": "/ˈiːmeɪ̯l/",
+      "example": "Vor der Besprechung schreibt sie noch ___.",
+      "imageUrl": null,
+      "imageQuery": "email"
+    },
+    {
+      "word": "das Telefon",
+      "russian": "телефон",
+      "transcription": "/teleˈfoːn/",
+      "example": "Auf dem Schreibtisch klingelt ___.",
+      "imageUrl": null,
+      "imageQuery": "phone"
+    },
+    {
+      "word": "die Präsentation",
+      "russian": "презентация",
+      "transcription": "/pʁezɛntaˈtsi̯oːn/",
+      "example": "Um zehn Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "presentation"
+    },
+    {
+      "word": "die Konferenz",
+      "russian": "конференция",
+      "transcription": "/kɔnfeˈʁɛnts/",
+      "example": "Nächste Woche findet eine wichtige ___ statt.",
+      "imageUrl": null,
+      "imageQuery": "conference"
+    },
+    {
+      "word": "die Abteilung",
+      "russian": "отдел",
+      "transcription": "/ˈaptaɪ̯lʊŋ/",
+      "example": "In diesem Stockwerk liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "department"
+    },
+    {
+      "word": "der Kunde",
+      "russian": "клиент",
+      "transcription": "/ˈkʊndə/",
+      "example": "An der Kasse wartet ___.",
+      "imageUrl": null,
+      "imageQuery": "customer"
+    }
+  ]
+}

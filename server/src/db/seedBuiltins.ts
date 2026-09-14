@@ -26,7 +26,7 @@ export function seedBuiltins(db: Database.Database, dataDir: string): void {
     .filter((f) => f.endsWith(".json"))
     .sort();
 
-  const deckExists = db.prepare("SELECT id FROM decks WHERE name = ?");
+  const deckExists = db.prepare("SELECT id FROM decks WHERE name = ? AND language = ?");
   const insertDeck = db.prepare(
     "INSERT INTO decks (id, name, is_builtin, language) VALUES (?, ?, 1, ?)",
   );
@@ -64,7 +64,7 @@ export function seedBuiltins(db: Database.Database, dataDir: string): void {
 
   for (const file of files) {
     const deck = JSON.parse(readFileSync(join(dataDir, file), "utf8")) as SeedDeck;
-    const existing = deckExists.get(deck.name) as { id: string } | undefined;
+    const existing = deckExists.get(deck.name, deck.language ?? "en") as { id: string } | undefined;
     if (existing) {
       backfillDeck(existing.id, deck);
       continue;

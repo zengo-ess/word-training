@@ -1,0 +1,326 @@
+{
+  "name": "Немецкая еда",
+  "language": "de",
+  "words": [
+    {
+      "word": "der Apfel",
+      "russian": "яблоко",
+      "transcription": "/ˈapfl̩/",
+      "example": "Mir schmeckt ___ sehr gut.",
+      "imageUrl": null,
+      "imageQuery": "apple"
+    },
+    {
+      "word": "das Brot",
+      "russian": "хлеб",
+      "transcription": "/broːt/",
+      "example": "Zum Frühstück esse ich gern ___.",
+      "imageUrl": null,
+      "imageQuery": "bread"
+    },
+    {
+      "word": "der Käse",
+      "russian": "сыр",
+      "transcription": "/ˈkɛːzə/",
+      "example": "Auf dem Brot liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "cheese"
+    },
+    {
+      "word": "das Hähnchen",
+      "russian": "курица",
+      "transcription": "/ˈhɛːnçən/",
+      "example": "Zum Mittagessen gibt es heute ___.",
+      "imageUrl": null,
+      "imageQuery": "chicken"
+    },
+    {
+      "word": "der Kaffee",
+      "russian": "кофе",
+      "transcription": "/ˈkafeː/",
+      "example": "Am Morgen duftet in der Küche ___.",
+      "imageUrl": null,
+      "imageQuery": "coffee"
+    },
+    {
+      "word": "das Abendessen",
+      "russian": "ужин",
+      "transcription": "/ˈaːbn̩tʔɛsn̩/",
+      "example": "Um sieben Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "dinner"
+    },
+    {
+      "word": "das Ei",
+      "russian": "яйцо",
+      "transcription": "/aɪ̯/",
+      "example": "Zum Frühstück kocht er ___.",
+      "imageUrl": null,
+      "imageQuery": "egg"
+    },
+    {
+      "word": "der Fisch",
+      "russian": "рыба",
+      "transcription": "/fɪʃ/",
+      "example": "Frisch aus dem Meer kommt ___.",
+      "imageUrl": null,
+      "imageQuery": "fish"
+    },
+    {
+      "word": "das Obst",
+      "russian": "фрукты",
+      "transcription": "/oːpst/",
+      "example": "Auf dem Markt liegt ___ frisch bereit.",
+      "imageUrl": null,
+      "imageQuery": "fruit"
+    },
+    {
+      "word": "der Saft",
+      "russian": "сок",
+      "transcription": "/zaft/",
+      "example": "Zum Frühstück steht auf dem Tisch ___.",
+      "imageUrl": null,
+      "imageQuery": "juice"
+    },
+    {
+      "word": "die Milch",
+      "russian": "молоко",
+      "transcription": "/mɪlç/",
+      "example": "In den Kaffee gebe ich ___.",
+      "imageUrl": null,
+      "imageQuery": "milk"
+    },
+    {
+      "word": "das Fleisch",
+      "russian": "мясо",
+      "transcription": "/flaɪ̯ʃ/",
+      "example": "Zum Mittagessen gibt es heute ___.",
+      "imageUrl": null,
+      "imageQuery": "meat"
+    },
+    {
+      "word": "der Reis",
+      "russian": "рис",
+      "transcription": "/raɪ̯s/",
+      "example": "Zum Fisch passt hervorragend ___.",
+      "imageUrl": null,
+      "imageQuery": "rice"
+    },
+    {
+      "word": "der Salat",
+      "russian": "салат",
+      "transcription": "/zaˈlaːt/",
+      "example": "Als Vorspeise schmeckt besonders gut ___.",
+      "imageUrl": null,
+      "imageQuery": "salad"
+    },
+    {
+      "word": "die Suppe",
+      "russian": "суп",
+      "transcription": "/ˈzʊpə/",
+      "example": "Zum Mittagessen kocht meine Mutter ___.",
+      "imageUrl": null,
+      "imageQuery": "soup"
+    },
+    {
+      "word": "der Zucker",
+      "russian": "сахар",
+      "transcription": "/ˈtsʊkɐ/",
+      "example": "Im Schrank steht ___.",
+      "imageUrl": null,
+      "imageQuery": "sugar"
+    },
+    {
+      "word": "der Tee",
+      "russian": "чай",
+      "transcription": "/teː/",
+      "example": "Am Nachmittag dampft in der Kanne ___.",
+      "imageUrl": null,
+      "imageQuery": "tea"
+    },
+    {
+      "word": "das Wasser",
+      "russian": "вода",
+      "transcription": "/ˈvasɐ/",
+      "example": "Auf dem Tisch steht kaltes ___.",
+      "imageUrl": null,
+      "imageQuery": "water"
+    },
+    {
+      "word": "die Butter",
+      "russian": "масло",
+      "transcription": "/ˈbʊtɐ/",
+      "example": "Auf das Brot streiche ich ___.",
+      "imageUrl": null,
+      "imageQuery": "butter"
+    },
+    {
+      "word": "der Kuchen",
+      "russian": "пирог",
+      "transcription": "/ˈkuːxn̩/",
+      "example": "Zum Geburtstag duftet in der Küche ___.",
+      "imageUrl": null,
+      "imageQuery": "cake"
+    },
+    {
+      "word": "die Banane",
+      "russian": "банан",
+      "transcription": "/baˈnaːnə/",
+      "example": "Zum Frühstück isst er ___.",
+      "imageUrl": null,
+      "imageQuery": "banana"
+    },
+    {
+      "word": "die Orange",
+      "russian": "апельсин",
+      "transcription": "/oˈʁãːʒə/",
+      "example": "Zum Frühstück isst er gern ___.",
+      "imageUrl": null,
+      "imageQuery": "orange"
+    },
+    {
+      "word": "die Kartoffel",
+      "russian": "картофель",
+      "transcription": "/kaʁˈtɔfl̩/",
+      "example": "Zum Fleisch serviert die Mutter ___.",
+      "imageUrl": null,
+      "imageQuery": "potato"
+    },
+    {
+      "word": "die Tomate",
+      "russian": "помидор",
+      "transcription": "/toˈmaːtə/",
+      "example": "Für den Salat schneidet er ___.",
+      "imageUrl": null,
+      "imageQuery": "tomato"
+    },
+    {
+      "word": "die Zwiebel",
+      "russian": "лук",
+      "transcription": "/ˈtsviːbl̩/",
+      "example": "In die Suppe schneidet er ___.",
+      "imageUrl": null,
+      "imageQuery": "onion"
+    },
+    {
+      "word": "die Karotte",
+      "russian": "морковь",
+      "transcription": "/kaˈʁɔtə/",
+      "example": "Der Hase frisst gern ___.",
+      "imageUrl": null,
+      "imageQuery": "carrot"
+    },
+    {
+      "word": "die Zitrone",
+      "russian": "лимон",
+      "transcription": "/tsiˈtʁoːnə/",
+      "example": "In den Tee gebe ich gern ___.",
+      "imageUrl": null,
+      "imageQuery": "lemon"
+    },
+    {
+      "word": "das Frühstück",
+      "russian": "завтрак",
+      "transcription": "/ˈfʁyːʃtʏk/",
+      "example": "Um acht Uhr beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "breakfast"
+    },
+    {
+      "word": "das Mittagessen",
+      "russian": "обед",
+      "transcription": "/ˈmɪtaːkʔɛsn̩/",
+      "example": "Um zwölf Uhr gibt es ___.",
+      "imageUrl": null,
+      "imageQuery": "lunch"
+    },
+    {
+      "word": "das Salz",
+      "russian": "соль",
+      "transcription": "/zalts/",
+      "example": "In die Suppe gebe ich ___.",
+      "imageUrl": null,
+      "imageQuery": "salt"
+    },
+    {
+      "word": "der Pfeffer",
+      "russian": "перец",
+      "transcription": "/ˈpfɛfɐ/",
+      "example": "Neben dem Salz steht ___.",
+      "imageUrl": null,
+      "imageQuery": "pepper"
+    },
+    {
+      "word": "der Honig",
+      "russian": "мёд",
+      "transcription": "/ˈhoːnɪç/",
+      "example": "Im Regal steht ___.",
+      "imageUrl": null,
+      "imageQuery": "honey"
+    },
+    {
+      "word": "die Schokolade",
+      "russian": "шоколад",
+      "transcription": "/ʃokoˈlaːdə/",
+      "example": "Nach dem Essen isst sie gern ___.",
+      "imageUrl": null,
+      "imageQuery": "chocolate"
+    },
+    {
+      "word": "der Keks",
+      "russian": "печенье",
+      "transcription": "/keːks/",
+      "example": "Neben der Tasse liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "cookie"
+    },
+    {
+      "word": "das Sandwich",
+      "russian": "бутерброд",
+      "transcription": "/ˈzɛntvɪtʃ/",
+      "example": "Zum Mittag esse ich schnell ___.",
+      "imageUrl": null,
+      "imageQuery": "sandwich"
+    },
+    {
+      "word": "die Pizza",
+      "russian": "пицца",
+      "transcription": "/ˈpɪtsa/",
+      "example": "Am Freitagabend bestellen wir ___.",
+      "imageUrl": null,
+      "imageQuery": "pizza"
+    },
+    {
+      "word": "der Teller",
+      "russian": "тарелка",
+      "transcription": "/ˈtɛlɐ/",
+      "example": "Auf dem Tisch steht ___.",
+      "imageUrl": null,
+      "imageQuery": "plate"
+    },
+    {
+      "word": "die Tasse",
+      "russian": "чашка",
+      "transcription": "/ˈtasə/",
+      "example": "Auf dem Tisch steht ___.",
+      "imageUrl": null,
+      "imageQuery": "cup"
+    },
+    {
+      "word": "die Gabel",
+      "russian": "вилка",
+      "transcription": "/ˈɡaːbl̩/",
+      "example": "Neben dem Teller liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "fork"
+    },
+    {
+      "word": "der Löffel",
+      "russian": "ложка",
+      "transcription": "/ˈlœfl̩/",
+      "example": "Neben dem Teller liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "spoon"
+    }
+  ]
+}

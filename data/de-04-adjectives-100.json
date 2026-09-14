@@ -1,0 +1,806 @@
+{
+  "name": "Топ-100 немецких прилагательных",
+  "language": "de",
+  "words": [
+    {
+      "word": "gut",
+      "russian": "хороший",
+      "transcription": "/ɡuːt/",
+      "example": "Diese Suppe schmeckt sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "good"
+    },
+    {
+      "word": "neu",
+      "russian": "новый",
+      "transcription": "/nɔʏ̯/",
+      "example": "Mein Telefon ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "new"
+    },
+    {
+      "word": "erste",
+      "russian": "первый",
+      "transcription": "/ˈeːɐ̯stə/",
+      "example": "Sie kam bei diesem Rennen als ___ ins Ziel.",
+      "imageUrl": null,
+      "imageQuery": "first"
+    },
+    {
+      "word": "letzte",
+      "russian": "последний",
+      "transcription": "/ˈlɛtstə/",
+      "example": "Dezember ist der ___ Monat im Jahr.",
+      "imageUrl": null,
+      "imageQuery": "last"
+    },
+    {
+      "word": "lang",
+      "russian": "длинный",
+      "transcription": "/laŋ/",
+      "example": "Der Weg zur Stadt ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "long"
+    },
+    {
+      "word": "großartig",
+      "russian": "отличный",
+      "transcription": "/ˈɡʁoːsʔaʁtɪç/",
+      "example": "Die Party war wirklich ___.",
+      "imageUrl": null,
+      "imageQuery": "great"
+    },
+    {
+      "word": "klein",
+      "russian": "маленький",
+      "transcription": "/klaɪ̯n/",
+      "example": "Ihr neuer Hund ist noch sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "little"
+    },
+    {
+      "word": "eigen",
+      "russian": "собственный",
+      "transcription": "/ˈaɪ̯ɡn̩/",
+      "example": "Diese Idee ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "own"
+    },
+    {
+      "word": "anders",
+      "russian": "другой",
+      "transcription": "/ˈandɐs/",
+      "example": "Dieses Hemd hier ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "other"
+    },
+    {
+      "word": "alt",
+      "russian": "старый",
+      "transcription": "/alt/",
+      "example": "Das Haus meines Großvaters ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "old"
+    },
+    {
+      "word": "richtig",
+      "russian": "правильный",
+      "transcription": "/ˈʁɪçtɪç/",
+      "example": "Deine Antwort ist völlig ___.",
+      "imageUrl": null,
+      "imageQuery": "right"
+    },
+    {
+      "word": "groß",
+      "russian": "большой",
+      "transcription": "/ɡʁoːs/",
+      "example": "Ihr Haus am Park ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "big"
+    },
+    {
+      "word": "hoch",
+      "russian": "высокий",
+      "transcription": "/hoːx/",
+      "example": "Dieser Berg ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "high"
+    },
+    {
+      "word": "winzig",
+      "russian": "небольшой",
+      "transcription": "/ˈvɪntsɪç/",
+      "example": "Der Garten hinter dem Haus ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "small"
+    },
+    {
+      "word": "riesig",
+      "russian": "крупный",
+      "transcription": "/ˈʁiːzɪç/",
+      "example": "Diese Pizza ist wirklich ___.",
+      "imageUrl": null,
+      "imageQuery": "large"
+    },
+    {
+      "word": "jung",
+      "russian": "молодой",
+      "transcription": "/jʊŋ/",
+      "example": "Sie ist noch viel zu ___, um Auto zu fahren.",
+      "imageUrl": null,
+      "imageQuery": "young"
+    },
+    {
+      "word": "wichtig",
+      "russian": "важный",
+      "transcription": "/ˈvɪçtɪç/",
+      "example": "Dieses Treffen heute ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "important"
+    },
+    {
+      "word": "verschieden",
+      "russian": "разный",
+      "transcription": "/fɛɐ̯ˈʃiːdn̩/",
+      "example": "Jedes Kind ist ___.",
+      "imageUrl": null,
+      "imageQuery": "different"
+    },
+    {
+      "word": "schlecht",
+      "russian": "плохой",
+      "transcription": "/ʃlɛçt/",
+      "example": "Das Wetter ist heute ___.",
+      "imageUrl": null,
+      "imageQuery": "bad"
+    },
+    {
+      "word": "gleich",
+      "russian": "одинаковый",
+      "transcription": "/ɡlaɪ̯ç/",
+      "example": "Unsere Schuhgröße ist ___.",
+      "imageUrl": null,
+      "imageQuery": "same"
+    },
+    {
+      "word": "fähig",
+      "russian": "способный",
+      "transcription": "/ˈfɛːɪç/",
+      "example": "Sie ist sehr ___, schnell zu schwimmen.",
+      "imageUrl": null,
+      "imageQuery": "able"
+    },
+    {
+      "word": "früh",
+      "russian": "ранний",
+      "transcription": "/fʁyː/",
+      "example": "Mein Zug zur Arbeit fährt sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "early"
+    },
+    {
+      "word": "spät",
+      "russian": "поздний",
+      "transcription": "/ʃpɛːt/",
+      "example": "Unser Abendessen gestern war sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "late"
+    },
+    {
+      "word": "hart",
+      "russian": "трудный",
+      "transcription": "/haʁt/",
+      "example": "Dieser Test ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "hard"
+    },
+    {
+      "word": "leicht",
+      "russian": "лёгкий",
+      "transcription": "/ˈlaɪ̯çt/",
+      "example": "Diese Frage ist für mich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "easy"
+    },
+    {
+      "word": "stark",
+      "russian": "сильный",
+      "transcription": "/ʃtaʁk/",
+      "example": "Er ist körperlich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "strong"
+    },
+    {
+      "word": "frei",
+      "russian": "свободный",
+      "transcription": "/fʁaɪ̯/",
+      "example": "Bist du heute Abend ___?",
+      "imageUrl": null,
+      "imageQuery": "free"
+    },
+    {
+      "word": "wahr",
+      "russian": "правдивый",
+      "transcription": "/vaːɐ̯/",
+      "example": "Diese Geschichte im Film ist ___.",
+      "imageUrl": null,
+      "imageQuery": "true"
+    },
+    {
+      "word": "echt",
+      "russian": "настоящий",
+      "transcription": "/ɛçt/",
+      "example": "Dieser Goldring ist ___.",
+      "imageUrl": null,
+      "imageQuery": "real"
+    },
+    {
+      "word": "voll",
+      "russian": "полный",
+      "transcription": "/fɔl/",
+      "example": "Das Glas ist ___ Wasser.",
+      "imageUrl": null,
+      "imageQuery": "full"
+    },
+    {
+      "word": "gewiss",
+      "russian": "уверенный",
+      "transcription": "/ɡəˈvɪs/",
+      "example": "Bist du dir da ganz ___?",
+      "imageUrl": null,
+      "imageQuery": "sure"
+    },
+    {
+      "word": "offen",
+      "russian": "открытый",
+      "transcription": "/ˈɔfn̩/",
+      "example": "Der Laden ist heute noch ___.",
+      "imageUrl": null,
+      "imageQuery": "open"
+    },
+    {
+      "word": "glücklich",
+      "russian": "счастливый",
+      "transcription": "/ˈɡlʏklɪç/",
+      "example": "Sie sieht heute sehr ___ aus.",
+      "imageUrl": null,
+      "imageQuery": "happy"
+    },
+    {
+      "word": "nah",
+      "russian": "близкий",
+      "transcription": "/naː/",
+      "example": "Wir stehen uns schon seit Jahren sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "close"
+    },
+    {
+      "word": "nett",
+      "russian": "милый",
+      "transcription": "/nɛt/",
+      "example": "Er ist zu allen Gästen sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "nice"
+    },
+    {
+      "word": "arm",
+      "russian": "бедный",
+      "transcription": "/aʁm/",
+      "example": "Die Familie war damals sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "poor"
+    },
+    {
+      "word": "reich",
+      "russian": "богатый",
+      "transcription": "/ʁaɪ̯ç/",
+      "example": "Dieser Mann mit zwei Häusern ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "rich"
+    },
+    {
+      "word": "klar",
+      "russian": "ясный",
+      "transcription": "/klaːɐ̯/",
+      "example": "Der Himmel ist heute Nacht sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "clear"
+    },
+    {
+      "word": "aktuell",
+      "russian": "недавний",
+      "transcription": "/akˈtu̯ɛl/",
+      "example": "Dieses Foto von meiner Familie ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "recent"
+    },
+    {
+      "word": "kurz",
+      "russian": "короткий",
+      "transcription": "/kʊʁts/",
+      "example": "Der Brief an ihre Freundin war sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "short"
+    },
+    {
+      "word": "hochgewachsen",
+      "russian": "высокий (о росте)",
+      "transcription": "/ˈhoːxɡəvaksn̩/",
+      "example": "Mein Bruder ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "tall"
+    },
+    {
+      "word": "niedrig",
+      "russian": "низкий",
+      "transcription": "/ˈniːdʁɪç/",
+      "example": "Die Preise in diesem Laden sind sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "low"
+    },
+    {
+      "word": "heiß",
+      "russian": "горячий",
+      "transcription": "/haɪ̯s/",
+      "example": "Vorsicht, der Tee ist noch sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "hot"
+    },
+    {
+      "word": "kalt",
+      "russian": "холодный",
+      "transcription": "/kalt/",
+      "example": "Draußen ist es heute sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "cold"
+    },
+    {
+      "word": "warm",
+      "russian": "тёплый",
+      "transcription": "/vaʁm/",
+      "example": "Heute ist es draußen sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "warm"
+    },
+    {
+      "word": "kühl",
+      "russian": "прохладный",
+      "transcription": "/kyːl/",
+      "example": "Die Abendluft ist angenehm ___.",
+      "imageUrl": null,
+      "imageQuery": "cool"
+    },
+    {
+      "word": "dunkel",
+      "russian": "тёмный",
+      "transcription": "/ˈdʊŋkl̩/",
+      "example": "Nachts ist das Zimmer sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "dark"
+    },
+    {
+      "word": "hell",
+      "russian": "светлый",
+      "transcription": "/hɛl/",
+      "example": "Die Küche ist groß und ___.",
+      "imageUrl": null,
+      "imageQuery": "light"
+    },
+    {
+      "word": "schwer",
+      "russian": "тяжёлый",
+      "transcription": "/ʃveːɐ̯/",
+      "example": "Diese Tasche ist für mich zu ___.",
+      "imageUrl": null,
+      "imageQuery": "heavy"
+    },
+    {
+      "word": "schnell",
+      "russian": "быстрый",
+      "transcription": "/ʃnɛl/",
+      "example": "Sein Auto ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "fast"
+    },
+    {
+      "word": "langsam",
+      "russian": "медленный",
+      "transcription": "/ˈlaŋzaːm/",
+      "example": "Das Internet ist heute sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "slow"
+    },
+    {
+      "word": "rasch",
+      "russian": "скорый",
+      "transcription": "/ʁaʃ/",
+      "example": "Vor dem Film essen wir noch ___ zu Mittag.",
+      "imageUrl": null,
+      "imageQuery": "quick"
+    },
+    {
+      "word": "beschäftigt",
+      "russian": "занятой",
+      "transcription": "/bəˈʃɛftɪçt/",
+      "example": "Diese Woche bin ich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "busy"
+    },
+    {
+      "word": "schön",
+      "russian": "красивый",
+      "transcription": "/ʃøːn/",
+      "example": "Dein Garten ist wirklich sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "beautiful"
+    },
+    {
+      "word": "hübsch",
+      "russian": "симпатичный",
+      "transcription": "/hʏpʃ/",
+      "example": "Ihr Lächeln ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "pretty"
+    },
+    {
+      "word": "lustig",
+      "russian": "смешной",
+      "transcription": "/ˈlʊstɪç/",
+      "example": "Sein Witz beim Abendessen war sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "funny"
+    },
+    {
+      "word": "interessant",
+      "russian": "интересный",
+      "transcription": "/ɪntɛʁɛˈsant/",
+      "example": "Dieses Buch ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "interesting"
+    },
+    {
+      "word": "langweilig",
+      "russian": "скучный",
+      "transcription": "/ˈlaŋvaɪ̯lɪç/",
+      "example": "Der Film war lang und ___.",
+      "imageUrl": null,
+      "imageQuery": "boring"
+    },
+    {
+      "word": "falsch",
+      "russian": "неправильный",
+      "transcription": "/falʃ/",
+      "example": "Meine Antwort in der Prüfung war leider ___.",
+      "imageUrl": null,
+      "imageQuery": "wrong"
+    },
+    {
+      "word": "fertig",
+      "russian": "готовый",
+      "transcription": "/ˈfɛʁtɪç/",
+      "example": "Das Abendessen ist ___, kommt an den Tisch.",
+      "imageUrl": null,
+      "imageQuery": "ready"
+    },
+    {
+      "word": "sauber",
+      "russian": "чистый",
+      "transcription": "/ˈzaʊ̯bɐ/",
+      "example": "Die Küche ist jetzt ___.",
+      "imageUrl": null,
+      "imageQuery": "clean"
+    },
+    {
+      "word": "schmutzig",
+      "russian": "грязный",
+      "transcription": "/ˈʃmʊtsɪç/",
+      "example": "Deine Schuhe sind nach dem Spaziergang ___.",
+      "imageUrl": null,
+      "imageQuery": "dirty"
+    },
+    {
+      "word": "trocken",
+      "russian": "сухой",
+      "transcription": "/ˈtʁɔkn̩/",
+      "example": "Das Handtuch ist jetzt ___.",
+      "imageUrl": null,
+      "imageQuery": "dry"
+    },
+    {
+      "word": "nass",
+      "russian": "мокрый",
+      "transcription": "/nas/",
+      "example": "Meine Haare sind nach der Dusche noch ___.",
+      "imageUrl": null,
+      "imageQuery": "wet"
+    },
+    {
+      "word": "sicher",
+      "russian": "безопасный",
+      "transcription": "/ˈzɪçɐ/",
+      "example": "Diese Straße ist nachts sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "safe"
+    },
+    {
+      "word": "gefährlich",
+      "russian": "опасный",
+      "transcription": "/ɡəˈfɛːɐ̯lɪç/",
+      "example": "Dieser große Hund sieht ___ aus.",
+      "imageUrl": null,
+      "imageQuery": "dangerous"
+    },
+    {
+      "word": "billig",
+      "russian": "дешёвый",
+      "transcription": "/ˈbɪlɪç/",
+      "example": "Diese Schuhe sind sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "cheap"
+    },
+    {
+      "word": "teuer",
+      "russian": "дорогой",
+      "transcription": "/ˈtɔʏ̯ɐ/",
+      "example": "Diese Uhr ist für mich zu ___.",
+      "imageUrl": null,
+      "imageQuery": "expensive"
+    },
+    {
+      "word": "gesund",
+      "russian": "здоровый",
+      "transcription": "/ɡəˈzʊnt/",
+      "example": "Obst ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "healthy"
+    },
+    {
+      "word": "krank",
+      "russian": "больной",
+      "transcription": "/kʁaŋk/",
+      "example": "Er ist ___ und bleibt im Bett.",
+      "imageUrl": null,
+      "imageQuery": "sick"
+    },
+    {
+      "word": "müde",
+      "russian": "усталый",
+      "transcription": "/ˈmyːdə/",
+      "example": "Ich bin nach der Arbeit sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "tired"
+    },
+    {
+      "word": "hungrig",
+      "russian": "голодный",
+      "transcription": "/ˈhʊŋʁɪç/",
+      "example": "Das Baby ist ___ und will Milch.",
+      "imageUrl": null,
+      "imageQuery": "hungry"
+    },
+    {
+      "word": "wütend",
+      "russian": "сердитый",
+      "transcription": "/ˈvyːtn̩t/",
+      "example": "Warum bist du so ___ auf mich?",
+      "imageUrl": null,
+      "imageQuery": "angry"
+    },
+    {
+      "word": "traurig",
+      "russian": "грустный",
+      "transcription": "/ˈtʁaʊ̯ʁɪç/",
+      "example": "Sie fühlte sich nach dem Film ___.",
+      "imageUrl": null,
+      "imageQuery": "sad"
+    },
+    {
+      "word": "ängstlich",
+      "russian": "испуганный",
+      "transcription": "/ˈɛŋstlɪç/",
+      "example": "Das Kind war in der Dunkelheit sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "afraid"
+    },
+    {
+      "word": "berühmt",
+      "russian": "известный",
+      "transcription": "/bəˈʁyːmt/",
+      "example": "Paris ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "famous"
+    },
+    {
+      "word": "beliebt",
+      "russian": "популярный",
+      "transcription": "/bəˈliːpt/",
+      "example": "Fußball ist in meinem Land sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "popular"
+    },
+    {
+      "word": "örtlich",
+      "russian": "местный",
+      "transcription": "/ˈœʁtlɪç/",
+      "example": "Dieser Laden ist ___ sehr bekannt.",
+      "imageUrl": null,
+      "imageQuery": "local"
+    },
+    {
+      "word": "national",
+      "russian": "национальный",
+      "transcription": "/natsi̯oˈnaːl/",
+      "example": "Dieser Feiertag ist rein ___.",
+      "imageUrl": null,
+      "imageQuery": "national"
+    },
+    {
+      "word": "international",
+      "russian": "международный",
+      "transcription": "/ˌɪntɐnatsi̯oˈnaːl/",
+      "example": "Ihre Firma ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "international"
+    },
+    {
+      "word": "öffentlich",
+      "russian": "общественный",
+      "transcription": "/ˈœfn̩tlɪç/",
+      "example": "Dieser Park ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "public"
+    },
+    {
+      "word": "privat",
+      "russian": "частный",
+      "transcription": "/pʁiˈvaːt/",
+      "example": "Diese Schule ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "private"
+    },
+    {
+      "word": "möglich",
+      "russian": "возможный",
+      "transcription": "/ˈmøːklɪç/",
+      "example": "Ist es ___, früher zu kommen?",
+      "imageUrl": null,
+      "imageQuery": "possible"
+    },
+    {
+      "word": "schwierig",
+      "russian": "сложный",
+      "transcription": "/ˈʃviːʁɪç/",
+      "example": "Chinesisch ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "difficult"
+    },
+    {
+      "word": "einfach",
+      "russian": "простой",
+      "transcription": "/ˈaɪ̯nfax/",
+      "example": "Die Regeln dieses Spiels sind sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "simple"
+    },
+    {
+      "word": "speziell",
+      "russian": "особенный",
+      "transcription": "/ʃpeˈtsi̯ɛl/",
+      "example": "Dieser Tag ist für unsere Familie ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "special"
+    },
+    {
+      "word": "wunderbar",
+      "russian": "чудесный",
+      "transcription": "/ˈvʊndɐbaːɐ̯/",
+      "example": "Unser Urlaub am Meer war ___.",
+      "imageUrl": null,
+      "imageQuery": "wonderful"
+    },
+    {
+      "word": "schrecklich",
+      "russian": "ужасный",
+      "transcription": "/ˈʃʁɛklɪç/",
+      "example": "Das Wetter war gestern ___.",
+      "imageUrl": null,
+      "imageQuery": "terrible"
+    },
+    {
+      "word": "ruhig",
+      "russian": "тихий",
+      "transcription": "/ˈʁuːɪç/",
+      "example": "Diese Straße mit wenig Verkehr ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "quiet"
+    },
+    {
+      "word": "laut",
+      "russian": "громкий",
+      "transcription": "/laʊ̯t/",
+      "example": "Die Musik ist mir zu ___.",
+      "imageUrl": null,
+      "imageQuery": "loud"
+    },
+    {
+      "word": "weich",
+      "russian": "мягкий",
+      "transcription": "/vaɪ̯ç/",
+      "example": "Das Kissen ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "soft"
+    },
+    {
+      "word": "breit",
+      "russian": "широкий",
+      "transcription": "/bʁaɪ̯t/",
+      "example": "Die Straße ist hier sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "wide"
+    },
+    {
+      "word": "tief",
+      "russian": "глубокий",
+      "transcription": "/tiːf/",
+      "example": "Der See ist an dieser Stelle sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "deep"
+    },
+    {
+      "word": "frisch",
+      "russian": "свежий",
+      "transcription": "/fʁɪʃ/",
+      "example": "Dieses Brot am Morgen ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "fresh"
+    },
+    {
+      "word": "süß",
+      "russian": "сладкий",
+      "transcription": "/zyːs/",
+      "example": "Dieser Kuchen ist mir zu ___.",
+      "imageUrl": null,
+      "imageQuery": "sweet"
+    },
+    {
+      "word": "klug",
+      "russian": "умный",
+      "transcription": "/kluːk/",
+      "example": "Diese Studentin ist sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "smart"
+    },
+    {
+      "word": "freundlich",
+      "russian": "добрый",
+      "transcription": "/ˈfʁɔʏ̯ntlɪç/",
+      "example": "Er ist sehr ___ zu Tieren.",
+      "imageUrl": null,
+      "imageQuery": "kind"
+    },
+    {
+      "word": "liebenswürdig",
+      "russian": "дружелюбный",
+      "transcription": "/ˈliːbn̩svʏʁdɪç/",
+      "example": "Die Menschen hier sind sehr ___.",
+      "imageUrl": null,
+      "imageQuery": "friendly"
+    },
+    {
+      "word": "modern",
+      "russian": "современный",
+      "transcription": "/moˈdɛʁn/",
+      "example": "Ihre Wohnung ist ganz ___.",
+      "imageUrl": null,
+      "imageQuery": "modern"
+    },
+    {
+      "word": "ganz",
+      "russian": "целый",
+      "transcription": "/ɡants/",
+      "example": "Nach dem Fallenlassen ist der Teller zum Glück noch ___.",
+      "imageUrl": null,
+      "imageQuery": "whole"
+    }
+  ]
+}

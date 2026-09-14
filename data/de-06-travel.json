@@ -1,0 +1,326 @@
+{
+  "name": "Немецкие путешествия",
+  "language": "de",
+  "words": [
+    {
+      "word": "der Flughafen",
+      "russian": "аэропорт",
+      "transcription": "/ˈfluːkhaːfn̩/",
+      "example": "Um sechs Uhr sind wir am ___.",
+      "imageUrl": null,
+      "imageQuery": "airport"
+    },
+    {
+      "word": "das Ticket",
+      "russian": "билет",
+      "transcription": "/ˈtɪkət/",
+      "example": "An der Kasse kaufe ich ___.",
+      "imageUrl": null,
+      "imageQuery": "ticket"
+    },
+    {
+      "word": "das Hotel",
+      "russian": "отель",
+      "transcription": "/hoˈtɛl/",
+      "example": "Am Strand liegt ein kleines ___.",
+      "imageUrl": null,
+      "imageQuery": "hotel"
+    },
+    {
+      "word": "der Reisepass",
+      "russian": "паспорт",
+      "transcription": "/ˈʁaɪ̯zəpas/",
+      "example": "Am Flughafen zeigt sie ___.",
+      "imageUrl": null,
+      "imageQuery": "passport"
+    },
+    {
+      "word": "das Gepäck",
+      "russian": "багаж",
+      "transcription": "/ɡəˈpɛk/",
+      "example": "Am Band wartet schon ___.",
+      "imageUrl": null,
+      "imageQuery": "luggage"
+    },
+    {
+      "word": "die Karte",
+      "russian": "карта",
+      "transcription": "/ˈkaʁtə/",
+      "example": "Auf dem Tisch liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "map"
+    },
+    {
+      "word": "der Strand",
+      "russian": "пляж",
+      "transcription": "/ʃtʁant/",
+      "example": "Direkt am Meer liegt ein schöner ___.",
+      "imageUrl": null,
+      "imageQuery": "beach"
+    },
+    {
+      "word": "die Reise",
+      "russian": "путешествие",
+      "transcription": "/ˈʁaɪ̯zə/",
+      "example": "Im Sommer beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "journey"
+    },
+    {
+      "word": "der Zug",
+      "russian": "поезд",
+      "transcription": "/tsuːk/",
+      "example": "Um neun Uhr fährt ___.",
+      "imageUrl": null,
+      "imageQuery": "train"
+    },
+    {
+      "word": "der Bus",
+      "russian": "автобус",
+      "transcription": "/bʊs/",
+      "example": "Zur Arbeit fährt jeden Morgen ___.",
+      "imageUrl": null,
+      "imageQuery": "bus"
+    },
+    {
+      "word": "das Flugzeug",
+      "russian": "самолёт",
+      "transcription": "/ˈfluːktsɔʏ̯k/",
+      "example": "Sehr hoch am Himmel fliegt ___.",
+      "imageUrl": null,
+      "imageQuery": "airplane"
+    },
+    {
+      "word": "das Taxi",
+      "russian": "такси",
+      "transcription": "/ˈtaksi/",
+      "example": "Vor dem Hotel wartet ___.",
+      "imageUrl": null,
+      "imageQuery": "taxi"
+    },
+    {
+      "word": "der Bahnhof",
+      "russian": "вокзал",
+      "transcription": "/ˈbaːnhoːf/",
+      "example": "In der Stadtmitte liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "train station"
+    },
+    {
+      "word": "der Ausflug",
+      "russian": "поездка",
+      "transcription": "/ˈaʊ̯sfluːk/",
+      "example": "Am Wochenende planen wir ___.",
+      "imageUrl": null,
+      "imageQuery": "trip"
+    },
+    {
+      "word": "der Tourist",
+      "russian": "турист",
+      "transcription": "/tuˈʁɪst/",
+      "example": "Vor dem Museum steht ___.",
+      "imageUrl": null,
+      "imageQuery": "tourist"
+    },
+    {
+      "word": "der Reiseführer",
+      "russian": "гид",
+      "transcription": "/ˈʁaɪ̯zəfyːʁɐ/",
+      "example": "Durch die Altstadt führt uns ___.",
+      "imageUrl": null,
+      "imageQuery": "tour guide"
+    },
+    {
+      "word": "der Koffer",
+      "russian": "чемодан",
+      "transcription": "/ˈkɔfɐ/",
+      "example": "Im Flur steht mein gepackter ___.",
+      "imageUrl": null,
+      "imageQuery": "suitcase"
+    },
+    {
+      "word": "die Kamera",
+      "russian": "камера",
+      "transcription": "/ˈkaməʁa/",
+      "example": "Am Strand liegt seine neue ___.",
+      "imageUrl": null,
+      "imageQuery": "camera"
+    },
+    {
+      "word": "das Visum",
+      "russian": "виза",
+      "transcription": "/ˈviːzʊm/",
+      "example": "Für diese Reise braucht sie ___.",
+      "imageUrl": null,
+      "imageQuery": "visa"
+    },
+    {
+      "word": "der Flug",
+      "russian": "рейс",
+      "transcription": "/fluːk/",
+      "example": "Um zehn Uhr startet ___.",
+      "imageUrl": null,
+      "imageQuery": "flight"
+    },
+    {
+      "word": "die Straße",
+      "russian": "улица",
+      "transcription": "/ˈʃtʁaːsə/",
+      "example": "Direkt zum Meer führt ___.",
+      "imageUrl": null,
+      "imageQuery": "road"
+    },
+    {
+      "word": "die Stadt",
+      "russian": "город",
+      "transcription": "/ʃtat/",
+      "example": "Am Fluss liegt eine alte ___.",
+      "imageUrl": null,
+      "imageQuery": "city"
+    },
+    {
+      "word": "das Land",
+      "russian": "страна",
+      "transcription": "/lant/",
+      "example": "Im Süden liegt ein warmes ___.",
+      "imageUrl": null,
+      "imageQuery": "country"
+    },
+    {
+      "word": "das Meer",
+      "russian": "море",
+      "transcription": "/meːɐ̯/",
+      "example": "Ganz nah am Hotel liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "sea"
+    },
+    {
+      "word": "der Berg",
+      "russian": "гора",
+      "transcription": "/bɛʁk/",
+      "example": "Direkt hinter dem Dorf liegt ein hoher ___.",
+      "imageUrl": null,
+      "imageQuery": "mountain"
+    },
+    {
+      "word": "die Insel",
+      "russian": "остров",
+      "transcription": "/ˈɪnzl̩/",
+      "example": "Weit draußen im Meer liegt ___.",
+      "imageUrl": null,
+      "imageQuery": "island"
+    },
+    {
+      "word": "das Museum",
+      "russian": "музей",
+      "transcription": "/muˈzeːʊm/",
+      "example": "Im Zentrum liegt ein großes ___.",
+      "imageUrl": null,
+      "imageQuery": "museum"
+    },
+    {
+      "word": "die Tour",
+      "russian": "тур",
+      "transcription": "/tuːɐ̯/",
+      "example": "Am Morgen beginnt ___ durch die Stadt.",
+      "imageUrl": null,
+      "imageQuery": "tour"
+    },
+    {
+      "word": "der Rucksack",
+      "russian": "рюкзак",
+      "transcription": "/ˈʁʊkzak/",
+      "example": "Auf seinem Rücken hängt ___.",
+      "imageUrl": null,
+      "imageQuery": "backpack"
+    },
+    {
+      "word": "das Souvenir",
+      "russian": "сувенир",
+      "transcription": "/zuvəˈniːɐ̯/",
+      "example": "Aus dem Urlaub bringt sie ___ mit.",
+      "imageUrl": null,
+      "imageQuery": "souvenir"
+    },
+    {
+      "word": "das Abenteuer",
+      "russian": "приключение",
+      "transcription": "/ˈaːbn̩tɔʏ̯ɐ/",
+      "example": "Auf dieser Insel beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "adventure"
+    },
+    {
+      "word": "die Abreise",
+      "russian": "отъезд",
+      "transcription": "/ˈapʁaɪ̯zə/",
+      "example": "Um acht Uhr ist ___ geplant.",
+      "imageUrl": null,
+      "imageQuery": "departure"
+    },
+    {
+      "word": "die Ankunft",
+      "russian": "прибытие",
+      "transcription": "/ˈankʊnft/",
+      "example": "Um zwölf Uhr ist ___ am Flughafen.",
+      "imageUrl": null,
+      "imageQuery": "arrival"
+    },
+    {
+      "word": "der Zoll",
+      "russian": "таможня",
+      "transcription": "/tsɔl/",
+      "example": "Am Flughafen wartet ___.",
+      "imageUrl": null,
+      "imageQuery": "customs"
+    },
+    {
+      "word": "die Grenze",
+      "russian": "граница",
+      "transcription": "/ˈɡʁɛntsə/",
+      "example": "Am Nachmittag erreichen wir ___.",
+      "imageUrl": null,
+      "imageQuery": "border"
+    },
+    {
+      "word": "die Reservierung",
+      "russian": "бронирование",
+      "transcription": "/ʁezɛʁˈviːʁʊŋ/",
+      "example": "Für das Hotel gilt ___.",
+      "imageUrl": null,
+      "imageQuery": "reservation"
+    },
+    {
+      "word": "der Urlaub",
+      "russian": "отпуск",
+      "transcription": "/ˈuːɐ̯laʊ̯p/",
+      "example": "Im August beginnt ___.",
+      "imageUrl": null,
+      "imageQuery": "vacation"
+    },
+    {
+      "word": "die Kreuzfahrt",
+      "russian": "круиз",
+      "transcription": "/ˈkʁɔʏ̯tsfaːɐ̯t/",
+      "example": "Nächstes Jahr planen wir ___.",
+      "imageUrl": null,
+      "imageQuery": "cruise"
+    },
+    {
+      "word": "der Hafen",
+      "russian": "гавань",
+      "transcription": "/ˈhaːfn̩/",
+      "example": "Am Abend liegt das Schiff im ___.",
+      "imageUrl": null,
+      "imageQuery": "harbor"
+    },
+    {
+      "word": "das Reiseziel",
+      "russian": "пункт назначения",
+      "transcription": "/ˈʁaɪ̯zətsiːl/",
+      "example": "Für diesen Sommer ist Italien ___.",
+      "imageUrl": null,
+      "imageQuery": "destination"
+    }
+  ]
+}
