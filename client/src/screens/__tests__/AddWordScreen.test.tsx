@@ -59,4 +59,17 @@ describe("AddWordScreen", () => {
 
     await waitFor(() => expect(lookupMock).toHaveBeenCalledWith("Apfel", "de"));
   });
+
+  it("если ввели русское слово — подставляет найденное иностранное в верхнее поле", async () => {
+    mockLanguage = "de";
+    lookupMock.mockResolvedValue({ foreignWord: "der Tisch", nativeWord: "стол", imageUrl: null, imageCandidates: [] });
+    const user = userEvent.setup();
+    render(<AddWordScreen deckId="d1" onClose={vi.fn()} onSaved={vi.fn()} />);
+
+    await user.type(screen.getByLabelText("Немецкое слово"), "стол");
+    await user.click(screen.getByRole("button", { name: "Найти" }));
+
+    await waitFor(() => expect(screen.getByLabelText("Немецкое слово")).toHaveValue("der Tisch"));
+    expect(screen.getByLabelText("Перевод")).toHaveValue("стол");
+  });
 });

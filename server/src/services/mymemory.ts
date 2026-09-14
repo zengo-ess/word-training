@@ -24,3 +24,21 @@ export async function translateToRussian(
   const json: unknown = await response.json();
   return parseTranslation(json);
 }
+
+export function buildTranslateFromRussianUrl(text: string, targetLang: string): string {
+  const params = new URLSearchParams({ q: text, langpair: `ru|${targetLang}` });
+  return `https://api.mymemory.translated.net/get?${params.toString()}`;
+}
+
+export async function translateFromRussian(
+  text: string,
+  targetLang: string,
+  fetchFn: typeof fetch = fetch,
+): Promise<string> {
+  const response = await fetchFn(buildTranslateFromRussianUrl(text, targetLang));
+  if (!response.ok) {
+    return "";
+  }
+  const json: unknown = await response.json();
+  return parseTranslation(json);
+}

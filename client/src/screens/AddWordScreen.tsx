@@ -58,10 +58,11 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
     setError("");
     try {
       const draft = await lookupWord(word, language);
+      setForeignWord(draft.foreignWord);
       setNativeWord(draft.nativeWord);
       setImageUrl(draft.imageUrl);
       setCandidates(draft.imageCandidates);
-      setImageQuery(word);
+      setImageQuery(draft.foreignWord);
       setStage("ready");
     } catch {
       setError("Не удалось получить данные слова");

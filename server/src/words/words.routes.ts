@@ -3,7 +3,7 @@ import type Database from "better-sqlite3";
 import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
 import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
-import { translateToRussian } from "../services/mymemory.js";
+import { translateToRussian, translateFromRussian } from "../services/mymemory.js";
 import { searchImages } from "../services/unsplash.js";
 import { synthesizeMp3 } from "../services/googleTts.js";
 import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
@@ -20,18 +20,29 @@ export interface WordsRouterDeps {
 export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps): Router {
   const router = Router();
 
-  // Авто-черновик: перевод + картинки, без сохранения
+  // Авто-черновик: перевод + картинки, без сохранения.
+  // Если ввели кириллицу — считаем, что это русское слово, и ищем в обратную
+  // сторону (переводим на изучаемый язык), а не как есть.
   router.post("/lookup", async (req, res) => {
-    const foreignWord = typeof req.body?.foreignWord === "string" ? req.body.foreignWord.trim() : "";
+    const input = typeof req.body?.foreignWord === "string" ? req.body.foreignWord.trim() : "";
     const language = typeof req.body?.language === "string" ? req.body.language : "en";
-    if (!foreignWord) {
+    if (!input) {
       res.status(400).json({ error: "Не указано слово" });
       return;
     }
-    const [nativeWord, images] = await Promise.all([
-      translateToRussian(foreignWord, language),
-      searchImages(foreignWord, deps.unsplashAccessKey),
-    ]);
+
+    const isRussianInput = /[а-яё]/i.test(input);
+    let foreignWord: string;
+    let nativeWord: string;
+    if (isRussianInput) {
+      nativeWord = input;
+      foreignWord = (await translateFromRussian(input, language)) || input;
+    } else {
+      foreignWord = input;
+      nativeWord = await translateToRussian(input, language);
+    }
+
+    const images = await searchImages(foreignWord, deps.unsplashAccessKey);
     res.json({
       foreignWord,
       nativeWord,

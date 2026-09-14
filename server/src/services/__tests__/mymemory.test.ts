@@ -5,6 +5,7 @@ import {
   buildTranslateUrl,
   parseTranslation,
   translateToRussian,
+  translateFromRussian,
 } from "../mymemory.js";
 
 function mockFetch(payload: { ok: boolean; body?: unknown }): typeof fetch {
@@ -48,5 +49,17 @@ describe("translateToRussian", () => {
   it("возвращает пустую строку при не-ok ответе", async () => {
     const fetchFn = mockFetch({ ok: false });
     expect(await translateToRussian("cat", "en", fetchFn)).toBe("");
+  });
+});
+
+describe("translateFromRussian", () => {
+  it("строит langpair ru|<target> и возвращает перевод", async () => {
+    const fetchFn = mockFetch({ ok: true, body: { responseData: { translatedText: "der Tisch" } } });
+    expect(await translateFromRussian("стол", "de", fetchFn)).toBe("der Tisch");
+  });
+
+  it("возвращает пустую строку при не-ok ответе", async () => {
+    const fetchFn = mockFetch({ ok: false });
+    expect(await translateFromRussian("стол", "de", fetchFn)).toBe("");
   });
 });
