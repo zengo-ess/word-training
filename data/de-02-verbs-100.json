@@ -7,7 +7,7 @@
       "russian": "быть",
       "transcription": "/zaɪ̯n/",
       "example": "Ich möchte Ärztin ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1584917865440-cebb1d3ed6e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZXxlbnwxfDJ8fHwxNzgxMzM4NDk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to be"
     },
     {
@@ -15,7 +15,7 @@
       "russian": "иметь",
       "transcription": "/ˈhaːbn̩/",
       "example": "Kannst du einen Stift ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1564052513728-d88c2f9d29e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYXZlfGVufDF8Mnx8fDE3ODEzMzg1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to have"
     },
     {
@@ -23,7 +23,7 @@
       "russian": "делать",
       "transcription": "/ˈmaxn̩/",
       "example": "Ich muss heute Abend meine Hausaufgaben ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1674424269115-d3ffb2ce3a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkb3xlbnwxfDJ8fHwxNzgxMzM4NjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to do"
     },
     {
@@ -31,7 +31,7 @@
       "russian": "сказать",
       "transcription": "/ˈzaːɡn̩/",
       "example": "Was wolltest du mir ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1641537652248-80c646718b56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYXl8ZW58MXwyfHx8MTc4MTMzOTM4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to say"
     },
     {
@@ -39,7 +39,7 @@
       "russian": "получать",
       "transcription": "/bəˈkɔmən/",
       "example": "Ich hoffe, bald einen Brief zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1707061229170-fc232a07a55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnZXR8ZW58MXwyfHx8MTc4MTM0MTAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to get"
     },
     {
@@ -47,7 +47,7 @@
       "russian": "печь",
       "transcription": "/ˈbakn̩/",
       "example": "Ich möchte für sie einen Kuchen ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1626256223725-bd0405405156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0byUyMG1ha2UlMjAlMjhiYWtlJTI5fGVufDF8Mnx8fDE3ODk0MDcwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to make (bake)"
     },
     {
@@ -55,7 +55,7 @@
       "russian": "идти",
       "transcription": "/ˈɡeːən/",
       "example": "Wir werden nach dem Essen spazieren ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1623949764783-edba6a1581a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnb3xlbnwxfDJ8fHwxNzgxMzM4NzQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to go"
     },
     {
@@ -63,7 +63,7 @@
       "russian": "знать",
       "transcription": "/ˈvɪsn̩/",
       "example": "Kannst du seine Telefonnummer ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1652077859695-de2851a95620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxrbm93fGVufDF8Mnx8fDE3ODEzNDAwMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to know"
     },
     {
@@ -71,7 +71,7 @@
       "russian": "брать",
       "transcription": "/ˈneːmən/",
       "example": "Bitte ___ einen Regenschirm mit.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1543363136-cdc03bcfa144?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YWtlfGVufDF8Mnx8fDE3ODEzNDA5MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to take"
     },
     {
@@ -79,7 +79,7 @@
       "russian": "видеть",
       "transcription": "/ˈzeːən/",
       "example": "Von hier kann ich das Meer ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1636899048700-d7f5462da30a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWV8ZW58MXwyfHx8MTc4MTMzODkwMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to see"
     },
     {
@@ -87,7 +87,7 @@
       "russian": "приходить",
       "transcription": "/ˈkɔmən/",
       "example": "Kannst du am Samstag zu meiner Party ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1743046199807-2a83ba6fc381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb21lfGVufDF8Mnx8fDE3ODEzMzg4MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to come"
     },
     {
@@ -95,7 +95,7 @@
       "russian": "думать",
       "transcription": "/ˈdɛŋkn̩/",
       "example": "Ich muss noch einmal darüber ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1598091875294-04a7539c972c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aGlua3xlbnwxfDJ8fHwxNzgxMzQwMTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to think"
     },
     {
@@ -103,7 +103,7 @@
       "russian": "смотреть",
       "transcription": "/ˈʃaʊ̯ən/",
       "example": "Bitte einmal auf dieses Bild ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1638889754167-b4540859ef94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb29rfGVufDF8Mnx8fDE3ODEzMzg5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to look"
     },
     {
@@ -111,7 +111,7 @@
       "russian": "хотеть",
       "transcription": "/ˈvɔlən/",
       "example": "Was möchtest du heute Abend ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1613353033247-10b03a92698c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YW50fGVufDF8Mnx8fDE3ODEzNDA0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to want"
     },
     {
@@ -119,7 +119,7 @@
       "russian": "давать",
       "transcription": "/ˈɡeːbn̩/",
       "example": "Kannst du mir das Salz ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1556703588-6eae2585e025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnaXZlfGVufDF8Mnx8fDE3ODEzNDA4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to give"
     },
     {
@@ -127,7 +127,7 @@
       "russian": "использовать",
       "transcription": "/bəˈnʊtsn̩/",
       "example": "Darf ich dein Telefon kurz ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1706697662270-170dde70ddf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx1c2V8ZW58MXwyfHx8MTc4MTM0NjU5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to use"
     },
     {
@@ -135,7 +135,7 @@
       "russian": "находить",
       "transcription": "/ˈfɪndn̩/",
       "example": "Ich kann meine Schlüssel nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1779171252851-0255e530fb3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaW5kfGVufDF8Mnx8fDE3ODEzNDEzMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to find"
     },
     {
@@ -143,7 +143,7 @@
       "russian": "рассказывать",
       "transcription": "/ɛɐ̯ˈtsɛːlən/",
       "example": "Kannst du mir von deiner Reise ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1603656203224-25393ea345a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWxsfGVufDF8Mnx8fDE3ODEzMzk0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to tell"
     },
     {
@@ -151,7 +151,7 @@
       "russian": "спрашивать",
       "transcription": "/ˈfʁaːɡn̩/",
       "example": "Du kannst den Lehrer ruhig ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1557318041-1ce374d55ebf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhc2t8ZW58MXwyfHx8MTc4MTMzOTU0OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to ask"
     },
     {
@@ -159,7 +159,7 @@
       "russian": "работать",
       "transcription": "/ˈaʁbaɪ̯tn̩/",
       "example": "Ich muss heute lange ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JrfGVufDF8Mnx8fDE3ODEzNDY2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to work"
     },
     {
@@ -167,7 +167,7 @@
       "russian": "казаться",
       "transcription": "/ˈʃaɪ̯nən/",
       "example": "Du sollst heute sehr glücklich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1758930908722-6f8f561d7473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWVtfGVufDF8Mnx8fDE3ODEzNDY3NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to seem"
     },
     {
@@ -175,7 +175,7 @@
       "russian": "чувствовать",
       "transcription": "/ˈfyːlən/",
       "example": "Nach dem Sport werde ich mich besser ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1601318314960-e17a48ebb6f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmZWVsfGVufDF8Mnx8fDE3ODEzNDY4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to feel"
     },
     {
@@ -183,7 +183,7 @@
       "russian": "пытаться",
       "transcription": "/fɛɐ̯ˈzuːxn̩/",
       "example": "Du solltest dieses Restaurant unbedingt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1598091874986-7da3b270fead?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cnl8ZW58MXwyfHx8MTc4MTM0NjkxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to try"
     },
     {
@@ -191,7 +191,7 @@
       "russian": "уходить",
       "transcription": "/fɛɐ̯ˈlasn̩/",
       "example": "Wir müssen das Haus um acht Uhr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZWF2ZXxlbnwxfDJ8fHwxNzgxMzQ2OTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to leave"
     },
     {
@@ -199,7 +199,7 @@
       "russian": "звонить",
       "transcription": "/ˈanʁuːfn̩/",
       "example": "Ich werde dich morgen früh ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1557180295-76eee20ae8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYWxsfGVufDF8Mnx8fDE3ODEzNDI3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to call"
     },
     {
@@ -207,7 +207,7 @@
       "russian": "нуждаться",
       "transcription": "/ˈbʁaʊ̯xn̩/",
       "example": "Ich muss dringend Hilfe ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1573187522488-a6d6176a43d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuZWVkfGVufDF8Mnx8fDE3ODEzNDA1MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to need"
     },
     {
@@ -215,7 +215,7 @@
       "russian": "становиться",
       "transcription": "/ˈveːɐ̯dn̩/",
       "example": "Sie möchte eine berühmte Sängerin ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1687585612416-c7e45dbb27d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZWNvbWV8ZW58MXwyfHx8MTc4MTM0NzA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to become"
     },
     {
@@ -223,7 +223,7 @@
       "russian": "означать",
       "transcription": "/bəˈdɔʏ̯tn̩/",
       "example": "Was soll dieses Wort auf Deutsch ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1738358451093-43e5e4a3ea58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtZWFufGVufDF8Mnx8fDE3ODEzNDcxNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to mean"
     },
     {
@@ -231,7 +231,7 @@
       "russian": "хранить",
       "transcription": "/bəˈhaltn̩/",
       "example": "Du darfst das Wechselgeld ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1624720564142-04c1c577ba7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxrZWVwfGVufDF8Mnx8fDE3ODEzNDcyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to keep"
     },
     {
@@ -239,7 +239,7 @@
       "russian": "позволять",
       "transcription": "/ˈlasn̩/",
       "example": "Meine Eltern ___ mich jeden Tag draußen spielen.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1660236740557-bb01865251a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZXR8ZW58MXwyfHx8MTc4MTM0NzMyMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to let"
     },
     {
@@ -247,7 +247,7 @@
       "russian": "начинать",
       "transcription": "/bəˈɡɪnən/",
       "example": "Der Unterricht wird um neun Uhr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1617720097949-d6fd9ed1d71b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZWdpbnxlbnwxfDJ8fHwxNzgxMzQ3NDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to begin"
     },
     {
@@ -255,7 +255,7 @@
       "russian": "помогать",
       "transcription": "/ˈhɛlfn̩/",
       "example": "Kannst du mir mit den Taschen ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1508349356983-7838c2b04eb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWxwfGVufDF8Mnx8fDE3ODEzNDA3NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to help"
     },
     {
@@ -263,7 +263,7 @@
       "russian": "разговаривать",
       "transcription": "/ˈʁeːdn̩/",
       "example": "Ich möchte gern mit dir ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1716654716581-3c92ba53de10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YWxrfGVufDF8Mnx8fDE3ODEzNDc0ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to talk"
     },
     {
@@ -271,7 +271,7 @@
       "russian": "поворачивать",
       "transcription": "/ˈdʁeːən/",
       "example": "Bitte an der nächsten Ecke links ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1733980315639-0b3cb5559179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0dXJufGVufDF8Mnx8fDE3ODEzNDc1NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to turn"
     },
     {
@@ -279,7 +279,7 @@
       "russian": "стартовать",
       "transcription": "/ˈʃtaʁtn̩/",
       "example": "Das Rennen wird in fünf Minuten ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1617720097949-d6fd9ed1d71b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdGFydHxlbnwxfDJ8fHwxNzgxMzQxNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to start"
     },
     {
@@ -287,7 +287,7 @@
       "russian": "показывать",
       "transcription": "/ˈtsaɪ̯ɡn̩/",
       "example": "Kannst du mir deine neuen Fotos ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632383380175-812d44ec112b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaG93fGVufDF8Mnx8fDE3ODEzNDc2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to show"
     },
     {
@@ -295,7 +295,7 @@
       "russian": "слышать",
       "transcription": "/ˈhøːʁən/",
       "example": "Von hier kann ich Musik ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1634656883281-3a665dd2bb8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWFyfGVufDF8Mnx8fDE3ODEzMzkxNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to hear"
     },
     {
@@ -303,7 +303,7 @@
       "russian": "играть",
       "transcription": "/ˈʃpiːlən/",
       "example": "Die Kinder werden im Hof Fußball ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1635241161466-541f065683ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwbGF5fGVufDF8Mnx8fDE3ODEzNDE4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to play"
     },
     {
@@ -311,7 +311,7 @@
       "russian": "бегать",
       "transcription": "/ˈʁɛnən/",
       "example": "Ich möchte jeden Morgen im Park ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1664762903793-f36665a15b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxydW58ZW58MXwyfHx8MTc4MTM0MTk4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to run"
     },
     {
@@ -319,7 +319,7 @@
       "russian": "двигаться",
       "transcription": "/bəˈveːɡn̩/",
       "example": "Bitte während des Fotos nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1698729864548-f1709c3eed50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3ZlfGVufDF8Mnx8fDE3ODEzNDc3MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to move"
     },
     {
@@ -327,7 +327,7 @@
       "russian": "нравиться",
       "transcription": "/ˈmøːɡn̩/",
       "example": "Ich kann Eiscreme sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1644664477908-f8c4b1d215c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsaWtlfGVufDF8Mnx8fDE3ODEzNDA1OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to like"
     },
     {
@@ -335,7 +335,7 @@
       "russian": "жить",
       "transcription": "/ˈleːbn̩/",
       "example": "Sie möchten in einem kleinen Haus am Fluss ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1629096193181-89aa83f523cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsaXZlfGVufDF8Mnx8fDE3ODEzNDc4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to live"
     },
     {
@@ -343,7 +343,7 @@
       "russian": "верить",
       "transcription": "/ˈɡlaʊ̯bn̩/",
       "example": "Ich kann dir das einfach nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1549633030-89d0743bad01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZWxpZXZlfGVufDF8Mnx8fDE3ODEzNDc4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to believe"
     },
     {
@@ -351,7 +351,7 @@
       "russian": "держать",
       "transcription": "/ˈhaltn̩/",
       "example": "Kannst du kurz meine Tasche ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1572974124013-47309d157225?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob2xkfGVufDF8Mnx8fDE3ODEzNDc5Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to hold"
     },
     {
@@ -359,7 +359,7 @@
       "russian": "приносить",
       "transcription": "/ˈbʁɪŋən/",
       "example": "Bitte morgen deine Bücher mit ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1712782516341-46e802f89d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmluZ3xlbnwxfDJ8fHwxNzgxMzQ4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to bring"
     },
     {
@@ -367,7 +367,7 @@
       "russian": "случаться",
       "transcription": "/paˈsiːʁən/",
       "example": "Was wird ___, wenn ich diesen Knopf drücke?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1600601904122-d12ee8933d76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYXBwZW58ZW58MXwyfHx8MTc4MTM0ODEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to happen"
     },
     {
@@ -375,7 +375,7 @@
       "russian": "писать",
       "transcription": "/ˈʃʁaɪ̯bn̩/",
       "example": "Ich werde meiner Großmutter einen Brief ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1585693907431-69d82bdced6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3cml0ZXxlbnwxfDJ8fHwxNzgxMzM5NzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to write"
     },
     {
@@ -383,7 +383,7 @@
       "russian": "сидеть",
       "transcription": "/ˈzɪtsn̩/",
       "example": "Bitte ___ und öffnet eure Bücher.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1642782540332-2c9d6b20603e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaXR8ZW58MXwyfHx8MTc4MTM0ODIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to sit"
     },
     {
@@ -391,7 +391,7 @@
       "russian": "стоять",
       "transcription": "/ˈʃteːən/",
       "example": "Bitte ___ auf, wenn der Lehrer hereinkommt.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1422728221357-57980993ea99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdGFuZHxlbnwxfDJ8fHwxNzgxMzQ4MjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to stand"
     },
     {
@@ -399,7 +399,7 @@
       "russian": "терять",
       "transcription": "/fɛɐ̯ˈliːʁən/",
       "example": "Pass auf, du darfst dein Ticket nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1772413438851-f6dd22c7ebe1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb3NlfGVufDF8Mnx8fDE3ODEzNDE0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to lose"
     },
     {
@@ -407,7 +407,7 @@
       "russian": "платить",
       "transcription": "/bəˈtsaːlən/",
       "example": "Kann ich mit Karte ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1754769777645-2e77c2deec18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwYXl8ZW58MXwyfHx8MTc4MTM0MTI0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to pay"
     },
     {
@@ -415,7 +415,7 @@
       "russian": "встречать",
       "transcription": "/ˈtʁɛfn̩/",
       "example": "Wollen wir uns um sechs Uhr im Café ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtZWV0fGVufDF8Mnx8fDE3ODEzNDI2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to meet"
     },
     {
@@ -423,7 +423,7 @@
       "russian": "включать",
       "transcription": "/ˈaɪ̯nʃliːsn̩/",
       "example": "Soll der Preis das Frühstück ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1649328364839-29451ff58148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpbmNsdWRlfGVufDF8Mnx8fDE3ODEzNDgzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to include"
     },
     {
@@ -431,7 +431,7 @@
       "russian": "продолжать",
       "transcription": "/ˈfɔʁtzɛtsn̩/",
       "example": "Wir werden die Stunde nach der Pause ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1687585612416-c7e45dbb27d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb250aW51ZXxlbnwxfDJ8fHwxNzgxMzQ4NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to continue"
     },
     {
@@ -439,7 +439,7 @@
       "russian": "устанавливать",
       "transcription": "/ˈʃtɛlən/",
       "example": "Vergiss nicht, den Wecker auf sieben Uhr zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1662547312773-d67fd908491b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZXR8ZW58MXwyfHx8MTc4MTM0ODUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to set"
     },
     {
@@ -447,7 +447,7 @@
       "russian": "изучать",
       "transcription": "/ˈlɛʁnən/",
       "example": "Ich möchte dieses Jahr Deutsch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1648747048297-07818372f73d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZWFybnxlbnwxfDJ8fHwxNzgxMzM5NzkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to learn"
     },
     {
@@ -455,7 +455,7 @@
       "russian": "менять",
       "transcription": "/ˈɛndɐn/",
       "example": "Ich muss vor dem Abendessen meine Kleidung ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1517255666489-db1d2c54d083?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGFuZ2V8ZW58MXwyfHx8MTc4MTM0ODYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to change"
     },
     {
@@ -463,7 +463,7 @@
       "russian": "вести",
       "transcription": "/ˈfyːʁən/",
       "example": "Diese Straße wird dich zum Bahnhof ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1620129232665-7e81c576f03b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZWFkfGVufDF8Mnx8fDE3ODEzNDg2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to lead"
     },
     {
@@ -471,7 +471,7 @@
       "russian": "понимать",
       "transcription": "/fɛɐ̯ˈʃteːən/",
       "example": "Ich kann diese Frage nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1652077859695-de2851a95620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx1bmRlcnN0YW5kfGVufDF8Mnx8fDE3ODEzNDAxOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to understand"
     },
     {
@@ -479,7 +479,7 @@
       "russian": "наблюдать",
       "transcription": "/bəˈʔoːbaxtn̩/",
       "example": "Wir werden heute Abend zusammen fernsehen und die Vögel ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YXRjaHxlbnwxfDJ8fHwxNzgxMzM5MDYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to watch"
     },
     {
@@ -487,7 +487,7 @@
       "russian": "следовать",
       "transcription": "/ˈfɔlɡn̩/",
       "example": "Bitte mir ___, das Zimmer ist hier.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1596194680148-524a52c87974?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmb2xsb3d8ZW58MXwyfHx8MTc4MTM0ODc3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to follow"
     },
     {
@@ -495,7 +495,7 @@
       "russian": "останавливаться",
       "transcription": "/ˈanhaltn̩/",
       "example": "Der Bus wird gleich neben der Schule ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1584792224177-047beb05002a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdG9wfGVufDF8Mnx8fDE3ODEzNDE4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to stop"
     },
     {
@@ -503,7 +503,7 @@
       "russian": "создавать",
       "transcription": "/ɛɐ̯ˈʃafn̩/",
       "example": "Du musst ein neues Passwort ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjcmVhdGV8ZW58MXwyfHx8MTc4MTM0ODg1OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to create"
     },
     {
@@ -511,7 +511,7 @@
       "russian": "говорить",
       "transcription": "/ˈʃpʁɛçn̩/",
       "example": "Kannst du Englisch ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1677957855685-e56faa741bc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzcGVha3xlbnwxfDJ8fHwxNzgxMzM5MzA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to speak"
     },
     {
@@ -519,7 +519,7 @@
       "russian": "читать",
       "transcription": "/ˈleːzn̩/",
       "example": "Ich möchte vor dem Schlafen ein Buch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZWFkfGVufDF8Mnx8fDE3ODEzMzk2Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to read"
     },
     {
@@ -527,7 +527,7 @@
       "russian": "тратить",
       "transcription": "/ˈaʊ̯sɡeːbn̩/",
       "example": "Du solltest nicht dein ganzes Geld für Spielzeug ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1771736007020-4b125e7f4485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzcGVuZHxlbnwxfDJ8fHwxNzgxMzQ4OTM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to spend"
     },
     {
@@ -535,7 +535,7 @@
       "russian": "расти",
       "transcription": "/ˈvaksn̩/",
       "example": "Diese Blumen werden im Sommer sehr schnell ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxncm93fGVufDF8Mnx8fDE3ODEzNDkwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to grow"
     },
     {
@@ -543,7 +543,7 @@
       "russian": "открывать",
       "transcription": "/ˈœfnən/",
       "example": "Kannst du bitte das Fenster ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1722170106116-b521b0917e2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvcGVufGVufDF8Mnx8fDE3ODEzNDE0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to open"
     },
     {
@@ -551,7 +551,7 @@
       "russian": "гулять",
       "transcription": "/ˈlaʊ̯fn̩/",
       "example": "Wir werden jeden Tag zur Schule ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1694347220878-aa07ad0d8203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YWxrfGVufDF8Mnx8fDE3ODEzNDIwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to walk"
     },
     {
@@ -559,7 +559,7 @@
       "russian": "побеждать",
       "transcription": "/ɡəˈvɪnən/",
       "example": "Ich hoffe, unser Team wird das Spiel ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1601066964201-618c595bc954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3aW58ZW58MXwyfHx8MTc4MTM0OTEwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to win"
     },
     {
@@ -567,7 +567,7 @@
       "russian": "преподавать",
       "transcription": "/ˈʊntɐʁɪçtn̩/",
       "example": "Meine Mutter kann dich kochen ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1641951820920-c90394aef512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWFjaHxlbnwxfDJ8fHwxNzgxMzM5ODcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to teach"
     },
     {
@@ -575,7 +575,7 @@
       "russian": "предлагать",
       "transcription": "/ˈanbiːtn̩/",
       "example": "Sie werden im Hotel kostenlosen Kaffee ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1700847304964-9fe563059742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvZmZlcnxlbnwxfDJ8fHwxNzgxMzQ5MTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to offer"
     },
     {
@@ -583,7 +583,7 @@
       "russian": "помнить",
       "transcription": "/ɛɐ̯ˈʔɪnɐn/",
       "example": "Kannst du dich an meinen Namen ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1667308274522-886ce9a3f0cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZW1lbWJlcnxlbnwxfDJ8fHwxNzgxMzQwMjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to remember"
     },
     {
@@ -591,7 +591,7 @@
       "russian": "любить",
       "transcription": "/ˈliːbn̩/",
       "example": "Ich möchte meine Familie immer sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1636280788355-550a9496655d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb3ZlfGVufDF8Mnx8fDE3ODEzNDA2ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to love"
     },
     {
@@ -599,7 +599,7 @@
       "russian": "рассматривать",
       "transcription": "/ˌyːbɐˈleːɡn̩/",
       "example": "Du solltest seine Idee wirklich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1759786810416-8662ac6e90c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb25zaWRlcnxlbnwxfDJ8fHwxNzgxMzQ5MjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to consider"
     },
     {
@@ -607,7 +607,7 @@
       "russian": "появляться",
       "transcription": "/ɛɐ̯ˈʃaɪ̯nən/",
       "example": "Sterne werden nachts am Himmel ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1619535541830-af170e005ef5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhcHBlYXJ8ZW58MXwyfHx8MTc4MTM0OTM0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to appear"
     },
     {
@@ -615,7 +615,7 @@
       "russian": "покупать",
       "transcription": "/ˈkaʊ̯fn̩/",
       "example": "Ich möchte etwas Brot und Milch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1608334444192-c38bd5c561ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidXl8ZW58MXwyfHx8MTc4MTM0MTA4NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to buy"
     },
     {
@@ -623,7 +623,7 @@
       "russian": "ждать",
       "transcription": "/ˈvaʁtn̩/",
       "example": "Bitte hier an der Bushaltestelle auf mich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1565038924091-e76522104855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YWl0fGVufDF8Mnx8fDE3ODEzNDI1NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to wait"
     },
     {
@@ -631,7 +631,7 @@
       "russian": "обслуживать",
       "transcription": "/zɛʁˈviːʁən/",
       "example": "Sie werden von sieben bis zehn Uhr Frühstück ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1726033589589-c4628bbba368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZXJ2ZXxlbnwxfDJ8fHwxNzgxMzQ5NDI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to serve"
     },
     {
@@ -639,7 +639,7 @@
       "russian": "умирать",
       "transcription": "/ˈʃtɛʁbn̩/",
       "example": "Ohne Wasser und Licht werden Pflanzen ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1646354380497-92a78ba8dcd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkaWV8ZW58MXwyfHx8MTc4MTM0OTUwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to die"
     },
     {
@@ -647,7 +647,7 @@
       "russian": "отправлять",
       "transcription": "/ˈzɛndn̩/",
       "example": "Ich werde dir heute Abend eine Nachricht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1567473030492-533b30c5494c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZW5kfGVufDF8Mnx8fDE3ODEzNDk1ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to send"
     },
     {
@@ -655,7 +655,7 @@
       "russian": "строить",
       "transcription": "/ˈbaʊ̯ən/",
       "example": "Sie möchten hier eine neue Schule ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1546455643-312811da2332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidWlsZHxlbnwxfDJ8fHwxNzgxMzQ5NjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to build"
     },
     {
@@ -663,7 +663,7 @@
       "russian": "оставаться",
       "transcription": "/ˈblaɪ̯bn̩/",
       "example": "Wir werden an diesem Wochenende zu Hause ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1587459450937-8402ffa769cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdGF5fGVufDF8Mnx8fDE3ODEzNDk3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to stay"
     },
     {
@@ -671,7 +671,7 @@
       "russian": "падать",
       "transcription": "/ˈfalən/",
       "example": "Sei vorsichtig, du kannst auf dem Eis ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1472496175377-b5d7625d4ba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYWxsfGVufDF8Mnx8fDE3ODEzNDk4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to fall"
     },
     {
@@ -679,7 +679,7 @@
       "russian": "резать",
       "transcription": "/ˈʃnaɪ̯dn̩/",
       "example": "Kannst du bitte das Brot ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1615485021298-2c79b31a0f2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjdXR8ZW58MXwyfHx8MTc4MTM0OTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to cut"
     },
     {
@@ -687,7 +687,7 @@
       "russian": "достигать",
       "transcription": "/ɛɐ̯ˈʁaɪ̯çn̩/",
       "example": "Wir werden die Stadt vor der Dunkelheit ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1561570541-aaba21a3ecf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZWFjaHxlbnwxfDJ8fHwxNzgxMzQ5OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to reach"
     },
     {
@@ -695,7 +695,7 @@
       "russian": "убивать",
       "transcription": "/ˈtøːtn̩/",
       "example": "Kälte kann diese Pflanzen leicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1669138965913-f1e435778078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxraWxsfGVufDF8Mnx8fDE3ODEzNTAwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to kill"
     },
     {
@@ -703,7 +703,7 @@
       "russian": "поднимать",
       "transcription": "/ˈheːbn̩/",
       "example": "Bitte die Hand ___, wenn du eine Frage hast.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1698767008609-f5fa6137b9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyYWlzZXxlbnwxfDJ8fHwxNzgxMzUwMTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to raise"
     },
     {
@@ -711,7 +711,7 @@
       "russian": "проходить",
       "transcription": "/foːɐ̯ˈbaɪ̯ɡeːən/",
       "example": "Viele Autos werden jeden Tag an unserem Haus ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1735900520414-a71642eb72e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0byUyMHBhc3MlMjBieXxlbnwxfDJ8fHwxNzg5NDA3MTAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to pass by"
     },
     {
@@ -719,7 +719,7 @@
       "russian": "продавать",
       "transcription": "/fɛɐ̯ˈkaʊ̯fn̩/",
       "example": "Sie werden frisches Obst auf dem Markt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1700847304964-9fe563059742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWxsfGVufDF8Mnx8fDE3ODEzNDExNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to sell"
     },
     {
@@ -727,7 +727,7 @@
       "russian": "решать",
       "transcription": "/ɛntˈʃaɪ̯dn̩/",
       "example": "Wir müssen ___, wohin wir in den Urlaub fahren.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1696960181433-68ca79ac8149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZWNpZGV8ZW58MXwyfHx8MTc4MTM1MDMxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to decide"
     },
     {
@@ -735,7 +735,7 @@
       "russian": "возвращаться",
       "transcription": "/tsuˈʁʏkkeːʁən/",
       "example": "Ich werde um sechs Uhr abends nach Hause ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1651031410043-f3ff4232ee29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZXR1cm58ZW58MXwyfHx8MTc4MTM1MDM5OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to return"
     },
     {
@@ -743,7 +743,7 @@
       "russian": "объяснять",
       "transcription": "/ɛɐ̯ˈklɛːʁən/",
       "example": "Kannst du mir diese Regel noch einmal ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1758930908722-6f8f561d7473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxleHBsYWlufGVufDF8Mnx8fDE3ODEzNTA0Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to explain"
     },
     {
@@ -751,7 +751,7 @@
       "russian": "надеяться",
       "transcription": "/ˈhɔfn̩/",
       "example": "Ich möchte auf gutes Wetter morgen ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1665019874444-4f66944855a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3BlfGVufDF8Mnx8fDE3ODEzNTA1NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to hope"
     },
     {
@@ -759,7 +759,7 @@
       "russian": "нести",
       "transcription": "/ˈtʁaːɡn̩/",
       "example": "Lass mich diese schwere Kiste für dich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1712782516341-46e802f89d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYXJyeXxlbnwxfDJ8fHwxNzgxMzUwNjQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to carry"
     },
     {
@@ -767,7 +767,7 @@
       "russian": "водить",
       "transcription": "/ˈfaːʁən/",
       "example": "Mein Vater kann einen Bus ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1702339955839-489ff9b5ce58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkcml2ZXxlbnwxfDJ8fHwxNzgxMzQyMzAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to drive"
     },
     {
@@ -775,7 +775,7 @@
       "russian": "ломать",
       "transcription": "/tsɛɐ̯ˈbʁɛçn̩/",
       "example": "Sei vorsichtig, du darfst das Glas nicht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1498582750569-89914abe05e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmVha3xlbnwxfDJ8fHwxNzgxMzUwNzIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to break"
     },
     {
@@ -783,7 +783,7 @@
       "russian": "есть",
       "transcription": "/ˈɛsn̩/",
       "example": "Wir werden das Abendessen um sieben Uhr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1663530761401-15eefb544889?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlYXR8ZW58MXwyfHx8MTc4MTM0Mjc5MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to eat"
     },
     {
@@ -791,7 +791,7 @@
       "russian": "пить",
       "transcription": "/ˈtʁɪŋkn̩/",
       "example": "Du solltest jeden Tag mehr Wasser ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1553531768-88af16561c0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MXwxfHNlYXJjaHwxfHxkcmlua3xlbnwxfDJ8fHwxNzgxMzQyODcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to drink"
     },
     {
@@ -799,7 +799,7 @@
       "russian": "спать",
       "transcription": "/ˈʃlaːfn̩/",
       "example": "Babys können viele Stunden am Tag ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1512548438457-4c9584d3766b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzbGVlcHxlbnwxfDJ8fHwxNzgxMzQzMDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to sleep"
     },
     {
@@ -807,7 +807,7 @@
       "russian": "готовить (еду)",
       "transcription": "/ˈkɔxn̩/",
       "example": "Meine Mutter kann sehr gut ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1663530761401-15eefb544889?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb29rfGVufDF8Mnx8fDE3ODEzNDI5NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to cook"
     },
     {
@@ -815,7 +815,7 @@
       "russian": "путешествовать",
       "transcription": "/ˈʁaɪ̯zn̩/",
       "example": "Nächstes Jahr möchten wir nach Italien ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MXwyfHx8MTc4MTM0MjM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "to travel"
     }
   ]

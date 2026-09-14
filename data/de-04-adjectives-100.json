@@ -7,7 +7,7 @@
       "russian": "хороший",
       "transcription": "/ɡuːt/",
       "example": "Diese Suppe schmeckt sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1600164318544-79e55da1ac8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnb29kfGVufDF8Mnx8fDE3ODEzNDMxOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "good"
     },
     {
@@ -15,7 +15,7 @@
       "russian": "новый",
       "transcription": "/nɔʏ̯/",
       "example": "Mein Telefon ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1513343499931-6bf7e0dc4e1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuZXd8ZW58MXwyfHx8MTc4MTM0MzUxOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "new"
     },
     {
@@ -23,7 +23,7 @@
       "russian": "первый",
       "transcription": "/ˈeːɐ̯stə/",
       "example": "Sie kam bei diesem Rennen als ___ ins Ziel.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1682251002952-051ffa79cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXJzdHxlbnwxfDJ8fHwxNzgxMzUyODU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "first"
     },
     {
@@ -31,7 +31,7 @@
       "russian": "последний",
       "transcription": "/ˈlɛtstə/",
       "example": "Dezember ist der ___ Monat im Jahr.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1572974124013-47309d157225?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsYXN0fGVufDF8Mnx8fDE3ODEzNTI5Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "last"
     },
     {
@@ -39,7 +39,7 @@
       "russian": "длинный",
       "transcription": "/laŋ/",
       "example": "Der Weg zur Stadt ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1674499025951-1fd42fa584af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb25nfGVufDF8Mnx8fDE3ODEzNDM3NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "long"
     },
     {
@@ -47,7 +47,7 @@
       "russian": "отличный",
       "transcription": "/ˈɡʁoːsʔaʁtɪç/",
       "example": "Die Party war wirklich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1644358130876-15b1090f74c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxncmVhdHxlbnwxfDJ8fHwxNzgxMzUzMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "great"
     },
     {
@@ -55,7 +55,7 @@
       "russian": "маленький",
       "transcription": "/klaɪ̯n/",
       "example": "Ihr neuer Hund ist noch sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632467634118-20c4fa8e40bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsaXR0bGV8ZW58MXwyfHx8MTc4MTM1MzEwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "little"
     },
     {
@@ -63,7 +63,7 @@
       "russian": "собственный",
       "transcription": "/ˈaɪ̯ɡn̩/",
       "example": "Diese Idee ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1755930167039-273617adfe1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvd258ZW58MXwyfHx8MTc4MTM1MzE4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "own"
     },
     {
@@ -71,7 +71,7 @@
       "russian": "другой",
       "transcription": "/ˈandɐs/",
       "example": "Dieses Hemd hier ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1703531228073-1fe38607bb26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvdGhlcnxlbnwxfDJ8fHwxNzgxMzUzMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "other"
     },
     {
@@ -79,7 +79,7 @@
       "russian": "старый",
       "transcription": "/alt/",
       "example": "Das Haus meines Großvaters ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1534954553104-88cb75be7648?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvbGR8ZW58MXwyfHx8MTc4MTM0MzU5OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "old"
     },
     {
@@ -87,7 +87,7 @@
       "russian": "правильный",
       "transcription": "/ˈʁɪçtɪç/",
       "example": "Deine Antwort ist völlig ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1733980315639-0b3cb5559179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyaWdodHxlbnwxfDJ8fHwxNzgxMzUzMzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "right"
     },
     {
@@ -95,7 +95,7 @@
       "russian": "большой",
       "transcription": "/ɡʁoːs/",
       "example": "Ihr Haus am Park ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1628155524928-35c02b8ac4d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiaWd8ZW58MXwyfHx8MTc4MTM0MzM1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "big"
     },
     {
@@ -103,7 +103,7 @@
       "russian": "высокий",
       "transcription": "/hoːx/",
       "example": "Dieser Berg ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1653328578731-504fe37c6011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoaWdofGVufDF8Mnx8fDE3ODEzNTM0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "high"
     },
     {
@@ -111,7 +111,7 @@
       "russian": "небольшой",
       "transcription": "/ˈvɪntsɪç/",
       "example": "Der Garten hinter dem Haus ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632467634118-20c4fa8e40bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzbWFsbHxlbnwxfDJ8fHwxNzgxMzQzNDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "small"
     },
     {
@@ -119,7 +119,7 @@
       "russian": "крупный",
       "transcription": "/ˈʁiːzɪç/",
       "example": "Diese Pizza ist wirklich ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632709117638-870c44ef5dd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsYXJnZXxlbnwxfDJ8fHwxNzgxMzUzNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "large"
     },
     {
@@ -127,7 +127,7 @@
       "russian": "молодой",
       "transcription": "/jʊŋ/",
       "example": "Sie ist noch viel zu ___, um Auto zu fahren.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5b3VuZ3xlbnwxfDJ8fHwxNzgxMzQzNjgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "young"
     },
     {
@@ -135,7 +135,7 @@
       "russian": "важный",
       "transcription": "/ˈvɪçtɪç/",
       "example": "Dieses Treffen heute ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1517488948216-e473cee81e23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpbXBvcnRhbnR8ZW58MXwyfHx8MTc4MTM0NTM3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "important"
     },
     {
@@ -143,7 +143,7 @@
       "russian": "разный",
       "transcription": "/fɛɐ̯ˈʃiːdn̩/",
       "example": "Jedes Kind ist ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1762100211681-fca75f99d90d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkaWZmZXJlbnR8ZW58MXwyfHx8MTc4MTM1MzU4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "different"
     },
     {
@@ -151,7 +151,7 @@
       "russian": "плохой",
       "transcription": "/ʃlɛçt/",
       "example": "Das Wetter ist heute ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1695839171192-6bc4a1630614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiYWR8ZW58MXwyfHx8MTc4MTM0MzI3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "bad"
     },
     {
@@ -159,7 +159,7 @@
       "russian": "одинаковый",
       "transcription": "/ɡlaɪ̯ç/",
       "example": "Unsere Schuhgröße ist ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1536700106091-24e6057a6fb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYW1lfGVufDF8Mnx8fDE3ODEzNTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "same"
     },
     {
@@ -167,7 +167,7 @@
       "russian": "способный",
       "transcription": "/ˈfɛːɪç/",
       "example": "Sie ist sehr ___, schnell zu schwimmen.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1556978082-fc2023bb5081?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhYmxlfGVufDF8Mnx8fDE3ODEzNTM3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "able"
     },
     {
@@ -175,7 +175,7 @@
       "russian": "ранний",
       "transcription": "/fʁyː/",
       "example": "Mein Zug zur Arbeit fährt sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1719433921012-b6e69200a354?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlYXJseXxlbnwxfDJ8fHwxNzgxMzUzODMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "early"
     },
     {
@@ -183,7 +183,7 @@
       "russian": "поздний",
       "transcription": "/ʃpɛːt/",
       "example": "Unser Abendessen gestern war sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725797951173-0b65ce460f08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsYXRlfGVufDF8Mnx8fDE3ODEzNTM5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "late"
     },
     {
@@ -191,7 +191,7 @@
       "russian": "трудный",
       "transcription": "/haʁt/",
       "example": "Dieser Test ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1551921486-4be2f85f62ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYXJkfGVufDF8Mnx8fDE3ODEzNTM5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "hard"
     },
     {
@@ -199,7 +199,7 @@
       "russian": "лёгкий",
       "transcription": "/ˈlaɪ̯çt/",
       "example": "Diese Frage ist für mich sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1692865814917-094cc56c5699?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlYXN5fGVufDF8Mnx8fDE3ODEzNDQ0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "easy"
     },
     {
@@ -207,7 +207,7 @@
       "russian": "сильный",
       "transcription": "/ʃtaʁk/",
       "example": "Er ist körperlich sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1508153460964-48ffffcb0829?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdHJvbmd8ZW58MXwyfHx8MTc4MTM1NDA3NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "strong"
     },
     {
@@ -215,7 +215,7 @@
       "russian": "свободный",
       "transcription": "/fʁaɪ̯/",
       "example": "Bist du heute Abend ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1511553677255-ba939e5537e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmcmVlfGVufDF8Mnx8fDE3ODEzNTQxNTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "free"
     },
     {
@@ -223,7 +223,7 @@
       "russian": "правдивый",
       "transcription": "/vaːɐ̯/",
       "example": "Diese Geschichte im Film ist ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1535954906091-59dea18fac73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cnVlfGVufDF8Mnx8fDE3ODEzNTQyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "true"
     },
     {
@@ -231,7 +231,7 @@
       "russian": "настоящий",
       "transcription": "/ɛçt/",
       "example": "Dieser Goldring ist ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1779583288267-5c692395778c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZWFsfGVufDF8Mnx8fDE3ODEzNTQzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "real"
     },
     {
@@ -239,7 +239,7 @@
       "russian": "полный",
       "transcription": "/fɔl/",
       "example": "Das Glas ist ___ Wasser.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1592029383200-73fb26a5b925?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmdWxsfGVufDF8Mnx8fDE3ODEzNTQ0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "full"
     },
     {
@@ -247,7 +247,7 @@
       "russian": "уверенный",
       "transcription": "/ɡəˈvɪs/",
       "example": "Bist du dir da ganz ___?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1707699489102-41d526b8666a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdXJlfGVufDF8Mnx8fDE3ODEzNTQ0ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "sure"
     },
     {
@@ -255,7 +255,7 @@
       "russian": "открытый",
       "transcription": "/ˈɔfn̩/",
       "example": "Der Laden ist heute noch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1722170106116-b521b0917e2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvcGVufGVufDF8Mnx8fDE3ODEzNDE0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "open"
     },
     {
@@ -263,7 +263,7 @@
       "russian": "счастливый",
       "transcription": "/ˈɡlʏklɪç/",
       "example": "Sie sieht heute sehr ___ aus.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYXBweXxlbnwxfDJ8fHwxNzgxMzQ0NTY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "happy"
     },
     {
@@ -271,7 +271,7 @@
       "russian": "близкий",
       "transcription": "/naː/",
       "example": "Wir stehen uns schon seit Jahren sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1584385002340-d886f3a0f097?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbG9zZXxlbnwxfDJ8fHwxNzgxMzQxNTcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "close"
     },
     {
@@ -279,7 +279,7 @@
       "russian": "милый",
       "transcription": "/nɛt/",
       "example": "Er ist zu allen Gästen sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1691480250099-a63081ecfcb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuaWNlfGVufDF8Mnx8fDE3ODEzNDUwNTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "nice"
     },
     {
@@ -287,7 +287,7 @@
       "russian": "бедный",
       "transcription": "/aʁm/",
       "example": "Die Familie war damals sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1629293360328-fc31e9e735a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwb29yfGVufDF8Mnx8fDE3ODEzNTQ1NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "poor"
     },
     {
@@ -295,7 +295,7 @@
       "russian": "богатый",
       "transcription": "/ʁaɪ̯ç/",
       "example": "Dieser Mann mit zwei Häusern ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1582139329536-e7284fece509?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyaWNofGVufDF8Mnx8fDE3ODEzNTQ2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "rich"
     },
     {
@@ -303,7 +303,7 @@
       "russian": "ясный",
       "transcription": "/klaːɐ̯/",
       "example": "Der Himmel ist heute Nacht sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1493880275510-58fcfd7768c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbGVhcnxlbnwxfDJ8fHwxNzgxMzU0NzI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "clear"
     },
     {
@@ -311,7 +311,7 @@
       "russian": "недавний",
       "transcription": "/akˈtu̯ɛl/",
       "example": "Dieses Foto von meiner Familie ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1519531537033-bf085fbfd6da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZWNlbnR8ZW58MXwyfHx8MTc4MTM1NDgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "recent"
     },
     {
@@ -319,7 +319,7 @@
       "russian": "короткий",
       "transcription": "/kʊʁts/",
       "example": "Der Brief an ihre Freundin war sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1617951907145-53f6eb87a3a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaG9ydHxlbnwxfDJ8fHwxNzgxMzQzODQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "short"
     },
     {
@@ -327,7 +327,7 @@
       "russian": "высокий (о росте)",
       "transcription": "/ˈhoːxɡəvaksn̩/",
       "example": "Mein Bruder ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1594655151525-cc979fc9bf8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YWxsfGVufDF8Mnx8fDE3ODEzNDM5MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "tall"
     },
     {
@@ -335,7 +335,7 @@
       "russian": "низкий",
       "transcription": "/ˈniːdʁɪç/",
       "example": "Die Preise in diesem Laden sind sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1613369798279-acddbc9f552c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb3d8ZW58MXwyfHx8MTc4MTM1NDg4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "low"
     },
     {
@@ -343,7 +343,7 @@
       "russian": "горячий",
       "transcription": "/haɪ̯s/",
       "example": "Vorsicht, der Tee ist noch sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1623111396948-5706bc25703e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3R8ZW58MXwyfHx8MTc4MTM0NDAwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "hot"
     },
     {
@@ -351,7 +351,7 @@
       "russian": "холодный",
       "transcription": "/kalt/",
       "example": "Draußen ist es heute sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1576781052958-061cf393473a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb2xkfGVufDF8Mnx8fDE3ODEzNDQwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "cold"
     },
     {
@@ -359,7 +359,7 @@
       "russian": "тёплый",
       "transcription": "/vaʁm/",
       "example": "Heute ist es draußen sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1612027276212-5100536d4b12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YXJtfGVufDF8Mnx8fDE3ODEzNDQxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "warm"
     },
     {
@@ -367,7 +367,7 @@
       "russian": "прохладный",
       "transcription": "/kyːl/",
       "example": "Die Abendluft ist angenehm ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb29sfGVufDF8Mnx8fDE3ODEzNTQ5Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "cool"
     },
     {
@@ -375,7 +375,7 @@
       "russian": "тёмный",
       "transcription": "/ˈdʊŋkl̩/",
       "example": "Nachts ist das Zimmer sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1504903271097-d7e7c7f5f7ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYXJrfGVufDF8Mnx8fDE3ODEzNTUwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "dark"
     },
     {
@@ -383,7 +383,7 @@
       "russian": "светлый",
       "transcription": "/hɛl/",
       "example": "Die Küche ist groß und ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1556703588-6eae2585e025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsaWdodHxlbnwxfDJ8fHwxNzgxMzU1MTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "light"
     },
     {
@@ -391,7 +391,7 @@
       "russian": "тяжёлый",
       "transcription": "/ʃveːɐ̯/",
       "example": "Diese Tasche ist für mich zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1698305889493-b0f504b1aefc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWF2eXxlbnwxfDJ8fHwxNzgxMzU1MjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "heavy"
     },
     {
@@ -399,7 +399,7 @@
       "russian": "быстрый",
       "transcription": "/ʃnɛl/",
       "example": "Sein Auto ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1645328225784-2a7b73847cc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYXN0fGVufDF8Mnx8fDE3ODEzNDQyNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "fast"
     },
     {
@@ -407,7 +407,7 @@
       "russian": "медленный",
       "transcription": "/ˈlaŋzaːm/",
       "example": "Das Internet ist heute sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1729761150068-1174d058dc6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzbG93fGVufDF8Mnx8fDE3ODEzNDQzMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "slow"
     },
     {
@@ -415,7 +415,7 @@
       "russian": "скорый",
       "transcription": "/ʁaʃ/",
       "example": "Vor dem Film essen wir noch ___ zu Mittag.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1702306072663-214c3d90be02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxxdWlja3xlbnwxfDJ8fHwxNzgxMzU1MjkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "quick"
     },
     {
@@ -423,7 +423,7 @@
       "russian": "занятой",
       "transcription": "/bəˈʃɛftɪçt/",
       "example": "Diese Woche bin ich sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1652386198673-2c76af537f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidXN5fGVufDF8Mnx8fDE3ODEzNTUzNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "busy"
     },
     {
@@ -431,7 +431,7 @@
       "russian": "красивый",
       "transcription": "/ʃøːn/",
       "example": "Dein Garten ist wirklich sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWx8ZW58MXwyfHx8MTc4MTM0NDk3NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "beautiful"
     },
     {
@@ -439,7 +439,7 @@
       "russian": "симпатичный",
       "transcription": "/hʏpʃ/",
       "example": "Ihr Lächeln ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcmV0dHl8ZW58MXwyfHx8MTc4MTM1NTQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "pretty"
     },
     {
@@ -447,7 +447,7 @@
       "russian": "смешной",
       "transcription": "/ˈlʊstɪç/",
       "example": "Sein Witz beim Abendessen war sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1507808973436-a4ed7b5e87c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmdW5ueXxlbnwxfDJ8fHwxNzgxMzQ1MjE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "funny"
     },
     {
@@ -455,7 +455,7 @@
       "russian": "интересный",
       "transcription": "/ɪntɛʁɛˈsant/",
       "example": "Dieses Buch ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1610813328411-8f6ff3185f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpbnRlcmVzdGluZ3xlbnwxfDJ8fHwxNzgxMzQ1Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "interesting"
     },
     {
@@ -463,7 +463,7 @@
       "russian": "скучный",
       "transcription": "/ˈlaŋvaɪ̯lɪç/",
       "example": "Der Film war lang und ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1523478016374-2a27cc521718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxib3Jpbmd8ZW58MXwyfHx8MTc4MTM1NTUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "boring"
     },
     {
@@ -471,7 +471,7 @@
       "russian": "неправильный",
       "transcription": "/falʃ/",
       "example": "Meine Antwort in der Prüfung war leider ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1587145716981-d97565ef76d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3cm9uZ3xlbnwxfDJ8fHwxNzgxMzU1NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "wrong"
     },
     {
@@ -479,7 +479,7 @@
       "russian": "готовый",
       "transcription": "/ˈfɛʁtɪç/",
       "example": "Das Abendessen ist ___, kommt an den Tisch.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1767121947913-a310610e8f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZWFkeXxlbnwxfDJ8fHwxNzgxMzU1Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "ready"
     },
     {
@@ -487,7 +487,7 @@
       "russian": "чистый",
       "transcription": "/ˈzaʊ̯bɐ/",
       "example": "Die Küche ist jetzt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1656331797721-b593b8f00297?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbGVhbnxlbnwxfDJ8fHwxNzgxMzU1Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "clean"
     },
     {
@@ -495,7 +495,7 @@
       "russian": "грязный",
       "transcription": "/ˈʃmʊtsɪç/",
       "example": "Deine Schuhe sind nach dem Spaziergang ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1747103217713-43b8a7a3e3ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkaXJ0eXxlbnwxfDJ8fHwxNzgxMzU1ODU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "dirty"
     },
     {
@@ -503,7 +503,7 @@
       "russian": "сухой",
       "transcription": "/ˈtʁɔkn̩/",
       "example": "Das Handtuch ist jetzt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1607664608695-45aaa6d621fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkcnl8ZW58MXwyfHx8MTc4MTM1NTkzOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "dry"
     },
     {
@@ -511,7 +511,7 @@
       "russian": "мокрый",
       "transcription": "/nas/",
       "example": "Meine Haare sind nach der Dusche noch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1554135392-28d77d7e8202?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3ZXR8ZW58MXwyfHx8MTc4MTM1NjAxOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "wet"
     },
     {
@@ -519,7 +519,7 @@
       "russian": "безопасный",
       "transcription": "/ˈzɪçɐ/",
       "example": "Diese Straße ist nachts sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1582139329536-e7284fece509?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYWZlfGVufDF8Mnx8fDE3ODEzNTYxMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "safe"
     },
     {
@@ -527,7 +527,7 @@
       "russian": "опасный",
       "transcription": "/ɡəˈfɛːɐ̯lɪç/",
       "example": "Dieser große Hund sieht ___ aus.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1699645522859-512f53d4a4bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYW5nZXJvdXN8ZW58MXwyfHx8MTc4MTM1NjE4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "dangerous"
     },
     {
@@ -535,7 +535,7 @@
       "russian": "дешёвый",
       "transcription": "/ˈbɪlɪç/",
       "example": "Diese Schuhe sind sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGVhcHxlbnwxfDJ8fHwxNzgxMzQ1NTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "cheap"
     },
     {
@@ -543,7 +543,7 @@
       "russian": "дорогой",
       "transcription": "/ˈtɔʏ̯ɐ/",
       "example": "Diese Uhr ist für mich zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1691480250099-a63081ecfcb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxleHBlbnNpdmV8ZW58MXwyfHx8MTc4MTM0NTQ2MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "expensive"
     },
     {
@@ -551,7 +551,7 @@
       "russian": "здоровый",
       "transcription": "/ɡəˈzʊnt/",
       "example": "Obst ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWFsdGh5fGVufDF8Mnx8fDE3ODEzNTYyNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "healthy"
     },
     {
@@ -559,7 +559,7 @@
       "russian": "больной",
       "transcription": "/kʁaŋk/",
       "example": "Er ist ___ und bleibt im Bett.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1579780864813-863e246d3bc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaWNrfGVufDF8Mnx8fDE3ODEzNTYzNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "sick"
     },
     {
@@ -567,7 +567,7 @@
       "russian": "усталый",
       "transcription": "/ˈmyːdə/",
       "example": "Ich bin nach der Arbeit sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1764699186616-8f707281e4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aXJlZHxlbnwxfDJ8fHwxNzgxMzQ0ODEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "tired"
     },
     {
@@ -575,7 +575,7 @@
       "russian": "голодный",
       "transcription": "/ˈhʊŋʁɪç/",
       "example": "Das Baby ist ___ und will Milch.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1647705195905-671a25be159d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxodW5ncnl8ZW58MXwyfHx8MTc4MTM0NDg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "hungry"
     },
     {
@@ -583,7 +583,7 @@
       "russian": "сердитый",
       "transcription": "/ˈvyːtn̩t/",
       "example": "Warum bist du so ___ auf mich?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1715517642825-3755b2d27b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhbmdyeXxlbnwxfDJ8fHwxNzgxMzQ0NzMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "angry"
     },
     {
@@ -591,7 +591,7 @@
       "russian": "грустный",
       "transcription": "/ˈtʁaʊ̯ʁɪç/",
       "example": "Sie fühlte sich nach dem Film ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1716072947592-624e1c1f35da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzYWR8ZW58MXwyfHx8MTc4MTM0NDY1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "sad"
     },
     {
@@ -599,7 +599,7 @@
       "russian": "испуганный",
       "transcription": "/ˈɛŋstlɪç/",
       "example": "Das Kind war in der Dunkelheit sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725640185787-f26c261e052b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhZnJhaWR8ZW58MXwyfHx8MTc4MTM1NjQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "afraid"
     },
     {
@@ -607,7 +607,7 @@
       "russian": "известный",
       "transcription": "/bəˈʁyːmt/",
       "example": "Paris ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1643756635111-ee5b18e055dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYW1vdXN8ZW58MXwyfHx8MTc4MTM1NjUwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "famous"
     },
     {
@@ -615,7 +615,7 @@
       "russian": "популярный",
       "transcription": "/bəˈliːpt/",
       "example": "Fußball ist in meinem Land sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1546193201-5a992ad56596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwb3B1bGFyfGVufDF8Mnx8fDE3ODEzNTY1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "popular"
     },
     {
@@ -623,7 +623,7 @@
       "russian": "местный",
       "transcription": "/ˈœʁtlɪç/",
       "example": "Dieser Laden ist ___ sehr bekannt.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1551327420-4b280d52cc68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb2NhbHxlbnwxfDJ8fHwxNzgxMzU2NjY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "local"
     },
     {
@@ -631,7 +631,7 @@
       "russian": "национальный",
       "transcription": "/natsi̯oˈnaːl/",
       "example": "Dieser Feiertag ist rein ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1579544787614-fa683917e045?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuYXRpb25hbHxlbnwxfDJ8fHwxNzgxMzU2NzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "national"
     },
     {
@@ -639,7 +639,7 @@
       "russian": "международный",
       "transcription": "/ˌɪntɐnatsi̯oˈnaːl/",
       "example": "Ihre Firma ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1652881818518-bb5645be9ac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsfGVufDF8Mnx8fDE3ODEzNTY4Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "international"
     },
     {
@@ -647,7 +647,7 @@
       "russian": "общественный",
       "transcription": "/ˈœfn̩tlɪç/",
       "example": "Dieser Park ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1579544787614-fa683917e045?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwdWJsaWN8ZW58MXwyfHx8MTc4MTM1NjkwOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "public"
     },
     {
@@ -655,7 +655,7 @@
       "russian": "частный",
       "transcription": "/pʁiˈvaːt/",
       "example": "Diese Schule ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1635668422724-fffb2201f951?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcml2YXRlfGVufDF8Mnx8fDE3ODEzNTY5ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "private"
     },
     {
@@ -663,7 +663,7 @@
       "russian": "возможный",
       "transcription": "/ˈmøːklɪç/",
       "example": "Ist es ___, früher zu kommen?",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1738873221829-372d891655a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwb3NzaWJsZXxlbnwxfDJ8fHwxNzgxMzU3MDcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "possible"
     },
     {
@@ -671,7 +671,7 @@
       "russian": "сложный",
       "transcription": "/ˈʃviːʁɪç/",
       "example": "Chinesisch ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1584993349314-9154b10f9bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkaWZmaWN1bHR8ZW58MXwyfHx8MTc4MTM0NDQ4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "difficult"
     },
     {
@@ -679,7 +679,7 @@
       "russian": "простой",
       "transcription": "/ˈaɪ̯nfax/",
       "example": "Die Regeln dieses Spiels sind sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1555354924-b72b8d4dfd6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaW1wbGV8ZW58MXwyfHx8MTc4MTM1NzE1MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "simple"
     },
     {
@@ -687,7 +687,7 @@
       "russian": "особенный",
       "transcription": "/ʃpeˈtsi̯ɛl/",
       "example": "Dieser Tag ist für unsere Familie ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1639060143223-8c802611eb64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzcGVjaWFsfGVufDF8Mnx8fDE3ODEzNTcyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "special"
     },
     {
@@ -695,7 +695,7 @@
       "russian": "чудесный",
       "transcription": "/ˈvʊndɐbaːɐ̯/",
       "example": "Unser Urlaub am Meer war ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1644785101849-f4c272b8ab6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b25kZXJmdWx8ZW58MXwyfHx8MTc4MTM1NzMxMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "wonderful"
     },
     {
@@ -703,7 +703,7 @@
       "russian": "ужасный",
       "transcription": "/ˈʃʁɛklɪç/",
       "example": "Das Wetter war gestern ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1679235035041-91b40855283f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZXJyaWJsZXxlbnwxfDJ8fHwxNzgxMzU3MzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "terrible"
     },
     {
@@ -711,7 +711,7 @@
       "russian": "тихий",
       "transcription": "/ˈʁuːɪç/",
       "example": "Diese Straße mit wenig Verkehr ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632404960568-e06732a0b324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxxdWlldHxlbnwxfDJ8fHwxNzgxMzU3NDc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "quiet"
     },
     {
@@ -719,7 +719,7 @@
       "russian": "громкий",
       "transcription": "/laʊ̯t/",
       "example": "Die Musik ist mir zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1730222348142-a9fcf6d571c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsb3VkfGVufDF8Mnx8fDE3ODEzNTc1NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "loud"
     },
     {
@@ -727,7 +727,7 @@
       "russian": "мягкий",
       "transcription": "/vaɪ̯ç/",
       "example": "Das Kissen ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1655474396177-e727349f44dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzb2Z0fGVufDF8Mnx8fDE3ODEzNTc2MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "soft"
     },
     {
@@ -735,7 +735,7 @@
       "russian": "широкий",
       "transcription": "/bʁaɪ̯t/",
       "example": "Die Straße ist hier sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1616496801958-0562a92cf168?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3aWRlfGVufDF8Mnx8fDE3ODEzNTc3MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "wide"
     },
     {
@@ -743,7 +743,7 @@
       "russian": "глубокий",
       "transcription": "/tiːf/",
       "example": "Der See ist an dieser Stelle sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1717501219604-cc1902b5d845?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZWVwfGVufDF8Mnx8fDE3ODEzNTc3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "deep"
     },
     {
@@ -751,7 +751,7 @@
       "russian": "свежий",
       "transcription": "/fʁɪʃ/",
       "example": "Dieses Brot am Morgen ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1645713595882-b6133d586fd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmcmVzaHxlbnwxfDJ8fHwxNzgxMzU3ODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "fresh"
     },
     {
@@ -759,7 +759,7 @@
       "russian": "сладкий",
       "transcription": "/zyːs/",
       "example": "Dieser Kuchen ist mir zu ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1534119428213-bd2626145164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzd2VldHxlbnwxfDJ8fHwxNzgxMzU3OTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "sweet"
     },
     {
@@ -767,7 +767,7 @@
       "russian": "умный",
       "transcription": "/kluːk/",
       "example": "Diese Studentin ist sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1507646227500-4d389b0012be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzbWFydHxlbnwxfDJ8fHwxNzgxMzU4MDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "smart"
     },
     {
@@ -775,7 +775,7 @@
       "russian": "добрый",
       "transcription": "/ˈfʁɔʏ̯ntlɪç/",
       "example": "Er ist sehr ___ zu Tieren.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1631376240059-97cc7bf5efc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxraW5kfGVufDF8Mnx8fDE3ODEzNDUxMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "kind"
     },
     {
@@ -783,7 +783,7 @@
       "russian": "дружелюбный",
       "transcription": "/ˈliːbn̩svʏʁdɪç/",
       "example": "Die Menschen hier sind sehr ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1630952588640-0204d5d48021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmcmllbmRseXxlbnwxfDJ8fHwxNzgxMzU4MTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "friendly"
     },
     {
@@ -791,7 +791,7 @@
       "russian": "современный",
       "transcription": "/moˈdɛʁn/",
       "example": "Ihre Wohnung ist ganz ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb2Rlcm58ZW58MXwyfHx8MTc4MTM1ODIwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "modern"
     },
     {
@@ -799,7 +799,7 @@
       "russian": "целый",
       "transcription": "/ɡants/",
       "example": "Nach dem Fallenlassen ist der Teller zum Glück noch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1649951806971-ad0e00408773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3aG9sZXxlbnwxfDJ8fHwxNzgxMzU4Mjg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "whole"
     }
   ]

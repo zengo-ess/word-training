@@ -7,7 +7,7 @@
       "russian": "один",
       "transcription": "/aɪ̯ns/",
       "example": "Nach der Null kommt die Zahl ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1682251002952-051ffa79cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBvbmV8ZW58MXwyfHx8MTc4OTQwNzU4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number one"
     },
     {
@@ -15,7 +15,7 @@
       "russian": "два",
       "transcription": "/tsvaɪ̯/",
       "example": "Ich habe genau ___ Brüder.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1592245942419-34640cc323be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjB0d298ZW58MXwyfHx8MTc4OTQwNzY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number two"
     },
     {
@@ -23,7 +23,7 @@
       "russian": "три",
       "transcription": "/dʁaɪ̯/",
       "example": "Auf dem Tisch liegen ___ Äpfel.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1633838364972-9cad9c0ac8a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjB0aHJlZXxlbnwxfDJ8fHwxNzg5NDA3NzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number three"
     },
     {
@@ -31,7 +31,7 @@
       "russian": "четыре",
       "transcription": "/fiːɐ̯/",
       "example": "Ein Auto hat ___ Räder.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1779464813067-a733c851ec98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBmb3VyfGVufDF8Mnx8fDE3ODk0MDc4MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number four"
     },
     {
@@ -39,7 +39,7 @@
       "russian": "пять",
       "transcription": "/fʏnf/",
       "example": "Eine Hand hat ___ Finger.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725378048978-c0df6b8e80a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBmaXZlfGVufDF8Mnx8fDE3ODk0MDc5MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number five"
     },
     {
@@ -47,7 +47,7 @@
       "russian": "шесть",
       "transcription": "/zɛks/",
       "example": "Eine Woche hat ___ Werktage.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725378048943-89f8f71ab4ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBzaXh8ZW58MXwyfHx8MTc4OTQwNzk5MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number six"
     },
     {
@@ -119,7 +119,7 @@
       "russian": "первый",
       "transcription": "/ˈeːɐ̯stə/",
       "example": "Das ist der ___ Tag im neuen Job.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1682251002952-051ffa79cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXJzdHxlbnwxfDJ8fHwxNzgxMzUyODU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "first"
     },
     {
@@ -135,7 +135,7 @@
       "russian": "час",
       "transcription": "/ˈʃtʊndə/",
       "example": "Der Film dauert eine ganze ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1554378739-200b04da4e8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3VyfGVufDF8Mnx8fDE3ODEyMzg5MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "hour"
     },
     {
@@ -143,7 +143,7 @@
       "russian": "минута",
       "transcription": "/miˈnuːtə/",
       "example": "Warte bitte noch ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1513544705284-99373737fab6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaW51dGV8ZW58MXwyfHx8MTc4MTIzOTAxMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "minute"
     },
     {
@@ -151,7 +151,7 @@
       "russian": "неделя",
       "transcription": "/ˈvɔxə/",
       "example": "Sehr schnell vergeht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1573247318220-36d3269fbff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3ZWVrfGVufDF8Mnx8fDE3ODEyMzg3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "week"
     },
     {
@@ -159,7 +159,7 @@
       "russian": "месяц",
       "transcription": "/ˈmoːnat/",
       "example": "Im Kalender beginnt ___ mit dem ersten Tag.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1692364795244-a5d270d96b78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb250aHxlbnwxfDJ8fHwxNzgxMjM4Njg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "month"
     },
     {
@@ -167,7 +167,7 @@
       "russian": "утро",
       "transcription": "/ˈmɔʁɡn̩/",
       "example": "Voller Sonnenschein beginnt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1536851770770-93bc6b39ebb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3JuaW5nfGVufDF8Mnx8fDE3ODEyMzkwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "morning"
     },
     {
@@ -175,7 +175,7 @@
       "russian": "вчера",
       "transcription": "/ˈɡɛstɐn/",
       "example": "Ich habe sie ___ getroffen.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1687585612416-c7e45dbb27d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5ZXN0ZXJkYXl8ZW58MXwyfHx8MTc4MTM0NjE4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "yesterday"
     },
     {
@@ -183,7 +183,7 @@
       "russian": "сегодня",
       "transcription": "/ˈhɔʏ̯tə/",
       "example": "Ich fühle mich ___ sehr gut.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1508848484850-f696c839aabd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b2RheXxlbnwxfDJ8fHwxNzgxMzQ2MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "today"
     },
     {
@@ -191,7 +191,7 @@
       "russian": "завтра",
       "transcription": "/ˈmɔʁɡn̩/",
       "example": "Der Zug fährt erst ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1606323891902-df2cb7474126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b21vcnJvd3xlbnwxfDJ8fHwxNzgxMzQ2MTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "tomorrow"
     },
     {
@@ -199,7 +199,7 @@
       "russian": "год",
       "transcription": "/jaːɐ̯/",
       "example": "Sehr schnell vergeht ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1515261918262-3562685e30ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5ZWFyfGVufDF8Mnx8fDE3ODEyMzg2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "year"
     },
     {
@@ -207,7 +207,7 @@
       "russian": "день",
       "transcription": "/taːk/",
       "example": "Heute ist ein sehr schöner ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1676045126308-7c10f6f6e8ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYXl8ZW58MXwyfHx8MTc4MTIzODg1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "day"
     },
     {
@@ -215,7 +215,7 @@
       "russian": "ночь",
       "transcription": "/naxt/",
       "example": "Ganz ruhig verläuft ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1511553677255-ba939e5537e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuaWdodHxlbnwxfDJ8fHwxNzgxMjM5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "night"
     },
     {
@@ -223,7 +223,7 @@
       "russian": "вечер",
       "transcription": "/ˈaːbn̩t/",
       "example": "Ganz ruhig verläuft ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1634176866089-b633f4aec882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxldmVuaW5nfGVufDF8Mnx8fDE3ODEyMzkxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "evening"
     },
     {
@@ -231,7 +231,7 @@
       "russian": "день (после полудня)",
       "transcription": "/ˈnaːxmɪtaːk/",
       "example": "Regnerisch beginnt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1707525643387-301c31a1f88d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhZnRlcm5vb258ZW58MXwyfHx8MTc4MTM2OTIzNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "afternoon"
     },
     {
@@ -239,7 +239,7 @@
       "russian": "полдень",
       "transcription": "/ˈmɪtaːk/",
       "example": "Ganz pünktlich beginnt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1572699612695-ed9890518e13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxub29ufGVufDF8Mnx8fDE3ODEzNjkzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "noon"
     },
     {
@@ -247,7 +247,7 @@
       "russian": "полночь",
       "transcription": "/ˈmɪtɐnaxt/",
       "example": "Um ___ beginnt das neue Jahr.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1614213813009-556095ce8a9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaWRuaWdodHxlbnwxfDJ8fHwxNzgxMzY5Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "midnight"
     },
     {
@@ -255,7 +255,7 @@
       "russian": "часы",
       "transcription": "/uːɐ̯/",
       "example": "An der Wand hängt eine alte ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1602162786736-1575a5b1be76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbG9ja3xlbnwxfDJ8fHwxNzgxMzY5NDc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "clock"
     },
     {
@@ -271,7 +271,7 @@
       "russian": "календарь",
       "transcription": "/kaˈlɛndɐ/",
       "example": "An der Wand hängt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1577950235519-72e271810cb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYWxlbmRhcnxlbnwxfDJ8fHwxNzgxMzY5NTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "calendar"
     },
     {
@@ -279,7 +279,7 @@
       "russian": "время года",
       "transcription": "/ˈjaːʁəstsaɪ̯t/",
       "example": "Der Herbst ist meine liebste ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1574364492277-dc495176bf18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWFzb258ZW58MXwyfHx8MTc4MTM2OTY0MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "season"
     },
     {
@@ -287,7 +287,7 @@
       "russian": "век",
       "transcription": "/jaːɐ̯ˈhʊndɐt/",
       "example": "Dieses Gebäude steht seit einem ganzen ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1562669602-2d1d940c2140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjZW50dXJ5fGVufDF8Mnx8fDE3ODEzNjk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "century"
     },
     {
@@ -295,7 +295,7 @@
       "russian": "момент",
       "transcription": "/moˈmɛnt/",
       "example": "Ganz plötzlich kommt ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1763889167811-9fdc12b8bda3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb21lbnR8ZW58MXwyfHx8MTc4MTM2OTgwMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "moment"
     },
     {
@@ -303,7 +303,7 @@
       "russian": "рано",
       "transcription": "/fʁyː/",
       "example": "Am Montag stehe ich sehr ___ auf.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1719433921012-b6e69200a354?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlYXJseXxlbnwxfDJ8fHwxNzgxMzUzODMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "early"
     },
     {
@@ -311,7 +311,7 @@
       "russian": "поздно",
       "transcription": "/ʃpɛːt/",
       "example": "Am Abend kommt er meistens ___ nach Hause.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725797951173-0b65ce460f08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsYXRlfGVufDF8Mnx8fDE3ODEzNTM5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "late"
     },
     {
@@ -319,7 +319,7 @@
       "russian": "сейчас",
       "transcription": "/jɛtst/",
       "example": "Wir müssen ___ sofort losfahren.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725797951116-98dc0cce8ac8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxub3d8ZW58MXwyfHx8MTc4MTM0NjI2OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "now"
     }
   ]
