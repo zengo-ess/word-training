@@ -45,3 +45,21 @@ export async function searchImages(query: string, fetchFn: typeof fetch = fetch)
   );
   return data.images;
 }
+
+// Тело запроса — сырые байты файла, не JSON, поэтому apiRequest не подходит
+export async function uploadImage(file: File, fetchFn: typeof fetch = fetch): Promise<string> {
+  const response = await fetchFn("/api/words/upload-image", {
+    method: "POST",
+    headers: {
+      "Content-Type": file.type,
+      Authorization: `Bearer ${getToken() ?? ""}`,
+    },
+    body: file,
+  });
+  if (!response.ok) {
+    const data = (await response.json().catch(() => ({}))) as { error?: string };
+    throw new Error(data.error ?? "Не удалось загрузить картинку");
+  }
+  const data = (await response.json()) as { imageUrl: string };
+  return data.imageUrl;
+}

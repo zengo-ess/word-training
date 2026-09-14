@@ -7,10 +7,12 @@ import { AddWordScreen } from "../AddWordScreen";
 
 const lookupMock = vi.fn();
 const createMock = vi.fn();
+const uploadImageMock = vi.fn();
 vi.mock("../../api/wordsApi", () => ({
   lookupWord: (foreignWord: string, language: string) => lookupMock(foreignWord, language),
   createWord: (input: unknown) => createMock(input),
   searchImages: vi.fn(),
+  uploadImage: (file: File) => uploadImageMock(file),
 }));
 
 let mockLanguage = "en";
@@ -21,6 +23,7 @@ vi.mock("../../auth/AuthContext", () => ({
 beforeEach(() => {
   lookupMock.mockReset();
   createMock.mockReset();
+  uploadImageMock.mockReset();
   mockLanguage = "en";
 });
 
@@ -71,5 +74,25 @@ describe("AddWordScreen", () => {
 
     await waitFor(() => expect(screen.getByLabelText("Немецкое слово")).toHaveValue("der Tisch"));
     expect(screen.getByLabelText("Перевод")).toHaveValue("стол");
+  });
+
+  it("загружает своё фото и делает его выбранной картинкой", async () => {
+    lookupMock.mockResolvedValue({ foreignWord: "apple", nativeWord: "яблоко", imageUrl: null, imageCandidates: [] });
+    uploadImageMock.mockResolvedValue("/uploads/images/abc.png");
+    const user = userEvent.setup();
+    const { container } = render(<AddWordScreen deckId="d1" onClose={vi.fn()} onSaved={vi.fn()} />);
+
+    await user.type(screen.getByLabelText("Английское слово"), "apple");
+    await user.click(screen.getByRole("button", { name: "Найти" }));
+    await waitFor(() => expect(screen.getByLabelText("Перевод")).toHaveValue("яблоко"));
+
+    const file = new File(["bytes"], "photo.png", { type: "image/png" });
+    const fileInput = container.querySelector('input[type="file"]') as HTMLInputElement;
+    await user.upload(fileInput, file);
+
+    await waitFor(() => expect(uploadImageMock).toHaveBeenCalledWith(file));
+    await waitFor(() =>
+      expect(screen.getByRole("button", { name: "Выбрать картинку" })).toHaveAttribute("aria-pressed", "true"),
+    );
   });
 });

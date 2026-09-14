@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, raw } from "express";
 import type Database from "better-sqlite3";
 import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
@@ -7,6 +7,7 @@ import { translateToRussian, translateFromRussian } from "../services/mymemory.j
 import { searchImages } from "../services/unsplash.js";
 import { synthesizeMp3 } from "../services/googleTts.js";
 import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
+import { saveUploadedImage, IMAGE_EXT_BY_MIME } from "../services/imageStorage.js";
 
 const BUILTIN_READONLY = "Встроенная колода доступна только для чтения";
 const TTS_LANGUAGE_CODE: Record<string, string> = { en: "en-US", de: "de-DE" };
@@ -50,6 +51,25 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       imageCandidates: images,
     });
   });
+
+  // Загрузка своей картинки: тело запроса — сырые байты файла, Content-Type — mime картинки
+  router.post(
+    "/upload-image",
+    raw({ type: Object.keys(IMAGE_EXT_BY_MIME), limit: "8mb" }),
+    (req: AuthedRequest, res) => {
+      if (!(req.body instanceof Buffer) || req.body.length === 0) {
+        res.status(400).json({ error: "Не указан файл картинки" });
+        return;
+      }
+      const contentType = req.headers["content-type"] ?? "";
+      const imageUrl = saveUploadedImage(deps.uploadsDir, contentType, req.body);
+      if (!imageUrl) {
+        res.status(400).json({ error: "Поддерживаются только JPEG, PNG и WebP" });
+        return;
+      }
+      res.status(201).json({ imageUrl });
+    },
+  );
 
   router.post("/", async (req: AuthedRequest, res) => {
     const userId = req.userId as string;

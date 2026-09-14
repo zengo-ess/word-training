@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from "react";
-import { lookupWord, createWord, searchImages } from "../api/wordsApi";
+import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
+import { lookupWord, createWord, searchImages, uploadImage } from "../api/wordsApi";
 import { useAuth } from "../auth/AuthContext";
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
@@ -49,6 +49,8 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
   const [stage, setStage] = useState<"input" | "loading" | "ready">("input");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const onLookup = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
@@ -78,6 +80,22 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
       setCandidates(await searchImages(q));
     } catch {
       /* картинки опциональны */
+    }
+  };
+
+  const onFileSelected = async (e: ChangeEvent<HTMLInputElement>): Promise<void> => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    setUploadingPhoto(true);
+    try {
+      const url = await uploadImage(file);
+      setCandidates((prev) => [url, ...prev]);
+      setImageUrl(url);
+    } catch {
+      setError("Не удалось загрузить картинку");
+    } finally {
+      setUploadingPhoto(false);
     }
   };
 
@@ -141,19 +159,37 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
               <span style={{ fontSize: 12, fontWeight: 600, color: "var(--ink-mute)" }}>черновик — поправьте при необходимости</span>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", margin: "0 4px 10px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", margin: "0 4px 10px", flexWrap: "wrap", gap: 8 }}>
               <label style={{ ...LABEL, marginLeft: 0 }}>Картинка</label>
-              <form onSubmit={(e) => void onSearchImages(e)} style={{ display: "flex", gap: 6 }}>
+              <div style={{ display: "flex", gap: 6 }}>
+                <form onSubmit={(e) => void onSearchImages(e)} style={{ display: "flex", gap: 6 }}>
+                  <input
+                    aria-label="Поиск картинки"
+                    value={imageQuery}
+                    onChange={(e) => setImageQuery(e.target.value)}
+                    style={{ ...TEXT_INPUT, fontSize: 13, padding: "6px 10px", fontWeight: 600 }}
+                  />
+                  <Button type="submit" variant="ghost" size="sm">
+                    Искать
+                  </Button>
+                </form>
                 <input
-                  aria-label="Поиск картинки"
-                  value={imageQuery}
-                  onChange={(e) => setImageQuery(e.target.value)}
-                  style={{ ...TEXT_INPUT, fontSize: 13, padding: "6px 10px", fontWeight: 600 }}
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  onChange={(e) => void onFileSelected(e)}
+                  style={{ display: "none" }}
                 />
-                <Button type="submit" variant="ghost" size="sm">
-                  Искать
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  disabled={uploadingPhoto}
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  {uploadingPhoto ? "Загружаю…" : "Своё фото"}
                 </Button>
-              </form>
+              </div>
             </div>
             {candidates.length > 0 ? (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 22 }}>

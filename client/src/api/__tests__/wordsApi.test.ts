@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { lookupWord, createWord, searchImages } from "../wordsApi";
+import { lookupWord, createWord, searchImages, uploadImage } from "../wordsApi";
 
 interface Captured {
   url: string;
@@ -46,5 +46,27 @@ describe("wordsApi", () => {
     const images = await searchImages("red apple", mockFetch({ images: ["a", "b"] }, captured));
     expect(images).toEqual(["a", "b"]);
     expect(captured.value?.url).toContain("/api/unsplash/search?q=red%20apple");
+  });
+
+  it("uploadImage шлёт файл как тело запроса с его mime-типом и токеном", async () => {
+    const captured: { value?: Captured } = {};
+    const file = new File(["bytes"], "photo.png", { type: "image/png" });
+    const url = await uploadImage(file, mockFetch({ imageUrl: "/uploads/images/x.png" }, captured));
+    expect(url).toBe("/uploads/images/x.png");
+    expect(captured.value?.url).toBe("/api/words/upload-image");
+    expect(captured.value?.init.method).toBe("POST");
+    expect(captured.value?.init.body).toBe(file);
+    expect((captured.value?.init.headers as Record<string, string>)["Content-Type"]).toBe("image/png");
+    expect((captured.value?.init.headers as Record<string, string>).Authorization).toBe("Bearer T");
+  });
+
+  it("uploadImage бросает ошибку при неуспешном ответе", async () => {
+    const file = new File(["bytes"], "photo.pdf", { type: "application/pdf" });
+    const failingFetch = (async () => ({
+      ok: false,
+      status: 400,
+      json: async () => ({ error: "Поддерживаются только JPEG, PNG и WebP" }),
+    })) as unknown as typeof fetch;
+    await expect(uploadImage(file, failingFetch)).rejects.toThrow("Поддерживаются только JPEG, PNG и WebP");
   });
 });
