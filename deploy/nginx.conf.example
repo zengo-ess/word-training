@@ -1,0 +1,24 @@
+# Конфиг nginx для домена. Положить на VPS как:
+#   /etc/nginx/sites-available/word-training
+# затем включить:
+#   sudo ln -s /etc/nginx/sites-available/word-training /etc/nginx/sites-enabled/word-training
+#   sudo nginx -t && sudo systemctl reload nginx
+#
+# ВАЖНО: замени word-training.duckdns.org на свой поддомен из DuckDNS.
+# Блок для HTTPS (listen 443 + пути к сертификатам) допишет certbot сам
+# при выполнении `sudo certbot --nginx -d word-training.duckdns.org`.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name word-training.duckdns.org;
+
+    location / {
+        # порт совпадает с левым числом в docker-compose.yml ("127.0.0.1:3001:3001")
+        proxy_pass http://127.0.0.1:3001;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}

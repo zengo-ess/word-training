@@ -3,7 +3,8 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      # только localhost — наружу отдаёт nginx (80/443)
+      - "127.0.0.1:3001:3001"
     env_file: .env
     volumes:
       - db:/app/db
