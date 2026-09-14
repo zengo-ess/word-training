@@ -4,7 +4,7 @@ import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
 import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
 import { translateToRussian, translateFromRussian } from "../services/mymemory.js";
-import { fetchEnglishTranscription } from "../services/dictionary.js";
+import { fetchTranscription } from "../services/dictionary.js";
 import { searchImages } from "../services/unsplash.js";
 import { synthesizeMp3 } from "../services/googleTts.js";
 import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
@@ -46,7 +46,7 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
 
     const [images, transcription] = await Promise.all([
       searchImages(foreignWord, deps.unsplashAccessKey),
-      language === "en" ? fetchEnglishTranscription(foreignWord) : Promise.resolve(null),
+      fetchTranscription(foreignWord, language),
     ]);
     res.json({
       foreignWord,
