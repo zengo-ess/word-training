@@ -22,6 +22,7 @@ import {
   Star,
   Globe,
   HelpCircle,
+  Trash2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -48,6 +49,7 @@ const MAP: Record<string, LucideIcon> = {
   book: BookOpen,
   star: Star,
   globe: Globe,
+  trash: Trash2,
 };
 
 export interface IconProps {

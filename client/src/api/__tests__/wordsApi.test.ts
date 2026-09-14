@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { lookupWord, createWord, searchImages, uploadImage } from "../wordsApi";
+import { lookupWord, createWord, searchImages, uploadImage, deleteWord } from "../wordsApi";
 
 interface Captured {
   url: string;
@@ -57,6 +57,18 @@ describe("wordsApi", () => {
     expect(captured.value?.init.method).toBe("POST");
     expect(captured.value?.init.body).toBe(file);
     expect((captured.value?.init.headers as Record<string, string>)["Content-Type"]).toBe("image/png");
+    expect((captured.value?.init.headers as Record<string, string>).Authorization).toBe("Bearer T");
+  });
+
+  it("deleteWord шлёт DELETE с токеном на нужный адрес", async () => {
+    const captured: { value?: Captured } = {};
+    const fetchFn = (async (url: string, init: RequestInit) => {
+      captured.value = { url, init };
+      return { ok: true, status: 204, json: async () => ({}) };
+    }) as unknown as typeof fetch;
+    await deleteWord("w1", fetchFn);
+    expect(captured.value?.url).toBe("/api/words/w1");
+    expect(captured.value?.init.method).toBe("DELETE");
     expect((captured.value?.init.headers as Record<string, string>).Authorization).toBe("Bearer T");
   });
 

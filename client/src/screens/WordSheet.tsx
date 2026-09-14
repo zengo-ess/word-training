@@ -3,15 +3,33 @@ import { IconBtn } from "../components/IconBtn";
 import { Icon } from "../components/Icon";
 import { WordTile } from "../components/WordTile";
 import { hueFromString, playWord } from "../lib/wordVisual";
+import { pronunciationRu } from "../lib/pronunciation";
+import { useAuth } from "../auth/AuthContext";
 import type { WordWithProgress } from "../api/types";
 
 const STAT_LABEL: React.CSSProperties = { fontSize: 11.5, fontWeight: 600, color: "var(--ink-mute)" };
 const STAT_NUM: React.CSSProperties = { fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700, color: "var(--ink)" };
 
-export function WordSheet({ word, onClose }: { word: WordWithProgress; onClose: () => void }) {
+interface Props {
+  word: WordWithProgress;
+  onClose: () => void;
+  onDelete?: () => void;
+}
+
+export function WordSheet({ word, onClose, onDelete }: Props) {
+  const { user } = useAuth();
+  const language = user?.language ?? "en";
   const learned = word.progress?.learned_at != null;
   const type = word.progress?.current_type ?? 1;
   const example = word.example_sentence ? word.example_sentence.replace("___", word.foreign_word) : null;
+  const pronunciation = pronunciationRu(word.foreign_word, language);
+
+  const handleDelete = (): void => {
+    if (!onDelete) return;
+    if (window.confirm(`Удалить слово «${word.foreign_word}»?`)) {
+      onDelete();
+    }
+  };
 
   return (
     <div
@@ -26,6 +44,11 @@ export function WordSheet({ word, onClose }: { word: WordWithProgress; onClose: 
         style={{ width: "100%", background: "var(--bg)", borderRadius: "28px 28px 0 0", padding: "12px 18px 30px", maxHeight: "86%", overflowY: "auto" }}
       >
         <div style={{ width: 40, height: 5, borderRadius: 99, background: "var(--line-strong)", margin: "0 auto 16px" }} />
+        {onDelete ? (
+          <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 4 }}>
+            <IconBtn name="trash" aria-label="Удалить слово" variant="ghost" onClick={handleDelete} />
+          </div>
+        ) : null}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
           {word.image_url ? (
             <img src={word.image_url} alt="" style={{ width: 168, height: 168, borderRadius: "var(--r-tile)", objectFit: "cover" }} />
@@ -36,10 +59,13 @@ export function WordSheet({ word, onClose }: { word: WordWithProgress; onClose: 
         <div style={{ textAlign: "center", marginBottom: 18 }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, margin: 0 }}>{word.foreign_word}</h2>
-            <IconBtn name="volume-2" aria-label="Озвучить" size={38} iconSize={19} onClick={() => playWord(word)} />
+            <IconBtn name="volume-2" aria-label="Озвучить" size={38} iconSize={19} onClick={() => playWord(word, language)} />
           </div>
           {word.transcription ? (
             <div style={{ fontFamily: "var(--mono)", fontSize: 15, color: "var(--ink-mute)", marginTop: 4 }}>{word.transcription}</div>
+          ) : null}
+          {pronunciation ? (
+            <div style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-mute)", marginTop: 2 }}>[{pronunciation}]</div>
           ) : null}
           <div style={{ fontSize: 19, fontWeight: 700, color: "var(--primary)", marginTop: 6 }}>{word.native_word}</div>
         </div>

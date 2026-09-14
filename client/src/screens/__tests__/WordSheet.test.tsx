@@ -11,6 +11,10 @@ vi.mock("../../lib/wordVisual", () => ({
   playWord: vi.fn(),
 }));
 
+vi.mock("../../auth/AuthContext", () => ({
+  useAuth: () => ({ user: { id: "u1", name: "Тестер", language: "en" } }),
+}));
+
 const word: WordWithProgress = {
   id: "w1",
   deck_id: "d1",
@@ -38,5 +42,28 @@ describe("WordSheet", () => {
     render(<WordSheet word={word} onClose={onClose} />);
     await user.click(screen.getByTestId("sheet-backdrop"));
     expect(onClose).toHaveBeenCalled();
+  });
+
+  it("без onDelete кнопка удаления не отображается", () => {
+    render(<WordSheet word={word} onClose={vi.fn()} />);
+    expect(screen.queryByRole("button", { name: "Удалить слово" })).not.toBeInTheDocument();
+  });
+
+  it("удаление вызывает onDelete после подтверждения", async () => {
+    const onDelete = vi.fn();
+    const user = userEvent.setup();
+    vi.spyOn(window, "confirm").mockReturnValue(true);
+    render(<WordSheet word={word} onClose={vi.fn()} onDelete={onDelete} />);
+    await user.click(screen.getByRole("button", { name: "Удалить слово" }));
+    expect(onDelete).toHaveBeenCalled();
+  });
+
+  it("отменённое подтверждение не вызывает onDelete", async () => {
+    const onDelete = vi.fn();
+    const user = userEvent.setup();
+    vi.spyOn(window, "confirm").mockReturnValue(false);
+    render(<WordSheet word={word} onClose={vi.fn()} onDelete={onDelete} />);
+    await user.click(screen.getByRole("button", { name: "Удалить слово" }));
+    expect(onDelete).not.toHaveBeenCalled();
   });
 });

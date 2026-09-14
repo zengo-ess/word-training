@@ -4,6 +4,7 @@ import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
 import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
 import { translateToRussian, translateFromRussian } from "../services/mymemory.js";
+import { fetchEnglishTranscription } from "../services/dictionary.js";
 import { searchImages } from "../services/unsplash.js";
 import { synthesizeMp3 } from "../services/googleTts.js";
 import { saveAudioFile, deleteAudioFile } from "../services/audioStorage.js";
@@ -43,12 +44,16 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       nativeWord = await translateToRussian(input, language);
     }
 
-    const images = await searchImages(foreignWord, deps.unsplashAccessKey);
+    const [images, transcription] = await Promise.all([
+      searchImages(foreignWord, deps.unsplashAccessKey),
+      language === "en" ? fetchEnglishTranscription(foreignWord) : Promise.resolve(null),
+    ]);
     res.json({
       foreignWord,
       nativeWord,
       imageUrl: images[0] ?? null,
       imageCandidates: images,
+      transcription,
     });
   });
 
@@ -78,6 +83,8 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
     const foreignWord = typeof body.foreignWord === "string" ? body.foreignWord.trim() : "";
     const nativeWord = typeof body.nativeWord === "string" ? body.nativeWord.trim() : "";
     const imageUrl = typeof body.imageUrl === "string" ? body.imageUrl : null;
+    const transcription =
+      typeof body.transcription === "string" && body.transcription.trim() ? body.transcription.trim() : null;
 
     const deck = getDeck(db, deckId);
     if (!deck || !canAccessDeck(deck, userId)) {
@@ -93,7 +100,7 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       return;
     }
 
-    const word = createWord(db, { deckId, foreignWord, nativeWord, imageUrl });
+    const word = createWord(db, { deckId, foreignWord, nativeWord, imageUrl, transcription });
 
     // Озвучка опциональна: при отсутствии ключа/ошибке слово остаётся без аудио
     let finalWord = word;

@@ -10,6 +10,7 @@ import { AddWordScreen } from "./screens/AddWordScreen";
 import { TrainerScreen } from "./screens/TrainerScreen";
 import { ReviewScreen } from "./screens/ReviewScreen";
 import { fetchTodayTraining } from "./api/trainingApi";
+import { deleteWord } from "./api/wordsApi";
 import type { Deck, Word, WordWithProgress } from "./api/types";
 
 type Overlay = { type: "deck"; deck: Deck } | { type: "add"; deckId: string };
@@ -69,7 +70,7 @@ export function AppShell() {
 
       {top?.type === "deck" ? (
         <DeckDetailScreen
-          key={top.deck.id}
+          key={`${top.deck.id}-${reloadKey}`}
           deck={top.deck}
           onBack={back}
           onWord={(w) => setSheetWord(w)}
@@ -112,7 +113,22 @@ export function AppShell() {
         />
       ) : null}
 
-      {sheetWord ? <WordSheet word={sheetWord} onClose={() => setSheetWord(null)} /> : null}
+      {sheetWord ? (
+        <WordSheet
+          word={sheetWord}
+          onClose={() => setSheetWord(null)}
+          onDelete={
+            top?.type === "deck" && top.deck.is_builtin !== 1
+              ? () => {
+                  void deleteWord(sheetWord.id).then(() => {
+                    setSheetWord(null);
+                    setReloadKey((k) => k + 1);
+                  });
+                }
+              : undefined
+          }
+        />
+      ) : null}
     </>
   );
 }

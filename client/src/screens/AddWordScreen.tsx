@@ -7,6 +7,7 @@ import { Button } from "../components/Button";
 import { IconBtn } from "../components/IconBtn";
 import { Pill } from "../components/Pill";
 import { Icon } from "../components/Icon";
+import { pronunciationRu } from "../lib/pronunciation";
 
 const LANGUAGE_LABEL: Record<string, string> = { en: "Английское", de: "Немецкое" };
 const LANGUAGE_PLACEHOLDER: Record<string, string> = { en: "dream", de: "Traum" };
@@ -43,6 +44,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
   const language = user?.language ?? "en";
   const [foreignWord, setForeignWord] = useState("");
   const [nativeWord, setNativeWord] = useState("");
+  const [transcription, setTranscription] = useState<string | null>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [candidates, setCandidates] = useState<string[]>([]);
   const [imageQuery, setImageQuery] = useState("");
@@ -62,6 +64,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
       const draft = await lookupWord(word, language);
       setForeignWord(draft.foreignWord);
       setNativeWord(draft.nativeWord);
+      setTranscription(draft.transcription);
       setImageUrl(draft.imageUrl);
       setCandidates(draft.imageCandidates);
       setImageQuery(draft.foreignWord);
@@ -103,7 +106,13 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
     setBusy(true);
     setError("");
     try {
-      await createWord({ deckId, foreignWord: foreignWord.trim(), nativeWord: nativeWord.trim(), imageUrl });
+      await createWord({
+        deckId,
+        foreignWord: foreignWord.trim(),
+        nativeWord: nativeWord.trim(),
+        imageUrl,
+        transcription,
+      });
       onSaved();
     } catch {
       setError("Не удалось сохранить слово");
@@ -157,6 +166,20 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
                 MyMemory
               </Pill>
               <span style={{ fontSize: 12, fontWeight: 600, color: "var(--ink-mute)" }}>черновик — поправьте при необходимости</span>
+            </div>
+
+            <label style={LABEL}>Транскрипция</label>
+            <div style={{ display: "flex", margin: "8px 0 6px" }}>
+              <input
+                aria-label="Транскрипция"
+                value={transcription ?? ""}
+                onChange={(e) => setTranscription(e.target.value || null)}
+                placeholder={language === "en" ? "/driːm/" : "необязательно"}
+                style={{ ...TEXT_INPUT, fontFamily: "var(--mono)", fontSize: 15 }}
+              />
+            </div>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "var(--ink-mute)", marginBottom: 20, marginLeft: 4 }}>
+              Произношение (рус. буквами): {pronunciationRu(foreignWord, language) || "—"}
             </div>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", margin: "0 4px 10px", flexWrap: "wrap", gap: 8 }}>
@@ -222,7 +245,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
             <Card pad={13} style={{ display: "flex", gap: 10, marginBottom: 20, background: "var(--surface-2)", boxShadow: "none" }}>
               <Icon name="sparkles" size={18} color="var(--ink-mute)" stroke={2} />
               <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--ink-soft)", lineHeight: 1.45 }}>
-                Транскрипция и пример для своих слов не подтягиваются. Тип 3 (пропуск) для слова без примера будет пропущен.
+                Пример предложения для своих слов не подтягивается. Тип 3 (пропуск) для слова без примера будет пропущен.
               </span>
             </Card>
 

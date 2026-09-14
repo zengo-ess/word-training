@@ -6,7 +6,8 @@ import { IconBtn } from "../components/IconBtn";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { WordTile } from "../components/WordTile";
-import { hueFromString } from "../lib/wordVisual";
+import { hueFromString, playWord } from "../lib/wordVisual";
+import { useAuth } from "../auth/AuthContext";
 import type { Word } from "../api/types";
 
 const EX_NAMES: Record<number, string> = {
@@ -474,6 +475,9 @@ export function Exercise({
   answered: "correct" | "wrong" | null;
   onResult: (correct: boolean) => void;
 }) {
+  const { user } = useAuth();
+  const language = user?.language ?? "en";
+
   if (layer === 1)
     return (
       <MCQ word={word} pool={pool} lang="ru" answered={answered} onResult={onResult}>
@@ -541,11 +545,7 @@ export function Exercise({
               className="btn-press"
               onClick={() => {
                 try {
-                  window.speechSynthesis.cancel();
-                  const u = new SpeechSynthesisUtterance(word.foreign_word);
-                  u.lang = "en-US";
-                  u.rate = 0.9;
-                  window.speechSynthesis.speak(u);
+                  playWord(word, language);
                 } catch {
                   /* ignore */
                 }

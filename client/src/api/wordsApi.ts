@@ -7,6 +7,7 @@ export interface WordDraft {
   nativeWord: string;
   imageUrl: string | null;
   imageCandidates: string[];
+  transcription: string | null;
 }
 
 export async function lookupWord(
@@ -26,6 +27,7 @@ export interface NewWordInput {
   foreignWord: string;
   nativeWord: string;
   imageUrl: string | null;
+  transcription?: string | null;
 }
 
 export async function createWord(input: NewWordInput, fetchFn: typeof fetch = fetch): Promise<Word> {
@@ -35,6 +37,10 @@ export async function createWord(input: NewWordInput, fetchFn: typeof fetch = fe
     fetchFn,
   );
   return data.word;
+}
+
+export async function deleteWord(id: string, fetchFn: typeof fetch = fetch): Promise<void> {
+  await apiRequest<void>(`/api/words/${id}`, { method: "DELETE", token: getToken() }, fetchFn);
 }
 
 export async function searchImages(query: string, fetchFn: typeof fetch = fetch): Promise<string[]> {

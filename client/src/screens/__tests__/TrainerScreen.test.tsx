@@ -19,6 +19,10 @@ vi.mock("../../screens/trainer/trainerLogic", async (importOriginal) => {
   };
 });
 
+vi.mock("../../auth/AuthContext", () => ({
+  useAuth: () => ({ user: { id: "u1", name: "Тестер", language: "en" } }),
+}));
+
 const WORD: Word = {
   id: "w1",
   deck_id: "d1",

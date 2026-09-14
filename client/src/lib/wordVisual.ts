@@ -6,7 +6,9 @@ export function hueFromString(value: string): number {
   return hash;
 }
 
-export function playWord(word: { foreign_word: string; audio_url: string | null }): void {
+const SPEECH_LANG: Record<string, string> = { en: "en-US", de: "de-DE" };
+
+export function playWord(word: { foreign_word: string; audio_url: string | null }, language = "en"): void {
   if (word.audio_url) {
     void new Audio(word.audio_url).play().catch(() => undefined);
     return;
@@ -14,7 +16,7 @@ export function playWord(word: { foreign_word: string; audio_url: string | null 
   if (typeof window !== "undefined" && "speechSynthesis" in window) {
     window.speechSynthesis.cancel();
     const utt = new SpeechSynthesisUtterance(word.foreign_word);
-    utt.lang = "en-US";
+    utt.lang = SPEECH_LANG[language] ?? "en-US";
     utt.rate = 0.9;
     window.speechSynthesis.speak(utt);
   }
