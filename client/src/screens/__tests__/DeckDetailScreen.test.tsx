@@ -11,7 +11,15 @@ vi.mock("../../api/decksApi", () => ({
   fetchDeckWords: (id: string) => fetchDeckWordsMock(id),
 }));
 
-const customDeck: Deck = { id: "d1", name: "Мои слова", is_builtin: 0, created_at: "x", total: 1, learned: 0 };
+const customDeck: Deck = {
+  id: "d1",
+  name: "Мои слова",
+  is_builtin: 0,
+  language: "en",
+  created_at: "x",
+  total: 1,
+  learned: 0,
+};
 
 beforeEach(() => {
   fetchDeckWordsMock.mockReset();

@@ -1,11 +1,15 @@
 import { useState, type FormEvent } from "react";
 import { lookupWord, createWord, searchImages } from "../api/wordsApi";
+import { useAuth } from "../auth/AuthContext";
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { IconBtn } from "../components/IconBtn";
 import { Pill } from "../components/Pill";
 import { Icon } from "../components/Icon";
+
+const LANGUAGE_LABEL: Record<string, string> = { en: "Английское", de: "Немецкое" };
+const LANGUAGE_PLACEHOLDER: Record<string, string> = { en: "dream", de: "Traum" };
 
 interface Props {
   deckId: string;
@@ -35,8 +39,10 @@ const TEXT_INPUT: React.CSSProperties = {
 };
 
 export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
-  const [english, setEnglish] = useState("");
-  const [russian, setRussian] = useState("");
+  const { user } = useAuth();
+  const language = user?.language ?? "en";
+  const [foreignWord, setForeignWord] = useState("");
+  const [nativeWord, setNativeWord] = useState("");
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [candidates, setCandidates] = useState<string[]>([]);
   const [imageQuery, setImageQuery] = useState("");
@@ -46,13 +52,13 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
 
   const onLookup = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-    const word = english.trim();
+    const word = foreignWord.trim();
     if (word.length === 0) return;
     setStage("loading");
     setError("");
     try {
-      const draft = await lookupWord(word);
-      setRussian(draft.russian);
+      const draft = await lookupWord(word, language);
+      setNativeWord(draft.nativeWord);
       setImageUrl(draft.imageUrl);
       setCandidates(draft.imageCandidates);
       setImageQuery(word);
@@ -78,7 +84,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
     setBusy(true);
     setError("");
     try {
-      await createWord({ deckId, english: english.trim(), russian: russian.trim(), imageUrl });
+      await createWord({ deckId, foreignWord: foreignWord.trim(), nativeWord: nativeWord.trim(), imageUrl });
       onSaved();
     } catch {
       setError("Не удалось сохранить слово");
@@ -95,19 +101,19 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
           <div style={{ width: 40 }} />
         </div>
 
-        <label style={LABEL}>Английское слово</label>
+        <label style={LABEL}>{LANGUAGE_LABEL[language]} слово</label>
         <form onSubmit={(e) => void onLookup(e)} style={{ display: "flex", gap: 10, marginTop: 8, marginBottom: 18 }}>
           <input
-            aria-label="Английское слово"
-            value={english}
+            aria-label={`${LANGUAGE_LABEL[language]} слово`}
+            value={foreignWord}
             onChange={(e) => {
-              setEnglish(e.target.value);
+              setForeignWord(e.target.value);
               setStage("input");
             }}
-            placeholder="dream"
+            placeholder={LANGUAGE_PLACEHOLDER[language]}
             style={{ ...TEXT_INPUT, fontSize: 18 }}
           />
-          <Button type="submit" variant="primary" size="md" disabled={english.trim().length === 0 || stage === "loading"}>
+          <Button type="submit" variant="primary" size="md" disabled={foreignWord.trim().length === 0 || stage === "loading"}>
             Найти
           </Button>
         </form>
@@ -125,7 +131,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
           <div className="fade-up">
             <label style={LABEL}>Перевод</label>
             <div style={{ display: "flex", margin: "8px 0 6px" }}>
-              <input aria-label="Перевод" value={russian} onChange={(e) => setRussian(e.target.value)} style={TEXT_INPUT} />
+              <input aria-label="Перевод" value={nativeWord} onChange={(e) => setNativeWord(e.target.value)} style={TEXT_INPUT} />
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 20, marginLeft: 4 }}>
               <Pill tone="primary" icon="sparkles" style={{ fontSize: 11 }}>
@@ -183,7 +189,7 @@ export function AddWordScreen({ deckId, onClose, onSaved }: Props) {
               </span>
             </Card>
 
-            <Button full variant="primary" icon="check" disabled={busy || russian.trim().length === 0} onClick={() => void onSave()}>
+            <Button full variant="primary" icon="check" disabled={busy || nativeWord.trim().length === 0} onClick={() => void onSave()}>
               {busy ? "Сохраняем…" : "Сохранить слово"}
             </Button>
           </div>
