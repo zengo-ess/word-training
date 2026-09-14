@@ -55,7 +55,7 @@
       "russian": "семь",
       "transcription": "/ˈziːbn̩/",
       "example": "Eine Woche hat ___ Tage.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1687842866200-9975ea78eb7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBzZXZlbnxlbnwxfDJ8fHwxNzg5NDA4MDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number seven"
     },
     {
@@ -63,7 +63,7 @@
       "russian": "восемь",
       "transcription": "/axt/",
       "example": "Ich schlafe jede Nacht ___ Stunden.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1571664638276-b3e6b70499e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBlaWdodHxlbnwxfDJ8fHwxNzg5NDA4MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number eight"
     },
     {
@@ -71,7 +71,7 @@
       "russian": "девять",
       "transcription": "/nɔʏ̯n/",
       "example": "Die Schule beginnt um ___ Uhr.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1635602777522-c1e8e2a6e01b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBuaW5lfGVufDF8Mnx8fDE3ODk0MDgyMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number nine"
     },
     {
@@ -79,7 +79,7 @@
       "russian": "десять",
       "transcription": "/tseːn/",
       "example": "Ich zähle bis ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1725378048962-0ede4a8e2e54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjB0ZW58ZW58MXwyfHx8MTc4OTQwODMxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number ten"
     },
     {
@@ -87,7 +87,7 @@
       "russian": "двадцать",
       "transcription": "/ˈtsvantsɪç/",
       "example": "Sie ist erst ___ Jahre alt.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1664146705724-b7f296807034?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjB0d2VudHl8ZW58MXwyfHx8MTc4OTQwODM5OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number twenty"
     },
     {
@@ -95,7 +95,7 @@
       "russian": "сто",
       "transcription": "/ˈhʊndɐt/",
       "example": "In dieser Stadt leben über ___ Familien.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1687842866200-9975ea78eb7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBodW5kcmVkfGVufDF8Mnx8fDE3ODk0MDg0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number hundred"
     },
     {
@@ -103,7 +103,7 @@
       "russian": "тысяча",
       "transcription": "/ˈtaʊ̯zn̩t/",
       "example": "Dieses Auto kostet mehr als ___ Euro.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632077618089-4458d0cfe75c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjB0aG91c2FuZHxlbnwxfDJ8fHwxNzg5NDA4NTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number thousand"
     },
     {
@@ -111,7 +111,7 @@
       "russian": "миллион",
       "transcription": "/mɪˈli̯oːn/",
       "example": "In dieser Stadt leben eine ganze ___ Menschen.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1632077618089-4458d0cfe75c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXIlMjBtaWxsaW9ufGVufDF8Mnx8fDE3ODk0MDg2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "number million"
     },
     {
@@ -127,7 +127,7 @@
       "russian": "второй",
       "transcription": "/ˈtsvaɪ̯tə/",
       "example": "Das ist der ___ Versuch heute.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1781105349881-349db5486a87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWNvbmQlMjAlMjhvcmRpbmFsJTI5fGVufDF8Mnx8fDE3ODk0MDg3MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "second (ordinal)"
     },
     {
@@ -263,7 +263,7 @@
       "russian": "наручные часы",
       "transcription": "/ˈaʁmbantʔuːɐ̯/",
       "example": "An ihrem Arm trägt sie eine goldene ___.",
-      "imageUrl": null,
+      "imageUrl": "https://images.unsplash.com/photo-1751437774882-deeea4352018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3cmlzdHdhdGNofGVufDF8Mnx8fDE3ODk0MDg4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageQuery": "wristwatch"
     },
     {
