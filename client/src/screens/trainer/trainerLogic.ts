@@ -14,7 +14,7 @@ export function buildChoices(
   pool: Word[],
   lang: "ru" | "en",
 ): { opts: string[]; correct: string } {
-  const field = lang === "ru" ? "russian" : "english";
+  const field = lang === "ru" ? "native_word" : "foreign_word";
   const correct = word[field] as string;
   const others = [...new Set(pool.filter((w) => w.id !== word.id).map((w) => w[field] as string))];
   const picks: string[] = [];

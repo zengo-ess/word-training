@@ -14,8 +14,8 @@ vi.mock("../../lib/wordVisual", () => ({
 const word: WordWithProgress = {
   id: "w1",
   deck_id: "d1",
-  english: "apple",
-  russian: "яблоко",
+  foreign_word: "apple",
+  native_word: "яблоко",
   transcription: "/ˈæpəl/",
   example_sentence: "I eat an ___ daily.",
   image_url: null,

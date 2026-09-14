@@ -32,18 +32,18 @@ function WordRow({ word, onClick }: { word: WordWithProgress; onClick: () => voi
           style={{ width: 46, height: 46, borderRadius: 13, objectFit: "cover", flexShrink: 0 }}
         />
       ) : (
-        <WordTile icon="book" hue={hueFromString(word.english)} size={46} round={13} />
+        <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={46} round={13} />
       )}
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-          <span style={{ fontSize: 16, fontWeight: 800, color: "var(--ink)" }}>{word.english}</span>
+          <span style={{ fontSize: 16, fontWeight: 800, color: "var(--ink)" }}>{word.foreign_word}</span>
           {word.transcription ? (
             <span style={{ fontFamily: "var(--mono)", fontSize: 11.5, color: "var(--ink-mute)" }}>
               {word.transcription}
             </span>
           ) : null}
         </div>
-        <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-soft)" }}>{word.russian}</div>
+        <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-soft)" }}>{word.native_word}</div>
       </div>
       {learned ? (
         <div

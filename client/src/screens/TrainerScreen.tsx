@@ -73,7 +73,7 @@ export function FeedbackBar({ kind, word }: { kind: "correct" | "wrong"; word: W
         <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{ok ? "Верно!" : "Почти!"}</div>
         {!ok ? (
           <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.9)" }}>
-            {word.english} — {word.russian}
+            {word.foreign_word} — {word.native_word}
           </div>
         ) : null}
       </div>
@@ -267,7 +267,7 @@ function FillGap({
   function check() {
     if (locked || !val.trim()) return;
     setLocked(true);
-    onResult(val.trim().toLowerCase() === word.english.toLowerCase());
+    onResult(val.trim().toLowerCase() === word.foreign_word.toLowerCase());
   }
 
   return (
@@ -295,7 +295,7 @@ function FillGap({
           {parts[1]}
         </div>
         <div style={{ marginTop: 12, fontSize: 14, fontWeight: 600, color: "var(--ink-mute)" }}>
-          = {word.russian}
+          = {word.native_word}
         </div>
       </Card>
       <input
@@ -341,7 +341,7 @@ function Assemble({
   answered: "correct" | "wrong" | null;
   onResult: (correct: boolean) => void;
 }) {
-  const target = word.english;
+  const target = word.foreign_word;
   const initial = useMemo(() => {
     let s = shuffle(target.split("")).map((ch, i): Tile => ({ ch, id: i }));
     if (s.map((t) => t.ch).join("") === target && target.length > 1) {
@@ -386,10 +386,10 @@ function Assemble({
         Соберите слово из букв
       </div>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
-        <WordTile icon="book" hue={hueFromString(word.english)} size={120} />
+        <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={120} />
       </div>
       <div style={{ textAlign: "center", fontSize: 17, fontWeight: 700, color: "var(--primary)", marginBottom: 16 }}>
-        {word.russian}
+        {word.native_word}
       </div>
       <div
         style={{
@@ -486,13 +486,13 @@ export function Exercise({
                 style={{ width: 140, height: 140, borderRadius: "var(--r-tile)", objectFit: "cover" }}
               />
             ) : (
-              <WordTile icon="book" hue={hueFromString(word.english)} size={140} photo />
+              <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={140} photo />
             )}
           </div>
           <h2
             style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--ink)", margin: 0 }}
           >
-            {word.english}
+            {word.foreign_word}
           </h2>
           {word.transcription ? (
             <div style={{ fontFamily: "var(--mono)", fontSize: 14, color: "var(--ink-mute)", marginTop: 4 }}>
@@ -522,7 +522,7 @@ export function Exercise({
           <h2
             style={{ fontFamily: "var(--font-display)", fontSize: 34, fontWeight: 700, color: "var(--ink)", margin: 0 }}
           >
-            {word.russian}
+            {word.native_word}
           </h2>
         </div>
       </MCQ>
@@ -542,7 +542,7 @@ export function Exercise({
               onClick={() => {
                 try {
                   window.speechSynthesis.cancel();
-                  const u = new SpeechSynthesisUtterance(word.english);
+                  const u = new SpeechSynthesisUtterance(word.foreign_word);
                   u.lang = "en-US";
                   u.rate = 0.9;
                   window.speechSynthesis.speak(u);

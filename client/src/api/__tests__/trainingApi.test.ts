@@ -21,7 +21,7 @@ function captureFetch(body: unknown): { captured: { url: string; init: RequestIn
   return { captured, fn };
 }
 
-const WORD = { id: "w1", deck_id: "d1", english: "apple", russian: "яблоко", transcription: null, example_sentence: null, image_url: null, audio_url: null, created_at: "x" };
+const WORD = { id: "w1", deck_id: "d1", foreign_word: "apple", native_word: "яблоко", transcription: null, example_sentence: null, image_url: null, audio_url: null, created_at: "x" };
 
 beforeEach(() => {
   localStorage.clear();
@@ -34,7 +34,7 @@ describe("trainingApi", () => {
       mockFetch({ newWords: [{ word: WORD, currentType: 1 }], reviewWords: [] }),
     );
     expect(result.newWords).toHaveLength(1);
-    expect(result.newWords[0].word.english).toBe("apple");
+    expect(result.newWords[0].word.foreign_word).toBe("apple");
     expect(result.reviewWords).toHaveLength(0);
   });
 

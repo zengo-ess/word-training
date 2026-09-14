@@ -22,8 +22,8 @@ vi.mock("../../screens/trainer/trainerLogic", async (importOriginal) => {
 const WORD: Word = {
   id: "w1",
   deck_id: "d1",
-  english: "apple",
-  russian: "яблоко",
+  foreign_word: "apple",
+  native_word: "яблоко",
   transcription: null,
   example_sentence: null,
   image_url: null,
@@ -33,9 +33,9 @@ const WORD: Word = {
 
 const POOL: Word[] = [
   WORD,
-  { ...WORD, id: "w2", english: "book", russian: "книга" },
-  { ...WORD, id: "w3", english: "car", russian: "машина" },
-  { ...WORD, id: "w4", english: "dog", russian: "собака" },
+  { ...WORD, id: "w2", foreign_word: "book", native_word: "книга" },
+  { ...WORD, id: "w3", foreign_word: "car", native_word: "машина" },
+  { ...WORD, id: "w4", foreign_word: "dog", native_word: "собака" },
 ];
 
 beforeEach(() => {

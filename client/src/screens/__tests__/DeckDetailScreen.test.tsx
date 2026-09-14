@@ -23,8 +23,8 @@ describe("DeckDetailScreen", () => {
       {
         id: "w1",
         deck_id: "d1",
-        english: "apple",
-        russian: "яблоко",
+        foreign_word: "apple",
+        native_word: "яблоко",
         transcription: null,
         example_sentence: null,
         image_url: null,

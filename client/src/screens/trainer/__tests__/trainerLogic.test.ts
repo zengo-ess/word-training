@@ -4,12 +4,12 @@ import { describe, it, expect } from "vitest";
 import { buildChoices, buildQueue, shuffle } from "../trainerLogic";
 import type { Word } from "../../../api/types";
 
-function makeWord(id: string, english: string, russian: string, hasExample = true): Word {
+function makeWord(id: string, foreignWord: string, nativeWord: string, hasExample = true): Word {
   return {
     id,
     deck_id: "d1",
-    english,
-    russian,
+    foreign_word: foreignWord,
+    native_word: nativeWord,
     transcription: null,
     example_sentence: hasExample ? `I see a ___ today.` : null,
     image_url: null,

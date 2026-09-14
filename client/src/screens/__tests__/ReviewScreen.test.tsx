@@ -14,8 +14,8 @@ vi.mock("../../api/trainingApi", () => ({
 const WORD: Word = {
   id: "w1",
   deck_id: "d1",
-  english: "apple",
-  russian: "яблоко",
+  foreign_word: "apple",
+  native_word: "яблоко",
   transcription: null,
   example_sentence: null,
   image_url: null,
@@ -25,7 +25,7 @@ const WORD: Word = {
 
 const WORDS: Word[] = [
   WORD,
-  { ...WORD, id: "w2", english: "book", russian: "книга" },
+  { ...WORD, id: "w2", foreign_word: "book", native_word: "книга" },
 ];
 
 beforeEach(() => {
