@@ -1,18 +1,38 @@
+import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { Icon } from "../components/Icon";
 
-const SETTINGS_ROWS = [
-  { icon: "target", label: "Дневная цель", detail: "20 слов" },
-  { icon: "volume-2", label: "Озвучка слов", detail: "Вкл" },
-  { icon: "refresh", label: "Направление повторов", detail: "Оба" },
-  { icon: "calendar", label: "Напоминания", detail: "20:00" },
-] as const;
+const LANGUAGE_NAME: Record<string, string> = { en: "Английский", de: "Немецкий" };
 
 export function ProfileScreen() {
-  const { logout, user } = useAuth();
+  const { logout, user, setLanguage } = useAuth();
+  const [switching, setSwitching] = useState(false);
+  const language = user?.language ?? "en";
+
+  const onToggleLanguage = async (): Promise<void> => {
+    setSwitching(true);
+    try {
+      await setLanguage(language === "en" ? "de" : "en");
+    } finally {
+      setSwitching(false);
+    }
+  };
+
+  const settingsRows = [
+    { icon: "target", label: "Дневная цель", detail: "20 слов" },
+    {
+      icon: "globe",
+      label: "Язык изучения",
+      detail: switching ? "…" : LANGUAGE_NAME[language],
+      onClick: () => void onToggleLanguage(),
+    },
+    { icon: "volume-2", label: "Озвучка слов", detail: "Вкл" },
+    { icon: "refresh", label: "Направление повторов", detail: "Оба" },
+    { icon: "calendar", label: "Напоминания", detail: "20:00" },
+  ] as const;
 
   return (
     <Page>
@@ -60,15 +80,17 @@ export function ProfileScreen() {
       </div>
 
       <Card pad={4} style={{ marginBottom: 20 }}>
-        {SETTINGS_ROWS.map((r, i) => (
+        {settingsRows.map((r, i) => (
           <div
             key={r.label}
+            onClick={"onClick" in r ? r.onClick : undefined}
             style={{
               display: "flex",
               alignItems: "center",
               gap: 13,
               padding: "13px 12px",
-              borderBottom: i < SETTINGS_ROWS.length - 1 ? "1px solid var(--line)" : "none",
+              borderBottom: i < settingsRows.length - 1 ? "1px solid var(--line)" : "none",
+              cursor: "onClick" in r ? "pointer" : "default",
             }}
           >
             <Icon name={r.icon} size={20} color="var(--ink-soft)" stroke={2.2} />

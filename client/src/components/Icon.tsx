@@ -20,6 +20,7 @@ import {
   RefreshCw,
   BookOpen,
   Star,
+  Globe,
   HelpCircle,
   type LucideIcon,
 } from "lucide-react";
@@ -46,6 +47,7 @@ const MAP: Record<string, LucideIcon> = {
   refresh: RefreshCw,
   book: BookOpen,
   star: Star,
+  globe: Globe,
 };
 
 export interface IconProps {
