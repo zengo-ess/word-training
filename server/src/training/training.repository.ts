@@ -42,8 +42,8 @@ export function listLearnableWords(
 interface DueRow {
   w_id: string;
   deck_id: string;
-  english: string;
-  russian: string;
+  foreign_word: string;
+  native_word: string;
   transcription: string | null;
   example_sentence: string | null;
   image_url: string | null;
@@ -67,7 +67,7 @@ export function listDueReviews(
   const rows = db
     .prepare(
       `SELECT
-         w.id AS w_id, w.deck_id, w.english, w.russian, w.transcription,
+         w.id AS w_id, w.deck_id, w.foreign_word, w.native_word, w.transcription,
          w.example_sentence, w.image_url, w.audio_url, w.created_at AS w_created_at,
          p.id AS p_id, p.current_type, p.learned_at, p.ease_factor, p.interval_days,
          p.next_review_at, p.total_reviews, p.correct_reviews
@@ -82,8 +82,8 @@ export function listDueReviews(
     word: {
       id: r.w_id,
       deck_id: r.deck_id,
-      english: r.english,
-      russian: r.russian,
+      foreign_word: r.foreign_word,
+      native_word: r.native_word,
       transcription: r.transcription,
       example_sentence: r.example_sentence,
       image_url: r.image_url,

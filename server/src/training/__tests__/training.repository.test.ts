@@ -18,26 +18,26 @@ beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
   userId = createUser(db, "Тестер", "salt:hash").id;
-  deckId = createDeck(db, "Колода", userId).id;
+  deckId = createDeck(db, "Колода", userId, "en").id;
 });
 
 describe("listLearnableWords", () => {
   it("слово без прогресса считается новым с currentType 1", () => {
-    createWord(db, { deckId, english: "cat", russian: "кот" });
+    createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" });
     const list = listLearnableWords(db, userId, 20);
     expect(list).toHaveLength(1);
-    expect(list[0].word.english).toBe("cat");
+    expect(list[0].word.foreign_word).toBe("cat");
     expect(list[0].currentType).toBe(1);
   });
 
   it("слово в процессе изучения сохраняет currentType", () => {
-    const id = createWord(db, { deckId, english: "dog", russian: "собака" }).id;
+    const id = createWord(db, { deckId, foreignWord: "dog", nativeWord: "собака" }).id;
     upsertProgress(db, userId, id, { currentType: 3 });
     expect(listLearnableWords(db, userId, 20)[0].currentType).toBe(3);
   });
 
   it("выученное слово исключается из новых", () => {
-    const id = createWord(db, { deckId, english: "fish", russian: "рыба" }).id;
+    const id = createWord(db, { deckId, foreignWord: "fish", nativeWord: "рыба" }).id;
     upsertProgress(db, userId, id, {
       currentType: null,
       learnedAt: "2026-06-05T12:00:00.000Z",
@@ -47,7 +47,7 @@ describe("listLearnableWords", () => {
 
   it("уважает лимит батча", () => {
     for (let i = 0; i < 5; i += 1) {
-      createWord(db, { deckId, english: `w${i}`, russian: `с${i}` });
+      createWord(db, { deckId, foreignWord: `w${i}`, nativeWord: `с${i}` });
     }
     expect(listLearnableWords(db, userId, 3)).toHaveLength(3);
   });
@@ -55,7 +55,7 @@ describe("listLearnableWords", () => {
 
 describe("listDueReviews", () => {
   it("возвращает выученные слова со сроком в прошлом", () => {
-    const id = createWord(db, { deckId, english: "cat", russian: "кот" }).id;
+    const id = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
     upsertProgress(db, userId, id, {
       currentType: null,
       learnedAt: "2026-06-01T12:00:00.000Z",
@@ -64,12 +64,12 @@ describe("listDueReviews", () => {
     });
     const due = listDueReviews(db, userId, "2026-06-05T12:00:00.000Z");
     expect(due).toHaveLength(1);
-    expect(due[0].word.english).toBe("cat");
+    expect(due[0].word.foreign_word).toBe("cat");
     expect(due[0].progress.interval_days).toBe(1);
   });
 
   it("не возвращает слова со сроком в будущем", () => {
-    const id = createWord(db, { deckId, english: "dog", russian: "собака" }).id;
+    const id = createWord(db, { deckId, foreignWord: "dog", nativeWord: "собака" }).id;
     upsertProgress(db, userId, id, {
       currentType: null,
       learnedAt: "2026-06-01T12:00:00.000Z",
@@ -79,7 +79,7 @@ describe("listDueReviews", () => {
   });
 
   it("не возвращает ещё не выученные слова", () => {
-    const id = createWord(db, { deckId, english: "fish", russian: "рыба" }).id;
+    const id = createWord(db, { deckId, foreignWord: "fish", nativeWord: "рыба" }).id;
     upsertProgress(db, userId, id, { currentType: 2 });
     expect(listDueReviews(db, userId, "2026-06-05T12:00:00.000Z")).toHaveLength(0);
   });

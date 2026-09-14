@@ -6,24 +6,29 @@ export interface DeckWithStats {
   id: string;
   name: string;
   is_builtin: number;
+  language: string;
   created_at: string;
   total: number;
   learned: number;
 }
 
-export function listDecksWithStats(db: Database.Database, userId: string): DeckWithStats[] {
+export function listDecksWithStats(
+  db: Database.Database,
+  userId: string,
+  language: string,
+): DeckWithStats[] {
   return db
     .prepare(
-      `SELECT d.id, d.name, d.is_builtin, d.created_at,
+      `SELECT d.id, d.name, d.is_builtin, d.language, d.created_at,
          (SELECT COUNT(*) FROM words w WHERE w.deck_id = d.id) AS total,
          (SELECT COUNT(*) FROM words w
             JOIN progress p ON p.word_id = w.id AND p.user_id = ?
             WHERE w.deck_id = d.id AND p.learned_at IS NOT NULL) AS learned
        FROM decks d
-       WHERE d.is_builtin = 1 OR d.user_id = ?
+       WHERE (d.is_builtin = 1 OR d.user_id = ?) AND d.language = ?
        ORDER BY d.is_builtin DESC, d.created_at ASC`,
     )
-    .all(userId, userId) as DeckWithStats[];
+    .all(userId, userId, language) as DeckWithStats[];
 }
 
 export interface WordWithProgress extends WordRow {

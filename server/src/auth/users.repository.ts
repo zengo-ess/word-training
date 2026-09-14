@@ -5,12 +5,14 @@ export interface UserRow {
   id: string;
   name: string;
   password_hash: string;
+  language: string;
   created_at: string;
 }
 
 export interface PublicUser {
   id: string;
   name: string;
+  language: string;
 }
 
 export function createUser(db: Database.Database, name: string, passwordHash: string): UserRow {
@@ -28,5 +30,16 @@ export function getUserByName(db: Database.Database, name: string): UserRow | un
 }
 
 export function listUsers(db: Database.Database): PublicUser[] {
-  return db.prepare("SELECT id, name FROM users ORDER BY created_at ASC").all() as PublicUser[];
+  return db
+    .prepare("SELECT id, name, language FROM users ORDER BY created_at ASC")
+    .all() as PublicUser[];
+}
+
+export function updateUserLanguage(
+  db: Database.Database,
+  id: string,
+  language: string,
+): UserRow | undefined {
+  db.prepare("UPDATE users SET language = ? WHERE id = ?").run(language, id);
+  return getUser(db, id);
 }

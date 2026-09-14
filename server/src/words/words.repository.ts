@@ -4,8 +4,8 @@ import type Database from "better-sqlite3";
 export interface WordRow {
   id: string;
   deck_id: string;
-  english: string;
-  russian: string;
+  foreign_word: string;
+  native_word: string;
   transcription: string | null;
   example_sentence: string | null;
   image_url: string | null;
@@ -15,8 +15,8 @@ export interface WordRow {
 
 export interface NewWord {
   deckId: string;
-  english: string;
-  russian: string;
+  foreignWord: string;
+  nativeWord: string;
   transcription?: string | null;
   exampleSentence?: string | null;
   imageUrl?: string | null;
@@ -24,8 +24,8 @@ export interface NewWord {
 }
 
 export interface WordUpdate {
-  english?: string;
-  russian?: string;
+  foreignWord?: string;
+  nativeWord?: string;
   transcription?: string | null;
   exampleSentence?: string | null;
   imageUrl?: string | null;
@@ -45,13 +45,13 @@ export function listWordsByDeck(db: Database.Database, deckId: string): WordRow[
 export function createWord(db: Database.Database, word: NewWord): WordRow {
   const id = randomUUID();
   db.prepare(
-    `INSERT INTO words (id, deck_id, english, russian, transcription, example_sentence, image_url, audio_url)
+    `INSERT INTO words (id, deck_id, foreign_word, native_word, transcription, example_sentence, image_url, audio_url)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
   ).run(
     id,
     word.deckId,
-    word.english,
-    word.russian,
+    word.foreignWord,
+    word.nativeWord,
     word.transcription ?? null,
     word.exampleSentence ?? null,
     word.imageUrl ?? null,
@@ -68,13 +68,13 @@ export function updateWord(
   const fields: string[] = [];
   const values: unknown[] = [];
 
-  if (update.english !== undefined) {
-    fields.push("english = ?");
-    values.push(update.english);
+  if (update.foreignWord !== undefined) {
+    fields.push("foreign_word = ?");
+    values.push(update.foreignWord);
   }
-  if (update.russian !== undefined) {
-    fields.push("russian = ?");
-    values.push(update.russian);
+  if (update.nativeWord !== undefined) {
+    fields.push("native_word = ?");
+    values.push(update.nativeWord);
   }
   if (update.transcription !== undefined) {
     fields.push("transcription = ?");

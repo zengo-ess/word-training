@@ -18,39 +18,45 @@ beforeEach(() => {
   db = createConnection(":memory:");
   runMigrations(db);
   userId = createUser(db, "Тестер", "salt:hash").id;
-  deckId = createDeck(db, "Еда", userId).id;
+  deckId = createDeck(db, "Еда", userId, "en").id;
 });
 
 describe("listDecksWithStats", () => {
   it("считает total и learned по колоде", () => {
-    const w1 = createWord(db, { deckId, english: "apple", russian: "яблоко" }).id;
-    createWord(db, { deckId, english: "bread", russian: "хлеб" });
+    const w1 = createWord(db, { deckId, foreignWord: "apple", nativeWord: "яблоко" }).id;
+    createWord(db, { deckId, foreignWord: "bread", nativeWord: "хлеб" });
     upsertProgress(db, userId, w1, { currentType: null, learnedAt: "2026-06-01T00:00:00.000Z" });
 
-    const decks = listDecksWithStats(db, userId);
+    const decks = listDecksWithStats(db, userId, "en");
     const food = decks.find((d) => d.id === deckId);
     expect(food?.total).toBe(2);
     expect(food?.learned).toBe(1);
   });
 
   it("новая пустая колода имеет total 0 / learned 0", () => {
-    const decks = listDecksWithStats(db, userId);
+    const decks = listDecksWithStats(db, userId, "en");
     expect(decks[0].total).toBe(0);
     expect(decks[0].learned).toBe(0);
+  });
+
+  it("не показывает колоду другого языка", () => {
+    const deDeck = createDeck(db, "Немецкая", userId, "de").id;
+    const decks = listDecksWithStats(db, userId, "en");
+    expect(decks.some((d) => d.id === deDeck)).toBe(false);
   });
 });
 
 describe("listWordsWithProgress", () => {
   it("слово без прогресса — progress null", () => {
-    createWord(db, { deckId, english: "apple", russian: "яблоко" });
+    createWord(db, { deckId, foreignWord: "apple", nativeWord: "яблоко" });
     const words = listWordsWithProgress(db, deckId, userId);
     expect(words).toHaveLength(1);
-    expect(words[0].english).toBe("apple");
+    expect(words[0].foreign_word).toBe("apple");
     expect(words[0].progress).toBeNull();
   });
 
   it("слово с прогрессом несёт его данные", () => {
-    const id = createWord(db, { deckId, english: "dog", russian: "собака" }).id;
+    const id = createWord(db, { deckId, foreignWord: "dog", nativeWord: "собака" }).id;
     upsertProgress(db, userId, id, { currentType: 3 });
     const words = listWordsWithProgress(db, deckId, userId);
     expect(words[0].progress?.current_type).toBe(3);

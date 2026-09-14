@@ -3,7 +3,7 @@
 import { describe, it, expect } from "vitest";
 import Database from "better-sqlite3";
 import { runMigrations } from "../../db/migrate.js";
-import { createUser, getUser, getUserByName, listUsers } from "../users.repository.js";
+import { createUser, getUser, getUserByName, listUsers, updateUserLanguage } from "../users.repository.js";
 
 function freshDb(): Database.Database {
   const db = new Database(":memory:");
@@ -32,5 +32,19 @@ describe("users.repository", () => {
     const db = freshDb();
     createUser(db, "Женя", "x:y");
     expect(() => createUser(db, "Женя", "x:y")).toThrow();
+  });
+
+  it("новый пользователь по умолчанию изучает английский", () => {
+    const db = freshDb();
+    const user = createUser(db, "Женя", "x:y");
+    expect(user.language).toBe("en");
+  });
+
+  it("updateUserLanguage меняет язык изучения", () => {
+    const db = freshDb();
+    const user = createUser(db, "Женя", "x:y");
+    const updated = updateUserLanguage(db, user.id, "de");
+    expect(updated?.language).toBe("de");
+    expect(getUser(db, user.id)?.language).toBe("de");
   });
 });
