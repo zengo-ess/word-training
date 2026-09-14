@@ -2,280 +2,280 @@
   "name": "Путешествия",
   "words": [
     {
-      "english": "airport",
+      "word": "airport",
       "russian": "аэропорт",
       "transcription": "/ˈɛrpɔrt/",
       "example": "We arrive at the ___ two hours before the flight.",
       "imageUrl": "https://images.unsplash.com/photo-1466691623998-d607fab1ca29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhaXJwb3J0fGVufDF8Mnx8fDE3ODEzMzQwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "ticket",
+      "word": "ticket",
       "russian": "билет",
       "transcription": "/ˈtɪkɪt/",
       "example": "I buy a train ___ at the station.",
       "imageUrl": "https://images.unsplash.com/photo-1549499090-d7ac0cec89f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aWNrZXR8ZW58MXwyfHx8MTc4MTMzNDUzN3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hotel",
+      "word": "hotel",
       "russian": "отель",
       "transcription": "/hoʊˈtɛl/",
       "example": "We stay at a small ___ near the beach.",
       "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3RlbHxlbnwxfDJ8fHwxNzgxMzM0MjE0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "passport",
+      "word": "passport",
       "russian": "паспорт",
       "transcription": "/ˈpæspɔrt/",
       "example": "Please show your ___ at the border.",
       "imageUrl": "https://images.unsplash.com/photo-1706880471208-88328ff11505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydHxlbnwxfDJ8fHwxNzgxMzYwNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "luggage",
+      "word": "luggage",
       "russian": "багаж",
       "transcription": "/ˈlʌɡɪdʒ/",
       "example": "My ___ is too heavy for the plane.",
       "imageUrl": "https://images.unsplash.com/photo-1595475349262-88ba1e1eecaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsdWdnYWdlfGVufDF8Mnx8fDE3ODEzNjA2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "map",
+      "word": "map",
       "russian": "карта",
       "transcription": "/mæp/",
       "example": "We look at the ___ to find the museum.",
       "imageUrl": "https://images.unsplash.com/photo-1578403881967-084f9885be74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtYXB8ZW58MXwyfHx8MTc4MTM2MDcxMXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "beach",
+      "word": "beach",
       "russian": "пляж",
       "transcription": "/bitʃ/",
       "example": "The children play on the ___ all day.",
       "imageUrl": "https://images.unsplash.com/photo-1552674510-62c267e73ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiZWFjaHxlbnwxfDJ8fHwxNzgxMzYwNzkyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "journey",
+      "word": "journey",
       "russian": "поездка",
       "transcription": "/ˈdʒɜrni/",
       "example": "The ___ from Moscow to Paris takes three hours.",
       "imageUrl": "https://images.unsplash.com/photo-1535856326707-98d0b5dbe639?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxqb3VybmV5fGVufDF8Mnx8fDE3ODEzNjA4NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "train",
+      "word": "train",
       "russian": "поезд",
       "transcription": "/treɪn/",
       "example": "The ___ leaves at nine in the morning.",
       "imageUrl": "https://images.unsplash.com/photo-1568514328861-5465017e40fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cmFpbnxlbnwxfDJ8fHwxNzgxMzMzODkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "bus",
+      "word": "bus",
       "russian": "автобус",
       "transcription": "/bʌs/",
       "example": "I take the ___ to the city center.",
       "imageUrl": "https://images.unsplash.com/photo-1478359900967-91ec0c6edc60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxidXN8ZW58MXwyfHx8MTc4MTMzMzgxMHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "plane",
+      "word": "plane",
       "russian": "самолёт",
       "transcription": "/pleɪn/",
       "example": "The ___ flies high above the clouds.",
       "imageUrl": "https://images.unsplash.com/photo-1621632361333-4649f0b59adc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwbGFuZXxlbnwxfDJ8fHwxNzgxMzMzOTcyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "taxi",
+      "word": "taxi",
       "russian": "такси",
       "transcription": "/ˈtæksi/",
       "example": "We call a ___ to go to the airport.",
       "imageUrl": "https://images.unsplash.com/photo-1519566657253-e37fbcf36dfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YXhpfGVufDF8Mnx8fDE3ODEzNjA5NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "station",
+      "word": "station",
       "russian": "вокзал",
       "transcription": "/ˈsteɪʃən/",
       "example": "The train ___ is near our hotel.",
       "imageUrl": "https://images.unsplash.com/photo-1603554179967-c21cfd757c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdGF0aW9ufGVufDF8Mnx8fDE3ODEzMzQxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "trip",
+      "word": "trip",
       "russian": "путешествие",
       "transcription": "/trɪp/",
       "example": "Our school ___ to London was great.",
       "imageUrl": "https://images.unsplash.com/photo-1606054534744-a3b13e35c574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cmlwfGVufDF8Mnx8fDE3ODEzNjEwMzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "tourist",
+      "word": "tourist",
       "russian": "турист",
       "transcription": "/ˈtʊrɪst/",
       "example": "A ___ asks me how to find the museum.",
       "imageUrl": "https://images.unsplash.com/photo-1599139497467-3e7f6e244c8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b3VyaXN0fGVufDF8Mnx8fDE3ODEzNjExMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "guide",
+      "word": "guide",
       "russian": "гид",
       "transcription": "/ɡaɪd/",
       "example": "The ___ shows us the old castle.",
       "imageUrl": "https://images.unsplash.com/photo-1654414882149-8417f5de3a63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxndWlkZXxlbnwxfDJ8fHwxNzgxMzYxMTk1fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "suitcase",
+      "word": "suitcase",
       "russian": "чемодан",
       "transcription": "/ˈsutkeɪs/",
       "example": "She packs her ___ the night before the trip.",
       "imageUrl": "https://images.unsplash.com/photo-1595475349262-88ba1e1eecaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdWl0Y2FzZXxlbnwxfDJ8fHwxNzgxMzYxMjc2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "camera",
+      "word": "camera",
       "russian": "фотоаппарат",
       "transcription": "/ˈkæmərə/",
       "example": "He takes photos with his new ___.",
       "imageUrl": "https://images.unsplash.com/photo-1524135220673-c731600a1a50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYW1lcmF8ZW58MXwyfHx8MTc4MTM2MTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "visa",
+      "word": "visa",
       "russian": "виза",
       "transcription": "/ˈvizə/",
       "example": "You need a ___ to visit that country.",
       "imageUrl": "https://images.unsplash.com/photo-1758928807847-ed94f9ed3cad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx2aXNhfGVufDF8Mnx8fDE3ODEzNjE0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "flight",
+      "word": "flight",
       "russian": "рейс",
       "transcription": "/flaɪt/",
       "example": "Our ___ to Rome is at six in the evening.",
       "imageUrl": "https://images.unsplash.com/photo-1621632361333-4649f0b59adc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmbGlnaHR8ZW58MXwyfHx8MTc4MTM2MTUxOHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "road",
+      "word": "road",
       "russian": "дорога",
       "transcription": "/roʊd/",
       "example": "This ___ goes to the mountains.",
       "imageUrl": "https://images.unsplash.com/photo-1515256722043-0f2b082ddadc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyb2FkfGVufDF8Mnx8fDE3ODEzMzM2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "city",
+      "word": "city",
       "russian": "город",
       "transcription": "/ˈsɪti/",
       "example": "Paris is a beautiful ___.",
       "imageUrl": "https://images.unsplash.com/photo-1567320743368-9db24e12ebf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaXR5fGVufDF8Mnx8fDE3ODEzMzM0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "country",
+      "word": "country",
       "russian": "страна",
       "transcription": "/ˈkʌntri/",
       "example": "Italy is a warm ___ in the south of Europe.",
       "imageUrl": "https://images.unsplash.com/photo-1433883669848-fa8a7ce070b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb3VudHJ5fGVufDF8Mnx8fDE3ODEzMzM0ODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "sea",
+      "word": "sea",
       "russian": "море",
       "transcription": "/si/",
       "example": "We swim in the ___ every summer.",
       "imageUrl": "https://images.unsplash.com/photo-1441829266145-6d4bfbd38eb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWF8ZW58MXwyfHx8MTc4MTMzNTAyM3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "mountain",
+      "word": "mountain",
       "russian": "гора",
       "transcription": "/ˈmaʊntən/",
       "example": "That ___ is very high and white with snow.",
       "imageUrl": "https://images.unsplash.com/photo-1606318621597-c057f7d4926e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3VudGFpbnxlbnwxfDJ8fHwxNzgxMzM1MTg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "island",
+      "word": "island",
       "russian": "остров",
       "transcription": "/ˈaɪlənd/",
       "example": "We take a boat to a small ___.",
       "imageUrl": "https://images.unsplash.com/photo-1509280951623-4a17506e3eb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpc2xhbmR8ZW58MXwyfHx8MTc4MTM2MTU5OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "museum",
+      "word": "museum",
       "russian": "музей",
       "transcription": "/mjuˈziəm/",
       "example": "The art ___ is open from ten to six.",
       "imageUrl": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtdXNldW18ZW58MXwyfHx8MTc4MTM2MTY4MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "tour",
+      "word": "tour",
       "russian": "экскурсия",
       "transcription": "/tʊr/",
       "example": "We take a bus ___ around the city.",
       "imageUrl": "https://images.unsplash.com/photo-1654414882149-8417f5de3a63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b3VyfGVufDF8Mnx8fDE3ODEzNjE3NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "backpack",
+      "word": "backpack",
       "russian": "рюкзак",
       "transcription": "/ˈbækpæk/",
       "example": "He carries water and a map in his ___.",
       "imageUrl": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiYWNrcGFja3xlbnwxfDJ8fHwxNzgxMzYxODQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "souvenir",
+      "word": "souvenir",
       "russian": "сувенир",
       "transcription": "/ˌsuvəˈnɪr/",
       "example": "I buy a small ___ for my sister.",
       "imageUrl": "https://images.unsplash.com/photo-1772110063536-0d227a983cb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzb3V2ZW5pcnxlbnwxfDJ8fHwxNzgxMzYxOTIyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "adventure",
+      "word": "adventure",
       "russian": "приключение",
       "transcription": "/ədˈvɛntʃər/",
       "example": "Our trip to the jungle was a real ___.",
       "imageUrl": "https://images.unsplash.com/photo-1465188035480-cf3a60801ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhZHZlbnR1cmV8ZW58MXwyfHx8MTc4MTM2MjAwM3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "departure",
+      "word": "departure",
       "russian": "отъезд",
       "transcription": "/dɪˈpɑrtʃər/",
       "example": "The ___ time of the bus is ten o'clock.",
       "imageUrl": "https://images.unsplash.com/photo-1721592872658-6600625160c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkZXBhcnR1cmV8ZW58MXwyfHx8MTc4MTM2MjA4NHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "arrival",
+      "word": "arrival",
       "russian": "прибытие",
       "transcription": "/əˈraɪvəl/",
       "example": "The ___ of the train is at five in the evening.",
       "imageUrl": "https://images.unsplash.com/photo-1651031410043-f3ff4232ee29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhcnJpdmFsfGVufDF8Mnx8fDE3ODEzNjIxNjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "customs",
+      "word": "customs",
       "russian": "таможня",
       "transcription": "/ˈkʌstəmz/",
       "example": "We show our bags at ___ in the airport.",
       "imageUrl": "https://images.unsplash.com/photo-1602066511755-e4936f41666a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjdXN0b21zfGVufDF8Mnx8fDE3ODEzNjIyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "border",
+      "word": "border",
       "russian": "граница",
       "transcription": "/ˈbɔrdər/",
       "example": "The bus stops at the ___ between two countries.",
       "imageUrl": "https://images.unsplash.com/photo-1684806043078-fc1e6842c94f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxib3JkZXJ8ZW58MXwyfHx8MTc4MTM2MjMyNnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "reservation",
+      "word": "reservation",
       "russian": "бронирование",
       "transcription": "/ˌrɛzərˈveɪʃən/",
       "example": "I have a ___ for two nights at this hotel.",
       "imageUrl": "https://images.unsplash.com/photo-1730138876084-38ffddf61d06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyZXNlcnZhdGlvbnxlbnwxfDJ8fHwxNzgxMzYyNDA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "vacation",
+      "word": "vacation",
       "russian": "отпуск",
       "transcription": "/veɪˈkeɪʃən/",
       "example": "We go to the sea on ___ every August.",
       "imageUrl": "https://images.unsplash.com/photo-1494947356691-434358cea5a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx2YWNhdGlvbnxlbnwxfDJ8fHwxNzgxMzYyNDg3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "cruise",
+      "word": "cruise",
       "russian": "круиз",
       "transcription": "/kruz/",
       "example": "My parents take a ___ on a big white ship.",
       "imageUrl": "https://images.unsplash.com/photo-1707300507318-da918a4424c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjcnVpc2V8ZW58MXwyfHx8MTc4MTM2MjU2OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "harbor",
+      "word": "harbor",
       "russian": "гавань",
       "transcription": "/ˈhɑrbər/",
       "example": "Many boats stand in the ___ at night.",
       "imageUrl": "https://images.unsplash.com/photo-1629645625284-0de2be552ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYXJib3J8ZW58MXwyfHx8MTc4MTM2MjY0OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "destination",
+      "word": "destination",
       "russian": "направление",
       "transcription": "/ˌdɛstəˈneɪʃən/",
       "example": "Our final ___ is a small town by the sea.",

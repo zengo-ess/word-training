@@ -2,280 +2,280 @@
   "name": "Числа и время",
   "words": [
     {
-      "english": "one",
+      "word": "one",
       "russian": "один",
       "transcription": "/wʌn/",
       "example": "I have only ___ brother.",
       "imageUrl": "https://images.unsplash.com/photo-1682251002952-051ffa79cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxvbmV8ZW58MXwyfHx8MTc4MTM2ODAwOHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "two",
+      "word": "two",
       "russian": "два",
       "transcription": "/tu/",
       "example": "She has ___ cats at home.",
       "imageUrl": "https://images.unsplash.com/photo-1666879022079-f946f3059497?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0d298ZW58MXwyfHx8MTc4MTM2ODA4OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "three",
+      "word": "three",
       "russian": "три",
       "transcription": "/θri/",
       "example": "There are ___ apples on the table.",
       "imageUrl": "https://images.unsplash.com/photo-1725378048994-8fc3a125d4be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aHJlZXxlbnwxfDJ8fHwxNzgxMzY4MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "four",
+      "word": "four",
       "russian": "четыре",
       "transcription": "/fɔr/",
       "example": "A car has ___ wheels.",
       "imageUrl": "https://images.unsplash.com/photo-1725378048982-61eab077b0c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmb3VyfGVufDF8Mnx8fDE3ODEzNjgyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "five",
+      "word": "five",
       "russian": "пять",
       "transcription": "/faɪv/",
       "example": "I have ___ fingers on each hand.",
       "imageUrl": "https://images.unsplash.com/photo-1725378048978-c0df6b8e80a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXZlfGVufDF8Mnx8fDE3ODEzNjgzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "six",
+      "word": "six",
       "russian": "шесть",
       "transcription": "/sɪks/",
       "example": "The class starts at ___ in the evening.",
       "imageUrl": "https://images.unsplash.com/photo-1725378048943-89f8f71ab4ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaXh8ZW58MXwyfHx8MTc4MTM2ODQxNXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "seven",
+      "word": "seven",
       "russian": "семь",
       "transcription": "/ˈsɛvən/",
       "example": "There are ___ days in a week.",
       "imageUrl": "https://images.unsplash.com/photo-1687842866200-9975ea78eb7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZXZlbnxlbnwxfDJ8fHwxNzgxMzY4NDk3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "eight",
+      "word": "eight",
       "russian": "восемь",
       "transcription": "/eɪt/",
       "example": "A spider has ___ legs.",
       "imageUrl": "https://images.unsplash.com/photo-1725378048990-1fb4795d9a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlaWdodHxlbnwxfDJ8fHwxNzgxMzY4NTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "nine",
+      "word": "nine",
       "russian": "девять",
       "transcription": "/naɪn/",
       "example": "School begins at ___ in the morning.",
       "imageUrl": "https://images.unsplash.com/photo-1635602777522-c1e8e2a6e01b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuaW5lfGVufDF8Mnx8fDE3ODEzNjg2NjB8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "ten",
+      "word": "ten",
       "russian": "десять",
       "transcription": "/tɛn/",
       "example": "I can count from one to ___.",
       "imageUrl": "https://images.unsplash.com/photo-1526391922840-891b87f9af1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZW58ZW58MXwyfHx8MTc4MTM2ODc0Mnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "twenty",
+      "word": "twenty",
       "russian": "двадцать",
       "transcription": "/ˈtwɛnti/",
       "example": "My sister is ___ years old.",
       "imageUrl": "https://images.unsplash.com/photo-1664146705724-b7f296807034?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0d2VudHl8ZW58MXwyfHx8MTc4MTM2ODgyNHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hundred",
+      "word": "hundred",
       "russian": "сто",
       "transcription": "/ˈhʌndrəd/",
       "example": "There are one ___ pages in this book.",
       "imageUrl": "https://images.unsplash.com/photo-1771736007020-4b125e7f4485?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxodW5kcmVkfGVufDF8Mnx8fDE3ODEzNjg5MDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "thousand",
+      "word": "thousand",
       "russian": "тысяча",
       "transcription": "/ˈθaʊzənd/",
       "example": "This old coin costs one ___ dollars.",
       "imageUrl": "https://images.unsplash.com/photo-1630247389974-1020b0019729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aG91c2FuZHxlbnwxfDJ8fHwxNzgxMzY4OTg3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "million",
+      "word": "million",
       "russian": "миллион",
       "transcription": "/ˈmɪljən/",
       "example": "More than one ___ people live in this city.",
       "imageUrl": "https://images.unsplash.com/photo-1585405520800-874e255f354e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaWxsaW9ufGVufDF8Mnx8fDE3ODEzNjkwNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "first",
+      "word": "first",
       "russian": "первый",
       "transcription": "/fɜrst/",
       "example": "Monday is the ___ day of the week.",
       "imageUrl": "https://images.unsplash.com/photo-1682251002952-051ffa79cfd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXJzdHxlbnwxfDJ8fHwxNzgxMzUyODU3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "second",
+      "word": "second",
       "russian": "второй",
       "transcription": "/ˈsɛkənd/",
       "example": "February is the ___ month of the year.",
       "imageUrl": "https://images.unsplash.com/photo-1723186051179-69b1dfe2a1f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWNvbmR8ZW58MXwyfHx8MTc4MTM2OTE1NHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hour",
+      "word": "hour",
       "russian": "час",
       "transcription": "/ˈaʊər/",
       "example": "The movie starts in one ___.",
       "imageUrl": "https://images.unsplash.com/photo-1554378739-200b04da4e8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3VyfGVufDF8Mnx8fDE3ODEyMzg5MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "minute",
+      "word": "minute",
       "russian": "минута",
       "transcription": "/ˈmɪnɪt/",
       "example": "Please wait a ___ for me.",
       "imageUrl": "https://images.unsplash.com/photo-1513544705284-99373737fab6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaW51dGV8ZW58MXwyfHx8MTc4MTIzOTAxMnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "week",
+      "word": "week",
       "russian": "неделя",
       "transcription": "/wik/",
       "example": "We go to the pool twice a ___.",
       "imageUrl": "https://images.unsplash.com/photo-1573247318220-36d3269fbff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3ZWVrfGVufDF8Mnx8fDE3ODEyMzg3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "month",
+      "word": "month",
       "russian": "месяц",
       "transcription": "/mʌnθ/",
       "example": "January is the coldest ___ here.",
       "imageUrl": "https://images.unsplash.com/photo-1692364795244-a5d270d96b78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb250aHxlbnwxfDJ8fHwxNzgxMjM4Njg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "morning",
+      "word": "morning",
       "russian": "утро",
       "transcription": "/ˈmɔrnɪŋ/",
       "example": "I drink tea every ___ before school.",
       "imageUrl": "https://images.unsplash.com/photo-1536851770770-93bc6b39ebb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3JuaW5nfGVufDF8Mnx8fDE3ODEyMzkwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "yesterday",
+      "word": "yesterday",
       "russian": "вчера",
       "transcription": "/ˈjɛstərdeɪ/",
       "example": "We watched a movie ___ evening.",
       "imageUrl": "https://images.unsplash.com/photo-1687585612416-c7e45dbb27d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5ZXN0ZXJkYXl8ZW58MXwyfHx8MTc4MTM0NjE4OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "today",
+      "word": "today",
       "russian": "сегодня",
       "transcription": "/təˈdeɪ/",
       "example": "The weather is sunny ___.",
       "imageUrl": "https://images.unsplash.com/photo-1508848484850-f696c839aabd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b2RheXxlbnwxfDJ8fHwxNzgxMzQ2MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "tomorrow",
+      "word": "tomorrow",
       "russian": "завтра",
       "transcription": "/təˈmɑroʊ/",
       "example": "We will go to the zoo ___.",
       "imageUrl": "https://images.unsplash.com/photo-1606323891902-df2cb7474126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0b21vcnJvd3xlbnwxfDJ8fHwxNzgxMzQ2MTA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "year",
+      "word": "year",
       "russian": "год",
       "transcription": "/jɪr/",
       "example": "Next ___ I will be twelve.",
       "imageUrl": "https://images.unsplash.com/photo-1515261918262-3562685e30ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5ZWFyfGVufDF8Mnx8fDE3ODEyMzg2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "day",
+      "word": "day",
       "russian": "день",
       "transcription": "/deɪ/",
       "example": "Sunday is my favorite ___ of the week.",
       "imageUrl": "https://images.unsplash.com/photo-1676045126308-7c10f6f6e8ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYXl8ZW58MXwyfHx8MTc4MTIzODg1MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "night",
+      "word": "night",
       "russian": "ночь",
       "transcription": "/naɪt/",
       "example": "The stars shine at ___.",
       "imageUrl": "https://images.unsplash.com/photo-1511553677255-ba939e5537e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuaWdodHxlbnwxfDJ8fHwxNzgxMjM5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "evening",
+      "word": "evening",
       "russian": "вечер",
       "transcription": "/ˈivnɪŋ/",
       "example": "We eat dinner together every ___.",
       "imageUrl": "https://images.unsplash.com/photo-1634176866089-b633f4aec882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxldmVuaW5nfGVufDF8Mnx8fDE3ODEyMzkxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "afternoon",
+      "word": "afternoon",
       "russian": "день",
       "transcription": "/ˌæftərˈnun/",
       "example": "I do my homework in the ___ after school.",
       "imageUrl": "https://images.unsplash.com/photo-1707525643387-301c31a1f88d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhZnRlcm5vb258ZW58MXwyfHx8MTc4MTM2OTIzNXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "noon",
+      "word": "noon",
       "russian": "полдень",
       "transcription": "/nun/",
       "example": "We eat lunch at ___ every day.",
       "imageUrl": "https://images.unsplash.com/photo-1572699612695-ed9890518e13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxub29ufGVufDF8Mnx8fDE3ODEzNjkzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "midnight",
+      "word": "midnight",
       "russian": "полночь",
       "transcription": "/ˈmɪdnaɪt/",
       "example": "The new year starts at ___.",
       "imageUrl": "https://images.unsplash.com/photo-1614213813009-556095ce8a9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaWRuaWdodHxlbnwxfDJ8fHwxNzgxMzY5Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "clock",
+      "word": "clock",
       "russian": "часы",
       "transcription": "/klɑk/",
       "example": "The ___ on the wall shows three.",
       "imageUrl": "https://images.unsplash.com/photo-1602162786736-1575a5b1be76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjbG9ja3xlbnwxfDJ8fHwxNzgxMzY5NDc4fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "watch",
+      "word": "watch",
       "russian": "часы",
       "transcription": "/wɑtʃ/",
       "example": "He looks at his ___ before the meeting.",
       "imageUrl": "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YXRjaHxlbnwxfDJ8fHwxNzgxMzM5MDYzfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "calendar",
+      "word": "calendar",
       "russian": "календарь",
       "transcription": "/ˈkæləndər/",
       "example": "I mark my birthday on the ___.",
       "imageUrl": "https://images.unsplash.com/photo-1577950235519-72e271810cb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYWxlbmRhcnxlbnwxfDJ8fHwxNzgxMzY5NTU5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "season",
+      "word": "season",
       "russian": "сезон",
       "transcription": "/ˈsizən/",
       "example": "Summer is my favorite ___ of the year.",
       "imageUrl": "https://images.unsplash.com/photo-1574364492277-dc495176bf18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWFzb258ZW58MXwyfHx8MTc4MTM2OTY0MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "century",
+      "word": "century",
       "russian": "век",
       "transcription": "/ˈsɛntʃəri/",
       "example": "This castle is from the twelfth ___.",
       "imageUrl": "https://images.unsplash.com/photo-1562669602-2d1d940c2140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjZW50dXJ5fGVufDF8Mnx8fDE3ODEzNjk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "moment",
+      "word": "moment",
       "russian": "момент",
       "transcription": "/ˈmoʊmənt/",
       "example": "Wait a ___ — I will open the door.",
       "imageUrl": "https://images.unsplash.com/photo-1763889167811-9fdc12b8bda3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb21lbnR8ZW58MXwyfHx8MTc4MTM2OTgwMnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "early",
+      "word": "early",
       "russian": "рано",
       "transcription": "/ˈɜrli/",
       "example": "I get up ___ on school days.",
       "imageUrl": "https://images.unsplash.com/photo-1719433921012-b6e69200a354?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxlYXJseXxlbnwxfDJ8fHwxNzgxMzUzODMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "late",
+      "word": "late",
       "russian": "поздно",
       "transcription": "/leɪt/",
       "example": "Do not go to bed too ___ tonight.",
       "imageUrl": "https://images.unsplash.com/photo-1725797951173-0b65ce460f08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsYXRlfGVufDF8Mnx8fDE3ODEzNTM5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "now",
+      "word": "now",
       "russian": "сейчас",
       "transcription": "/naʊ/",
       "example": "We must leave ___ or we will miss the bus.",

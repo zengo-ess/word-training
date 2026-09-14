@@ -2,700 +2,700 @@
   "name": "Топ-100 существительных",
   "words": [
     {
-      "english": "time",
+      "word": "time",
       "russian": "время",
       "transcription": "/taɪm/",
       "example": "What ___ is it now?",
       "imageUrl": "https://images.unsplash.com/photo-1554378739-200b04da4e8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aW1lfGVufDF8Mnx8fDE3ODEyMzg1MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "year",
+      "word": "year",
       "russian": "год",
       "transcription": "/jɪr/",
       "example": "Next ___ I will go to London.",
       "imageUrl": "https://images.unsplash.com/photo-1515261918262-3562685e30ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx5ZWFyfGVufDF8Mnx8fDE3ODEyMzg2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "people",
+      "word": "people",
       "russian": "люди",
       "transcription": "/ˈpiːpəl/",
       "example": "Many ___ in my city ride bikes.",
       "imageUrl": "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwZW9wbGV8ZW58MXwyfHx8MTc4MTMzMTc4N3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "way",
+      "word": "way",
       "russian": "путь",
       "transcription": "/weɪ/",
       "example": "Is this the right ___ to the museum?",
       "imageUrl": "https://images.unsplash.com/photo-1691593529510-181b8bad0614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3YXl8ZW58MXwyfHx8MTc4MTM1MDgwMnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "day",
+      "word": "day",
       "russian": "день",
       "transcription": "/deɪ/",
       "example": "Sunday is my favorite ___ of the week.",
       "imageUrl": "https://images.unsplash.com/photo-1676045126308-7c10f6f6e8ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYXl8ZW58MXwyfHx8MTc4MTIzODg1MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "man",
+      "word": "man",
       "russian": "мужчина",
       "transcription": "/mæn/",
       "example": "The old ___ is reading a newspaper.",
       "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtYW58ZW58MXwyfHx8MTc4MTIzOTQ5OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "thing",
+      "word": "thing",
       "russian": "вещь",
       "transcription": "/θɪŋ/",
       "example": "What is this little ___ in your bag?",
       "imageUrl": "https://images.unsplash.com/photo-1698231033094-9a9f5d269d7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0aGluZ3xlbnwxfDJ8fHwxNzgxMzUwODg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "woman",
+      "word": "woman",
       "russian": "женщина",
       "transcription": "/ˈwʊmən/",
       "example": "That ___ is a famous singer.",
       "imageUrl": "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b21hbnxlbnwxfDJ8fHwxNzgxMjM5NTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "life",
+      "word": "life",
       "russian": "жизнь",
       "transcription": "/laɪf/",
       "example": "He has a long and happy ___.",
       "imageUrl": "https://images.unsplash.com/flagged/photo-1595542767876-715090b35fad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsaWZlfGVufDF8Mnx8fDE3ODEyMzk0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "child",
+      "word": "child",
       "russian": "ребёнок",
       "transcription": "/tʃaɪld/",
       "example": "The small ___ is sleeping now.",
       "imageUrl": "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGlsZHxlbnwxfDJ8fHwxNzgxMjM5NjYwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "world",
+      "word": "world",
       "russian": "мир",
       "transcription": "/wɜːrld/",
       "example": "There are many countries in the ___.",
       "imageUrl": "https://images.unsplash.com/photo-1564053489984-317bbd824340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JsZHxlbnwxfDJ8fHwxNzgxMjM5MzM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "school",
+      "word": "school",
       "russian": "школа",
       "transcription": "/skuːl/",
       "example": "I go to ___ every morning.",
       "imageUrl": "https://images.unsplash.com/photo-1471970471555-19d4b113e9ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzY2hvb2x8ZW58MXwyfHx8MTc4MTMzNjg4MXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "family",
+      "word": "family",
       "russian": "семья",
       "transcription": "/ˈfæməli/",
       "example": "My ___ lives in a big house.",
       "imageUrl": "https://images.unsplash.com/photo-1528256507509-cc4facea43f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYW1pbHl8ZW58MXwyfHx8MTc4MTMzMTYyNXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "house",
+      "word": "house",
       "russian": "дом",
       "transcription": "/haʊs/",
       "example": "This is my ___ and my family lives here.",
       "imageUrl": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3VzZXxlbnwxfDJ8fHwxNzgxMzMyMzU0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hand",
+      "word": "hand",
       "russian": "рука",
       "transcription": "/hænd/",
       "example": "He writes with his left ___.",
       "imageUrl": "https://images.unsplash.com/photo-1561570541-aaba21a3ecf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoYW5kfGVufDF8Mnx8fDE3ODEzNTA5NjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "part",
+      "word": "part",
       "russian": "часть",
       "transcription": "/pɑːrt/",
       "example": "The first ___ of the book is boring.",
       "imageUrl": "https://images.unsplash.com/photo-1723299256651-814d70520c01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwYXJ0fGVufDF8Mnx8fDE3ODEzNTEwNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "place",
+      "word": "place",
       "russian": "место",
       "transcription": "/pleɪs/",
       "example": "This cafe is a good ___ to meet.",
       "imageUrl": "https://images.unsplash.com/photo-1740664650740-19f77370fe9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwbGFjZXxlbnwxfDJ8fHwxNzgxMzUxMTI3fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "week",
+      "word": "week",
       "russian": "неделя",
       "transcription": "/wiːk/",
       "example": "There are seven days in a ___.",
       "imageUrl": "https://images.unsplash.com/photo-1573247318220-36d3269fbff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3ZWVrfGVufDF8Mnx8fDE3ODEyMzg3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "work",
+      "word": "work",
       "russian": "работа",
       "transcription": "/wɜːrk/",
       "example": "My dad goes to ___ by bus.",
       "imageUrl": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JrfGVufDF8Mnx8fDE3ODEzNDY2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "eye",
+      "word": "eye",
       "russian": "глаз",
       "transcription": "/aɪ/",
       "example": "She has something in her left ___.",
       "imageUrl": "https://images.unsplash.com/photo-1596697612480-e1b6615aec10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxleWV8ZW58MXwyfHx8MTc4MTM1MTIxM3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "word",
+      "word": "word",
       "russian": "слово",
       "transcription": "/wɜːrd/",
       "example": "I do not know this English ___.",
       "imageUrl": "https://images.unsplash.com/photo-1519531537033-bf085fbfd6da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3b3JkfGVufDF8Mnx8fDE3ODEzMzg0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "side",
+      "word": "side",
       "russian": "сторона",
       "transcription": "/saɪd/",
       "example": "The shop is on the other ___ of the street.",
       "imageUrl": "https://images.unsplash.com/photo-1627999708572-61ef4a097622?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaWRlfGVufDF8Mnx8fDE3ODEzNTEyOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "head",
+      "word": "head",
       "russian": "голова",
       "transcription": "/hɛd/",
       "example": "Put the hat on your ___.",
       "imageUrl": "https://images.unsplash.com/photo-1561910377-c2a014ffd1cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWFkfGVufDF8Mnx8fDE3ODEzMzE5NDh8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "friend",
+      "word": "friend",
       "russian": "друг",
       "transcription": "/frɛnd/",
       "example": "My best ___ lives next door.",
       "imageUrl": "https://images.unsplash.com/photo-1630952588640-0204d5d48021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmcmllbmR8ZW58MXwyfHx8MTc4MTMzMTcwNnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "father",
+      "word": "father",
       "russian": "отец",
       "transcription": "/ˈfɑːðər/",
       "example": "My ___ works in a hospital.",
       "imageUrl": "https://images.unsplash.com/photo-1528256507509-cc4facea43f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYXRoZXJ8ZW58MXwyfHx8MTc4MTMzMjI3M3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "mother",
+      "word": "mother",
       "russian": "мать",
       "transcription": "/ˈmʌðər/",
       "example": "His ___ cooks very tasty food.",
       "imageUrl": "https://images.unsplash.com/photo-1592984235777-4f463a8ef173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3RoZXJ8ZW58MXwyfHx8MTc4MTMzMjE5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "night",
+      "word": "night",
       "russian": "ночь",
       "transcription": "/naɪt/",
       "example": "I sleep eight hours every ___.",
       "imageUrl": "https://images.unsplash.com/photo-1511553677255-ba939e5537e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuaWdodHxlbnwxfDJ8fHwxNzgxMjM5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "water",
+      "word": "water",
       "russian": "вода",
       "transcription": "/ˈwɔːtər/",
       "example": "I drink a glass of ___ every morning.",
       "imageUrl": "https://images.unsplash.com/photo-1553531768-88af16561c0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MXwxfHNlYXJjaHwxfHx3YXRlcnxlbnwxfDJ8fHwxNzgxMzM0NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "room",
+      "word": "room",
       "russian": "комната",
       "transcription": "/ruːm/",
       "example": "My ___ has a big window.",
       "imageUrl": "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyb29tfGVufDF8Mnx8fDE3ODEzMzI1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "story",
+      "word": "story",
       "russian": "рассказ",
       "transcription": "/ˈstɔːri/",
       "example": "Grandma tells me a ___ before bed.",
       "imageUrl": "https://images.unsplash.com/photo-1642715614665-8e5534e7e427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdG9yeXxlbnwxfDJ8fHwxNzgxMzUxMzc4fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "month",
+      "word": "month",
       "russian": "месяц",
       "transcription": "/mʌnθ/",
       "example": "January is the first ___ of the year.",
       "imageUrl": "https://images.unsplash.com/photo-1692364795244-a5d270d96b78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb250aHxlbnwxfDJ8fHwxNzgxMjM4Njg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "book",
+      "word": "book",
       "russian": "книга",
       "transcription": "/bʊk/",
       "example": "I am reading an interesting ___ now.",
       "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxib29rfGVufDF8Mnx8fDE3ODEzMzc0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "job",
+      "word": "job",
       "russian": "работа",
       "transcription": "/dʒɑːb/",
       "example": "She found a new ___ in a bank.",
       "imageUrl": "https://images.unsplash.com/photo-1698077689052-73daf0d5b10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxqb2J8ZW58MXwyfHx8MTc4MTMzNjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "money",
+      "word": "money",
       "russian": "деньги",
       "transcription": "/ˈmʌni/",
       "example": "I need some ___ to buy bread.",
       "imageUrl": "https://images.unsplash.com/photo-1698285439441-06c88e37fc0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb25leXxlbnwxfDJ8fHwxNzgxMzM3NzcwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "name",
+      "word": "name",
       "russian": "имя",
       "transcription": "/neɪm/",
       "example": "My ___ is Anna.",
       "imageUrl": "https://images.unsplash.com/photo-1548104210-6d130801c54a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxuYW1lfGVufDF8Mnx8fDE3ODEzMzE4Njd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "idea",
+      "word": "idea",
       "russian": "идея",
       "transcription": "/aɪˈdiːə/",
       "example": "I have a good ___ for the party.",
       "imageUrl": "https://images.unsplash.com/photo-1606234942951-b10a5b373ff0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxpZGVhfGVufDF8Mnx8fDE3ODEzNTE0NTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "body",
+      "word": "body",
       "russian": "тело",
       "transcription": "/ˈbɑːdi/",
       "example": "Sport is good for your ___.",
       "imageUrl": "https://images.unsplash.com/photo-1561570541-aaba21a3ecf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxib2R5fGVufDF8Mnx8fDE3ODEzNTE1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "country",
+      "word": "country",
       "russian": "страна",
       "transcription": "/ˈkʌntri/",
       "example": "France is a beautiful ___.",
       "imageUrl": "https://images.unsplash.com/photo-1433883669848-fa8a7ce070b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb3VudHJ5fGVufDF8Mnx8fDE3ODEzMzM0ODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "question",
+      "word": "question",
       "russian": "вопрос",
       "transcription": "/ˈkwɛstʃən/",
       "example": "Can I ask you a ___?",
       "imageUrl": "https://images.unsplash.com/photo-1557318041-1ce374d55ebf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxxdWVzdGlvbnxlbnwxfDJ8fHwxNzgxMzM3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "door",
+      "word": "door",
       "russian": "дверь",
       "transcription": "/dɔːr/",
       "example": "Please close the ___ behind you.",
       "imageUrl": "https://images.unsplash.com/photo-1508247687564-2289326346a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkb29yfGVufDF8Mnx8fDE3ODEzMzI1OTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "city",
+      "word": "city",
       "russian": "город",
       "transcription": "/ˈsɪti/",
       "example": "Moscow is a very big ___.",
       "imageUrl": "https://images.unsplash.com/photo-1567320743368-9db24e12ebf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaXR5fGVufDF8Mnx8fDE3ODEzMzM0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "car",
+      "word": "car",
       "russian": "машина",
       "transcription": "/kɑːr/",
       "example": "My father drives a red ___.",
       "imageUrl": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYXJ8ZW58MXwyfHx8MTc4MTMzMzcyOXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "music",
+      "word": "music",
       "russian": "музыка",
       "transcription": "/ˈmjuːzɪk/",
       "example": "I listen to ___ every day.",
       "imageUrl": "https://images.unsplash.com/photo-1524650359799-842906ca1c06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtdXNpY3xlbnwxfDJ8fHwxNzgxMzM4MDkzfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "food",
+      "word": "food",
       "russian": "еда",
       "transcription": "/fuːd/",
       "example": "This restaurant has very tasty ___.",
       "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmb29kfGVufDF8Mnx8fDE3ODEzMzU5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "morning",
+      "word": "morning",
       "russian": "утро",
       "transcription": "/ˈmɔːrnɪŋ/",
       "example": "I drink coffee every ___.",
       "imageUrl": "https://images.unsplash.com/photo-1536851770770-93bc6b39ebb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3JuaW5nfGVufDF8Mnx8fDE3ODEyMzkwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "street",
+      "word": "street",
       "russian": "улица",
       "transcription": "/striːt/",
       "example": "Our school is on this ___.",
       "imageUrl": "https://images.unsplash.com/photo-1552819686-25b0c726045d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdHJlZXR8ZW58MXwyfHx8MTc4MTMzMzU2OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "dog",
+      "word": "dog",
       "russian": "собака",
       "transcription": "/dɔːɡ/",
       "example": "My ___ likes to play with a ball.",
       "imageUrl": "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkb2d8ZW58MXwyfHx8MTc4MTMzNTU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "cat",
+      "word": "cat",
       "russian": "кошка",
       "transcription": "/kæt/",
       "example": "The black ___ sleeps on the sofa.",
       "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MXwyfHx8MTc4MTMzNTY3MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "table",
+      "word": "table",
       "russian": "стол",
       "transcription": "/ˈteɪbəl/",
       "example": "The cup is on the ___.",
       "imageUrl": "https://images.unsplash.com/photo-1565791380713-1756b9a05343?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0YWJsZXxlbnwxfDJ8fHwxNzgxMzMyNzU5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "chair",
+      "word": "chair",
       "russian": "стул",
       "transcription": "/tʃɛr/",
       "example": "Please sit on this ___.",
       "imageUrl": "https://images.unsplash.com/photo-1598300056393-4aac492f4344?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjaGFpcnxlbnwxfDJ8fHwxNzgxMzMyODM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "window",
+      "word": "window",
       "russian": "окно",
       "transcription": "/ˈwɪndoʊ/",
       "example": "Open the ___, it is hot here.",
       "imageUrl": "https://images.unsplash.com/photo-1581342803201-7483d703f2e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx3aW5kb3d8ZW58MXwyfHx8MTc4MTMzMjY3OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "teacher",
+      "word": "teacher",
       "russian": "учитель",
       "transcription": "/ˈtiːtʃər/",
       "example": "Our English ___ is very kind.",
       "imageUrl": "https://images.unsplash.com/photo-1708062831981-ec4742a52d9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyfGVufDF8Mnx8fDE3ODEzMzcxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "student",
+      "word": "student",
       "russian": "студент",
       "transcription": "/ˈstuːdənt/",
       "example": "He is the best ___ in our class.",
       "imageUrl": "https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdHVkZW50fGVufDF8Mnx8fDE3ODEzMzcyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "lesson",
+      "word": "lesson",
       "russian": "урок",
       "transcription": "/ˈlɛsən/",
       "example": "The first ___ starts at nine.",
       "imageUrl": "https://images.unsplash.com/photo-1693829956959-325c0ce55523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZXNzb258ZW58MXwyfHx8MTc4MTM1MTYyMXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "game",
+      "word": "game",
       "russian": "игра",
       "transcription": "/ɡeɪm/",
       "example": "Football is my favorite ___.",
       "imageUrl": "https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnYW1lfGVufDF8Mnx8fDE3ODEzMzgyNTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "animal",
+      "word": "animal",
       "russian": "животное",
       "transcription": "/ˈænəməl/",
       "example": "An elephant is a very big ___.",
       "imageUrl": "https://images.unsplash.com/photo-1497206365907-f5e630693df0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhbmltYWx8ZW58MXwyfHx8MTc4MTMzNTUwOHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "tree",
+      "word": "tree",
       "russian": "дерево",
       "transcription": "/triː/",
       "example": "There is a tall ___ near our house.",
       "imageUrl": "https://images.unsplash.com/photo-1471180625745-944903837c22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0cmVlfGVufDF8Mnx8fDE3ODEzMzQ2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "flower",
+      "word": "flower",
       "russian": "цветок",
       "transcription": "/ˈflaʊər/",
       "example": "A rose is a beautiful ___.",
       "imageUrl": "https://images.unsplash.com/photo-1619650277752-9b853abf815b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmbG93ZXJ8ZW58MXwyfHx8MTc4MTMzNDc4MHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "sun",
+      "word": "sun",
       "russian": "солнце",
       "transcription": "/sʌn/",
       "example": "The ___ shines brightly in summer.",
       "imageUrl": "https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzdW58ZW58MXwyfHx8MTc4MTMzNDg2MXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "moon",
+      "word": "moon",
       "russian": "луна",
       "transcription": "/muːn/",
       "example": "The ___ is very bright tonight.",
       "imageUrl": "https://images.unsplash.com/photo-1490814525860-594e82bfd34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb29ufGVufDF8Mnx8fDE3ODEzNTE3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "sky",
+      "word": "sky",
       "russian": "небо",
       "transcription": "/skaɪ/",
       "example": "The ___ is blue today.",
       "imageUrl": "https://images.unsplash.com/photo-1582170155308-e9dd8f0d271b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxza3l8ZW58MXwyfHx8MTc4MTMzNDk0MXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "sea",
+      "word": "sea",
       "russian": "море",
       "transcription": "/siː/",
       "example": "We swim in the ___ every summer.",
       "imageUrl": "https://images.unsplash.com/photo-1441829266145-6d4bfbd38eb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzZWF8ZW58MXwyfHx8MTc4MTMzNTAyM3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "river",
+      "word": "river",
       "russian": "река",
       "transcription": "/ˈrɪvər/",
       "example": "A long ___ runs through our city.",
       "imageUrl": "https://images.unsplash.com/photo-1533651675684-b4ad9cbe0f32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyaXZlcnxlbnwxfDJ8fHwxNzgxMzM1MTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "mountain",
+      "word": "mountain",
       "russian": "гора",
       "transcription": "/ˈmaʊntən/",
       "example": "Everest is the highest ___ in the world.",
       "imageUrl": "https://images.unsplash.com/photo-1606318621597-c057f7d4926e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtb3VudGFpbnxlbnwxfDJ8fHwxNzgxMzM1MTg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "road",
+      "word": "road",
       "russian": "дорога",
       "transcription": "/roʊd/",
       "example": "This ___ goes to the village.",
       "imageUrl": "https://images.unsplash.com/photo-1515256722043-0f2b082ddadc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxyb2FkfGVufDF8Mnx8fDE3ODEzMzM2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "shop",
+      "word": "shop",
       "russian": "магазин",
       "transcription": "/ʃɑːp/",
       "example": "I buy milk in the ___ near my house.",
       "imageUrl": "https://images.unsplash.com/photo-1570857502809-08184874388e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaG9wfGVufDF8Mnx8fDE3ODEzMzQyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "market",
+      "word": "market",
       "russian": "рынок",
       "transcription": "/ˈmɑːrkɪt/",
       "example": "We buy fruit at the ___ on Sundays.",
       "imageUrl": "https://images.unsplash.com/photo-1444459094717-a39f1e3e0903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtYXJrZXR8ZW58MXwyfHx8MTc4MTMzNDM3NXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hospital",
+      "word": "hospital",
       "russian": "больница",
       "transcription": "/ˈhɑːspɪtəl/",
       "example": "The doctor works in a big ___.",
       "imageUrl": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3NwaXRhbHxlbnwxfDJ8fHwxNzgxMzM3MzY2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "doctor",
+      "word": "doctor",
       "russian": "врач",
       "transcription": "/ˈdɑːktər/",
       "example": "The ___ tells me to drink more water.",
       "imageUrl": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkb2N0b3J8ZW58MXwyfHx8MTc4MTMzNzI4NXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "letter",
+      "word": "letter",
       "russian": "письмо",
       "transcription": "/ˈlɛtər/",
       "example": "I write a ___ to my grandmother.",
       "imageUrl": "https://images.unsplash.com/photo-1567473030492-533b30c5494c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxsZXR0ZXJ8ZW58MXwyfHx8MTc4MTMzNzUyOHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "phone",
+      "word": "phone",
       "russian": "телефон",
       "transcription": "/foʊn/",
       "example": "My ___ is in my pocket.",
       "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwaG9uZXxlbnwxfDJ8fHwxNzgxMzM3ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "computer",
+      "word": "computer",
       "russian": "компьютер",
       "transcription": "/kəmˈpjuːtər/",
       "example": "I play games on my ___.",
       "imageUrl": "https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb21wdXRlcnxlbnwxfDJ8fHwxNzgxMzM3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "picture",
+      "word": "picture",
       "russian": "картина",
       "transcription": "/ˈpɪktʃər/",
       "example": "There is a nice ___ on the wall.",
       "imageUrl": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwaWN0dXJlfGVufDF8Mnx8fDE3ODEzMzgwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "film",
+      "word": "film",
       "russian": "фильм",
       "transcription": "/fɪlm/",
       "example": "We watch a ___ every Friday evening.",
       "imageUrl": "https://images.unsplash.com/photo-1569346276519-709519eeaa51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaWxtfGVufDF8Mnx8fDE3ODEzMzgzMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "song",
+      "word": "song",
       "russian": "песня",
       "transcription": "/sɔːŋ/",
       "example": "She sings a beautiful ___.",
       "imageUrl": "https://images.unsplash.com/photo-1524650359799-842906ca1c06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzb25nfGVufDF8Mnx8fDE3ODEzMzgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "color",
+      "word": "color",
       "russian": "цвет",
       "transcription": "/ˈkʌlər/",
       "example": "Green is my favorite ___.",
       "imageUrl": "https://images.unsplash.com/photo-1464820453369-31d2c0b651af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb2xvcnxlbnwxfDJ8fHwxNzgxMzUxNzg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "number",
+      "word": "number",
       "russian": "число",
       "transcription": "/ˈnʌmbər/",
       "example": "Seven is my lucky ___.",
       "imageUrl": "https://images.unsplash.com/photo-1657560783859-1eec8de461f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxudW1iZXJ8ZW58MXwyfHx8MTc4MTM1MTg2NXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "hour",
+      "word": "hour",
       "russian": "час",
       "transcription": "/ˈaʊər/",
       "example": "I read for an ___ before bed.",
       "imageUrl": "https://images.unsplash.com/photo-1554378739-200b04da4e8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxob3VyfGVufDF8Mnx8fDE3ODEyMzg5MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "minute",
+      "word": "minute",
       "russian": "минута",
       "transcription": "/ˈmɪnɪt/",
       "example": "Wait a ___, please.",
       "imageUrl": "https://images.unsplash.com/photo-1513544705284-99373737fab6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaW51dGV8ZW58MXwyfHx8MTc4MTIzOTAxMnww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "answer",
+      "word": "answer",
       "russian": "ответ",
       "transcription": "/ˈænsər/",
       "example": "I know the right ___ to this question.",
       "imageUrl": "https://images.unsplash.com/photo-1557318041-1ce374d55ebf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhbnN3ZXJ8ZW58MXwyfHx8MTc4MTMzNzY4OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "problem",
+      "word": "problem",
       "russian": "проблема",
       "transcription": "/ˈprɑːbləm/",
       "example": "We have a small ___ with the car.",
       "imageUrl": "https://images.unsplash.com/photo-1652077859695-de2851a95620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwcm9ibGVtfGVufDF8Mnx8fDE3ODEzNTE5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "person",
+      "word": "person",
       "russian": "человек",
       "transcription": "/ˈpɜːrsən/",
       "example": "She is a very kind ___.",
       "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwZXJzb258ZW58MXwyfHx8MTc4MTM1MjAzNHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "group",
+      "word": "group",
       "russian": "группа",
       "transcription": "/ɡruːp/",
       "example": "A ___ of children plays in the yard.",
       "imageUrl": "https://images.unsplash.com/photo-1598986119545-ea2701477e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxncm91cHxlbnwxfDJ8fHwxNzgxMzUyMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "company",
+      "word": "company",
       "russian": "компания",
       "transcription": "/ˈkʌmpəni/",
       "example": "My mother works for a big ___.",
       "imageUrl": "https://images.unsplash.com/photo-1481026469463-66327c86e544?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxjb21wYW55fGVufDF8Mnx8fDE3ODEzNTIyMDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "team",
+      "word": "team",
       "russian": "команда",
       "transcription": "/tiːm/",
       "example": "Our ___ wins the game.",
       "imageUrl": "https://images.unsplash.com/photo-1595589943370-3d84c8f54c98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx0ZWFtfGVufDF8Mnx8fDE3ODEzNTIyODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "parent",
+      "word": "parent",
       "russian": "родитель",
       "transcription": "/ˈpɛrənt/",
       "example": "Each ___ comes to the school meeting.",
       "imageUrl": "https://images.unsplash.com/photo-1528256507509-cc4facea43f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxwYXJlbnR8ZW58MXwyfHx8MTc4MTM1MjM2OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "brother",
+      "word": "brother",
       "russian": "брат",
       "transcription": "/ˈbrʌðər/",
       "example": "My little ___ is five years old.",
       "imageUrl": "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicm90aGVyfGVufDF8Mnx8fDE3ODEzMzIwMjl8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "sister",
+      "word": "sister",
       "russian": "сестра",
       "transcription": "/ˈsɪstər/",
       "example": "His ___ studies at university.",
       "imageUrl": "https://images.unsplash.com/photo-1565963925128-eebd45213b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzaXN0ZXJ8ZW58MXwyfHx8MTc4MTMzMjExMXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "son",
+      "word": "son",
       "russian": "сын",
       "transcription": "/sʌn/",
       "example": "Their ___ plays the piano very well.",
       "imageUrl": "https://images.unsplash.com/photo-1696695071061-193f90d7089a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxzb258ZW58MXwyfHx8MTc4MTM1MjQ0OXww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "daughter",
+      "word": "daughter",
       "russian": "дочь",
       "transcription": "/ˈdɔːtər/",
       "example": "Her ___ goes to kindergarten.",
       "imageUrl": "https://images.unsplash.com/photo-1528256507509-cc4facea43f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxkYXVnaHRlcnxlbnwxfDJ8fHwxNzgxMzUyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "heart",
+      "word": "heart",
       "russian": "сердце",
       "transcription": "/hɑːrt/",
       "example": "Running is good for your ___.",
       "imageUrl": "https://images.unsplash.com/photo-1543121955-8dfb9e9e255f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxoZWFydHxlbnwxfDJ8fHwxNzgxMzUyNjExfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "face",
+      "word": "face",
       "russian": "лицо",
       "transcription": "/feɪs/",
       "example": "Wash your ___ every morning.",
       "imageUrl": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmYWNlfGVufDF8Mnx8fDE3ODEzNTI2OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "voice",
+      "word": "voice",
       "russian": "голос",
       "transcription": "/vɔɪs/",
       "example": "The singer has a beautiful ___.",
       "imageUrl": "https://images.unsplash.com/photo-1570372387537-9d517516277b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHx2b2ljZXxlbnwxfDJ8fHwxNzgxMzUyNzc2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "bird",
+      "word": "bird",
       "russian": "птица",
       "transcription": "/bɜːrd/",
       "example": "A small ___ sings in the tree.",
       "imageUrl": "https://images.unsplash.com/photo-1539664030485-a936c7d29c6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxiaXJkfGVufDF8Mnx8fDE3ODEzMzU3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "fish",
+      "word": "fish",
       "russian": "рыба",
       "transcription": "/fɪʃ/",
       "example": "There is a big ___ in the lake.",
       "imageUrl": "https://images.unsplash.com/photo-1495594059084-33752639b9c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxmaXNofGVufDF8Mnx8fDE3ODEzMzU4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "bread",
+      "word": "bread",
       "russian": "хлеб",
       "transcription": "/brɛd/",
       "example": "I buy fresh ___ every morning.",
       "imageUrl": "https://images.unsplash.com/photo-1691480162735-9b91238080f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxicmVhZHxlbnwxfDJ8fHwxNzgxMzM1OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "milk",
+      "word": "milk",
       "russian": "молоко",
       "transcription": "/mɪlk/",
       "example": "The cat drinks ___ from a bowl.",
       "imageUrl": "https://images.unsplash.com/photo-1523473827533-2a64d0d36748?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxtaWxrfGVufDF8Mnx8fDE3ODEzMzYwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "apple",
+      "word": "apple",
       "russian": "яблоко",
       "transcription": "/ˈæpəl/",
       "example": "I eat an ___ every day.",
       "imageUrl": "https://images.unsplash.com/photo-1678942946279-c83e37f32304?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxhcHBsZXxlbnwxfDJ8fHwxNzgxMzM2MzE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "garden",
+      "word": "garden",
       "russian": "сад",
       "transcription": "/ˈɡɑːrdən/",
       "example": "Flowers grow in our ___.",
       "imageUrl": "https://images.unsplash.com/photo-1615226871993-119e6b6ae9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTgwNzR8MHwxfHNlYXJjaHwxfHxnYXJkZW58ZW58MXwyfHx8MTc4MTMzMzA4M3ww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      "english": "bed",
+      "word": "bed",
       "russian": "кровать",
       "transcription": "/bɛd/",
       "example": "I go to ___ at ten o'clock.",
