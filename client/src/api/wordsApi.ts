@@ -3,24 +3,28 @@ import { getToken } from "../auth/token";
 import type { Word } from "./types";
 
 export interface WordDraft {
-  english: string;
-  russian: string;
+  foreignWord: string;
+  nativeWord: string;
   imageUrl: string | null;
   imageCandidates: string[];
 }
 
-export async function lookupWord(english: string, fetchFn: typeof fetch = fetch): Promise<WordDraft> {
+export async function lookupWord(
+  foreignWord: string,
+  language: string,
+  fetchFn: typeof fetch = fetch,
+): Promise<WordDraft> {
   return apiRequest<WordDraft>(
     "/api/words/lookup",
-    { method: "POST", body: { english }, token: getToken() },
+    { method: "POST", body: { foreignWord, language }, token: getToken() },
     fetchFn,
   );
 }
 
 export interface NewWordInput {
   deckId: string;
-  english: string;
-  russian: string;
+  foreignWord: string;
+  nativeWord: string;
   imageUrl: string | null;
 }
 

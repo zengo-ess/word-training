@@ -2,6 +2,7 @@ export interface Deck {
   id: string;
   name: string;
   is_builtin: number;
+  language: string;
   created_at: string;
   total: number;
   learned: number;
@@ -10,8 +11,8 @@ export interface Deck {
 export interface Word {
   id: string;
   deck_id: string;
-  english: string;
-  russian: string;
+  foreign_word: string;
+  native_word: string;
   transcription: string | null;
   example_sentence: string | null;
   image_url: string | null;

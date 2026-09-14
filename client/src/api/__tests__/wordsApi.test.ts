@@ -21,21 +21,22 @@ beforeEach(() => {
 });
 
 describe("wordsApi", () => {
-  it("lookupWord постит слово и возвращает черновик", async () => {
+  it("lookupWord постит слово и язык, возвращает черновик", async () => {
     const captured: { value?: Captured } = {};
     const draft = await lookupWord(
       "apple",
-      mockFetch({ english: "apple", russian: "яблоко", imageUrl: "u", imageCandidates: ["u"] }, captured),
+      "en",
+      mockFetch({ foreignWord: "apple", nativeWord: "яблоко", imageUrl: "u", imageCandidates: ["u"] }, captured),
     );
-    expect(draft.russian).toBe("яблоко");
+    expect(draft.nativeWord).toBe("яблоко");
     expect(captured.value?.url).toBe("/api/words/lookup");
-    expect(captured.value?.init.body).toBe(JSON.stringify({ english: "apple" }));
+    expect(captured.value?.init.body).toBe(JSON.stringify({ foreignWord: "apple", language: "en" }));
   });
 
   it("createWord постит слово и возвращает его", async () => {
     const word = await createWord(
-      { deckId: "d1", english: "apple", russian: "яблоко", imageUrl: null },
-      mockFetch({ word: { id: "w1", deck_id: "d1", english: "apple", russian: "яблоко" } }),
+      { deckId: "d1", foreignWord: "apple", nativeWord: "яблоко", imageUrl: null },
+      mockFetch({ word: { id: "w1", deck_id: "d1", foreign_word: "apple", native_word: "яблоко" } }),
     );
     expect(word.id).toBe("w1");
   });

@@ -4,6 +4,7 @@ const USER_KEY = "wt_user";
 export interface StoredUser {
   id: string;
   name: string;
+  language: string;
 }
 
 export function getToken(): string | null {
