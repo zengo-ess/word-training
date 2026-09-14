@@ -1,5 +1,5 @@
-export function buildTranslateUrl(text: string): string {
-  const params = new URLSearchParams({ q: text, langpair: "en|ru" });
+export function buildTranslateUrl(text: string, sourceLang: string): string {
+  const params = new URLSearchParams({ q: text, langpair: `${sourceLang}|ru` });
   return `https://api.mymemory.translated.net/get?${params.toString()}`;
 }
 
@@ -14,9 +14,10 @@ export function parseTranslation(json: unknown): string {
 
 export async function translateToRussian(
   text: string,
+  sourceLang: string,
   fetchFn: typeof fetch = fetch,
 ): Promise<string> {
-  const response = await fetchFn(buildTranslateUrl(text));
+  const response = await fetchFn(buildTranslateUrl(text, sourceLang));
   if (!response.ok) {
     return "";
   }

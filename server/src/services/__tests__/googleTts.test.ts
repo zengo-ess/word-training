@@ -19,11 +19,16 @@ describe("buildTtsUrl", () => {
 });
 
 describe("buildTtsBody", () => {
-  it("задаёт текст, английский голос и MP3", () => {
-    const body = buildTtsBody("cat");
+  it("задаёт текст, переданный код языка и MP3", () => {
+    const body = buildTtsBody("cat", "en-US");
     expect(body.input.text).toBe("cat");
     expect(body.voice.languageCode).toBe("en-US");
     expect(body.audioConfig.audioEncoding).toBe("MP3");
+  });
+
+  it("поддерживает немецкий код языка", () => {
+    const body = buildTtsBody("Katze", "de-DE");
+    expect(body.voice.languageCode).toBe("de-DE");
   });
 });
 
@@ -43,7 +48,7 @@ describe("synthesizeMp3", () => {
   it("возвращает Buffer при успешном ответе", async () => {
     const b64 = Buffer.from("mp3bytes").toString("base64");
     const fetchFn = mockFetch({ ok: true, body: { audioContent: b64 } });
-    const result = await synthesizeMp3("cat", "KEY", fetchFn);
+    const result = await synthesizeMp3("cat", "en-US", "KEY", fetchFn);
     expect(result?.toString()).toBe("mp3bytes");
   });
 
@@ -53,12 +58,12 @@ describe("synthesizeMp3", () => {
       called = true;
       return { ok: true, json: async () => ({}) };
     }) as unknown as typeof fetch;
-    expect(await synthesizeMp3("cat", "", fetchFn)).toBeNull();
+    expect(await synthesizeMp3("cat", "en-US", "", fetchFn)).toBeNull();
     expect(called).toBe(false);
   });
 
   it("возвращает null при не-ok ответе", async () => {
     const fetchFn = mockFetch({ ok: false });
-    expect(await synthesizeMp3("cat", "KEY", fetchFn)).toBeNull();
+    expect(await synthesizeMp3("cat", "en-US", "KEY", fetchFn)).toBeNull();
   });
 });

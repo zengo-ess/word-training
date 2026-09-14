@@ -8,10 +8,10 @@ export interface TtsBody {
   audioConfig: { audioEncoding: string };
 }
 
-export function buildTtsBody(text: string): TtsBody {
+export function buildTtsBody(text: string, languageCode: string): TtsBody {
   return {
     input: { text },
-    voice: { languageCode: "en-US", ssmlGender: "NEUTRAL" },
+    voice: { languageCode, ssmlGender: "NEUTRAL" },
     audioConfig: { audioEncoding: "MP3" },
   };
 }
@@ -30,6 +30,7 @@ export function parseTtsAudio(json: unknown): Buffer | null {
 
 export async function synthesizeMp3(
   text: string,
+  languageCode: string,
   apiKey: string,
   fetchFn: typeof fetch = fetch,
 ): Promise<Buffer | null> {
@@ -39,7 +40,7 @@ export async function synthesizeMp3(
   const response = await fetchFn(buildTtsUrl(apiKey), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(buildTtsBody(text)),
+    body: JSON.stringify(buildTtsBody(text, languageCode)),
   });
   if (!response.ok) {
     return null;
