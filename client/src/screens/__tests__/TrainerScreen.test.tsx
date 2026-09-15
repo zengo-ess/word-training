@@ -19,8 +19,9 @@ vi.mock("../../screens/trainer/trainerLogic", async (importOriginal) => {
   };
 });
 
+let mockLanguage = "en";
 vi.mock("../../auth/AuthContext", () => ({
-  useAuth: () => ({ user: { id: "u1", name: "Тестер", language: "en" } }),
+  useAuth: () => ({ user: { id: "u1", name: "Тестер", language: mockLanguage } }),
 }));
 
 const playWordMock = vi.fn();
@@ -54,6 +55,7 @@ const POOL: Word[] = [
 beforeEach(() => {
   postResultMock.mockReset();
   postResultMock.mockResolvedValue({ progress: {} });
+  mockLanguage = "en";
   vi.useFakeTimers({ shouldAdvanceTime: true });
 });
 
@@ -87,5 +89,28 @@ describe("TrainerScreen", () => {
   it("показывает экран завершения для пустого батча", () => {
     render(<TrainerScreen batch={[]} onClose={vi.fn()} onDone={vi.fn()} />);
     expect(screen.getByText(/Батч выучен/i)).toBeInTheDocument();
+  });
+
+  it("клик по шагу переключает режим вручную, не дожидаясь прохождения предыдущего", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    render(<TrainerScreen batch={POOL} onClose={vi.fn()} onDone={vi.fn()} />);
+    expect(screen.getByText("Перевод EN→RU")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Режим: Собери из букв" }));
+
+    expect(screen.getByText("Собери из букв")).toBeInTheDocument();
+    expect(screen.getByText("Соберите слово из букв")).toBeInTheDocument();
+  });
+
+  it("для немецкого профиля названия режимов и текст перевода используют DE/немецкий", async () => {
+    mockLanguage = "de";
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    render(<TrainerScreen batch={POOL} onClose={vi.fn()} onDone={vi.fn()} />);
+    expect(screen.getByText("Перевод DE→RU")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Режим: Перевод RU→DE" }));
+
+    expect(screen.getByText("Перевод RU→DE")).toBeInTheDocument();
+    expect(screen.getByText("Переведите на немецкий")).toBeInTheDocument();
   });
 });

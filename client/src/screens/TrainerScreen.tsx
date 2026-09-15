@@ -10,13 +10,19 @@ import { hueFromString, playWord } from "../lib/wordVisual";
 import { useAuth } from "../auth/AuthContext";
 import type { Word } from "../api/types";
 
-const EX_NAMES: Record<number, string> = {
-  1: "Перевод EN→RU",
-  2: "Перевод RU→EN",
-  3: "Вставь пропуск",
-  4: "Собери из букв",
-  5: "Аудио",
-};
+const LANG_CODE: Record<string, string> = { en: "EN", de: "DE" };
+const LANG_NAME_ACCUSATIVE: Record<string, string> = { en: "английский", de: "немецкий" };
+
+function exerciseNames(language: string): Record<number, string> {
+  const code = LANG_CODE[language] ?? "EN";
+  return {
+    1: `Перевод ${code}→RU`,
+    2: `Перевод RU→${code}`,
+    3: "Вставь пропуск",
+    4: "Собери из букв",
+    5: "Аудио",
+  };
+}
 
 function SegBar({ total, done }: { total: number; done: number }) {
   return (
@@ -530,7 +536,7 @@ export function Exercise({
               marginBottom: 10,
             }}
           >
-            Переведите на английский
+            Переведите на {LANG_NAME_ACCUSATIVE[language] ?? "английский"}
           </div>
           <h2
             style={{ fontFamily: "var(--font-display)", fontSize: 34, fontWeight: 700, color: "var(--ink)", margin: 0 }}
@@ -592,6 +598,8 @@ interface Props {
 }
 
 export function TrainerScreen({ batch, onClose, onDone }: Props) {
+  const { user } = useAuth();
+  const language = user?.language ?? "en";
   const byId = useMemo(() => Object.fromEntries(batch.map((w) => [w.id, w])), [batch]);
 
   const [layer, setLayer] = useState(1);
@@ -621,6 +629,13 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
     }
     void Promise.all(batch.map((w) => postTrainingResult(w.id, "learned"))).then(onDone);
     setDone(true);
+  }
+
+  // Ручной переход к режиму по клику на шаг — в отличие от enterLayer(layer + 1)
+  // после серии верных ответов, здесь можно прыгнуть на любой шаг в любой момент.
+  function goToLayer(t: number) {
+    setAnswered(null);
+    enterLayer(t);
   }
 
   function handleResult(correct: boolean) {
@@ -685,7 +700,15 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
             const active = t === layer;
             const doneL = t < layer;
             return (
-              <div key={t} style={{ flex: 1 }}>
+              <button
+                key={t}
+                type="button"
+                className="btn-press"
+                aria-label={`Режим: ${exerciseNames(language)[t]}`}
+                aria-pressed={active}
+                onClick={() => goToLayer(t)}
+                style={{ flex: 1, border: "none", background: "transparent", padding: 0, cursor: "pointer" }}
+              >
                 <div
                   style={{
                     height: 32,
@@ -711,12 +734,12 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
                     <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700 }}>{t}</span>
                   )}
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
         <div style={{ textAlign: "center", fontSize: 12.5, fontWeight: 700, color: "var(--ink-mute)", marginTop: 6 }}>
-          {EX_NAMES[layer]}
+          {exerciseNames(language)[layer]}
         </div>
       </div>
 
