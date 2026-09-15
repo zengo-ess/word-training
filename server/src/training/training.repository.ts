@@ -21,6 +21,7 @@ export function listLearnableWords(
   userId: string,
   limit: number,
   language: string,
+  deckId?: string,
 ): LearnableWord[] {
   const rows = db
     .prepare(
@@ -30,10 +31,11 @@ export function listLearnableWords(
        LEFT JOIN progress p ON p.word_id = w.id AND p.user_id = ?
        WHERE (d.is_builtin = 1 OR d.user_id = ?) AND d.language = ?
          AND (p.id IS NULL OR p.learned_at IS NULL)
+         AND (? IS NULL OR w.deck_id = ?)
        ORDER BY w.created_at ASC
        LIMIT ?`,
     )
-    .all(userId, userId, language, limit) as LearnableRow[];
+    .all(userId, userId, language, deckId ?? null, deckId ?? null, limit) as LearnableRow[];
 
   return rows.map((row) => {
     const { p_current_type, ...word } = row;
@@ -66,6 +68,7 @@ export function listDueReviews(
   userId: string,
   nowIso: string,
   language: string,
+  deckId?: string,
 ): DueReview[] {
   const rows = db
     .prepare(
@@ -78,9 +81,10 @@ export function listDueReviews(
        JOIN words w ON w.id = p.word_id
        JOIN decks d ON d.id = w.deck_id
        WHERE p.user_id = ? AND p.learned_at IS NOT NULL AND p.next_review_at <= ? AND d.language = ?
+         AND (? IS NULL OR w.deck_id = ?)
        ORDER BY p.next_review_at ASC`,
     )
-    .all(userId, nowIso, language) as DueRow[];
+    .all(userId, nowIso, language, deckId ?? null, deckId ?? null) as DueRow[];
 
   return rows.map((r) => ({
     word: {

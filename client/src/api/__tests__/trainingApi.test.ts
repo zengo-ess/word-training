@@ -31,11 +31,24 @@ beforeEach(() => {
 describe("trainingApi", () => {
   it("fetchTodayTraining возвращает newWords и reviewWords", async () => {
     const result = await fetchTodayTraining(
+      undefined,
       mockFetch({ newWords: [{ word: WORD, currentType: 1 }], reviewWords: [] }),
     );
     expect(result.newWords).toHaveLength(1);
     expect(result.newWords[0].word.foreign_word).toBe("apple");
     expect(result.reviewWords).toHaveLength(0);
+  });
+
+  it("fetchTodayTraining без deckId не добавляет query-параметр", async () => {
+    const { captured, fn } = captureFetch({ newWords: [], reviewWords: [] });
+    await fetchTodayTraining(undefined, fn);
+    expect(captured.url).toBe("/api/training/today");
+  });
+
+  it("fetchTodayTraining с deckId ограничивает запрос одной колодой", async () => {
+    const { captured, fn } = captureFetch({ newWords: [], reviewWords: [] });
+    await fetchTodayTraining("d1", fn);
+    expect(captured.url).toBe("/api/training/today?deckId=d1");
   });
 
   it("postTrainingResult шлёт learned с нужным телом", async () => {

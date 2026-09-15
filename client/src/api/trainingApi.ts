@@ -17,8 +17,9 @@ export interface TodayTraining {
   reviewWords: DueReview[];
 }
 
-export async function fetchTodayTraining(fetchFn: typeof fetch = fetch): Promise<TodayTraining> {
-  return apiRequest<TodayTraining>("/api/training/today", { token: getToken() }, fetchFn);
+export async function fetchTodayTraining(deckId?: string, fetchFn: typeof fetch = fetch): Promise<TodayTraining> {
+  const query = deckId ? `?deckId=${encodeURIComponent(deckId)}` : "";
+  return apiRequest<TodayTraining>(`/api/training/today${query}`, { token: getToken() }, fetchFn);
 }
 
 export async function postTrainingResult(

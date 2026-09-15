@@ -27,16 +27,16 @@ export function AppShell() {
   const back = () => setStack((s) => s.slice(0, -1));
   const openDeck = (deck: Deck) => setStack((s) => [...s, { type: "deck", deck }]);
 
-  const openTrainer = () => {
-    void fetchTodayTraining().then(({ newWords }) => {
+  const openTrainer = (deckId?: string) => {
+    void fetchTodayTraining(deckId).then(({ newWords }) => {
       if (newWords.length > 0) {
         setTrainerWords(newWords.map((lw) => lw.word));
       }
     });
   };
 
-  const openReview = () => {
-    void fetchTodayTraining().then(({ reviewWords: due }) => {
+  const openReview = (deckId?: string) => {
+    void fetchTodayTraining(deckId).then(({ reviewWords: due }) => {
       if (due.length > 0) {
         setReviewWords(due.map((r) => r.word));
       }
@@ -75,8 +75,8 @@ export function AppShell() {
           onBack={back}
           onWord={(w) => setSheetWord(w)}
           onAddWord={() => setStack((s) => [...s, { type: "add", deckId: top.deck.id }])}
-          onLearn={openTrainer}
-          onReview={openReview}
+          onLearn={() => openTrainer(top.deck.id)}
+          onReview={() => openReview(top.deck.id)}
         />
       ) : null}
 

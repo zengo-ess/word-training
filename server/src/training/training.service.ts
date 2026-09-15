@@ -19,10 +19,11 @@ export function getTodayTraining(
   now: Date,
   language: string,
   batchSize = 20,
+  deckId?: string,
 ): TrainingToday {
   return {
-    newWords: listLearnableWords(db, userId, batchSize, language),
-    reviewWords: listDueReviews(db, userId, now.toISOString(), language),
+    newWords: listLearnableWords(db, userId, batchSize, language, deckId),
+    reviewWords: listDueReviews(db, userId, now.toISOString(), language, deckId),
   };
 }
 

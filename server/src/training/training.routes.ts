@@ -18,7 +18,15 @@ export function createTrainingRouter(db: Database.Database): Router {
   router.get("/today", (req: AuthedRequest, res) => {
     const userId = req.userId as string;
     const language = getUser(db, userId)?.language ?? "en";
-    res.json(getTodayTraining(db, userId, new Date(), language));
+    const deckId = typeof req.query.deckId === "string" ? req.query.deckId : undefined;
+    if (deckId !== undefined) {
+      const deck = getDeck(db, deckId);
+      if (!deck || !canAccessDeck(deck, userId)) {
+        res.status(404).json({ error: "Колода не найдена" });
+        return;
+      }
+    }
+    res.json(getTodayTraining(db, userId, new Date(), language, 20, deckId));
   });
 
   router.post("/result", (req: AuthedRequest, res) => {

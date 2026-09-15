@@ -61,6 +61,16 @@ describe("listLearnableWords", () => {
     expect(listLearnableWords(db, userId, 20, "de")).toHaveLength(1);
     expect(listLearnableWords(db, userId, 20, "de")[0].word.foreign_word).toBe("Katze");
   });
+
+  it("с deckId отдаёт слова только из этой колоды, даже если другая создана раньше", () => {
+    createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" });
+    const otherDeckId = createDeck(db, "Другая", userId, "en").id;
+    createWord(db, { deckId: otherDeckId, foreignWord: "dog", nativeWord: "собака" });
+
+    const list = listLearnableWords(db, userId, 20, "en", otherDeckId);
+    expect(list).toHaveLength(1);
+    expect(list[0].word.foreign_word).toBe("dog");
+  });
 });
 
 describe("listDueReviews", () => {
@@ -102,5 +112,25 @@ describe("listDueReviews", () => {
       nextReviewAt: "2026-06-02T12:00:00.000Z",
     });
     expect(listDueReviews(db, userId, "2026-06-05T12:00:00.000Z", "de")).toHaveLength(0);
+  });
+
+  it("с deckId отдаёт повторения только из этой колоды", () => {
+    const id1 = createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот" }).id;
+    upsertProgress(db, userId, id1, {
+      currentType: null,
+      learnedAt: "2026-06-01T12:00:00.000Z",
+      nextReviewAt: "2026-06-02T12:00:00.000Z",
+    });
+    const otherDeckId = createDeck(db, "Другая", userId, "en").id;
+    const id2 = createWord(db, { deckId: otherDeckId, foreignWord: "dog", nativeWord: "собака" }).id;
+    upsertProgress(db, userId, id2, {
+      currentType: null,
+      learnedAt: "2026-06-01T12:00:00.000Z",
+      nextReviewAt: "2026-06-02T12:00:00.000Z",
+    });
+
+    const due = listDueReviews(db, userId, "2026-06-05T12:00:00.000Z", "en", otherDeckId);
+    expect(due).toHaveLength(1);
+    expect(due[0].word.foreign_word).toBe("dog");
   });
 });
