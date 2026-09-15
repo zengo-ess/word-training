@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { lookupWord, createWord, searchImages, uploadImage, deleteWord } from "../wordsApi";
+import { lookupWord, createWord, searchImages, uploadImage, deleteWord, updateWord } from "../wordsApi";
 
 interface Captured {
   url: string;
@@ -58,6 +58,21 @@ describe("wordsApi", () => {
     expect(captured.value?.init.body).toBe(file);
     expect((captured.value?.init.headers as Record<string, string>)["Content-Type"]).toBe("image/png");
     expect((captured.value?.init.headers as Record<string, string>).Authorization).toBe("Bearer T");
+  });
+
+  it("updateWord шлёт PUT с изменёнными полями", async () => {
+    const captured: { value?: Captured } = {};
+    const word = await updateWord(
+      "w1",
+      { foreignWord: "apple", nativeWord: "яблочко", imageUrl: null, transcription: "/ˈæpəl/" },
+      mockFetch({ word: { id: "w1", deck_id: "d1", foreign_word: "apple", native_word: "яблочко" } }, captured),
+    );
+    expect(word.native_word).toBe("яблочко");
+    expect(captured.value?.url).toBe("/api/words/w1");
+    expect(captured.value?.init.method).toBe("PUT");
+    expect(captured.value?.init.body).toBe(
+      JSON.stringify({ foreignWord: "apple", nativeWord: "яблочко", imageUrl: null, transcription: "/ˈæpəl/" }),
+    );
   });
 
   it("deleteWord шлёт DELETE с токеном на нужный адрес", async () => {

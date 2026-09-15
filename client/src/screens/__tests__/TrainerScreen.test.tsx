@@ -23,6 +23,15 @@ vi.mock("../../auth/AuthContext", () => ({
   useAuth: () => ({ user: { id: "u1", name: "Тестер", language: "en" } }),
 }));
 
+const playWordMock = vi.fn();
+vi.mock("../../lib/wordVisual", async (importOriginal) => {
+  const real = await importOriginal<typeof import("../../lib/wordVisual")>();
+  return {
+    ...real,
+    playWord: (...args: unknown[]) => playWordMock(...args),
+  };
+});
+
 const WORD: Word = {
   id: "w1",
   deck_id: "d1",
@@ -65,6 +74,14 @@ describe("TrainerScreen", () => {
     render(<TrainerScreen batch={POOL} onClose={onClose} onDone={vi.fn()} />);
     await user.click(screen.getByRole("button", { name: /закрыть/i }));
     expect(onClose).toHaveBeenCalledOnce();
+  });
+
+  it("кнопка озвучки на фазе перевода вызывает playWord", async () => {
+    playWordMock.mockReset();
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    render(<TrainerScreen batch={POOL} onClose={vi.fn()} onDone={vi.fn()} />);
+    await user.click(screen.getByRole("button", { name: "Озвучить" }));
+    expect(playWordMock).toHaveBeenCalledWith(expect.objectContaining({ foreign_word: "apple" }), "en");
   });
 
   it("показывает экран завершения для пустого батча", () => {

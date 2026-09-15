@@ -14,9 +14,10 @@ interface Props {
   word: WordWithProgress;
   onClose: () => void;
   onDelete?: () => void;
+  onEdit?: () => void;
 }
 
-export function WordSheet({ word, onClose, onDelete }: Props) {
+export function WordSheet({ word, onClose, onDelete, onEdit }: Props) {
   const { user } = useAuth();
   const language = user?.language ?? "en";
   const learned = word.progress?.learned_at != null;
@@ -44,9 +45,10 @@ export function WordSheet({ word, onClose, onDelete }: Props) {
         style={{ width: "100%", background: "var(--bg)", borderRadius: "28px 28px 0 0", padding: "12px 18px 30px", maxHeight: "86%", overflowY: "auto" }}
       >
         <div style={{ width: 40, height: 5, borderRadius: 99, background: "var(--line-strong)", margin: "0 auto 16px" }} />
-        {onDelete ? (
-          <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 4 }}>
-            <IconBtn name="trash" aria-label="Удалить слово" variant="ghost" onClick={handleDelete} />
+        {onEdit || onDelete ? (
+          <div style={{ display: "flex", justifyContent: "flex-end", gap: 6, marginBottom: 4 }}>
+            {onEdit ? <IconBtn name="edit" aria-label="Изменить слово" variant="ghost" onClick={onEdit} /> : null}
+            {onDelete ? <IconBtn name="trash" aria-label="Удалить слово" variant="ghost" onClick={handleDelete} /> : null}
           </div>
         ) : null}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
@@ -81,7 +83,7 @@ export function WordSheet({ word, onClose, onDelete }: Props) {
           <Card pad={14} style={{ marginBottom: 14, display: "flex", alignItems: "center", gap: 10 }}>
             <Icon name="sparkles" size={18} color="var(--ink-mute)" stroke={2} />
             <span style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-mute)" }}>
-              У своих слов пример и транскрипция не заполняются автоматически
+              У своих слов пример предложения не заполняется автоматически
             </span>
           </Card>
         )}

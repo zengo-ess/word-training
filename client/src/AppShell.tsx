@@ -7,6 +7,7 @@ import { ProfileScreen } from "./screens/ProfileScreen";
 import { DeckDetailScreen } from "./screens/DeckDetailScreen";
 import { WordSheet } from "./screens/WordSheet";
 import { AddWordScreen } from "./screens/AddWordScreen";
+import { EditWordScreen } from "./screens/EditWordScreen";
 import { TrainerScreen } from "./screens/TrainerScreen";
 import { ReviewScreen } from "./screens/ReviewScreen";
 import { fetchTodayTraining } from "./api/trainingApi";
@@ -19,6 +20,7 @@ export function AppShell() {
   const [tab, setTab] = useState<Tab>("home");
   const [stack, setStack] = useState<Overlay[]>([]);
   const [sheetWord, setSheetWord] = useState<WordWithProgress | null>(null);
+  const [editingWord, setEditingWord] = useState<WordWithProgress | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
   const [trainerWords, setTrainerWords] = useState<Word[] | null>(null);
   const [reviewWords, setReviewWords] = useState<Word[] | null>(null);
@@ -127,6 +129,25 @@ export function AppShell() {
                 }
               : undefined
           }
+          onEdit={
+            top?.type === "deck" && top.deck.is_builtin !== 1
+              ? () => {
+                  setEditingWord(sheetWord);
+                  setSheetWord(null);
+                }
+              : undefined
+          }
+        />
+      ) : null}
+
+      {editingWord ? (
+        <EditWordScreen
+          word={editingWord}
+          onClose={() => setEditingWord(null)}
+          onSaved={() => {
+            setEditingWord(null);
+            setReloadKey((k) => k + 1);
+          }}
         />
       ) : null}
     </>

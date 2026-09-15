@@ -139,6 +139,12 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       foreignWord: typeof body.foreignWord === "string" ? body.foreignWord.trim() : undefined,
       nativeWord: typeof body.nativeWord === "string" ? body.nativeWord.trim() : undefined,
       imageUrl: typeof body.imageUrl === "string" ? body.imageUrl : undefined,
+      transcription:
+        typeof body.transcription === "string"
+          ? body.transcription.trim() || null
+          : body.transcription === null
+            ? null
+            : undefined,
     });
     res.json({ word: updated });
   });

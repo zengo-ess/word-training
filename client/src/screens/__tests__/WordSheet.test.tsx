@@ -66,4 +66,17 @@ describe("WordSheet", () => {
     await user.click(screen.getByRole("button", { name: "Удалить слово" }));
     expect(onDelete).not.toHaveBeenCalled();
   });
+
+  it("без onEdit кнопка редактирования не отображается", () => {
+    render(<WordSheet word={word} onClose={vi.fn()} />);
+    expect(screen.queryByRole("button", { name: "Изменить слово" })).not.toBeInTheDocument();
+  });
+
+  it("клик по кнопке редактирования вызывает onEdit", async () => {
+    const onEdit = vi.fn();
+    const user = userEvent.setup();
+    render(<WordSheet word={word} onClose={vi.fn()} onEdit={onEdit} />);
+    await user.click(screen.getByRole("button", { name: "Изменить слово" }));
+    expect(onEdit).toHaveBeenCalled();
+  });
 });

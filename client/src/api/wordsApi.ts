@@ -43,6 +43,22 @@ export async function deleteWord(id: string, fetchFn: typeof fetch = fetch): Pro
   await apiRequest<void>(`/api/words/${id}`, { method: "DELETE", token: getToken() }, fetchFn);
 }
 
+export interface WordUpdateInput {
+  foreignWord: string;
+  nativeWord: string;
+  imageUrl: string | null;
+  transcription?: string | null;
+}
+
+export async function updateWord(id: string, input: WordUpdateInput, fetchFn: typeof fetch = fetch): Promise<Word> {
+  const data = await apiRequest<{ word: Word }>(
+    `/api/words/${id}`,
+    { method: "PUT", body: input, token: getToken() },
+    fetchFn,
+  );
+  return data.word;
+}
+
 export async function searchImages(query: string, fetchFn: typeof fetch = fetch): Promise<string[]> {
   const data = await apiRequest<{ images: string[] }>(
     `/api/unsplash/search?q=${encodeURIComponent(query)}`,

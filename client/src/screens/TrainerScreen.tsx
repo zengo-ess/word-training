@@ -493,11 +493,20 @@ export function Exercise({
               <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={140} photo />
             )}
           </div>
-          <h2
-            style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--ink)", margin: 0 }}
-          >
-            {word.foreign_word}
-          </h2>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            <h2
+              style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--ink)", margin: 0 }}
+            >
+              {word.foreign_word}
+            </h2>
+            <IconBtn
+              name="volume-2"
+              aria-label="Озвучить"
+              size={34}
+              iconSize={17}
+              onClick={() => playWord(word, language)}
+            />
+          </div>
           {word.transcription ? (
             <div style={{ fontFamily: "var(--mono)", fontSize: 14, color: "var(--ink-mute)", marginTop: 4 }}>
               {word.transcription}
