@@ -49,8 +49,8 @@ export function AppShell() {
     <>
       {tab === "home" ? (
         <HomeScreen
-          onLearn={openTrainer}
-          onReview={openReview}
+          onLearn={() => openTrainer()}
+          onReview={() => openReview()}
           onOpenDeck={openDeck}
           onProfile={() => setTab("profile")}
         />
@@ -66,7 +66,7 @@ export function AppShell() {
             setStack([]);
             setTab(t);
           }}
-          onLearn={openTrainer}
+          onLearn={() => openTrainer()}
         />
       ) : null}
 
