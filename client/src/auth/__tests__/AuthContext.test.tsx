@@ -14,24 +14,35 @@ vi.mock("../authApi", () => ({
     token: "JWT2",
     user: { id: "u2", name, language: "en" },
   })),
-  setLanguage: vi.fn(async (language: string) => ({ id: "u1", name: "Женя", language })),
+  updateSettings: vi.fn(async (patch: { language?: string; dailyGoal?: number }) => ({
+    id: "u1",
+    name: "Женя",
+    language: patch.language ?? "en",
+    daily_goal: patch.dailyGoal ?? 20,
+    tts_enabled: 1,
+    review_direction: "both",
+  })),
 }));
 
 function Probe() {
-  const { isAuthenticated, user, login, register, logout, setLanguage } = useAuth();
+  const { isAuthenticated, user, login, register, logout, updateSettings } = useAuth();
   return (
     <div>
       <span data-testid="state">{isAuthenticated ? "in" : "out"}</span>
       <span data-testid="user">{user ? user.name : "-"}</span>
       <span data-testid="language">{user ? user.language : "-"}</span>
+      <span data-testid="goal">{user ? String(user.daily_goal) : "-"}</span>
       <button type="button" onClick={() => void login("u1", "ok")}>
         войти
       </button>
       <button type="button" onClick={() => void register("Маша", "1234", "family")}>
         создать
       </button>
-      <button type="button" onClick={() => void setLanguage("de")}>
+      <button type="button" onClick={() => void updateSettings({ language: "de" })}>
         сменить язык
+      </button>
+      <button type="button" onClick={() => void updateSettings({ dailyGoal: 50 })}>
+        сменить цель
       </button>
       <button type="button" onClick={logout}>
         выйти
@@ -62,11 +73,11 @@ describe("AuthProvider / useAuth", () => {
     expect(screen.getByTestId("user")).toHaveTextContent("Женя");
     expect(localStorage.getItem("wt_token")).toBe("JWT");
     expect(localStorage.getItem("wt_user")).toBe(
-      JSON.stringify({ id: "u1", name: "Женя", language: "en" }),
+      JSON.stringify({ id: "u1", name: "Женя", language: "en", "daily_goal":20,"tts_enabled":1,"review_direction":"both" }),
     );
   });
 
-  it("setLanguage обновляет user.language и localStorage", async () => {
+  it("updateSettings обновляет user.language и localStorage", async () => {
     localStorage.setItem("wt_token", "JWT");
     localStorage.setItem("wt_user", JSON.stringify({ id: "u1", name: "Женя", language: "en" }));
     render(
@@ -82,8 +93,35 @@ describe("AuthProvider / useAuth", () => {
 
     expect(screen.getByTestId("language")).toHaveTextContent("de");
     expect(localStorage.getItem("wt_user")).toBe(
-      JSON.stringify({ id: "u1", name: "Женя", language: "de" }),
+      JSON.stringify({ id: "u1", name: "Женя", language: "de", "daily_goal":20,"tts_enabled":1,"review_direction":"both" }),
     );
+  });
+
+  it("у сохранённого без настроек пользователя подставляются дефолты", () => {
+    localStorage.setItem("wt_token", "JWT");
+    localStorage.setItem("wt_user", JSON.stringify({ id: "u1", name: "Женя", language: "en" }));
+    render(
+      <AuthProvider>
+        <Probe />
+      </AuthProvider>,
+    );
+    expect(screen.getByTestId("goal")).toHaveTextContent("20");
+  });
+
+  it("updateSettings обновляет дневную цель", async () => {
+    localStorage.setItem("wt_token", "JWT");
+    localStorage.setItem("wt_user", JSON.stringify({ id: "u1", name: "Женя", language: "en" }));
+    render(
+      <AuthProvider>
+        <Probe />
+      </AuthProvider>,
+    );
+
+    await act(async () => {
+      screen.getByRole("button", { name: "сменить цель" }).click();
+    });
+
+    expect(screen.getByTestId("goal")).toHaveTextContent("50");
   });
 
   it("register логинит нового пользователя", async () => {

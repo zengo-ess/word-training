@@ -28,6 +28,19 @@ export function buildChoices(
   return { opts, correct };
 }
 
-export function buildQueue(batch: Word[], type: number): string[] {
+// Пустая очередь означает, что шаг недоступен для этого батча: тип 3 требует
+// примера с пропуском, тип 5 — включённой озвучки.
+export function buildQueue(batch: Word[], type: number, ttsEnabled = true): string[] {
+  if (type === 5 && !ttsEnabled) {
+    return [];
+  }
   return batch.filter((w) => type !== 3 || w.example_sentence != null).map((w) => w.id);
+}
+
+export const ALL_TYPES = [1, 2, 3, 4, 5];
+
+// Шаги, которые реально можно пройти на этом батче — по ним считается прогресс
+// и определяется момент завершения
+export function availableTypes(batch: Word[], ttsEnabled: boolean): number[] {
+  return ALL_TYPES.filter((type) => buildQueue(batch, type, ttsEnabled).length > 0);
 }

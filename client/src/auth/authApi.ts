@@ -5,6 +5,16 @@ export interface AuthUser {
   id: string;
   name: string;
   language: string;
+  daily_goal: number;
+  tts_enabled: number;
+  review_direction: string;
+}
+
+export interface SettingsPatch {
+  language?: string;
+  dailyGoal?: number;
+  ttsEnabled?: boolean;
+  reviewDirection?: string;
 }
 
 export interface AuthResult {
@@ -42,13 +52,13 @@ export async function register(
   );
 }
 
-export async function setLanguage(
-  language: string,
+export async function updateSettings(
+  patch: SettingsPatch,
   fetchFn: typeof fetch = fetch,
 ): Promise<AuthUser> {
   const data = await apiRequest<{ user: AuthUser }>(
-    "/api/auth/me/language",
-    { method: "PATCH", body: { language }, token: getToken() },
+    "/api/auth/me/settings",
+    { method: "PATCH", body: patch, token: getToken() },
     fetchFn,
   );
   return data.user;

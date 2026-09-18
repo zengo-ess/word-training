@@ -25,7 +25,7 @@ export function createApp(config: AppConfig, db: Database.Database): Express {
 
   const requireAuth = createAuthMiddleware(config.jwtSecret, db);
   app.use("/api/auth/me", requireAuth, createAuthMeRouter(db));
-  app.use("/api/decks", requireAuth, createDecksRouter(db));
+  app.use("/api/decks", requireAuth, createDecksRouter(db, { uploadsDir: config.uploadsDir }));
   app.use(
     "/api/words",
     requireAuth,

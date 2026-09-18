@@ -4,35 +4,70 @@ import { Page } from "../components/Page";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { Icon } from "../components/Icon";
+import { directionLabel, type Direction } from "../lib/languageLabels";
+import type { SettingsPatch } from "../auth/authApi";
 
 const LANGUAGE_NAME: Record<string, string> = { en: "Английский", de: "Немецкий" };
+const GOALS = [10, 20, 30, 50];
+const DIRECTIONS: Direction[] = ["toNative", "toForeign", "both"];
+
+// Настройки переключаются по кругу прямо в строке списка — отдельных экранов нет
+function nextIn<T>(values: T[], current: T): T {
+  const index = values.indexOf(current);
+  return values[(index + 1) % values.length];
+}
+
+interface SettingRow {
+  icon: string;
+  label: string;
+  detail: string;
+  patch: SettingsPatch;
+}
 
 export function ProfileScreen() {
-  const { logout, user, setLanguage } = useAuth();
-  const [switching, setSwitching] = useState(false);
-  const language = user?.language ?? "en";
+  const { logout, user, updateSettings } = useAuth();
+  const [saving, setSaving] = useState<string | null>(null);
 
-  const onToggleLanguage = async (): Promise<void> => {
-    setSwitching(true);
+  const language = user?.language ?? "en";
+  const dailyGoal = user?.daily_goal ?? 20;
+  const ttsEnabled = (user?.tts_enabled ?? 1) === 1;
+  const reviewDirection = (user?.review_direction ?? "both") as Direction;
+
+  const apply = async (label: string, patch: SettingsPatch): Promise<void> => {
+    setSaving(label);
     try {
-      await setLanguage(language === "en" ? "de" : "en");
+      await updateSettings(patch);
     } finally {
-      setSwitching(false);
+      setSaving(null);
     }
   };
 
-  const settingsRows = [
-    { icon: "target", label: "Дневная цель", detail: "20 слов" },
+  const rows: SettingRow[] = [
+    {
+      icon: "target",
+      label: "Дневная цель",
+      detail: `${dailyGoal} слов`,
+      patch: { dailyGoal: nextIn(GOALS, dailyGoal) },
+    },
     {
       icon: "globe",
       label: "Язык изучения",
-      detail: switching ? "…" : LANGUAGE_NAME[language],
-      onClick: () => void onToggleLanguage(),
+      detail: LANGUAGE_NAME[language] ?? LANGUAGE_NAME.en,
+      patch: { language: language === "en" ? "de" : "en" },
     },
-    { icon: "volume-2", label: "Озвучка слов", detail: "Вкл" },
-    { icon: "refresh", label: "Направление повторов", detail: "Оба" },
-    { icon: "calendar", label: "Напоминания", detail: "20:00" },
-  ] as const;
+    {
+      icon: "volume-2",
+      label: "Озвучка слов",
+      detail: ttsEnabled ? "Вкл" : "Выкл",
+      patch: { ttsEnabled: !ttsEnabled },
+    },
+    {
+      icon: "refresh",
+      label: "Направление повторов",
+      detail: directionLabel(language, reviewDirection),
+      patch: { reviewDirection: nextIn(DIRECTIONS, reviewDirection) },
+    },
+  ];
 
   return (
     <Page>
@@ -80,24 +115,33 @@ export function ProfileScreen() {
       </div>
 
       <Card pad={4} style={{ marginBottom: 20 }}>
-        {settingsRows.map((r, i) => (
-          <div
+        {rows.map((r, i) => (
+          <button
             key={r.label}
-            onClick={"onClick" in r ? r.onClick : undefined}
+            type="button"
+            onClick={() => void apply(r.label, r.patch)}
+            disabled={saving !== null}
             style={{
+              width: "100%",
+              background: "transparent",
+              border: "none",
+              textAlign: "left",
+              font: "inherit",
               display: "flex",
               alignItems: "center",
               gap: 13,
               padding: "13px 12px",
-              borderBottom: i < settingsRows.length - 1 ? "1px solid var(--line)" : "none",
-              cursor: "onClick" in r ? "pointer" : "default",
+              borderBottom: i < rows.length - 1 ? "1px solid var(--line)" : "none",
+              cursor: saving === null ? "pointer" : "default",
             }}
           >
             <Icon name={r.icon} size={20} color="var(--ink-soft)" stroke={2.2} />
             <span style={{ flex: 1, fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>{r.label}</span>
-            <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink-mute)" }}>{r.detail}</span>
+            <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink-mute)" }}>
+              {saving === r.label ? "…" : r.detail}
+            </span>
             <Icon name="chevron-right" size={17} color="var(--ink-mute)" stroke={2.4} />
-          </div>
+          </button>
         ))}
       </Card>
 

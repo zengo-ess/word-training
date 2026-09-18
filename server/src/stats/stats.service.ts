@@ -2,8 +2,6 @@ import type Database from "better-sqlite3";
 import { listDecksWithStats, type DeckWithStats } from "../decks/deckStats.repository.js";
 import { computeStreak, isoDay } from "./studyDays.js";
 
-export const DAILY_GOAL = 20;
-
 export interface Stats {
   learned: number;
   inProgress: number;
@@ -15,7 +13,13 @@ export interface Stats {
   decks: DeckWithStats[];
 }
 
-export function getStats(db: Database.Database, userId: string, now: Date, language: string): Stats {
+export function getStats(
+  db: Database.Database,
+  userId: string,
+  now: Date,
+  language: string,
+  dailyGoal: number,
+): Stats {
   const nowIso = now.toISOString();
   const today = isoDay(now);
 
@@ -59,7 +63,7 @@ export function getStats(db: Database.Database, userId: string, now: Date, langu
     inProgress,
     dueToday,
     learnedToday,
-    dailyGoal: DAILY_GOAL,
+    dailyGoal,
     streak: computeStreak(db, userId, now),
     week,
     decks: listDecksWithStats(db, userId, language),

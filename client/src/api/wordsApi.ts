@@ -85,3 +85,16 @@ export async function uploadImage(file: File, fetchFn: typeof fetch = fetch): Pr
   const data = (await response.json()) as { imageUrl: string };
   return data.imageUrl;
 }
+
+export async function copyWord(
+  wordId: string,
+  targetDeckId: string,
+  fetchFn: typeof fetch = fetch,
+): Promise<Word> {
+  const data = await apiRequest<{ word: Word }>(
+    `/api/words/${wordId}/copy`,
+    { method: "POST", body: { targetDeckId }, token: getToken() },
+    fetchFn,
+  );
+  return data.word;
+}

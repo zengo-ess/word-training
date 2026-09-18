@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, vi } from "vitest";
-import { fetchUsers, login, register, setLanguage } from "../authApi";
+import { fetchUsers, login, register, updateSettings } from "../authApi";
 
 function mockFetch(status: number, body: unknown) {
   return vi.fn(async () => ({
@@ -67,17 +67,43 @@ describe("register", () => {
   });
 });
 
-describe("setLanguage", () => {
+describe("updateSettings", () => {
   it("шлёт PATCH с языком и возвращает обновлённого пользователя", async () => {
-    const fetchFn = mockFetch(200, { user: { id: "u1", name: "Женя", language: "de" } });
-    const user = await setLanguage("de", fetchFn as unknown as typeof fetch);
-    expect(user).toEqual({ id: "u1", name: "Женя", language: "de" });
+    const updated = {
+      id: "u1",
+      name: "Женя",
+      language: "de",
+      daily_goal: 20,
+      tts_enabled: 1,
+      review_direction: "both",
+    };
+    const fetchFn = mockFetch(200, { user: updated });
+    const user = await updateSettings({ language: "de" }, fetchFn as unknown as typeof fetch);
+    expect(user).toEqual(updated);
     expect(fetchFn).toHaveBeenCalledWith(
-      "/api/auth/me/language",
+      "/api/auth/me/settings",
       expect.objectContaining({
         method: "PATCH",
         body: JSON.stringify({ language: "de" }),
       }),
+    );
+  });
+
+  it("шлёт только переданные поля настроек", async () => {
+    const fetchFn = mockFetch(200, {
+      user: {
+        id: "u1",
+        name: "Женя",
+        language: "en",
+        daily_goal: 30,
+        tts_enabled: 0,
+        review_direction: "both",
+      },
+    });
+    await updateSettings({ dailyGoal: 30, ttsEnabled: false }, fetchFn as unknown as typeof fetch);
+    expect(fetchFn).toHaveBeenCalledWith(
+      "/api/auth/me/settings",
+      expect.objectContaining({ body: JSON.stringify({ dailyGoal: 30, ttsEnabled: false }) }),
     );
   });
 });

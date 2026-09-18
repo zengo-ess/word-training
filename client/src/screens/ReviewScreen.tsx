@@ -8,17 +8,9 @@ import { IconBtn } from "../components/IconBtn";
 import { Icon } from "../components/Icon";
 import { Pill } from "../components/Pill";
 import { ProgressBar } from "../components/ProgressBar";
+import { useAuth } from "../auth/AuthContext";
+import { directionLabels, typeShort, type Direction } from "../lib/languageLabels";
 import type { Word } from "../api/types";
-
-type Direction = "enru" | "ruen" | "both";
-
-const DIRS: { key: Direction; label: string; sub: string }[] = [
-  { key: "enru", label: "EN → RU", sub: "Только Тип 1" },
-  { key: "ruen", label: "RU → EN", sub: "Только Тип 2" },
-  { key: "both", label: "Оба", sub: "Чередуем Тип 1 и Тип 2" },
-];
-
-const TYPE_SHORT: Record<number, string> = { 1: "EN → RU", 2: "RU → EN" };
 
 interface Props {
   dueWords: Word[];
@@ -27,14 +19,18 @@ interface Props {
 }
 
 export function ReviewScreen({ dueWords, onClose, onDone }: Props) {
-  const [dir, setDir] = useState<Direction>("both");
+  const { user } = useAuth();
+  const language = user?.language ?? "en";
+  const dirs = directionLabels(language);
+  const shortNames = typeShort(language);
+  const [dir, setDir] = useState<Direction>((user?.review_direction ?? "both") as Direction);
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [results, setResults] = useState<boolean[]>([]);
   const [started, setStarted] = useState(false);
 
   const word = dueWords[idx];
-  const layer = dir === "enru" ? 1 : dir === "ruen" ? 2 : idx % 2 === 0 ? 1 : 2;
+  const layer = dir === "toNative" ? 1 : dir === "toForeign" ? 2 : idx % 2 === 0 ? 1 : 2;
 
   function handleResult(correct: boolean) {
     if (answered) return;
@@ -103,7 +99,7 @@ export function ReviewScreen({ dueWords, onClose, onDone }: Props) {
             Направление
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
-            {DIRS.map((d) => (
+            {dirs.map((d) => (
               <Card
                 key={d.key}
                 onClick={() => setDir(d.key)}
@@ -227,7 +223,7 @@ export function ReviewScreen({ dueWords, onClose, onDone }: Props) {
         </div>
         <div style={{ textAlign: "center", marginBottom: 4 }}>
           <Pill tone="amber" icon="refresh">
-            Повторение · {TYPE_SHORT[layer]}
+            Повторение · {shortNames[layer]}
           </Pill>
         </div>
       </div>

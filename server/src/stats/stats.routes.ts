@@ -8,8 +8,10 @@ export function createStatsRouter(db: Database.Database): Router {
   const router = Router();
   router.get("/", (req: AuthedRequest, res) => {
     const userId = req.userId as string;
-    const language = getUser(db, userId)?.language ?? "en";
-    res.json(getStats(db, userId, new Date(), language));
+    const user = getUser(db, userId);
+    const language = user?.language ?? "en";
+    const dailyGoal = user?.daily_goal ?? 20;
+    res.json(getStats(db, userId, new Date(), language, dailyGoal));
   });
   return router;
 }

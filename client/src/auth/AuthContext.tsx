@@ -6,16 +6,22 @@ import {
   getToken,
   saveStoredUser,
   saveToken,
+  withSettingsDefaults,
   type StoredUser,
 } from "./token";
-import { login as loginApi, register as registerApi, setLanguage as setLanguageApi } from "./authApi";
+import {
+  login as loginApi,
+  register as registerApi,
+  updateSettings as updateSettingsApi,
+  type SettingsPatch,
+} from "./authApi";
 
 interface AuthValue {
   isAuthenticated: boolean;
   user: StoredUser | null;
   login: (userId: string, password: string) => Promise<void>;
   register: (name: string, password: string, familyCode: string) => Promise<void>;
-  setLanguage: (language: string) => Promise<void>;
+  updateSettings: (patch: SettingsPatch) => Promise<void>;
   logout: () => void;
 }
 
@@ -26,10 +32,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<StoredUser | null>(() => getStoredUser());
 
   const apply = (result: { token: string; user: StoredUser }): void => {
+    const stored = withSettingsDefaults(result.user);
     saveToken(result.token);
-    saveStoredUser(result.user);
+    saveStoredUser(stored);
     setToken(result.token);
-    setUser(result.user);
+    setUser(stored);
   };
 
   const login = async (userId: string, password: string): Promise<void> => {
@@ -40,8 +47,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     apply(await registerApi(name, password, familyCode));
   };
 
-  const setLanguage = async (language: string): Promise<void> => {
-    const updated = await setLanguageApi(language);
+  const updateSettings = async (patch: SettingsPatch): Promise<void> => {
+    const updated = withSettingsDefaults(await updateSettingsApi(patch));
     saveStoredUser(updated);
     setUser(updated);
   };
@@ -61,7 +68,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ isAuthenticated: token !== null, user, login, register, setLanguage, logout }}
+      value={{ isAuthenticated: token !== null, user, login, register, updateSettings, logout }}
     >
       {children}
     </AuthContext.Provider>

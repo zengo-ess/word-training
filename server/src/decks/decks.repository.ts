@@ -38,3 +38,19 @@ export function createDeck(
 export function canAccessDeck(deck: DeckRow, userId: string): boolean {
   return deck.is_builtin === 1 || deck.user_id === userId;
 }
+
+export function renameDeck(db: Database.Database, id: string, name: string): DeckRow | undefined {
+  db.prepare("UPDATE decks SET name = ? WHERE id = ?").run(name, id);
+  return getDeck(db, id);
+}
+
+// Нужен до удаления колоды: файлы озвучки лежат вне БД и каскадом не удаляются
+export function listWordIds(db: Database.Database, deckId: string): string[] {
+  const rows = db.prepare("SELECT id FROM words WHERE deck_id = ?").all(deckId) as { id: string }[];
+  return rows.map((row) => row.id);
+}
+
+// Слова и прогресс по ним уходят каскадом (см. схему + PRAGMA foreign_keys)
+export function deleteDeckById(db: Database.Database, id: string): void {
+  db.prepare("DELETE FROM decks WHERE id = ?").run(id);
+}

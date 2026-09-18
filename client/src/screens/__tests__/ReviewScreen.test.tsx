@@ -11,8 +11,17 @@ vi.mock("../../api/trainingApi", () => ({
   postReviewResult: (...args: unknown[]) => postReviewMock(...args),
 }));
 
+let mockLanguage = "en";
+let mockDirection = "both";
 vi.mock("../../auth/AuthContext", () => ({
-  useAuth: () => ({ user: { id: "u1", name: "Тестер", language: "en" } }),
+  useAuth: () => ({
+    user: {
+      id: "u1",
+      name: "Тестер",
+      language: mockLanguage,
+      review_direction: mockDirection,
+    },
+  }),
 }));
 
 const WORD: Word = {
@@ -35,6 +44,8 @@ const WORDS: Word[] = [
 beforeEach(() => {
   postReviewMock.mockReset();
   postReviewMock.mockResolvedValue({ progress: {} });
+  mockLanguage = "en";
+  mockDirection = "both";
 });
 
 describe("ReviewScreen", () => {
@@ -59,5 +70,35 @@ describe("ReviewScreen", () => {
     render(<ReviewScreen dueWords={WORDS} onClose={vi.fn()} onDone={vi.fn()} />);
     await user.click(screen.getByRole("button", { name: /Начать повтор/ }));
     expect(screen.getByText("apple")).toBeInTheDocument();
+  });
+
+  it("подписывает направления языком профиля", () => {
+    mockLanguage = "de";
+    render(<ReviewScreen dueWords={WORDS} onClose={vi.fn()} onDone={vi.fn()} />);
+    expect(screen.getByText("DE → RU")).toBeInTheDocument();
+    expect(screen.getByText("RU → DE")).toBeInTheDocument();
+    expect(screen.queryByText("EN → RU")).not.toBeInTheDocument();
+  });
+
+  it("начальное направление берётся из настроек пользователя", async () => {
+    mockDirection = "toForeign";
+    const user = userEvent.setup();
+    render(<ReviewScreen dueWords={WORDS} onClose={vi.fn()} onDone={vi.fn()} />);
+
+    await user.click(screen.getByRole("button", { name: /Начать повтор/ }));
+
+    // Тип 2 — перевод с русского, на экране вопрос-перевод, а не иностранное слово
+    expect(screen.getByText("Повторение · RU → EN")).toBeInTheDocument();
+  });
+
+  it("плашка режима подписана языком профиля", async () => {
+    mockLanguage = "de";
+    mockDirection = "toNative";
+    const user = userEvent.setup();
+    render(<ReviewScreen dueWords={WORDS} onClose={vi.fn()} onDone={vi.fn()} />);
+
+    await user.click(screen.getByRole("button", { name: /Начать повтор/ }));
+
+    expect(screen.getByText("Повторение · DE → RU")).toBeInTheDocument();
   });
 });

@@ -79,6 +79,14 @@ export function AppShell() {
           onAddWord={() => setStack((s) => [...s, { type: "add", deckId: top.deck.id }])}
           onLearn={() => openTrainer(top.deck.id)}
           onReview={() => openReview(top.deck.id)}
+          onChanged={(updated) => {
+            if (updated) {
+              setStack((s) =>
+                s.map((o) => (o.type === "deck" && o.deck.id === updated.id ? { ...o, deck: updated } : o)),
+              );
+            }
+            setReloadKey((k) => k + 1);
+          }}
         />
       ) : null}
 
@@ -135,6 +143,11 @@ export function AppShell() {
                   setEditingWord(sheetWord);
                   setSheetWord(null);
                 }
+              : undefined
+          }
+          onCopied={
+            top?.type === "deck" && top.deck.is_builtin === 1
+              ? () => setReloadKey((k) => k + 1)
               : undefined
           }
         />

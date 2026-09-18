@@ -1,4 +1,5 @@
-import { fetchDeckWords } from "../api/decksApi";
+import { useMemo, useState } from "react";
+import { fetchDeckWords, renameDeck, deleteDeck } from "../api/decksApi";
 import { useAsync } from "../hooks/useAsync";
 import { Page } from "../components/Page";
 import { Card } from "../components/Card";
@@ -11,6 +12,10 @@ import { WordTile } from "../components/WordTile";
 import { hueFromString } from "../lib/wordVisual";
 import type { Deck, WordWithProgress } from "../api/types";
 
+// Поиск нужен только на длинных колодах, на коротких это лишний элемент
+const SEARCH_THRESHOLD = 20;
+const PAGE_SIZE = 50;
+
 interface Props {
   deck: Deck;
   onBack: () => void;
@@ -18,6 +23,9 @@ interface Props {
   onAddWord: () => void;
   onLearn: () => void;
   onReview: () => void;
+  // Переименование отдаёт обновлённую колоду: экран пересоздаётся по key,
+  // и без этого в шапку вернулось бы старое имя из стека оверлеев
+  onChanged?: (deck?: Deck) => void;
 }
 
 function WordRow({ word, onClick }: { word: WordWithProgress; onClick: () => void }) {
@@ -68,19 +76,87 @@ function WordRow({ word, onClick }: { word: WordWithProgress; onClick: () => voi
   );
 }
 
-export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onReview }: Props) {
+const INPUT_STYLE: React.CSSProperties = {
+  width: "100%",
+  boxSizing: "border-box",
+  fontSize: 15,
+  fontWeight: 600,
+  color: "var(--ink)",
+  background: "var(--surface)",
+  border: "2px solid var(--line)",
+  borderRadius: "var(--r-btn)",
+  padding: "11px 13px",
+  outline: "none",
+};
+
+export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onReview, onChanged }: Props) {
   const { data: words } = useAsync<WordWithProgress[]>(() => fetchDeckWords(deck.id), [deck.id]);
   const builtin = deck.is_builtin === 1;
   const pct = deck.total ? Math.round((deck.learned / deck.total) * 100) : 0;
-  const list = words ?? [];
+  const list = useMemo(() => words ?? [], [words]);
   const newCount = list.filter((w) => w.progress?.learned_at == null).length;
+
+  const [name, setName] = useState(deck.name);
+  const [renaming, setRenaming] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+  const [visible, setVisible] = useState(PAGE_SIZE);
+
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    if (!needle) return list;
+    return list.filter(
+      (w) =>
+        w.foreign_word.toLowerCase().includes(needle) ||
+        w.native_word.toLowerCase().includes(needle),
+    );
+  }, [list, query]);
+
+  const onQueryChange = (value: string): void => {
+    setQuery(value);
+    setVisible(PAGE_SIZE);
+  };
+
+  const submitRename = (): void => {
+    const next = (renaming ?? "").trim();
+    setRenaming(null);
+    if (!next || next === name) return;
+    void renameDeck(deck.id, next).then((updated) => {
+      setName(updated.name);
+      onChanged?.({ ...deck, name: updated.name });
+    });
+  };
+
+  const handleDelete = (): void => {
+    const words = list.length === 1 ? "1 словом" : `${list.length} словами`;
+    const message =
+      list.length > 0
+        ? `Удалить колоду «${name}» вместе с ${words}? Прогресс по ним пропадёт.`
+        : `Удалить колоду «${name}»?`;
+    if (!window.confirm(message)) return;
+    void deleteDeck(deck.id).then(() => {
+      onChanged?.();
+      onBack();
+    });
+  };
 
   return (
     <div style={{ position: "absolute", inset: 0, background: "var(--bg)", zIndex: 60, overflowY: "auto" }} className="page-scroll">
       <Page withNav={false}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
           <IconBtn name="chevron-left" aria-label="Назад" onClick={onBack} />
-          {builtin ? <Pill icon="lock">Только чтение</Pill> : null}
+          {builtin ? (
+            <Pill icon="lock">Только чтение</Pill>
+          ) : (
+            <div style={{ display: "flex", gap: 6 }}>
+              <IconBtn
+                name="edit"
+                aria-label="Переименовать колоду"
+                variant="ghost"
+                onClick={() => setRenaming(name)}
+              />
+              <IconBtn name="trash" aria-label="Удалить колоду" variant="ghost" onClick={handleDelete} />
+            </div>
+          )}
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 15, marginBottom: 16 }}>
@@ -98,13 +174,33 @@ export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onR
           >
             <Icon name={builtin ? "book" : "star"} size={32} color="var(--primary)" stroke={2.1} />
           </div>
-          <div style={{ flex: 1 }}>
-            <h1 style={{ fontFamily: "var(--font-display)", fontSize: 23, fontWeight: 700, margin: 0, lineHeight: 1.1 }}>
-              {deck.name}
-            </h1>
-            <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)", marginTop: 3 }}>
-              {builtin ? "Встроенная колода" : "Личная колода"}
-            </div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            {renaming !== null ? (
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <input
+                  autoFocus
+                  value={renaming}
+                  aria-label="Название колоды"
+                  onChange={(e) => setRenaming(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") submitRename();
+                    if (e.key === "Escape") setRenaming(null);
+                  }}
+                  style={INPUT_STYLE}
+                />
+                <IconBtn name="check" aria-label="Сохранить название" onClick={submitRename} />
+                <IconBtn name="x" aria-label="Отменить" variant="ghost" onClick={() => setRenaming(null)} />
+              </div>
+            ) : (
+              <>
+                <h1 style={{ fontFamily: "var(--font-display)", fontSize: 23, fontWeight: 700, margin: 0, lineHeight: 1.1 }}>
+                  {name}
+                </h1>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)", marginTop: 3 }}>
+                  {builtin ? "Встроенная колода" : "Личная колода"}
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -135,6 +231,16 @@ export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onR
           <div style={{ height: 8 }} />
         )}
 
+        {list.length > SEARCH_THRESHOLD ? (
+          <input
+            value={query}
+            aria-label="Поиск по колоде"
+            placeholder="Поиск по слову или переводу…"
+            onChange={(e) => onQueryChange(e.target.value)}
+            style={{ ...INPUT_STYLE, marginBottom: 12 }}
+          />
+        ) : null}
+
         <div
           style={{
             fontSize: 12.5,
@@ -145,20 +251,33 @@ export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onR
             margin: "6px 4px 10px",
           }}
         >
-          Слова {list.length ? `(${list.length})` : ""}
+          {query.trim() ? `Найдено ${filtered.length} из ${list.length}` : `Слова ${list.length ? `(${list.length})` : ""}`}
         </div>
 
-        {list.length === 0 ? (
+        {filtered.length === 0 ? (
           <Card pad={22} style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)" }}>В колоде пока нет слов.</div>
+            <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)" }}>
+              {query.trim() ? "Ничего не нашлось." : "В колоде пока нет слов."}
+            </div>
           </Card>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {list.map((w) => (
+            {filtered.slice(0, visible).map((w) => (
               <WordRow key={w.id} word={w} onClick={() => onWord(w)} />
             ))}
           </div>
         )}
+
+        {visible < filtered.length ? (
+          <Button
+            full
+            variant="outline"
+            onClick={() => setVisible((v) => v + PAGE_SIZE)}
+            style={{ marginTop: 12 }}
+          >
+            Показать ещё
+          </Button>
+        ) : null}
       </Page>
     </div>
   );

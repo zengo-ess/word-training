@@ -24,3 +24,24 @@ export async function fetchDeckWords(deckId: string, fetchFn: typeof fetch = fet
   );
   return data.words;
 }
+
+export async function renameDeck(
+  deckId: string,
+  name: string,
+  fetchFn: typeof fetch = fetch,
+): Promise<Deck> {
+  const data = await apiRequest<{ deck: Deck }>(
+    `/api/decks/${deckId}`,
+    { method: "PATCH", body: { name }, token: getToken() },
+    fetchFn,
+  );
+  return data.deck;
+}
+
+export async function deleteDeck(deckId: string, fetchFn: typeof fetch = fetch): Promise<void> {
+  await apiRequest<void>(
+    `/api/decks/${deckId}`,
+    { method: "DELETE", token: getToken() },
+    fetchFn,
+  );
+}

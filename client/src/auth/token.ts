@@ -5,6 +5,22 @@ export interface StoredUser {
   id: string;
   name: string;
   language: string;
+  daily_goal: number;
+  tts_enabled: number;
+  review_direction: string;
+}
+
+// В localStorage у ранее залогиненных лежит объект без полей настроек —
+// подставляем дефолты, а не полагаемся на их наличие
+export function withSettingsDefaults(user: Partial<StoredUser> & { id: string; name: string }): StoredUser {
+  return {
+    id: user.id,
+    name: user.name,
+    language: user.language ?? "en",
+    daily_goal: user.daily_goal ?? 20,
+    tts_enabled: user.tts_enabled ?? 1,
+    review_direction: user.review_direction ?? "both",
+  };
 }
 
 export function getToken(): string | null {
@@ -25,7 +41,7 @@ export function getStoredUser(): StoredUser | null {
     return null;
   }
   try {
-    return JSON.parse(raw) as StoredUser;
+    return withSettingsDefaults(JSON.parse(raw) as StoredUser);
   } catch {
     return null;
   }

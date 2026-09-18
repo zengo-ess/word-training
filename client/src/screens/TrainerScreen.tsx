@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { postTrainingResult } from "../api/trainingApi";
-import { buildChoices, buildQueue, shuffle } from "./trainer/trainerLogic";
+import { availableTypes, buildChoices, buildQueue, shuffle } from "./trainer/trainerLogic";
 import { Icon } from "../components/Icon";
 import { IconBtn } from "../components/IconBtn";
 import { Card } from "../components/Card";
@@ -8,21 +8,8 @@ import { Button } from "../components/Button";
 import { WordTile } from "../components/WordTile";
 import { hueFromString, playWord } from "../lib/wordVisual";
 import { useAuth } from "../auth/AuthContext";
+import { exerciseNames, langNameAccusative } from "../lib/languageLabels";
 import type { Word } from "../api/types";
-
-const LANG_CODE: Record<string, string> = { en: "EN", de: "DE" };
-const LANG_NAME_ACCUSATIVE: Record<string, string> = { en: "английский", de: "немецкий" };
-
-function exerciseNames(language: string): Record<number, string> {
-  const code = LANG_CODE[language] ?? "EN";
-  return {
-    1: `Перевод ${code}→RU`,
-    2: `Перевод RU→${code}`,
-    3: "Вставь пропуск",
-    4: "Собери из букв",
-    5: "Аудио",
-  };
-}
 
 function SegBar({ total, done }: { total: number; done: number }) {
   return (
@@ -483,6 +470,7 @@ export function Exercise({
 }) {
   const { user } = useAuth();
   const language = user?.language ?? "en";
+  const ttsEnabled = (user?.tts_enabled ?? 1) === 1;
 
   if (layer === 1)
     return (
@@ -505,13 +493,15 @@ export function Exercise({
             >
               {word.foreign_word}
             </h2>
-            <IconBtn
-              name="volume-2"
-              aria-label="Озвучить"
-              size={34}
-              iconSize={17}
-              onClick={() => playWord(word, language)}
-            />
+            {ttsEnabled ? (
+              <IconBtn
+                name="volume-2"
+                aria-label="Озвучить"
+                size={34}
+                iconSize={17}
+                onClick={() => playWord(word, language)}
+              />
+            ) : null}
           </div>
           {word.transcription ? (
             <div style={{ fontFamily: "var(--mono)", fontSize: 14, color: "var(--ink-mute)", marginTop: 4 }}>
@@ -536,7 +526,7 @@ export function Exercise({
               marginBottom: 10,
             }}
           >
-            Переведите на {LANG_NAME_ACCUSATIVE[language] ?? "английский"}
+            Переведите на {langNameAccusative(language)}
           </div>
           <h2
             style={{ fontFamily: "var(--font-display)", fontSize: 34, fontWeight: 700, color: "var(--ink)", margin: 0 }}
@@ -600,42 +590,62 @@ interface Props {
 export function TrainerScreen({ batch, onClose, onDone }: Props) {
   const { user } = useAuth();
   const language = user?.language ?? "en";
+  const ttsEnabled = (user?.tts_enabled ?? 1) === 1;
   const byId = useMemo(() => Object.fromEntries(batch.map((w) => [w.id, w])), [batch]);
 
-  const [layer, setLayer] = useState(1);
-  const [queue, setQueue] = useState(() => buildQueue(batch, 1));
+  // Доступные шаги: тип 3 отпадает без примеров, тип 5 — при выключенной озвучке
+  const types = useMemo(() => availableTypes(batch, ttsEnabled), [batch, ttsEnabled]);
+  const firstType = types[0] ?? 1;
+
+  const [layer, setLayer] = useState(firstType);
+  const [queue, setQueue] = useState(() => buildQueue(batch, firstType, ttsEnabled));
   const [errors, setErrors] = useState<string[]>([]);
   const [passed, setPassed] = useState(0);
-  const [target, setTarget] = useState(() => buildQueue(batch, 1).length);
+  const [target, setTarget] = useState(() => buildQueue(batch, firstType, ttsEnabled).length);
+  const [completed, setCompleted] = useState<Set<number>>(() => new Set());
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [done, setDone] = useState(false);
 
   const currentId = queue[0];
   const word = currentId != null ? byId[currentId] : undefined;
 
-  function enterLayer(t: number) {
-    let next = t;
-    while (next <= 5) {
-      const q = buildQueue(batch, next);
-      if (q.length) {
-        setLayer(next);
-        setQueue(q);
-        setErrors([]);
-        setPassed(0);
-        setTarget(q.length);
-        return;
-      }
-      next += 1;
-    }
+  function startLayer(t: number) {
+    const q = buildQueue(batch, t, ttsEnabled);
+    setLayer(t);
+    setQueue(q);
+    setErrors([]);
+    setPassed(0);
+    setTarget(q.length);
+  }
+
+  function finishBatch() {
     void Promise.all(batch.map((w) => postTrainingResult(w.id, "learned"))).then(onDone);
     setDone(true);
   }
 
-  // Ручной переход к режиму по клику на шаг — в отличие от enterLayer(layer + 1)
-  // после серии верных ответов, здесь можно прыгнуть на любой шаг в любой момент.
+  // Шаг пройден: помечаем его и идём к следующему непройденному по кругу.
+  // Батч закрывается только когда пройдены все доступные шаги — иначе ручной
+  // прыжок вперёд отправлял бы слова в повторение мимо пропущенных шагов.
+  function completeLayer() {
+    const nextCompleted = new Set(completed).add(layer);
+    setCompleted(nextCompleted);
+
+    const from = types.indexOf(layer);
+    for (let i = 1; i <= types.length; i += 1) {
+      const candidate = types[(from + i) % types.length];
+      if (!nextCompleted.has(candidate)) {
+        startLayer(candidate);
+        return;
+      }
+    }
+    finishBatch();
+  }
+
+  // Ручной переход по клику на шаг — можно прыгнуть на любой доступный шаг
+  // в любой момент, пройденность при этом не теряется
   function goToLayer(t: number) {
     setAnswered(null);
-    enterLayer(t);
+    startLayer(t);
   }
 
   function handleResult(correct: boolean) {
@@ -649,7 +659,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
           const np = passed + 1;
           setPassed(np);
           if (np >= target) {
-            enterLayer(layer + 1);
+            completeLayer();
             return;
           }
           if (rest.length === 0 && errors.length > 0) {
@@ -696,9 +706,9 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
           </span>
         </div>
         <div style={{ display: "flex", gap: 6, marginBottom: 4 }}>
-          {([1, 2, 3, 4, 5] as const).map((t) => {
+          {types.map((t) => {
             const active = t === layer;
-            const doneL = t < layer;
+            const doneL = completed.has(t);
             return (
               <button
                 key={t}

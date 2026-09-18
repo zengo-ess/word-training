@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { fetchDecks, createDeck, fetchDeckWords } from "../decksApi";
+import { fetchDecks, createDeck, fetchDeckWords, renameDeck, deleteDeck } from "../decksApi";
 
 interface Captured {
   url: string;
@@ -48,5 +48,26 @@ describe("decksApi", () => {
     const words = await fetchDeckWords("deck-1", mockFetch({ words: [] }, captured));
     expect(words).toEqual([]);
     expect(captured.value?.url).toBe("/api/decks/deck-1/words");
+  });
+
+  it("renameDeck шлёт PATCH с новым именем", async () => {
+    const captured: { value?: Captured } = {};
+    const deck = await renameDeck(
+      "d1",
+      "Работа",
+      mockFetch({ deck: { id: "d1", name: "Работа", is_builtin: 0, created_at: "x" } }, captured),
+    );
+    expect(deck.name).toBe("Работа");
+    expect(captured.value?.url).toBe("/api/decks/d1");
+    expect(captured.value?.init.method).toBe("PATCH");
+    expect(captured.value?.init.body).toBe(JSON.stringify({ name: "Работа" }));
+  });
+
+  it("deleteDeck шлёт DELETE на нужный адрес", async () => {
+    const captured: { value?: Captured } = {};
+    await deleteDeck("d1", mockFetch({}, captured));
+    expect(captured.value?.url).toBe("/api/decks/d1");
+    expect(captured.value?.init.method).toBe("DELETE");
+    expect((captured.value?.init.headers as Record<string, string>).Authorization).toBe("Bearer T");
   });
 });

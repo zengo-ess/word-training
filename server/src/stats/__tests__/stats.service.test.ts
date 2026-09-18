@@ -42,7 +42,7 @@ describe("getStats", () => {
     upsertProgress(db, userId, inProgressId, { currentType: 2 });
     recordStudyDay(db, userId, "2026-06-09");
 
-    const stats = getStats(db, userId, NOW, "en");
+    const stats = getStats(db, userId, NOW, "en", 20);
     expect(stats.learned).toBe(2);
     expect(stats.inProgress).toBe(1);
     expect(stats.dueToday).toBe(1);
@@ -50,5 +50,9 @@ describe("getStats", () => {
     expect(stats.streak).toBe(1);
     expect(stats.dailyGoal).toBe(20);
     expect(stats.decks.find((d) => d.id === deckId)?.total).toBe(3);
+  });
+
+  it("дневная цель приходит параметром, а не константой", () => {
+    expect(getStats(db, userId, NOW, "en", 50).dailyGoal).toBe(50);
   });
 });

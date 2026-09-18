@@ -4,7 +4,19 @@ import type { AppConfig } from "../config.js";
 import type { AuthedRequest } from "./auth.middleware.js";
 import { checkPassword, signToken } from "./auth.service.js";
 import { hashPassword, verifyPassword } from "./password.js";
-import { createUser, getUser, getUserByName, listUsers, updateUserLanguage } from "./users.repository.js";
+import {
+  createUser,
+  getUser,
+  getUserByName,
+  listUsers,
+  toPublicUser,
+  updateUserSettings,
+  type UserSettingsPatch,
+} from "./users.repository.js";
+
+const LANGUAGES = ["en", "de"];
+const DIRECTIONS = ["toNative", "toForeign", "both"];
+const MAX_DAILY_GOAL = 500;
 
 export function createAuthRouter(config: AppConfig, db: Database.Database): Router {
   const router = Router();
@@ -35,7 +47,7 @@ export function createAuthRouter(config: AppConfig, db: Database.Database): Rout
     const user = createUser(db, name, hashPassword(password));
     res.status(201).json({
       token: signToken(user.id, config.jwtSecret),
-      user: { id: user.id, name: user.name, language: user.language },
+      user: toPublicUser(user),
     });
   });
 
@@ -52,26 +64,69 @@ export function createAuthRouter(config: AppConfig, db: Database.Database): Rout
 
     res.json({
       token: signToken(user.id, config.jwtSecret),
-      user: { id: user.id, name: user.name, language: user.language },
+      user: toPublicUser(user),
     });
   });
 
   return router;
 }
 
+// Разбирает тело PATCH /me/settings. Строка с ошибкой означает, что ничего
+// сохранять нельзя — патч применяется целиком или не применяется вовсе.
+export function parseSettingsPatch(body: unknown): UserSettingsPatch | string {
+  const raw = (body ?? {}) as Record<string, unknown>;
+  const patch: UserSettingsPatch = {};
+
+  if (raw.language !== undefined) {
+    if (typeof raw.language !== "string" || !LANGUAGES.includes(raw.language)) {
+      return "Недопустимый язык";
+    }
+    patch.language = raw.language;
+  }
+  if (raw.dailyGoal !== undefined) {
+    if (
+      typeof raw.dailyGoal !== "number" ||
+      !Number.isInteger(raw.dailyGoal) ||
+      raw.dailyGoal < 1 ||
+      raw.dailyGoal > MAX_DAILY_GOAL
+    ) {
+      return `Дневная цель должна быть целым числом от 1 до ${MAX_DAILY_GOAL}`;
+    }
+    patch.dailyGoal = raw.dailyGoal;
+  }
+  if (raw.ttsEnabled !== undefined) {
+    if (typeof raw.ttsEnabled !== "boolean") {
+      return "Нужно поле ttsEnabled (boolean)";
+    }
+    patch.ttsEnabled = raw.ttsEnabled;
+  }
+  if (raw.reviewDirection !== undefined) {
+    if (typeof raw.reviewDirection !== "string" || !DIRECTIONS.includes(raw.reviewDirection)) {
+      return "Недопустимое направление повторов";
+    }
+    patch.reviewDirection = raw.reviewDirection;
+  }
+
+  return patch;
+}
+
 // Требует авторизации — монтируется отдельно с auth-middleware (см. app.ts)
 export function createAuthMeRouter(db: Database.Database): Router {
   const router = Router();
 
-  router.patch("/language", (req: AuthedRequest, res) => {
+  router.patch("/settings", (req: AuthedRequest, res) => {
     const userId = req.userId as string;
-    const language = typeof req.body?.language === "string" ? req.body.language : "";
-    if (language !== "en" && language !== "de") {
-      res.status(400).json({ error: "Недопустимый язык" });
+    const patch = parseSettingsPatch(req.body);
+    if (typeof patch === "string") {
+      res.status(400).json({ error: patch });
       return;
     }
-    const user = updateUserLanguage(db, userId, language);
-    res.json({ user: { id: user!.id, name: user!.name, language: user!.language } });
+    const user = updateUserSettings(db, userId, patch);
+    if (!user) {
+      res.status(404).json({ error: "Пользователь не найден" });
+      return;
+    }
+    res.json({ user: toPublicUser(user) });
   });
 
   return router;

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect } from "vitest";
-import { buildChoices, buildQueue, shuffle } from "../trainerLogic";
+import { availableTypes, buildChoices, buildQueue, shuffle } from "../trainerLogic";
 import type { Word } from "../../../api/types";
 
 function makeWord(id: string, foreignWord: string, nativeWord: string, hasExample = true): Word {
@@ -64,5 +64,40 @@ describe("shuffle", () => {
     const arr = [1, 2, 3];
     shuffle(arr);
     expect(arr).toEqual([1, 2, 3]);
+  });
+});
+
+describe("buildQueue и озвучка", () => {
+  it("при выключенной озвучке тип 5 недоступен", () => {
+    expect(buildQueue(POOL, 5, false)).toEqual([]);
+  });
+
+  it("при включённой озвучке тип 5 берёт весь батч", () => {
+    expect(buildQueue(POOL, 5, true)).toHaveLength(POOL.length);
+  });
+
+  it("озвучка не влияет на остальные типы", () => {
+    expect(buildQueue(POOL, 1, false)).toHaveLength(POOL.length);
+    expect(buildQueue(POOL, 4, false)).toHaveLength(POOL.length);
+  });
+});
+
+describe("availableTypes", () => {
+  it("на полном батче с озвучкой доступны все пять шагов", () => {
+    expect(availableTypes(POOL, true)).toEqual([1, 2, 3, 4, 5]);
+  });
+
+  it("без озвучки шага 5 нет", () => {
+    expect(availableTypes(POOL, false)).toEqual([1, 2, 3, 4]);
+  });
+
+  it("без примеров нет шага 3", () => {
+    const noExamples = [makeWord("a", "hi", "привет", false)];
+    expect(availableTypes(noExamples, true)).toEqual([1, 2, 4, 5]);
+  });
+
+  it("без примеров и без озвучки остаются шаги 1, 2 и 4", () => {
+    const noExamples = [makeWord("a", "hi", "привет", false)];
+    expect(availableTypes(noExamples, false)).toEqual([1, 2, 4]);
   });
 });

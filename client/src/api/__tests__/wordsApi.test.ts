@@ -1,7 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach } from "vitest";
-import { lookupWord, createWord, searchImages, uploadImage, deleteWord, updateWord } from "../wordsApi";
+import {
+  lookupWord,
+  createWord,
+  searchImages,
+  uploadImage,
+  deleteWord,
+  updateWord,
+  copyWord,
+} from "../wordsApi";
 
 interface Captured {
   url: string;
@@ -95,5 +103,18 @@ describe("wordsApi", () => {
       json: async () => ({ error: "Поддерживаются только JPEG, PNG и WebP" }),
     })) as unknown as typeof fetch;
     await expect(uploadImage(file, failingFetch)).rejects.toThrow("Поддерживаются только JPEG, PNG и WebP");
+  });
+
+  it("copyWord постит целевую колоду и возвращает копию", async () => {
+    const captured: { value?: Captured } = {};
+    const word = await copyWord(
+      "w1",
+      "d9",
+      mockFetch({ word: { id: "w2", deck_id: "d9", foreign_word: "apple" } }, captured),
+    );
+    expect(word.id).toBe("w2");
+    expect(captured.value?.url).toBe("/api/words/w1/copy");
+    expect(captured.value?.init.method).toBe("POST");
+    expect(captured.value?.init.body).toBe(JSON.stringify({ targetDeckId: "d9" }));
   });
 });
