@@ -12,11 +12,32 @@ import {
   createWord,
   updateWord,
   deleteWord,
+  findReusableAudio,
 } from "../words.repository.js";
 
 let db: Database.Database;
 let userId: string;
 let deckId: string;
+
+describe("повторное использование озвучки", () => {
+  it("находит запись своего слова без учёта регистра", () => {
+    createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот", audioUrl: "/uploads/audio/cat.m4a" });
+    expect(findReusableAudio(db, "Cat", "en", userId)).toBe("/uploads/audio/cat.m4a");
+  });
+  it("не использует личную запись другого профиля или запись другого языка", () => {
+    const other = createUser(db, "Другой", "hash").id;
+    const otherDeck = createDeck(db, "Другая", other, "en").id;
+    createWord(db, { deckId: otherDeck, foreignWord: "cat", nativeWord: "кот", audioUrl: "/private.m4a" });
+    const german = createDeck(db, "Немецкий", userId, "de").id;
+    createWord(db, { deckId: german, foreignWord: "cat", nativeWord: "кот", audioUrl: "/german.m4a" });
+    expect(findReusableAudio(db, "cat", "en", userId)).toBeNull();
+  });
+  it("использует запись из встроенной колоды", () => {
+    db.prepare("UPDATE decks SET is_builtin=1,user_id=NULL WHERE id=?").run(deckId);
+    createWord(db, { deckId, foreignWord: "cat", nativeWord: "кот", audioUrl: "/builtin.m4a" });
+    expect(findReusableAudio(db, "cat", "en", "other")).toBe("/builtin.m4a");
+  });
+});
 
 beforeEach(() => {
   db = createConnection(":memory:");

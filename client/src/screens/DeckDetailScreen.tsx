@@ -11,6 +11,7 @@ import { ProgressBar } from "../components/ProgressBar";
 import { WordTile } from "../components/WordTile";
 import { hueFromString } from "../lib/wordVisual";
 import type { Deck, WordWithProgress } from "../api/types";
+import { DownloadDeck } from "../offline/DownloadDeck";
 
 // Поиск нужен только на длинных колодах, на коротких это лишний элемент
 const SEARCH_THRESHOLD = 20;
@@ -231,6 +232,7 @@ export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onR
           <div style={{ height: 8 }} />
         )}
 
+        <DownloadDeck deck={deck} />
         {list.length > SEARCH_THRESHOLD ? (
           <input
             value={query}

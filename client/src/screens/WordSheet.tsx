@@ -6,7 +6,8 @@ import { Button } from "../components/Button";
 import { IconBtn } from "../components/IconBtn";
 import { Icon } from "../components/Icon";
 import { WordTile } from "../components/WordTile";
-import { hueFromString, playWord } from "../lib/wordVisual";
+import { hueFromString } from "../lib/wordVisual";
+import { WordAudioButton } from "../components/WordAudioButton";
 import { pronunciationRu } from "../lib/pronunciation";
 import { useAuth } from "../auth/AuthContext";
 import type { Deck, WordWithProgress } from "../api/types";
@@ -208,10 +209,10 @@ export function WordSheet({ word, onClose, onDelete, onEdit, onCopied }: Props) 
           )}
         </div>
         <div style={{ textAlign: "center", marginBottom: 18 }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 10 }}>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, margin: 0 }}>{word.foreign_word}</h2>
             {ttsEnabled ? (
-              <IconBtn name="volume-2" aria-label="Озвучить" size={38} iconSize={19} onClick={() => playWord(word, language)} />
+              <WordAudioButton word={word} language={language} />
             ) : null}
           </div>
           {word.transcription ? (

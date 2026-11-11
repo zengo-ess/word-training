@@ -3,10 +3,11 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { TrainerScreen } from "../TrainerScreen";
+import { Exercise, TrainerScreen } from "../TrainerScreen";
 import type { Word } from "../../api/types";
 
 const postResultMock = vi.fn();
+const shuffleQueueMock = vi.fn((ids: string[], _previous?: string[]) => [...ids]);
 vi.mock("../../api/trainingApi", () => ({
   postTrainingResult: (...args: unknown[]) => postResultMock(...args),
 }));
@@ -16,6 +17,7 @@ vi.mock("../../screens/trainer/trainerLogic", async (importOriginal) => {
   return {
     ...real,
     shuffle: (a: unknown[]) => [...a],
+    shuffleQueue: (ids: string[], previous?: string[]) => shuffleQueueMock(ids, previous),
   };
 });
 
@@ -56,6 +58,8 @@ const POOL: Word[] = [
 ];
 
 beforeEach(() => {
+  shuffleQueueMock.mockReset();
+  shuffleQueueMock.mockImplementation(ids => [...ids]);
   postResultMock.mockReset();
   postResultMock.mockResolvedValue({ progress: {} });
   mockLanguage = "en";
@@ -68,6 +72,15 @@ afterEach(() => {
 });
 
 describe("TrainerScreen", () => {
+  it("при переходе к следующему режиму использует новый порядок и передаёт предыдущий полный список", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    render(<TrainerScreen batch={POOL} onClose={vi.fn()} onDone={vi.fn()} />);
+    shuffleQueueMock.mockImplementationOnce(ids => [...ids].reverse());
+    await user.click(screen.getByRole("button", { name: "Режим: Перевод RU→EN" }));
+    expect(screen.getByRole("heading", { name: "собака" })).toBeInTheDocument();
+    expect(shuffleQueueMock).toHaveBeenLastCalledWith(["w1", "w2", "w3", "w4"], ["w1", "w2", "w3", "w4"]);
+  });
+
   it("показывает MCQ с вариантами ответов для типа 1", () => {
     render(<TrainerScreen batch={POOL} onClose={vi.fn()} onDone={vi.fn()} />);
     expect(screen.getByText("яблоко")).toBeInTheDocument();
@@ -104,6 +117,22 @@ describe("TrainerScreen", () => {
 
     expect(screen.getByText("Собери из букв")).toBeInTheDocument();
     expect(screen.getByText("Соберите слово из букв")).toBeInTheDocument();
+  });
+
+  it("собирает фразу из целых слов с пробелами и знаками препинания", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    const word = { ...WORD, foreign_word: "Can I play?", native_word: "Можно мне поиграть?" };
+    const onResult = vi.fn();
+    render(<Exercise layer={4} word={word} pool={[word]} answered={null} onResult={onResult} />);
+
+    expect(screen.getByText("Соберите фразу из слов")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Can" }));
+    await user.click(screen.getByRole("button", { name: "I" }));
+    await user.click(screen.getByRole("button", { name: "play?" }));
+    await act(() => vi.advanceTimersByTimeAsync(250));
+
+    expect(onResult).toHaveBeenCalledOnce();
+    expect(onResult).toHaveBeenCalledWith(true);
   });
 
   it("для немецкого профиля названия режимов и текст перевода используют DE/немецкий", async () => {
@@ -153,13 +182,14 @@ describe("TrainerScreen", () => {
     // Односимвольные слова: шаг «Собери из букв» проходится одним кликом,
     // и тест остаётся про правило завершения, а не про UI сборки
     const batch: Word[] = [
-      { ...WORD, id: "s1", foreign_word: "a", native_word: "первое" },
-      { ...WORD, id: "s2", foreign_word: "b", native_word: "второе" },
+      { ...WORD, id: "s1", foreign_word: "a", native_word: "первое", example_sentence: "This is a." },
+      { ...WORD, id: "s2", foreign_word: "b", native_word: "второе", example_sentence: "This is b." },
     ];
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
     render(<TrainerScreen batch={batch} onClose={vi.fn()} onDone={onDone} />);
 
-    // Доступны шаги 1, 2, 4 и 5 — примеров у слов нет, озвучка включена
+    // Даже с примерами доступны только 1, 2, 4 и 5: скрытый тип не блокирует завершение.
+    expect(screen.queryByRole("button", { name: "Режим: Вставь пропуск" })).not.toBeInTheDocument();
     const stepAnswers = [
       ["первое", "второе"],
       ["a", "b"],

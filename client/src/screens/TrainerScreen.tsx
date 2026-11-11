@@ -1,12 +1,13 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { postTrainingResult } from "../api/trainingApi";
-import { availableTypes, buildChoices, buildQueue, shuffle } from "./trainer/trainerLogic";
+import { availableTypes, buildChoices, buildQueue, shuffle, shuffleQueue } from "./trainer/trainerLogic";
 import { Icon } from "../components/Icon";
 import { IconBtn } from "../components/IconBtn";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { WordTile } from "../components/WordTile";
-import { hueFromString, playWord } from "../lib/wordVisual";
+import { hueFromString } from "../lib/wordVisual";
+import { WordAudioButton } from "../components/WordAudioButton";
 import { useAuth } from "../auth/AuthContext";
 import { exerciseNames, langNameAccusative } from "../lib/languageLabels";
 import type { Word } from "../api/types";
@@ -122,7 +123,7 @@ function TrainerDone({ count, onDone }: { count: number; onDone: () => void }) {
           maxWidth: 280,
         }}
       >
-        {count} слов прошли все 5 типов и отправились в умное повторение.
+        {count} слов прошли все доступные этапы и отправились в умное повторение.
       </p>
       <div style={{ display: "flex", gap: 8, margin: "14px 0 28px" }}>
         <div
@@ -322,6 +323,7 @@ function FillGap({
   );
 }
 
+/** Плитка с буквой или словом для сборки ответа. */
 interface Tile {
   ch: string;
   id: number;
@@ -335,14 +337,13 @@ function Assemble({
   answered: "correct" | "wrong" | null;
   onResult: (correct: boolean) => void;
 }) {
-  const target = word.foreign_word;
+  const target = word.foreign_word.trim().replace(/\s+/g, " ");
+  const separator = target.includes(" ") ? " " : "";
+  const isPhrase = separator === " ";
   const initial = useMemo(() => {
-    let s = shuffle(target.split("")).map((ch, i): Tile => ({ ch, id: i }));
-    if (s.map((t) => t.ch).join("") === target && target.length > 1) {
-      s = shuffle(s);
-    }
-    return s;
-  }, [word.id]);
+    const pieces = target.split(separator);
+    return shuffleQueue(pieces, pieces).map((ch, id): Tile => ({ ch, id }));
+  }, [word.id, target, separator]);
 
   const [bank, setBank] = useState<Tile[]>(initial);
   const [slots, setSlots] = useState<Tile[]>([]);
@@ -355,8 +356,8 @@ function Assemble({
   }, [word.id]);
 
   useEffect(() => {
-    if (!locked && slots.length === target.length && slots.length > 0) {
-      const guess = slots.map((t) => t.ch).join("");
+    if (!locked && slots.length === initial.length && slots.length > 0) {
+      const guess = slots.map((t) => t.ch).join(separator);
       setLocked(true);
       setTimeout(() => onResult(guess.toLowerCase() === target.toLowerCase()), 250);
     }
@@ -377,7 +378,7 @@ function Assemble({
   return (
     <>
       <div style={{ textAlign: "center", fontSize: 14, fontWeight: 700, color: "var(--ink-mute)", marginBottom: 18 }}>
-        Соберите слово из букв
+        {isPhrase ? "Соберите фразу из слов" : "Соберите слово из букв"}
       </div>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
         <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={120} />
@@ -400,7 +401,7 @@ function Assemble({
       >
         {slots.length === 0 ? (
           <span style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)", alignSelf: "center" }}>
-            нажимайте на буквы ниже
+            {isPhrase ? "нажимайте на слова ниже" : "нажимайте на буквы ниже"}
           </span>
         ) : null}
         {slots.map((t) => (
@@ -411,7 +412,9 @@ function Assemble({
             style={{
               border: "none",
               cursor: "pointer",
-              width: 40,
+              minWidth: 40,
+              width: isPhrase ? "auto" : 40,
+              padding: isPhrase ? "0 10px" : 0,
               height: 46,
               borderRadius: 11,
               background: "var(--primary)",
@@ -436,7 +439,9 @@ function Assemble({
             style={{
               border: "none",
               cursor: "pointer",
-              width: 46,
+              minWidth: 46,
+              width: isPhrase ? "auto" : 46,
+              padding: isPhrase ? "0 10px" : 0,
               height: 52,
               borderRadius: 13,
               background: "var(--surface)",
@@ -487,20 +492,14 @@ export function Exercise({
               <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={140} photo />
             )}
           </div>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 8 }}>
             <h2
               style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--ink)", margin: 0 }}
             >
               {word.foreign_word}
             </h2>
             {ttsEnabled ? (
-              <IconBtn
-                name="volume-2"
-                aria-label="Озвучить"
-                size={34}
-                iconSize={17}
-                onClick={() => playWord(word, language)}
-              />
+              <WordAudioButton word={word} language={language} />
             ) : null}
           </div>
           {word.transcription ? (
@@ -546,30 +545,7 @@ export function Exercise({
       <MCQ word={word} pool={pool} lang="ru" answered={answered} onResult={onResult}>
         <div style={{ textAlign: "center", marginBottom: 22 }}>
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
-            <button
-              className="btn-press"
-              onClick={() => {
-                try {
-                  playWord(word, language);
-                } catch {
-                  /* ignore */
-                }
-              }}
-              style={{
-                border: "none",
-                cursor: "pointer",
-                width: 120,
-                height: 120,
-                borderRadius: "50%",
-                background: "var(--primary-soft)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "var(--shadow-sm)",
-              }}
-            >
-              <Icon name="volume-2" size={48} color="var(--primary)" stroke={2.2} />
-            </button>
+            <WordAudioButton word={word} language={language} large />
           </div>
           <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ink-mute)" }}>
             Нажмите, чтобы прослушать
@@ -592,16 +568,22 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   const language = user?.language ?? "en";
   const ttsEnabled = (user?.tts_enabled ?? 1) === 1;
   const byId = useMemo(() => Object.fromEntries(batch.map((w) => [w.id, w])), [batch]);
+  const modeNames = exerciseNames(language);
+  if (batch.some((w) => /\s/.test(w.foreign_word.trim()))) {
+    modeNames[4] = "Собери слово или фразу";
+  }
 
-  // Доступные шаги: тип 3 отпадает без примеров, тип 5 — при выключенной озвучке
+  // Тип 3 временно скрыт, тип 5 недоступен при выключенной озвучке.
   const types = useMemo(() => availableTypes(batch, ttsEnabled), [batch, ttsEnabled]);
   const firstType = types[0] ?? 1;
 
   const [layer, setLayer] = useState(firstType);
-  const [queue, setQueue] = useState(() => buildQueue(batch, firstType, ttsEnabled));
+  const [initialQueue] = useState(() => shuffleQueue(buildQueue(batch, firstType, ttsEnabled)));
+  const previousOrder = useRef(initialQueue);
+  const [queue, setQueue] = useState(initialQueue);
   const [errors, setErrors] = useState<string[]>([]);
   const [passed, setPassed] = useState(0);
-  const [target, setTarget] = useState(() => buildQueue(batch, firstType, ttsEnabled).length);
+  const [target, setTarget] = useState(initialQueue.length);
   const [completed, setCompleted] = useState<Set<number>>(() => new Set());
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [done, setDone] = useState(false);
@@ -610,7 +592,8 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   const word = currentId != null ? byId[currentId] : undefined;
 
   function startLayer(t: number) {
-    const q = buildQueue(batch, t, ttsEnabled);
+    const q = shuffleQueue(buildQueue(batch, t, ttsEnabled), previousOrder.current);
+    previousOrder.current = q;
     setLayer(t);
     setQueue(q);
     setErrors([]);
@@ -706,7 +689,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
           </span>
         </div>
         <div style={{ display: "flex", gap: 6, marginBottom: 4 }}>
-          {types.map((t) => {
+          {types.map((t, index) => {
             const active = t === layer;
             const doneL = completed.has(t);
             return (
@@ -714,7 +697,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
                 key={t}
                 type="button"
                 className="btn-press"
-                aria-label={`Режим: ${exerciseNames(language)[t]}`}
+                aria-label={`Режим: ${modeNames[t]}`}
                 aria-pressed={active}
                 onClick={() => goToLayer(t)}
                 style={{ flex: 1, border: "none", background: "transparent", padding: 0, cursor: "pointer" }}
@@ -741,7 +724,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
                   {doneL ? (
                     <Icon name="check" size={15} stroke={3} />
                   ) : (
-                    <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700 }}>{t}</span>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700 }}>{index + 1}</span>
                   )}
                 </div>
               </button>
@@ -749,7 +732,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
           })}
         </div>
         <div style={{ textAlign: "center", fontSize: 12.5, fontWeight: 700, color: "var(--ink-mute)", marginTop: 6 }}>
-          {exerciseNames(language)[layer]}
+          {modeNames[layer]}
         </div>
       </div>
 

@@ -9,6 +9,16 @@ export function shuffle<T>(arr: T[]): T[] {
   return r;
 }
 
+// Даже случайное совпадение с предыдущим этапом убираем, если слов больше одного.
+export function shuffleQueue(ids: string[], previous: string[] = []): string[] {
+  const next = shuffle(ids);
+  if (next.length > 1 && next.length === previous.length && next.every((id, index) => id === previous[index])) {
+    const offset = 1 + Math.floor(Math.random() * (next.length - 1));
+    return [...next.slice(offset), ...next.slice(0, offset)];
+  }
+  return next;
+}
+
 export function buildChoices(
   word: Word,
   pool: Word[],
@@ -37,7 +47,8 @@ export function buildQueue(batch: Word[], type: number, ttsEnabled = true): stri
   return batch.filter((w) => type !== 3 || w.example_sentence != null).map((w) => w.id);
 }
 
-export const ALL_TYPES = [1, 2, 3, 4, 5];
+// «Вставь пропуск» временно скрыт; номера типов в данных сохраняем.
+export const ALL_TYPES = [1, 2, 4, 5];
 
 // Шаги, которые реально можно пройти на этом батче — по ним считается прогресс
 // и определяется момент завершения

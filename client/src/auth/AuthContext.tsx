@@ -15,6 +15,7 @@ import {
   updateSettings as updateSettingsApi,
   type SettingsPatch,
 } from "./authApi";
+import { clearOfflineUser } from "../offline/storage";
 
 interface AuthValue {
   isAuthenticated: boolean;
@@ -54,6 +55,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const logout = (): void => {
+    const stored = getStoredUser();
+    if (stored && "indexedDB" in window) void clearOfflineUser(stored.id).catch(() => undefined);
     clearToken();
     clearStoredUser();
     setToken(null);

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { App } from "../App";
 
 const authState = { isAuthenticated: false };
@@ -21,6 +21,14 @@ vi.mock("../AppShell", () => ({
 }));
 
 describe("App (гейт авторизации)", () => {
+  it("при потере сети переходит к скачанным колодам", () => {
+    authState.isAuthenticated = true;
+    render(<App />);
+    fireEvent(window, new Event("offline"));
+    expect(screen.getByRole("heading", { name: "Скачанные колоды" })).toBeInTheDocument();
+    expect(screen.queryByText("app-shell")).not.toBeInTheDocument();
+  });
+
   it("показывает экран входа без авторизации", () => {
     authState.isAuthenticated = false;
     render(<App />);

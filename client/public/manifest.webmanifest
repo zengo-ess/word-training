@@ -1,0 +1,11 @@
+{
+  "name": "Тренажёр слов",
+  "short_name": "Словарь",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbf4ea",
+  "theme_color": "#fbf4ea",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

@@ -9,6 +9,7 @@ import type { WordWithProgress } from "../../api/types";
 vi.mock("../../lib/wordVisual", () => ({
   hueFromString: () => 55,
   playWord: vi.fn(),
+  stopWordPlayback: vi.fn(),
 }));
 
 let mockTts = 1;

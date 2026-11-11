@@ -6,6 +6,7 @@ import { Card } from "../components/Card";
 import { Icon } from "../components/Icon";
 import { ProgressBar } from "../components/ProgressBar";
 import type { Deck } from "../api/types";
+import { OfflineEntry } from "../offline/DownloadDeck";
 
 function DeckCard({ deck, onClick }: { deck: Deck; onClick: () => void }) {
   const pct = deck.total ? Math.round((deck.learned / deck.total) * 100) : 0;
@@ -105,6 +106,7 @@ export function DecksTab({ onOpenDeck }: { onOpenDeck: (deck: Deck) => void }) {
   return (
     <Page>
       <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 700, margin: "4px 0 16px" }}>Колоды</h1>
+      <OfflineEntry />
 
       {loading ? <p style={{ color: "var(--ink-mute)" }}>Загрузка…</p> : null}
 

@@ -36,6 +36,13 @@ export function getWord(db: Database.Database, id: string): WordRow | undefined 
   return db.prepare("SELECT * FROM words WHERE id = ?").get(id) as WordRow | undefined;
 }
 
+export function findReusableAudio(db: Database.Database, word: string, language: string, userId: string): string | null {
+  const found = db.prepare(`SELECT w.audio_url FROM words w JOIN decks d ON d.id=w.deck_id
+    WHERE lower(w.foreign_word)=lower(?) AND d.language=? AND w.audio_url IS NOT NULL
+    AND (d.is_builtin=1 OR d.user_id=?) LIMIT 1`).get(word, language, userId) as { audio_url: string } | undefined;
+  return found?.audio_url ?? null;
+}
+
 export function listWordsByDeck(db: Database.Database, deckId: string): WordRow[] {
   return db
     .prepare("SELECT * FROM words WHERE deck_id = ? ORDER BY created_at ASC")

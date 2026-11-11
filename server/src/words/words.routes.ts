@@ -2,7 +2,7 @@ import { Router, raw } from "express";
 import type Database from "better-sqlite3";
 import type { AuthedRequest } from "../auth/auth.middleware.js";
 import { getDeck, canAccessDeck } from "../decks/decks.repository.js";
-import { createWord, getWord, updateWord, deleteWord } from "./words.repository.js";
+import { createWord, getWord, updateWord, deleteWord, findReusableAudio } from "./words.repository.js";
 import { translateToRussian, translateFromRussian } from "../services/mymemory.js";
 import { fetchTranscription } from "../services/dictionary.js";
 import { searchImages } from "../services/unsplash.js";
@@ -100,13 +100,15 @@ export function createWordsRouter(db: Database.Database, deps: WordsRouterDeps):
       return;
     }
 
-    const word = createWord(db, { deckId, foreignWord, nativeWord, imageUrl, transcription });
+    // Reuse an existing recording before asking a cloud service to synthesize it.
+    const cached = findReusableAudio(db, foreignWord, deck.language, userId);
+    const word = createWord(db, { deckId, foreignWord, nativeWord, imageUrl, transcription, audioUrl: cached });
 
     // Озвучка опциональна: при отсутствии ключа/ошибке слово остаётся без аудио
     let finalWord = word;
     try {
       const languageCode = TTS_LANGUAGE_CODE[deck.language] ?? "en-US";
-      const mp3 = await synthesizeMp3(foreignWord, languageCode, deps.googleTtsApiKey);
+      const mp3 = cached ? null : await synthesizeMp3(foreignWord, languageCode, deps.googleTtsApiKey);
       if (mp3) {
         const audioUrl = saveAudioFile(deps.uploadsDir, word.id, mp3);
         finalWord = updateWord(db, word.id, { audioUrl }) ?? word;

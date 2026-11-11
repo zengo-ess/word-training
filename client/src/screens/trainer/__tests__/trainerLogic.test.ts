@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable sonarjs/no-duplicate-string */
-import { describe, it, expect } from "vitest";
-import { availableTypes, buildChoices, buildQueue, shuffle } from "../trainerLogic";
+import { describe, it, expect, vi } from "vitest";
+import { availableTypes, buildChoices, buildQueue, shuffle, shuffleQueue } from "../trainerLogic";
 import type { Word } from "../../../api/types";
 
 function makeWord(id: string, foreignWord: string, nativeWord: string, hasExample = true): Word {
@@ -67,6 +67,33 @@ describe("shuffle", () => {
   });
 });
 
+describe("перемешивание между этапами", () => {
+  it("случайное совпадение порядка заменяет другим, не теряя слова", () => {
+    const random = vi.spyOn(Math, "random").mockReturnValue(0.999);
+    try {
+      const ids = ["a", "b", "c", "d"];
+      const previous = [...ids];
+      const result = shuffleQueue(ids, previous);
+      expect(result).not.toEqual(previous);
+      expect([...result].sort()).toEqual(ids);
+      expect(ids).toEqual(["a", "b", "c", "d"]);
+      expect(previous).toEqual(ids);
+    } finally { random.mockRestore(); }
+  });
+
+  it("перемешивает и первый этап", () => {
+    const random = vi.spyOn(Math, "random").mockReturnValue(0);
+    try {
+      expect(shuffleQueue(["a", "b", "c"])).toEqual(["b", "c", "a"]);
+    } finally { random.mockRestore(); }
+  });
+
+  it("не зацикливается на одном слове или пустой очереди", () => {
+    expect(shuffleQueue(["a"], ["a"])).toEqual(["a"]);
+    expect(shuffleQueue([], [])).toEqual([]);
+  });
+});
+
 describe("buildQueue и озвучка", () => {
   it("при выключенной озвучке тип 5 недоступен", () => {
     expect(buildQueue(POOL, 5, false)).toEqual([]);
@@ -83,12 +110,12 @@ describe("buildQueue и озвучка", () => {
 });
 
 describe("availableTypes", () => {
-  it("на полном батче с озвучкой доступны все пять шагов", () => {
-    expect(availableTypes(POOL, true)).toEqual([1, 2, 3, 4, 5]);
+  it("даже при наличии примеров скрытый тип 3 не попадает в последовательность", () => {
+    expect(availableTypes(POOL, true)).toEqual([1, 2, 4, 5]);
   });
 
   it("без озвучки шага 5 нет", () => {
-    expect(availableTypes(POOL, false)).toEqual([1, 2, 3, 4]);
+    expect(availableTypes(POOL, false)).toEqual([1, 2, 4]);
   });
 
   it("без примеров нет шага 3", () => {

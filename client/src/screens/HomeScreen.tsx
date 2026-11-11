@@ -7,6 +7,7 @@ import { IconBtn } from "../components/IconBtn";
 import { ProgressBar } from "../components/ProgressBar";
 import { Ring } from "../components/Ring";
 import type { Deck, Stats } from "../api/types";
+import { OfflineEntry } from "../offline/DownloadDeck";
 
 const WEEK_LABELS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
@@ -69,6 +70,7 @@ function HomeContent({ s, onLearn, onReview, onOpenDeck, onProfile }: Props & { 
         <IconBtn name="settings" aria-label="Профиль" onClick={onProfile} />
       </div>
 
+      <OfflineEntry />
       {/* streak hero */}
       <div
         style={{
@@ -252,6 +254,7 @@ export function HomeScreen({ onLearn, onReview, onOpenDeck, onProfile }: Props) 
   if (loading || !stats) {
     return (
       <Page>
+        <OfflineEntry />
         <p style={{ color: "var(--ink-mute)" }}>Загрузка…</p>
       </Page>
     );
