@@ -9,6 +9,7 @@ import { WordSheet } from "./screens/WordSheet";
 import { AddWordScreen } from "./screens/AddWordScreen";
 import { EditWordScreen } from "./screens/EditWordScreen";
 import { TrainerScreen } from "./screens/TrainerScreen";
+import { shuffle } from "./screens/trainer/trainerLogic";
 import { ReviewScreen } from "./screens/ReviewScreen";
 import { fetchTodayTraining } from "./api/trainingApi";
 import { deleteWord } from "./api/wordsApi";
@@ -22,7 +23,7 @@ export function AppShell() {
   const [sheetWord, setSheetWord] = useState<WordWithProgress | null>(null);
   const [editingWord, setEditingWord] = useState<WordWithProgress | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
-  const [trainerWords, setTrainerWords] = useState<Word[] | null>(null);
+  const [trainer, setTrainer] = useState<{ words: Word[]; spellingOnly: boolean } | null>(null);
   const [reviewWords, setReviewWords] = useState<Word[] | null>(null);
 
   const top = stack[stack.length - 1] ?? null;
@@ -32,7 +33,7 @@ export function AppShell() {
   const openTrainer = (deckId?: string) => {
     void fetchTodayTraining(deckId).then(({ newWords }) => {
       if (newWords.length > 0) {
-        setTrainerWords(newWords.map((lw) => lw.word));
+        setTrainer({ words: newWords.map((lw) => lw.word), spellingOnly: false });
       }
     });
   };
@@ -79,6 +80,7 @@ export function AppShell() {
           onAddWord={() => setStack((s) => [...s, { type: "add", deckId: top.deck.id }])}
           onLearn={() => openTrainer(top.deck.id)}
           onReview={() => openReview(top.deck.id)}
+          onPracticeSpelling={(words) => setTrainer({ words: shuffle(words).slice(0, 20), spellingOnly: true })}
           onChanged={(updated) => {
             if (updated) {
               setStack((s) =>
@@ -101,12 +103,13 @@ export function AppShell() {
         />
       ) : null}
 
-      {trainerWords ? (
+      {trainer ? (
         <TrainerScreen
-          batch={trainerWords}
-          onClose={() => setTrainerWords(null)}
+          batch={trainer.words}
+          spellingOnly={trainer.spellingOnly}
+          onClose={() => setTrainer(null)}
           onDone={() => {
-            setTrainerWords(null);
+            setTrainer(null);
             setReloadKey((k) => k + 1);
           }}
         />

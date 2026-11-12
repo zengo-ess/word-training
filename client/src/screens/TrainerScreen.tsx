@@ -76,7 +76,7 @@ export function FeedbackBar({ kind, word }: { kind: "correct" | "wrong"; word: W
   );
 }
 
-function TrainerDone({ count, onDone }: { count: number; onDone: () => void }) {
+function TrainerDone({ count, spellingOnly, onDone }: { count: number; spellingOnly: boolean; onDone: () => void }) {
   return (
     <div
       style={{
@@ -111,7 +111,7 @@ function TrainerDone({ count, onDone }: { count: number; onDone: () => void }) {
       <h1
         style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "var(--ink)", margin: "0 0 8px" }}
       >
-        Батч выучен! 🎉
+        {spellingOnly ? "Тренировка завершена!" : "Батч выучен! 🎉"}
       </h1>
       <p
         style={{
@@ -123,9 +123,9 @@ function TrainerDone({ count, onDone }: { count: number; onDone: () => void }) {
           maxWidth: 280,
         }}
       >
-        {count} слов прошли все доступные этапы и отправились в умное повторение.
+        {spellingOnly ? `Собрано слов: ${count}` : `${count} слов прошли все доступные этапы и отправились в умное повторение.`}
       </p>
-      <div style={{ display: "flex", gap: 8, margin: "14px 0 28px" }}>
+      {!spellingOnly ? <div style={{ display: "flex", gap: 8, margin: "14px 0 28px" }}>
         <div
           style={{
             display: "flex",
@@ -142,8 +142,8 @@ function TrainerDone({ count, onDone }: { count: number; onDone: () => void }) {
           <Icon name="refresh" size={14} color="var(--success, #16a34a)" stroke={2.4} />
           Повтор через 1 день
         </div>
-      </div>
-      <Button full variant="primary" icon="sparkles" onClick={onDone}>
+      </div> : null}
+      <Button full variant="primary" icon="sparkles" onClick={onDone} style={spellingOnly ? { marginTop: 24 } : undefined}>
         Готово
       </Button>
     </div>
@@ -329,21 +329,37 @@ interface Tile {
   id: number;
 }
 
+const ENGLISH_SPELLING_PARTS: ReadonlyMap<string, readonly string[]> = new Map([
+  ["fish", ["f", "i", "sh"]],
+  ["duck", ["d", "u", "ck"]],
+  ["bee", ["b", "ee"]],
+  ["sheep", ["sh", "ee", "p"]],
+  ["goose", ["g", "oo", "s", "e"]],
+  ["moose", ["m", "oo", "s", "e"]],
+  ["cow", ["c", "ow"]],
+  ["goat", ["g", "oa", "t"]],
+  ["snail", ["s", "n", "ai", "l"]],
+]);
+
 function Assemble({
   word,
+  answered,
+  language,
+  ttsEnabled,
   onResult,
 }: {
   word: Word;
   answered: "correct" | "wrong" | null;
+  language: string;
+  ttsEnabled: boolean;
   onResult: (correct: boolean) => void;
 }) {
   const target = word.foreign_word.trim().replace(/\s+/g, " ");
   const separator = target.includes(" ") ? " " : "";
   const isPhrase = separator === " ";
-  const initial = useMemo(() => {
-    const pieces = target.split(separator);
-    return shuffleQueue(pieces, pieces).map((ch, id): Tile => ({ ch, id }));
-  }, [word.id, target, separator]);
+  const spellingParts = language === "en" ? ENGLISH_SPELLING_PARTS.get(target) : undefined;
+  const pieces = useMemo(() => [...(spellingParts ?? target.split(separator))], [target, separator, spellingParts]);
+  const initial = useMemo(() => shuffleQueue(pieces, pieces).map((ch, id): Tile => ({ ch, id })), [pieces]);
 
   const [bank, setBank] = useState<Tile[]>(initial);
   const [slots, setSlots] = useState<Tile[]>([]);
@@ -355,18 +371,16 @@ function Assemble({
     setLocked(false);
   }, [word.id]);
 
-  useEffect(() => {
-    if (!locked && slots.length === initial.length && slots.length > 0) {
-      const guess = slots.map((t) => t.ch).join(separator);
-      setLocked(true);
-      setTimeout(() => onResult(guess.toLowerCase() === target.toLowerCase()), 250);
-    }
-  }, [slots]);
-
   function place(tile: Tile) {
     if (locked) return;
+    const next = [...slots, tile];
     setBank((b) => b.filter((t) => t.id !== tile.id));
-    setSlots((s) => [...s, tile]);
+    setSlots(next);
+    if (next.length === pieces.length) {
+      setLocked(true);
+      const guess = next.map((t) => t.ch).join(separator);
+      onResult(guess.toLowerCase() === target.toLowerCase());
+    }
   }
 
   function remove(tile: Tile) {
@@ -378,13 +392,18 @@ function Assemble({
   return (
     <>
       <div style={{ textAlign: "center", fontSize: 14, fontWeight: 700, color: "var(--ink-mute)", marginBottom: 18 }}>
-        {isPhrase ? "Соберите фразу из слов" : "Соберите слово из букв"}
+        {isPhrase ? "Соберите фразу из слов" : spellingParts ? "Соберите слово из частей" : "Соберите слово из букв"}
       </div>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
-        <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={120} />
+        {word.image_url ? (
+          <img src={word.image_url} alt={word.native_word} style={{ width: 120, height: 120, objectFit: "cover", borderRadius: 16 }} />
+        ) : (
+          <WordTile icon="book" hue={hueFromString(word.foreign_word)} size={120} />
+        )}
       </div>
-      <div style={{ textAlign: "center", fontSize: 17, fontWeight: 700, color: "var(--primary)", marginBottom: 16 }}>
-        {word.native_word}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, textAlign: "center", fontSize: 17, fontWeight: 700, color: "var(--primary)", marginBottom: 16 }}>
+        <span>{word.native_word}</span>
+        {ttsEnabled ? <WordAudioButton word={word} language={language} /> : null}
       </div>
       <div
         style={{
@@ -401,20 +420,21 @@ function Assemble({
       >
         {slots.length === 0 ? (
           <span style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink-mute)", alignSelf: "center" }}>
-            {isPhrase ? "нажимайте на слова ниже" : "нажимайте на буквы ниже"}
+            {isPhrase ? "нажимайте на слова ниже" : "нажимайте на плитки ниже"}
           </span>
         ) : null}
         {slots.map((t) => (
           <button
             key={t.id}
             onClick={() => remove(t)}
+            disabled={locked}
             className="tile-pop"
             style={{
               border: "none",
               cursor: "pointer",
               minWidth: 40,
-              width: isPhrase ? "auto" : 40,
-              padding: isPhrase ? "0 10px" : 0,
+              width: isPhrase || spellingParts ? "auto" : 40,
+              padding: isPhrase || spellingParts ? "0 10px" : 0,
               height: 46,
               borderRadius: 11,
               background: "var(--primary)",
@@ -429,19 +449,32 @@ function Assemble({
           </button>
         ))}
       </div>
-      <div style={{ height: 28 }} />
+      {answered === "wrong" ? (
+        <div role="status" style={{ textAlign: "center", margin: "12px 0", fontWeight: 700 }}>
+          <div>Правильный ответ</div>
+          <span lang={language} style={{ fontSize: 22 }}>
+            {pieces.map((piece, index) => (
+              <span key={index}>
+                {index > 0 ? separator : ""}
+                {slots[index]?.ch.toLowerCase() !== piece.toLowerCase() ? <mark>{piece}</mark> : piece}
+              </span>
+            ))}
+          </span>
+        </div>
+      ) : <div style={{ height: 28 }} />}
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 8, marginTop: "auto" }}>
         {bank.map((t) => (
           <button
             key={t.id}
             onClick={() => place(t)}
+            disabled={locked}
             className="btn-press"
             style={{
               border: "none",
               cursor: "pointer",
               minWidth: 46,
-              width: isPhrase ? "auto" : 46,
-              padding: isPhrase ? "0 10px" : 0,
+              width: isPhrase || spellingParts ? "auto" : 46,
+              padding: isPhrase || spellingParts ? "0 10px" : 0,
               height: 52,
               borderRadius: 13,
               background: "var(--surface)",
@@ -538,7 +571,7 @@ export function Exercise({
 
   if (layer === 3) return <FillGap word={word} answered={answered} onResult={onResult} />;
 
-  if (layer === 4) return <Assemble word={word} answered={answered} onResult={onResult} />;
+  if (layer === 4) return <Assemble word={word} answered={answered} language={language} ttsEnabled={ttsEnabled} onResult={onResult} />;
 
   if (layer === 5)
     return (
@@ -557,13 +590,15 @@ export function Exercise({
   return null;
 }
 
+/** A training session using the regular sequence or just the assembly exercise. */
 interface Props {
   batch: Word[];
+  spellingOnly?: boolean;
   onClose: () => void;
   onDone: () => void;
 }
 
-export function TrainerScreen({ batch, onClose, onDone }: Props) {
+export function TrainerScreen({ batch, spellingOnly = false, onClose, onDone }: Props) {
   const { user } = useAuth();
   const language = user?.language ?? "en";
   const ttsEnabled = (user?.tts_enabled ?? 1) === 1;
@@ -574,7 +609,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   }
 
   // Тип 3 временно скрыт, тип 5 недоступен при выключенной озвучке.
-  const types = useMemo(() => availableTypes(batch, ttsEnabled), [batch, ttsEnabled]);
+  const types = useMemo(() => spellingOnly ? [4] : availableTypes(batch, ttsEnabled), [batch, spellingOnly, ttsEnabled]);
   const firstType = types[0] ?? 1;
 
   const [layer, setLayer] = useState(firstType);
@@ -587,6 +622,11 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   const [completed, setCompleted] = useState<Set<number>>(() => new Set());
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [done, setDone] = useState(false);
+
+  const [attempt, setAttempt] = useState(0);
+  const feedbackTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  useEffect(() => () => clearTimeout(feedbackTimer.current), []);
+  const waitsForContinue = layer === 4 && answered === "wrong";
 
   const currentId = queue[0];
   const word = currentId != null ? byId[currentId] : undefined;
@@ -602,7 +642,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   }
 
   function finishBatch() {
-    void Promise.all(batch.map((w) => postTrainingResult(w.id, "learned"))).then(onDone);
+    if (!spellingOnly) void Promise.all(batch.map((w) => postTrainingResult(w.id, "learned"))).then(onDone);
     setDone(true);
   }
 
@@ -627,46 +667,49 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
   // Ручной переход по клику на шаг — можно прыгнуть на любой доступный шаг
   // в любой момент, пройденность при этом не теряется
   function goToLayer(t: number) {
+    clearTimeout(feedbackTimer.current);
+    setAttempt((n) => n + 1);
     setAnswered(null);
     startLayer(t);
+  }
+
+  function advance(correct: boolean) {
+    setAttempt((n) => n + 1);
+    setAnswered(null);
+    const [head, ...rest] = queue;
+    if (correct) {
+      const np = passed + 1;
+      setPassed(np);
+      if (np >= target) {
+        completeLayer();
+        return;
+      }
+      if (rest.length === 0 && errors.length > 0) {
+        setQueue(shuffle(errors));
+        setErrors([]);
+      } else {
+        setQueue(rest);
+      }
+    } else {
+      const newErrors = [...errors, head];
+      if (rest.length === 0) {
+        setQueue(shuffle(newErrors));
+        setErrors([]);
+      } else {
+        setQueue(rest);
+        setErrors(newErrors);
+      }
+    }
   }
 
   function handleResult(correct: boolean) {
     if (answered) return;
     setAnswered(correct ? "correct" : "wrong");
-    setTimeout(
-      () => {
-        setAnswered(null);
-        const [head, ...rest] = queue;
-        if (correct) {
-          const np = passed + 1;
-          setPassed(np);
-          if (np >= target) {
-            completeLayer();
-            return;
-          }
-          if (rest.length === 0 && errors.length > 0) {
-            setQueue(shuffle(errors));
-            setErrors([]);
-          } else {
-            setQueue(rest);
-          }
-        } else {
-          const newErrors = [...errors, head];
-          if (rest.length === 0) {
-            setQueue(shuffle(newErrors));
-            setErrors([]);
-          } else {
-            setQueue(rest);
-            setErrors(newErrors);
-          }
-        }
-      },
-      correct ? 750 : 1050,
-    );
+    if (layer === 4 && !correct) return;
+    feedbackTimer.current = setTimeout(() => advance(correct), correct ? 750 : 1050);
   }
 
-  if (done || batch.length === 0) return <TrainerDone count={batch.length} onDone={onDone} />;
+  if (done || batch.length === 0) return <TrainerDone count={batch.length} spellingOnly={spellingOnly} onDone={onDone} />;
   if (!word) return null;
 
   return (
@@ -688,7 +731,7 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
             {passed}/{target}
           </span>
         </div>
-        <div style={{ display: "flex", gap: 6, marginBottom: 4 }}>
+        {!spellingOnly ? <div style={{ display: "flex", gap: 6, marginBottom: 4 }}>
           {types.map((t, index) => {
             const active = t === layer;
             const doneL = completed.has(t);
@@ -730,14 +773,14 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
               </button>
             );
           })}
-        </div>
+        </div> : null}
         <div style={{ textAlign: "center", fontSize: 12.5, fontWeight: 700, color: "var(--ink-mute)", marginTop: 6 }}>
           {modeNames[layer]}
         </div>
       </div>
 
       <div
-        key={`${layer}-${currentId}-${queue.length}`}
+        key={`${layer}-${currentId}-${attempt}`}
         className="ex-enter"
         style={{
           flex: 1,
@@ -748,9 +791,10 @@ export function TrainerScreen({ batch, onClose, onDone }: Props) {
         }}
       >
         <Exercise layer={layer} word={word} pool={batch} answered={answered} onResult={handleResult} />
+        {waitsForContinue ? <Button full variant="primary" onClick={() => advance(false)} style={{ marginTop: 16 }}>Дальше</Button> : null}
       </div>
 
-      {answered ? <FeedbackBar kind={answered} word={word} /> : null}
+      {answered && !waitsForContinue ? <FeedbackBar kind={answered} word={word} /> : null}
     </div>
   );
 }

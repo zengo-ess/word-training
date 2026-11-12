@@ -135,6 +135,30 @@ describe("TrainerScreen", () => {
     expect(onResult).toHaveBeenCalledWith(true);
   });
 
+  it("показывает картинку, озвучку и подсказку после ошибки в сборке", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });
+    const fish = { ...WORD, foreign_word: "fish", native_word: "рыба", image_url: "/uploads/fish.webp" };
+    render(<TrainerScreen batch={[fish]} onClose={vi.fn()} onDone={vi.fn()} />);
+
+    await user.click(screen.getByRole("button", { name: "Режим: Собери из букв" }));
+    expect(screen.getByRole("img", { name: "рыба" })).toHaveAttribute("src", fish.image_url);
+    await user.click(screen.getByRole("button", { name: "Озвучить" }));
+    expect(playWordMock).toHaveBeenLastCalledWith(fish, "en");
+
+    for (const piece of ["sh", "i", "f"]) {
+      await user.click(screen.getByRole("button", { name: piece }));
+    }
+    await act(() => vi.advanceTimersByTimeAsync(3000));
+
+    const feedback = screen.getByRole("status");
+    expect(feedback).toHaveTextContent("fish");
+    expect(feedback.querySelector("mark:last-child")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Дальше" }));
+    expect(screen.queryByText("Правильный ответ")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "sh" })).toBeEnabled();
+  });
+
   it("для немецкого профиля названия режимов и текст перевода используют DE/немецкий", async () => {
     mockLanguage = "de";
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime.bind(vi) });

@@ -17,6 +17,7 @@ import { DownloadDeck } from "../offline/DownloadDeck";
 const SEARCH_THRESHOLD = 20;
 const PAGE_SIZE = 50;
 
+/** Actions and data available in a deck detail view. */
 interface Props {
   deck: Deck;
   onBack: () => void;
@@ -24,6 +25,7 @@ interface Props {
   onAddWord: () => void;
   onLearn: () => void;
   onReview: () => void;
+  onPracticeSpelling?: (words: WordWithProgress[]) => void;
   // Переименование отдаёт обновлённую колоду: экран пересоздаётся по key,
   // и без этого в шапку вернулось бы старое имя из стека оверлеев
   onChanged?: (deck?: Deck) => void;
@@ -90,7 +92,7 @@ const INPUT_STYLE: React.CSSProperties = {
   outline: "none",
 };
 
-export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onReview, onChanged }: Props) {
+export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onReview, onPracticeSpelling, onChanged }: Props) {
   const { data: words } = useAsync<WordWithProgress[]>(() => fetchDeckWords(deck.id), [deck.id]);
   const builtin = deck.is_builtin === 1;
   const pct = deck.total ? Math.round((deck.learned / deck.total) * 100) : 0;
@@ -224,6 +226,11 @@ export function DeckDetailScreen({ deck, onBack, onWord, onAddWord, onLearn, onR
             Повторить колоду
           </Button>
         )}
+        {onPracticeSpelling && list.length > 0 ? (
+          <Button full variant="soft" onClick={() => onPracticeSpelling(list)} style={{ marginBottom: 10 }}>
+            Тренировать написание
+          </Button>
+        ) : null}
         {!builtin ? (
           <Button full variant="outline" icon="plus" onClick={onAddWord} style={{ marginBottom: 18 }}>
             Добавить слово
