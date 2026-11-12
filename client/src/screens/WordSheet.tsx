@@ -9,6 +9,7 @@ import { WordTile } from "../components/WordTile";
 import { hueFromString } from "../lib/wordVisual";
 import { WordAudioButton } from "../components/WordAudioButton";
 import { pronunciationRu } from "../lib/pronunciation";
+import { getSpellingParts } from "../lib/spellingParts";
 import { useAuth } from "../auth/AuthContext";
 import type { Deck, WordWithProgress } from "../api/types";
 
@@ -171,6 +172,7 @@ export function WordSheet({ word, onClose, onDelete, onEdit, onCopied }: Props) 
   const type = word.progress?.current_type ?? 1;
   const example = word.example_sentence ? word.example_sentence.replace("___", word.foreign_word) : null;
   const pronunciation = pronunciationRu(word.foreign_word, language);
+  const spellingParts = getSpellingParts(word.foreign_word, language);
 
   // Копировать предлагаем там, где слово нельзя редактировать — во встроенной колоде
   const canCopy = onCopied !== undefined;
@@ -210,7 +212,11 @@ export function WordSheet({ word, onClose, onDelete, onEdit, onCopied }: Props) 
         </div>
         <div style={{ textAlign: "center", marginBottom: 18 }}>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 10 }}>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, margin: 0 }}>{word.foreign_word}</h2>
+            <h2 lang={language} aria-label={word.foreign_word} style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, margin: 0 }}>
+              {spellingParts?.map((part, index) => /^[a-z]{2,}$/i.test(part)
+                ? <mark key={index} style={{ background: "var(--primary-soft)", color: "var(--primary)", borderRadius: 4 }}>{part}</mark>
+                : <span key={index}>{part}</span>) ?? word.foreign_word}
+            </h2>
             {ttsEnabled ? (
               <WordAudioButton word={word} language={language} />
             ) : null}

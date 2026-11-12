@@ -8,6 +8,7 @@ import { Button } from "../components/Button";
 import { WordTile } from "../components/WordTile";
 import { hueFromString } from "../lib/wordVisual";
 import { WordAudioButton } from "../components/WordAudioButton";
+import { getSpellingParts } from "../lib/spellingParts";
 import { useAuth } from "../auth/AuthContext";
 import { exerciseNames, langNameAccusative } from "../lib/languageLabels";
 import type { Word } from "../api/types";
@@ -329,18 +330,6 @@ interface Tile {
   id: number;
 }
 
-const ENGLISH_SPELLING_PARTS: ReadonlyMap<string, readonly string[]> = new Map([
-  ["fish", ["f", "i", "sh"]],
-  ["duck", ["d", "u", "ck"]],
-  ["bee", ["b", "ee"]],
-  ["sheep", ["sh", "ee", "p"]],
-  ["goose", ["g", "oo", "s", "e"]],
-  ["moose", ["m", "oo", "s", "e"]],
-  ["cow", ["c", "ow"]],
-  ["goat", ["g", "oa", "t"]],
-  ["snail", ["s", "n", "ai", "l"]],
-]);
-
 function Assemble({
   word,
   answered,
@@ -357,7 +346,7 @@ function Assemble({
   const target = word.foreign_word.trim().replace(/\s+/g, " ");
   const separator = target.includes(" ") ? " " : "";
   const isPhrase = separator === " ";
-  const spellingParts = language === "en" ? ENGLISH_SPELLING_PARTS.get(target) : undefined;
+  const spellingParts = getSpellingParts(target, language);
   const pieces = useMemo(() => [...(spellingParts ?? target.split(separator))], [target, separator, spellingParts]);
   const initial = useMemo(() => shuffleQueue(pieces, pieces).map((ch, id): Tile => ({ ch, id })), [pieces]);
 
